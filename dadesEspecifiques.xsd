@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema"
+        xmlns="http://www.aoc.cat/representa/v2"
+        targetNamespace="http://www.aoc.cat/representa/v2"
+        elementFormDefault="qualified"
+        attributeFormDefault="unqualified">
+
+	<xs:element name="consultarRepresentacions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaRepresentacions">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="representacio" type="representacio"/>
+                            <xs:element name="estats" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="estat"  type="estat" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+	<xs:element name="consultarRepresentacionsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta"  type="resposta"/>
+                            <xs:element name="numRepresentacionsTotal"/>
+                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="representacions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="representacio"  type="representacio" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:element name="validarRepresentacio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="representacio" type="representacio" minOccurs="0"/>
+                <xs:element name="dataValidacio" type="xs:string"/>
+                <xs:element name="funcionariSolicitant" type="persona"/>
+                <xs:element name="administracioSolicitant" type="administracio"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="validarRepresentacioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta"  type="resposta"/>
+                            <xs:element name="representacio" type="representacio"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+	<xs:simpleType name="pagina">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+	<xs:simpleType name="estat">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PENDENT_VALIDACIO"/>
+            <xs:enumeration value="VALIDA"/>
+            <xs:enumeration value="ANULADA"/>
+            <xs:enumeration value="RENUNCIADA"/>
+            <xs:enumeration value="REVOCADA"/>
+            <xs:enumeration value="DENEGADA"/>
+            <xs:enumeration value="EXPIRADA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="representacio">
+        <xs:sequence>
+            <xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>
+            <xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>
+            <xs:element name="estat" type="estat" minOccurs="0"/>
+            <xs:element name="poderdant" type="persona" minOccurs="1"/>
+            <xs:element name="representant" type="persona" minOccurs="1"/>
+            <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
+            <xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
+            <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
+            <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
+            <xs:element name="refAlta" type="xs:string" minOccurs="0"/>
+            <xs:element name="evidencies" minOccurs="0" >
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="tramit">
+        <xs:sequence>
+            <xs:element name="uuid" type="xs:string" minOccurs="0"/>
+            <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>
+            <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>
+            <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>
+            <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
+            <xs:element name="actiu" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="evidencia">
+        <xs:sequence>
+            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+            <xs:element name="identificadorLegal" type="xs:string"/>
+            <xs:element name="motiu" type="xs:string"  minOccurs="0"/>
+            <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
+            <xs:element name="funcionariReceptor" type="persona"/>
+            <xs:element name="documentsEvidencia" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="documentEvidencia" type="documentEvidencia" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="documentEvidencia">
+        <xs:sequence>
+            <xs:element name="uuid" type="xs:string"  minOccurs="0"/>
+            <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+            <xs:element name="nomDocument" type="xs:string" minOccurs="0"/>
+            <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
+            <xs:element name="tamany" type="xs:string" minOccurs="0"/>
+            <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
+            <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipusEncriptacio">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="SHA-1"/>
+            <xs:enumeration value="SHA-256"/>
+            <xs:enumeration value="SHA-512"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="ambitRepresentacio">
+        <xs:sequence>
+            <xs:element name="administracio" type="administracio" minOccurs="0"/>
+            <xs:element name="tramit" minOccurs="0"  type="tramit"/>
+            <xs:element name="capacitats" minOccurs="0" >
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="administracio">
+        <xs:sequence>
+            <xs:element name="codi" type="xs:string"/>
+            <xs:element name="nif" type="xs:string" minOccurs="0"/>
+            <xs:element name="nom" type="xs:string" minOccurs="0"/>
+            <xs:element name="activa" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipusPersona">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="FISICA"/>
+            <xs:enumeration value="JURIDICA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="capacitat">
+        <xs:sequence>
+            <xs:element name="codi" type="xs:string"/>
+            <xs:element name="nom" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="persona">
+        <xs:sequence>
+            <xs:element type="xs:string" name="tipusDocumentIdentificatiu"/>
+            <xs:element type="xs:string" name="valorDocumentIdentificatiu"/>
+            <xs:element type="tipusPersona" name="tipusPersona"/>
+            <xs:element type="xs:string" name="nomRaoSocial" minOccurs="0"/>
+            <xs:element type="xs:string" name="cognoms" minOccurs="0"/>
+            <xs:element type="xs:string" name="correuElectronic" minOccurs="0"/>
+            <xs:element type="xs:boolean" name="acceptaAvisos" minOccurs="0"/>
+            <xs:element type="xs:string" name="dataAcceptacioAvisos" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="tipusRepresentacio">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="TIPUS_A"/>
+            <xs:enumeration value="TIPUS_B"/>
+            <xs:enumeration value="TIPUS_C"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="resposta">
+        <xs:sequence>
+            <xs:element type="xs:string" name="codi" minOccurs="0"/>
+            <xs:element type="xs:string" name="descripcio" minOccurs="0"/>
+            <xs:element type="xs:string" name="tipusSolicitud" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="mida">
+        <xs:restriction base="xs:int">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="NonEmptyString">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="1"/>
+            <xs:pattern value=".*[^\s].*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+</xs:schema>
