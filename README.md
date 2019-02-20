@@ -42,6 +42,7 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
         </xs:sequence>
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |identificadorLegal | Identificador únic de la representació|
@@ -80,6 +81,7 @@ Per cada acció realitzada sobre una representació es registra un element _evid
         </xs:sequence>
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |dataCreacio | Data de creació de l'evidencia|
@@ -105,7 +107,6 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
         </xs:sequence>
 </xs:complexType>
 ```
-
 
 ## 2.4 Tipus de representacions
 
@@ -359,6 +360,7 @@ En cas d'existir alguna representació existent i vàlida que ho permeti es resp
         </xs:complexType>
 </xs:element>
 ```
+
 |Camp | Descripció
 |---- | ----------
 |representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, tramit, capacitat/s)|
@@ -383,6 +385,7 @@ En cas d'existir alguna representació existent i vàlida que ho permeti es resp
         </xs:complexType>
 </xs:element>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |resposta | Element del tipus _resposta_|
@@ -398,6 +401,7 @@ S'inclou l'element _resposta_
         </xs:sequence>
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |codi | Codi del resultat de la petició|
