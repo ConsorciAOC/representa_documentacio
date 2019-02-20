@@ -15,7 +15,8 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 
 
 ## 2.1 Representacio
-```
+
+```xml
 <xs:complexType name="representacio">
         <xs:sequence>
             <xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>
@@ -61,7 +62,7 @@ evidencies | Llistat d'elements _evidencia_
 ## 2.2 Evidencia
 Per cada acció realitzada sobre una representació es registra un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi en la representació.
 
-```
+```xml
 <xs:complexType name="evidencia">
         <xs:sequence>
             <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
@@ -90,7 +91,7 @@ documentsEvidencia | Llistat d'elements _documentEvidencia_
 
 ## 2.3 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
-```
+```xml
 <xs:complexType name="documentEvidencia">
         <xs:sequence>
             <xs:element name="uuid" type="xs:string"  minOccurs="0"/>
@@ -108,7 +109,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 
 ## 2.4 Tipus de representacions
 
-```
+```xml
 <xs:simpleType name="tipusRepresentacio">
         <xs:restriction base="xs:string">
             <xs:enumeration value="TIPUS_A"/>
@@ -118,7 +119,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 </xs:simpleType>
 ```
 El tipus de representació té afectació en l'ambit de la representació
-```
+```xml
 <xs:complexType name="ambitRepresentacio">
         <xs:sequence>
             <xs:element name="administracio" type="administracio" minOccurs="0"/>
@@ -141,7 +142,7 @@ Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor *
 L'element _ambitRepresentació_ està buit ja que no aplica.
 
 Exemple:
-```
+```xml
 <representacio>
    <identificadorLegal>201900000096</identificadorLegal>
    <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
@@ -175,7 +176,7 @@ Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor *
 L'element _ambitRepresentació_ té definit l'element _administracio_.
 
 Exemple:
-```
+```xml
 <representacio>
    <identificadorLegal>201900000097</identificadorLegal>
    <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
@@ -213,7 +214,7 @@ Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor *
 L'element _ambitRepresentació_ té definida la _administracio_, l'element _tramit_ i una llista d'elements _capacitat_.
 
 Exemple:
-```
+```xml
 <representacio>
    <identificadorLegal>201900000098</identificadorLegal>
    <tipusRepresentacio>TIPUS_C</tipusRepresentacio>
@@ -272,7 +273,7 @@ _Pendent_
 Permet consultar les representacions existents entre dues persones.
 
 #### Peticio
-```
+```xml
 <xs:element name="consultarRepresentacions">
         <xs:complexType>
             <xs:sequence>
@@ -308,7 +309,7 @@ estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 
 
 #### Resposta
-```
+```xml
 <xs:element name="consultarRepresentacionsResponse">
 	<xs:complexType>
 		<xs:sequence>
@@ -346,7 +347,7 @@ La opertació de validació permet preguntar a Representa si existeix alguna rep
 En cas d'existir alguna representació existent i vàlida que ho permeti es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 
 #### Petició
-```
+```xml
 <xs:element name="validarRepresentacio">
         <xs:complexType>
             <xs:sequence>
@@ -366,7 +367,7 @@ funcionariSolicitant | Persona funcionaria que fa la consulta de validació
 administracioSolicitant | Administració des d'on es llença la consulta de validació
 
 #### Resposta
-```
+```xml
 <xs:element name="validarRepresentacioResponse">
         <xs:complexType>
             <xs:sequence>
@@ -388,7 +389,7 @@ resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
 S'inclou l'element _resposta_
-```
+```xml
 <xs:complexType name="resposta">
         <xs:sequence>
             <xs:element type="xs:string" name="codi" minOccurs="0"/>
