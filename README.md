@@ -7,7 +7,7 @@ Tal i com es reflecteix a la següent figura, el **Core** de **Representa** s'in
 Per tant els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta, per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
 
 <p align="center">
-<img align="center" src="/img/representa_arquitectura_pci.png" />
+<img align="center" src="img/representa_arquitectura_pci.png" />
 </p>  
 
 # 2. Missatgeria específica
@@ -42,22 +42,22 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
         </xs:sequence>
 </xs:complexType>
 ```
-Camp | Descripció
----- | ----------
-identificadorLegal | Identificador únic de la representació
-tipusRepresentacio | Tipus de Representacio (TIPUS_A, TIPUS_B, TIPUS_C)
-estat | Llistat d'element _estat_
-poderdant | Persona (física o jurídica) que atorga el poder de representació
-representant | Persona (física o jurídica) que rep el poder de representació
-ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_, _tramit_ i _capacitat_
-dataCreacio | Data de creació de la representació
-dataIniciVigencia | Data d'inici de vigència
-dataFiVigencia | Data de fi de la vigència
-validacions | Nombre de validacions realitzades sobre aquesta representació
-csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació
-administracioReceptora | Administració receptora on s'ha inscrit la representació
-refAlta | Identificador per vincular les possibles N representacions a tramit creades en el mateix instant d'inscripció
-evidencies | Llistat d'elements _evidencia_
+|Camp | Descripció|
+|---- | ----------|
+|identificadorLegal | Identificador únic de la representació|
+|tipusRepresentacio | Tipus de Representacio (TIPUS_A, TIPUS_B, TIPUS_C)|
+|estat | Llistat d'element _estat_|
+|poderdant | Persona (física o jurídica) que atorga el poder de representació|
+|representant | Persona (física o jurídica) que rep el poder de representació|
+|ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_, _tramit_ i _capacitat_|
+|dataCreacio | Data de creació de la representació|
+|dataIniciVigencia | Data d'inici de vigència|
+|dataFiVigencia | Data de fi de la vigència|
+|validacions | Nombre de validacions realitzades sobre aquesta representació|
+|csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
+|administracioReceptora | Administració receptora on s'ha inscrit la representació|
+|refAlta | Identificador per vincular les possibles N representacions a tramit creades en el mateix instant d'inscripció|
+|evidencies | Llistat d'elements _evidencia_|
 
 ## 2.2 Evidencia
 Per cada acció realitzada sobre una representació es registra un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi en la representació.
@@ -80,14 +80,14 @@ Per cada acció realitzada sobre una representació es registra un element _evid
         </xs:sequence>
 </xs:complexType>
 ```
-Camp | Descripció
----- | ----------
-dataCreacio | Data de creació de l'evidencia
-identificadorLegal | Identificador únic de la representació
-motiu | Motiu del canvi
-administracioReceptora | Element del tipus _administracio_ on s'ha efectuat el canvi 
-funcionariReceptor | Persona funcionaria que ha executat el canvi
-documentsEvidencia | Llistat d'elements _documentEvidencia_
+|Camp | Descripció|
+|---- | ----------|
+|dataCreacio | Data de creació de l'evidencia|
+|identificadorLegal | Identificador únic de la representació|
+|motiu | Motiu del canvi|
+|administracioReceptora | Element del tipus _administracio_ on s'ha efectuat el canvi|
+|funcionariReceptor | Persona funcionaria que ha executat el canvi|
+|documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 2.3 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
@@ -300,12 +300,12 @@ Permet consultar les representacions existents entre dues persones.
 Segons el tipus de representació que es desitgi consultar, per a l'element _representacio_ serà obligatori informat determinats camps.
 
 
-Camp | Descripció
----- | ----------
-mida | Nombre màxim de resultats retornats per pàgina
-pagina | Pàgina de resultats sol·licitada (de 0 a N)
-representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions
-estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
+|Camp | Descripció|
+|---- | ----------|
+|mida | Nombre màxim de resultats retornats per pàgina|
+|pagina | Pàgina de resultats sol·licitada (de 0 a N)|
+|representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions|
+|estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats|
 
 
 #### Resposta
@@ -334,12 +334,12 @@ estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-resposta | Element del tipus _resposta_
-numRepresentacionsTotal | Nombre de representacions totals resultants de la petició de consulta
-numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de consulta
-representacions | Llistat d'1 o més elements del tipus _representacio_
+|Camp | Descripció|
+|---- | ----------|
+|resposta | Element del tipus _resposta_|
+|numRepresentacionsTotal | Nombre de representacions totals resultants de la petició de consulta|
+|numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de consulta|
+|representacions | Llistat d'1 o més elements del tipus _representacio_|
 
 
 ### 2.6.2 Validació
@@ -359,12 +359,12 @@ En cas d'existir alguna representació existent i vàlida que ho permeti es resp
         </xs:complexType>
 </xs:element>
 ```
-Camp | Descripció
----- | ----------
-representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, tramit, capacitat/s)
-dataValidacio | Data on es fa la consulta de validació. Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
-funcionariSolicitant | Persona funcionaria que fa la consulta de validació
-administracioSolicitant | Administració des d'on es llença la consulta de validació
+|Camp | Descripció
+|---- | ----------
+|representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, tramit, capacitat/s)|
+|dataValidacio | Data on es fa la consulta de validació. Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei|
+|funcionariSolicitant | Persona funcionaria que fa la consulta de validació|
+|administracioSolicitant | Administració des d'on es llença la consulta de validació|
 
 #### Resposta
 ```xml
@@ -383,10 +383,10 @@ administracioSolicitant | Administració des d'on es llença la consulta de vali
         </xs:complexType>
 </xs:element>
 ```
-Camp | Descripció
----- | ----------
-resposta | Element del tipus _resposta_
-representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
+|Camp | Descripció|
+|---- | ----------|
+|resposta | Element del tipus _resposta_|
+|representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació|
 
 S'inclou l'element _resposta_
 ```xml
@@ -398,11 +398,11 @@ S'inclou l'element _resposta_
         </xs:sequence>
 </xs:complexType>
 ```
-Camp | Descripció
----- | ----------
-codi | Codi del resultat de la petició
-descripcio | Descripció del resultat de la petició
-tipusSolicitud | Tipus de sol·licitud de la petició
+|Camp | Descripció|
+|---- | ----------|
+|codi | Codi del resultat de la petició|
+|descripcio | Descripció del resultat de la petició|
+|tipusSolicitud | Tipus de sol·licitud de la petició|
 
 
 # 4. Codis de resposta
