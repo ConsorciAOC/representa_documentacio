@@ -16,8 +16,8 @@ Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a serve
 Específicament per a fer ús del servei de Representa dins de la missatgeria de la PCI és necessari informar els següents elements del missatge XML:
 
 * //Peticion/Atributos/CodigoProducto >> REPRESENTA
-* //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO o REPRESENTA_CONSULTA segons l'ús**
-* //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO o REPRESENTA_CONSULTA segons l'ús**
+* //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
+* //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
 * //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de *Representa*_
 
 Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisits definits al document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
@@ -285,7 +285,8 @@ _Pendent_
 ## 3.6 Operacions
 
 ### 3.6.1 Consulta de representacions
-Permet consultar les representacions existents entre dues persones.
+Permet consultar les representacions existents entre dues persones. 
+Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
 #### Peticio
 ```xml
@@ -360,6 +361,7 @@ representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-re
 
 ### 3.6.2 Consulta de representació
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
+Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
 ### Petició
 
@@ -412,6 +414,7 @@ representacio | Element del tipus [_representació_](#21-representacio)
 ### 3.6.2 Validació
 La opertació de validació permet preguntar a Representa si existeix alguna representació en estat _VALIDA_ entre un poderdant i un representant per un tràmit i capacitat específic.
 En cas d'existir alguna representació existent i vàlida que ho permeti es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
+Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_VALIDACIO*.
 
 #### Petició
 
