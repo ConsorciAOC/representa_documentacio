@@ -17,6 +17,7 @@ Específicament per a fer ús del servei de Representa dins de la missatgeria de
 
 * //Peticion/Atributos/CodigoProducto >> REPRESENTA
 * //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
+* //Peticion/Atributos/DatosAutorizacion/Finalidad >> PROVES (preproducció) / REPRESENTA (producció)
 * //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
 * //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de *Representa*_
 
