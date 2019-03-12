@@ -671,3 +671,48 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 
 # 5. Codis de resposta
 _Pendent_
+
+# 6. Cataleg de tràmits
+Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en *families*. Alhora les families s'agrupen entorn a una entitat anomenada *cataleg*.
+Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
+Per generar o fer ús del catàleg es contemplen 3 escenaris:
+
+## 6.1 Creació manual
+Quan una administració inicia l'ús del servei de Representa disposarà d'un catàleg inicial buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
+
+## 6.2 Importació mitjançant fitxer CSV
+Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Aquest procés requereix 2 fitxers:
+
+* CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi familia";"Nom familia"_
+
+Exemple:
+```
+"0004";"Llicències"
+"0006";"Ajudes"
+"0007";"Sol·licituds"
+```
+
+El codi de cada familia ha de ser únic per cada catàleg.
+
+* CSV per tramits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia;"Codi tràmit";"Nom tramit"_
+
+Exemple:
+```
+"0004";"1110";"Llicència d'obres"
+"0004";"1230";"Reclamacions i recursos a taxes i preus públics"
+"0006";"1456";"Plans parcials d'ordenació"
+```
+El codi de cada tràmit ha de ser únic per cada familia. És recomenable que també sigui únic en tot el catàleg.
+
+Restriccions / limitacions
+* El separador de columnes del fitxer csv ha de ser el caràcter ';'.
+* Un catàleg pot incloure N families.
+* Una familia pot incloure N tràmits.
+* Tot tràmit ha de pertànyer a una familia i ha d'estar vinculat a una familia existent (o bé s'ha creat en una càrrega anterior o està definit en el fitxer families.csv que acompanyi la càrrega del tramits.csv en qüestió).
+* La càrrega mitjançant csv no actualitzarà cap familia ni cap tràmit existent. Un cop s'hagi creat una familia o tràmit amb un codi determinat, les posteriors càrregues indicant el mateix codi no actualitzaràn ni el tràmit ni la familia. Es podrà modificar manualment a través dels formularis web en els corresponents apartats d'edició.
+* Si s'afegeix una familia o tràmit nou (amb un codi que no existeixi prèviament al catàleg) es crearà i s'actualitzarà el llistat de families/tramits.
+
+## 6.3 Ús catàleg compartit per Consorci AOC
+_Pendent definir_
+
+
