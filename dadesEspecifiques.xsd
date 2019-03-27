@@ -165,6 +165,7 @@
         <xs:sequence>
             <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
             <xs:element name="identificadorLegal" type="xs:string"/>
+            <xs:element name="estat" type="estat"/>
             <xs:element name="motiu" type="xs:string"  minOccurs="0"/>
             <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
             <xs:element name="funcionariReceptor" type="persona"/>
