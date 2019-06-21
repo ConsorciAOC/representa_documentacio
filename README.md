@@ -46,9 +46,13 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
             <xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
             <xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
             <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />
             <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
             <xs:element name="refAlta" type="xs:string" minOccurs="0"/>
-            <xs:element name="evidencies" minOccurs="0">
+            <xs:element name="solicitant" type="solicitant" minOccurs="0" />
+            <xs:element name="origen" type="origen" minOccurs="0" />
+            <xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />
+            <xs:element name="evidencies" minOccurs="0" >
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>
@@ -56,7 +60,7 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
-</xs:complexType>
+    </xs:complexType>
 ```
 
 |Camp | Descripció|
@@ -72,8 +76,11 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 |dataFiVigencia | Data de fi de la vigència|
 |validacions | Nombre de validacions realitzades sobre aquesta representació|
 |csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
+|dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial|
 |administracioReceptora | Administració receptora on s'ha inscrit la representació|
 |refAlta | Identificador per vincular les possibles N representacions a tramit creades en el mateix instant d'inscripció|
+|solicitant | Persona i administració que van sol·licitar la creació de la representació|
+|idRepresentacioA | Relacionat amb l'apartat _a través de_ ... |
 |evidencies | Llistat d'elements _evidencia_|
 
 ## 3.2 Evidencia
@@ -307,6 +314,8 @@ Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
+							<xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
+							<xs:element name="solicitant" type="solicitant" />	
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -323,7 +332,8 @@ mida | Nombre màxim de resultats retornats per pàgina
 pagina | Pàgina de resultats sol·licitada (de 0 a N)
 representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions
 estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
-
+generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
+solicitant | Persona i administració que sol·licita la petició
 
 #### Resposta
 
@@ -344,6 +354,7 @@ estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
+						<xs:element name="urlDescarregaInforme"  minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -358,7 +369,7 @@ resposta | Element del tipus _resposta_
 numRepresentacionsTotal | Nombre de representacions totals resultants de la petició de consulta
 numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de consulta
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
-
+urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ### 3.6.2 Consulta de representació
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
@@ -374,6 +385,8 @@ Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="identificadorLegal" type="xs:string" />
+						<xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
+                        <xs:element name="solicitant" type="solicitant" />
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
@@ -385,7 +398,8 @@ Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA
 Camp | Descripció
 ---- | ----------
 identificadorLegal | Identificador únic de la representació
-
+generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
+solicitant | Persona i administració que sol·licita la petició
 
 ### Resposta
 
@@ -398,6 +412,7 @@ identificadorLegal | Identificador únic de la representació
 					<xs:sequence>
 						<xs:element name="resposta" type="resposta" />
 						<xs:element name="representacio" type="representacio" minOccurs="0" />
+						<xs:element name="urlDescarregaInforme"  minOccurs="0"/>
 					</xs:sequence>
 				</xs:complexType>
 			</xs:element>
@@ -410,7 +425,7 @@ Camp | Descripció
 ---- | ----------
 resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
-
+urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ### 3.6.2 Validació
 La opertació de validació permet preguntar a Representa si existeix alguna representació en estat _VALIDA_ entre un poderdant i un representant per un tràmit i capacitat específic.
@@ -425,8 +440,7 @@ Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA
             <xs:sequence>
                 <xs:element name="representacio" type="representacio" minOccurs="0"/>
                 <xs:element name="dataValidacio" type="xs:string"/>
-                <xs:element name="funcionariSolicitant" type="persona"/>
-                <xs:element name="administracioSolicitant" type="administracio"/>
+                <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
         </xs:complexType>
 </xs:element>
@@ -436,8 +450,7 @@ Camp | Descripció
 ---- | ----------
 representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, tramit, capacitat/s)
 dataValidacio | Data on es fa la consulta de validació. Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
-funcionariSolicitant | Persona funcionaria que fa la consulta de validació
-administracioSolicitant | Administració des d'on es llença la consulta de validació
+solicitant | Persona i administració que sol·licita la petició
 
 #### Resposta
 
@@ -480,6 +493,51 @@ Camp | Descripció
 codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició
+
+## 3.7 Elements missatgeria
+
+### 3.7.1 Capacitat
+Indica quin tipus d'accions defineixen l'ambit d'una representació per a les representacions de tipus _a tramit_.
+Les representacions _a organisme_ o _generals_ no tenen la dimensió de capacitat.
+
+```
+<xs:complexType name="capacitat">
+	<xs:sequence>
+		<xs:element name="codi" type="xs:string"/>
+		<xs:element name="nom" type="xs:string" minOccurs="0"/>
+	</xs:sequence>
+</xs:complexType>
+```
+
+La capacitat pot tenir els següents _codi_:
+- CONSULTAR
+- TRAMITAR
+- NOTIFICAR
+
+#### 3.7.2 Solicitant
+Element obligatori on cal informar quina persona i des de quina administració es fa la petició. Adicionalment a les consultes, els elements _representacio_ conserven la informació del _solicitant_ que va sol·licitar-ne la creació.
+
+```
+<xs:complexType name="solicitant">
+	<xs:sequence>
+		<xs:element name="persona" type="persona" minOccurs="0" />
+		<xs:element name="administracio" type="administracio" minOccurs="0" />
+	</xs:sequence>
+</xs:complexType>
+```
+
+#### 3.7.3 Origen
+Camp on es desa la font des d'on es va crear una representació. Pot pendre els següents valors:
+
+```
+<xs:simpleType name="origen">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="PORTAL_EMPLEAT"/>
+		<xs:enumeration value="PORTAL_CIUTADA"/>
+		<xs:enumeration value="INTEGRACIO"/>
+	</xs:restriction>
+</xs:simpleType>
+```
 
 # 4. Exemples de peticions
 
