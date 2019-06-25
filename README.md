@@ -545,44 +545,44 @@ Camp on es desa la font des d'on es va crear una representació. Pot pendre els 
 En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
 
 ```xml
-<r:validarRepresentacio>
-		<r:representacio>
-			<r:poderdant>
-				<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-				<r:valorDocumentIdentificatiu>12345678Z</r:valorDocumentIdentificatiu>
-				<r:tipusPersona>FISICA</r:tipusPersona>
-			</r:poderdant>
-			<r:representant>
-				<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-				<r:valorDocumentIdentificatiu>99999999A</r:valorDocumentIdentificatiu>
-				<r:tipusPersona>FISICA</r:tipusPersona>
-			</r:representant>
-			<r:ambitRepresentacio>
-				<r:administracio>
-					<r:codi>800180001</r:codi>
-				</r:administracio>
-				<r:tramit>					
-					<r:codi>1111</r:codi>
-				</r:tramit>
-				<r:capacitats>
-					<r:capacitat>
-						<r:codi>CONSULTA</r:codi>
-					</r:capacitat>
-				</r:capacitats>
-			</r:ambitRepresentacio>
-		</r:representacio>
-		<r:dataValidacio>2019-03-07T00:00:00</r:dataValidacio>
-		<r:solicitant>
-	        <r:persona>
-	         	<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-				<r:tipusPersona>FISICA</r:tipusPersona>
-	         	<r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
-	        </r:persona>
-	        <r:administracio>
-	         	<r:codi>12345</r:codi>
-	        </r:administracio>
-         </r:solicitant>
-</r:validarRepresentacio>
+<validarRepresentacio>
+		<representacio>
+			<poderdant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</poderdant>
+			<representant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>99999999A</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</representant>
+			<ambitRepresentacio>
+				<administracio>
+					<codi>800180001</codi>
+				</administracio>
+				<tramit>					
+					<codi>1111</codi>
+				</tramit>
+				<capacitats>
+					<capacitat>
+						<codi>CONSULTA</codi>
+					</capacitat>
+				</capacitats>
+			</ambitRepresentacio>
+		</representacio>
+		<dataValidacio>2019-03-07T00:00:00</dataValidacio>
+		<solicitant>
+	        <persona>
+	         	<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+	         	<valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+	        </persona>
+	        <administracio>
+	         	<codi>12345</codi>
+	        </administracio>
+         </solicitant>
+</validarRepresentacio>
 ```
 
 ## 4.2 Resposta validació positiva
@@ -668,9 +668,9 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 ## 4.4 Petició de consulta de representació
 
 ```xml
-<r:consultarRepresentacio>
-	<r:ConsultaRepresentacio>            
-		<r:identificadorLegal>201900000063</r:identificadorLegal>
+<consultarRepresentacio>
+	<ConsultaRepresentacio>            
+		<identificadorLegal>201900000063</identificadorLegal>
 		<solicitant>
 			<persona>
 				 <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
@@ -681,8 +681,8 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 				<codi>9821920002</codi>
 			</administracio>
 		</solicitant>
-	</r:ConsultaRepresentacio>
-</r:consultarRepresentacio>
+	</ConsultaRepresentacio>
+</consultarRepresentacio>
 ```
 
 Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
