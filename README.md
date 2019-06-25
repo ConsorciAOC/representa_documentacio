@@ -517,7 +517,7 @@ La capacitat pot tenir els següents _codi_:
 #### 3.7.2 Solicitant
 Element obligatori on cal informar quina persona i des de quina administració es fa la petició. Adicionalment a les consultes, els elements _representacio_ conserven la informació del _solicitant_ que va sol·licitar-ne la creació.
 
-```
+```xml
 <xs:complexType name="solicitant">
 	<xs:sequence>
 		<xs:element name="persona" type="persona" minOccurs="0" />
@@ -529,7 +529,7 @@ Element obligatori on cal informar quina persona i des de quina administració e
 #### 3.7.3 Origen
 Camp on es desa la font des d'on es va crear una representació. Pot pendre els següents valors:
 
-```
+```xml
 <xs:simpleType name="origen">
 	<xs:restriction base="xs:string">
 		<xs:enumeration value="PORTAL_EMPLEAT"/>
@@ -546,7 +546,6 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 
 ```xml
 <r:validarRepresentacio>
-	<r:dades>
 		<r:representacio>
 			<r:poderdant>
 				<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
@@ -573,15 +572,16 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 			</r:ambitRepresentacio>
 		</r:representacio>
 		<r:dataValidacio>2019-03-07T00:00:00</r:dataValidacio>
-		<r:funcionariSolicitant>
-			<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-			<r:valorDocumentIdentificatiu>99999999A</r:valorDocumentIdentificatiu>
-			<r:tipusPersona>FISICA</r:tipusPersona>
-		</r:funcionariSolicitant>
-		<r:administracioSolicitant>
-			<r:codi>1</r:codi>
-		</r:administracioSolicitant>
-	</r:dades>
+		<r:solicitant>
+	        <r:persona>
+	         	<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+				<r:tipusPersona>FISICA</r:tipusPersona>
+	         	<r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+	        </r:persona>
+	        <r:administracio>
+	         	<r:codi>12345</r:codi>
+	        </r:administracio>
+         </r:solicitant>
 </r:validarRepresentacio>
 ```
 
@@ -671,9 +671,21 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 <r:consultarRepresentacio>
 	<r:ConsultaRepresentacio>            
 		<r:identificadorLegal>201900000063</r:identificadorLegal>
+		<solicitant>
+			<persona>
+				 <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+				<valorDocumentIdentificatiu>12121212Z</valorDocumentIdentificatiu>
+			</persona>
+			<administracio>
+				<codi>9821920002</codi>
+			</administracio>
+		</solicitant>
 	</r:ConsultaRepresentacio>
 </r:consultarRepresentacio>
 ```
+
+Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
 
 ## 4.5 Resposta de consulta de representació
 
@@ -726,6 +738,106 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 	</resultat>
  </consultarRepresentacioResponse>
 ```
+
+Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
+
+```xml
+<consultarRepresentacioResponse xmlns="r:representa:V1.0">
+	<resultat>
+	<resposta>
+	   <codi>0</codi>
+	   <descripcio>L'operació ha estat executada correctament</descripcio>
+	   <tipusSolicitud>CONSULTA</tipusSolicitud>
+	</resposta>
+	<urlDescarregaInforme xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://serveis3.app.aoc.cat/representa-core/informe?uuid=bea705e1-6669-4550-b59a-7da0bb99a16c</urlDescarregaInforme>
+	</resultat>
+</consultarRepresentacioResponse>
+```
+
+## 4.6 Petició de consulta de representacions
+Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
+
+```xml
+<consultarRepresentacions>
+	<ConsultaRepresentacions>
+		<mida>25</mida>
+		<pagina>0</pagina>
+		<representacio>			
+			<poderdant>
+					 <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+					 <valorDocumentIdentificatiu>11223344B</valorDocumentIdentificatiu> 
+					 <tipusPersona>FISICA</tipusPersona>
+			</poderdant>
+			<representant>
+					 <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+					 <valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
+					 <tipusPersona>FISICA</tipusPersona>
+				  </representant>             	
+		</representacio>      					 
+		<estats>		 
+		   <estat>VALIDA</estat>
+		   <estat>EXPIRADA</estat>
+		</estats>         
+		<generaInforme>false</generaInforme>		
+		<solicitant>
+			<persona>
+				 <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+				<valorDocumentIdentificatiu>12121212Z</valorDocumentIdentificatiu>
+			</persona>
+			<administracio>
+				<codi>9821920002</codi>
+			</administracio>
+		</solicitant> 
+	</ConsultaRepresentacions>
+</consultarRepresentacions>
+```
+
+Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
+
+
+## 4.7 Resposta de consulta de representacions
+La resposta indica que la consulta anterior consta de 53 representacions i 6 pàgines de resultats.
+
+```xml
+<consultarRepresentacionsResponse xmlns="r:representa:V1.0">
+	<resultat>
+		<resposta>
+		   <codi>0</codi>
+		   <descripcio>L'operació ha estat executada correctament</descripcio>
+		   <tipusSolicitud>CONSULTA</tipusSolicitud>
+		</resposta>
+		<numRepresentacionsTotal xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">53</numRepresentacionsTotal>
+		<numPaginesTotal xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">6</numPaginesTotal>
+		<representacions>
+		   <representacio>
+			  ...
+		   </representacio>
+		   <representacio>
+			  ...
+		   </representacio>
+		</representacions>
+	</resultat>
+</consultarRepresentacionsResponse>
+```
+
+Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
+
+```xml
+<consultarRepresentacionsResponse xmlns="r:representa:V1.0">
+	<resultat>
+		<resposta>
+		   <codi>0</codi>
+		   <descripcio>L'operació ha estat executada correctament</descripcio>
+		   <tipusSolicitud>INFORME</tipusSolicitud>
+		</resposta>
+		<urlDescarregaInforme xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://serveis3.app.aoc.cat/representa-core/informe?uuid=d94e19f3-9f49-4819-9356-9f6c93c18c8b</urlDescarregaInforme>
+	</resultat>
+</consultarRepresentacionsResponse>
+```
+
+NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
+
 
 # 5. Codis de resposta
 _Pendent_
