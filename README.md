@@ -169,7 +169,7 @@ El tipus de representació té afectació en l'ambit de la representació
 ```
 
 L'element _tramit_ té la següent estructura:
-```
+```xml
 <xs:complexType name="tramit">
     <xs:sequence>
         <xs:element type="xs:string" name="uuid" minOccurs="0" />
