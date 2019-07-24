@@ -119,7 +119,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 ```xml
 <xs:complexType name="documentEvidencia">
         <xs:sequence>
-            <xs:element name="uuid" type="xs:string"  minOccurs="0"/>
+            <xs:element name="uuid" type="xs:string" minOccurs="0"/>
             <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
             <xs:element name="nomDocument" type="xs:string" minOccurs="0"/>
             <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
@@ -130,6 +130,16 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
         </xs:sequence>
 </xs:complexType>
 ```
+
+|Camp | Descripció|
+|---- | ----------|
+|tipusDocument | Tipus del document (sol·licitud, poder notarial, altes) |
+|nomDocument | Nom del document|
+|descripcio | Descripció del document|
+|tamany | Tamany (bytes)|
+|tipusEncriptacio | Algoritme de resum criptogràfic|
+|resumCriptografic | Resum hash|
+|dataCreacio | Data de creació|
 
 ## 3.4 Tipus de representacions					   
 ```xml
@@ -157,6 +167,29 @@ El tipus de representació té afectació en l'ambit de la representació
         </xs:sequence>
 </xs:complexType>
 ```
+
+L'element _tramit_ té la següent estructura:
+```
+<xs:complexType name="tramit">
+    <xs:sequence>
+        <xs:element type="xs:string" name="uuid" minOccurs="0" />
+        <xs:element type="NonEmptyString" name="codi" minOccurs="0" />
+        <xs:element type="NonEmptyString" name="nom" minOccurs="0" />
+        <xs:element type="xs:string" name="uuidFamilia" minOccurs="0" />
+        <xs:element type="xs:string" name="descripcio" minOccurs="0" />
+        <xs:element type="xs:boolean" name="actiu" minOccurs="0" />
+    </xs:sequence>
+</xs:complexType>
+```
+
+|Camp | Descripció|
+|---- | ----------|
+|codi | Codi del tramit |
+|nom | Nom del tramit |
+|uuidFamilia | Identificador únic intern de la familia a la que pertany |
+|descripcio | Descrpicó del tramit |
+|actiu | Indicador d'actiu o no actiu |
+
 
 ### 3.4.1 General
 Representació per a qualsevol tràmit, per a qualsevol administració.

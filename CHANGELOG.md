@@ -2,6 +2,7 @@
 
 ## Juliol 2019
 - Corregit titol
+- Afegit descripció element _tramit_ i detall d'alguns camps de _documentEvidencia_
 
 ## Juny 2019
 - Afegida explicació dels elements _origen_, _solicitant_, _capacitat_
