@@ -1,5 +1,8 @@
 # Change log
 
+## Juliol 2019
+- Corregit titol
+
 ## Juny 2019
 - Afegida explicació dels elements _origen_, _solicitant_, _capacitat_
 
