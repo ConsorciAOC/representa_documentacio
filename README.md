@@ -16,9 +16,9 @@ Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a serve
 Específicament per a fer ús del servei de Representa dins de la missatgeria de la PCI és necessari informar els següents elements del missatge XML:
 
 * //Peticion/Atributos/CodigoProducto >> REPRESENTA
-* //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
+* //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS / REPRESENTA_ALTA _segons l'ús**_
 * //Peticion/Atributos/DatosAutorizacion/Finalidad >> PROVES (preproducció) / REPRESENTA (producció)
-* //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS  segons l'ús**
+* //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS / REPRESENTA_ALTA _segons l'ús**_
 * //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de *Representa*_
 
 Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisits definits al document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
@@ -34,33 +34,32 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 
 ```xml
 <xs:complexType name="representacio">
-        <xs:sequence>
-            <xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>
-            <xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>
-            <xs:element name="estat" type="estat" minOccurs="0"/>
-            <xs:element name="poderdant" type="persona" minOccurs="1"/>
-            <xs:element name="representant" type="persona" minOccurs="1"/>
-            <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
-            <xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
-            <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />
-            <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
-            <xs:element name="refAlta" type="xs:string" minOccurs="0"/>
-            <xs:element name="solicitant" type="solicitant" minOccurs="0" />
-            <xs:element name="origen" type="origen" minOccurs="0" />
-            <xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />
-            <xs:element name="evidencies" minOccurs="0" >
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-    </xs:complexType>
+	<xs:sequence>
+		<xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>
+		<xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>
+		<xs:element name="estat" type="estat" minOccurs="0"/>
+		<xs:element name="poderdant" type="persona" minOccurs="1"/>
+		<xs:element name="representant" type="persona" minOccurs="1"/>
+		<xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
+		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+		<xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>
+		<xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
+		<xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
+		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
+		<xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />
+		<xs:element name="refAlta" type="xs:string" minOccurs="0"/>
+		<xs:element name="solicitant" type="solicitant" minOccurs="0" />
+		<xs:element name="origen" type="origen" minOccurs="0" />
+		<xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />
+		<xs:element name="evidencies" minOccurs="0" >
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+	</xs:sequence>
+</xs:complexType>
 ```
 
 |Camp | Descripció|
@@ -77,7 +76,6 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 |validacions | Nombre de validacions realitzades sobre aquesta representació|
 |csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
 |dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial|
-|administracioReceptora | Administració receptora on s'ha inscrit la representació|
 |refAlta | Identificador per vincular les possibles N representacions a tramit creades en el mateix instant d'inscripció|
 |solicitant | Persona i administració que van sol·licitar la creació de la representació|
 |idRepresentacioA | Relacionat amb l'apartat _a través de_ ... |
@@ -88,20 +86,20 @@ Per cada acció realitzada sobre una representació es registra un element _evid
 
 ```xml
 <xs:complexType name="evidencia">
-        <xs:sequence>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
-            <xs:element name="identificadorLegal" type="xs:string"/>
-            <xs:element name="motiu" type="xs:string"  minOccurs="0"/>
-            <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
-            <xs:element name="funcionariReceptor" type="persona"/>
-            <xs:element name="documentsEvidencia" minOccurs="0">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="documentEvidencia" type="documentEvidencia" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
+	<xs:sequence>
+		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+		<xs:element name="identificadorLegal" type="xs:string"/>
+		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>
+		<xs:element name="funcionariReceptor" type="persona"/>
+		<xs:element name="documentsEvidencia" minOccurs="0">
+			<xs:complexType>
+				<xs:sequence>
+					<xs:element name="documentEvidencia" type="documentEvidencia" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:complexType>
+		</xs:element>
+		<xs:element name="solicitant" type="solicitant" minOccurs="0"/>
+	</xs:sequence>
 </xs:complexType>
 ```
 
@@ -110,7 +108,7 @@ Per cada acció realitzada sobre una representació es registra un element _evid
 |dataCreacio | Data de creació de l'evidencia|
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
-|administracioReceptora | Element del tipus _administracio_ on s'ha efectuat el canvi|
+|solicitant | Element del tipus _solicitant_|
 |funcionariReceptor | Persona funcionaria que ha executat el canvi|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
@@ -214,9 +212,9 @@ Exemple:
    <dataIniciVigencia>2019-03-06T00:00:00</dataIniciVigencia>
    <dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
    <validacions>0</validacions>
-   <administracioReceptora>
+   <solicitant>
       ...
-   </administracioReceptora>
+   </solicitant>
    <evidencies>
       <evidencia>
           ...
@@ -252,9 +250,9 @@ Exemple:
    <dataIniciVigencia>2019-03-06T00:00:00</dataIniciVigencia>
    <dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
    <validacions>0</validacions>
-   <administracioReceptora>
+   <solicitant>
       ...
-   </administracioReceptora>
+   </solicitant>
    <evidencies>
       <evidencia>
           ...
@@ -298,9 +296,9 @@ Exemple:
    <dataIniciVigencia>2019-03-06T00:00:00</dataIniciVigencia>
    <dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
    <validacions>0</validacions>
-   <administracioReceptora>
+   <solicitant>
       ...
-   </administracioReceptora>
+   </solicitant>
    <evidencies>
       <evidencia>
           ...
@@ -527,6 +525,74 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició
 
+### 3.6.4 Alta / Modificació
+Permet realitzar la inscripció o modificació** d'una representació.
+La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop creada una representació.
+
+#### Petició
+
+```xml
+<xs:element name="processarRepresentacio">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="dades">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="tokenValid" type="xs:string" minOccurs="0" />
+						<xs:element name="representacio" type="representacio">
+						</xs:element>
+						<xs:element name="documentsRepresentacio" minOccurs="0" >
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="documentRepresentacio" minOccurs="0" maxOccurs="unbounded" type="documentRepresentacio" />
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="motiu" type="xs:string" />
+						<xs:element name="tipusSolicitud"  type="tipusSolicitud"/>				
+						<xs:element name="solicitant" type="solicitant" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació
+representacio | Element del tipus _representacio_ 
+documentsRepresentacio | Elements del tipus _documentRepresentacio_
+motiu | Descripció del motiu de la inscripció
+tipusSolicitud | Tipus de sol·licitud de la petició (ALTA, MODIFICACIO)
+solicitant | Persona i administració que sol·licita la petició
+
+
+#### Resposta
+```xml
+<xs:element name="processarRepresentacioResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="resultat" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="resposta" type="resposta" />
+						<xs:element name="representacio" type="representacio" />
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+resposta | Element del tipus _resposta_
+representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
+
+
 ## 3.7 Elements missatgeria
 
 ### 3.7.1 Capacitat
@@ -574,131 +640,9 @@ Camp on es desa la font des d'on es va crear una representació. Pot pendre els 
 
 # 4. Exemples de peticions
 
-## 4.1 Peticio de validació. 
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
+## 4.1 Consulta
 
-```xml
-<validarRepresentacio>
-		<representacio>
-			<poderdant>
-				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-				<valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
-				<tipusPersona>FISICA</tipusPersona>
-			</poderdant>
-			<representant>
-				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-				<valorDocumentIdentificatiu>99999999A</valorDocumentIdentificatiu>
-				<tipusPersona>FISICA</tipusPersona>
-			</representant>
-			<ambitRepresentacio>
-				<administracio>
-					<codi>800180001</codi>
-				</administracio>
-				<tramit>					
-					<codi>1111</codi>
-				</tramit>
-				<capacitats>
-					<capacitat>
-						<codi>CONSULTA</codi>
-					</capacitat>
-				</capacitats>
-			</ambitRepresentacio>
-		</representacio>
-		<dataValidacio>2019-03-07T00:00:00</dataValidacio>
-		<solicitant>
-	        <persona>
-	         	<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-				<tipusPersona>FISICA</tipusPersona>
-	         	<valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-	        </persona>
-	        <administracio>
-	         	<codi>12345</codi>
-	        </administracio>
-         </solicitant>
-</validarRepresentacio>
-```
-
-## 4.2 Resposta validació positiva
-Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
-
-```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">
- <resultat>
-	<resposta>
-	   <codi>0</codi>
-	   <descripcio>S'ha validat positivament el poder sol·licitat</descripcio>
-	   <tipusSolicitud>VALIDACIO</tipusSolicitud>
-	</resposta>
-	<representacio>
-	   <identificadorLegal>201900000131</identificadorLegal>
-	   <tipusRepresentacio>TIPUS_B</tipusRepresentacio>
-	   <estat>VALIDA</estat>
-	   <poderdant>
-		  ...
-	   </poderdant>
-	   <representant>
-		  ...
-	   </representant>
-	   <ambitRepresentacio>
-		  <administracio>
-			 <codi>800180001</codi>
-			 <nif>P-0800100-J</nif>
-			 <nom>Ajuntament d'Abrera</nom>
-			 <activa>true</activa>
-		  </administracio>
-	   </ambitRepresentacio>
-	   <dataCreacio>2019-03-08T00:00:00</dataCreacio>
-	   <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
-	   <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
-	   <validacions>2</validacions>
-	   <administracioReceptora>
-		  <codi>9821920002</codi>
-		  <nif>Q12345678</nif>
-		  <nom>Consorci AOC</nom>
-		  ...
-	   </administracioReceptora>
-	   <evidencies>
-		  <evidencia>
-			 <dataCreacio>2019-03-05T14:18:01</dataCreacio>
-			 <identificadorLegal>201900000131</identificadorLegal>
-			 <motiu>ALTA - Inscripció</motiu>
-			 <administracioReceptora>
-				<codi>9821920002</codi>
-				<nif>Q12345678</nif>
-				...
-			 </administracioReceptora>
-			 <funcionariReceptor>
-				...
-			 </funcionariReceptor>
-			 <documentsEvidencia>
-				<documentEvidencia>
-				   ...
-				</documentEvidencia>
-			 </documentsEvidencia>
-		  </evidencia>
-	   </evidencies>
-	</representacio>
- </resultat>
-</validarRepresentacioResponse>
-```
-
-** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
-
-## 4.3 Resposta negativa
-En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
-
-```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">
-	<resultat>
-        <resposta>
-            <codi>001</codi>
-            <descripcio>No hi ha cap apoderament inscrit amb aquesta informació</descripcio>
-        </resposta>
-    </resultat>
-</validarRepresentacioResponse>
-```
-
-## 4.4 Petició de consulta de representació
+### Petició
 
 ```xml
 <consultarRepresentacio>
@@ -720,10 +664,10 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 
 Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
 
-## 4.5 Resposta de consulta de representació
+### Resposta de consulta de representació
 
 ```xml
-<consultarRepresentacioResponse xmlns="r:representa:V1.0">
+<consultarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
 	 <resultat>
 		<resposta>
 		   <codi>0</codi>
@@ -755,9 +699,9 @@ Si es vol retornar els resultats en format PDF generant un informe cal indicar l
 		   <dataIniciVigencia>2019-02-23T00:00:00</dataIniciVigencia>
 		   <dataFiVigencia>2019-02-24T00:00:00</dataFiVigencia>
 		   <validacions>0</validacions>
-		   <administracioReceptora>
+		   <solicitant>
 			  ...
-		   </administracioReceptora>
+		   </solicitant>
 		   <refAlta>a716be0b-4882-44a2-bd4a-7de30bbc8a8b-2512070005</refAlta>
 		   <evidencies>
 			  <evidencia>
@@ -775,7 +719,7 @@ Si es vol retornar els resultats en format PDF generant un informe cal indicar l
 Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
 
 ```xml
-<consultarRepresentacioResponse xmlns="r:representa:V1.0">
+<consultarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
 	<resultat>
 	<resposta>
 	   <codi>0</codi>
@@ -787,8 +731,10 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 </consultarRepresentacioResponse>
 ```
 
-## 4.6 Petició de consulta de representacions
+## 4.2 Consulta (múltiples representacions)
 Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
+
+### Petició
 
 ```xml
 <consultarRepresentacions>
@@ -829,11 +775,12 @@ Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRA
 Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
 
 
-## 4.7 Resposta de consulta de representacions
+### Resposta
+
 La resposta indica que la consulta anterior consta de 53 representacions i 6 pàgines de resultats.
 
 ```xml
-<consultarRepresentacionsResponse xmlns="r:representa:V1.0">
+<consultarRepresentacionsResponse xmlns="http://www.aoc.cat/representa/v2">
 	<resultat>
 		<resposta>
 		   <codi>0</codi>
@@ -857,7 +804,7 @@ La resposta indica que la consulta anterior consta de 53 representacions i 6 pà
 Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
 
 ```xml
-<consultarRepresentacionsResponse xmlns="r:representa:V1.0">
+<consultarRepresentacionsResponse xmlns="http://www.aoc.cat/representa/v2">
 	<resultat>
 		<resposta>
 		   <codi>0</codi>
@@ -871,6 +818,305 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
+## 4.3 Validació
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
+
+### Peticio
+
+```xml
+<validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
+		<representacio>
+			<poderdant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</poderdant>
+			<representant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>99999999A</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</representant>
+			<ambitRepresentacio>
+				<administracio>
+					<codi>800180001</codi>
+				</administracio>
+				<tramit>					
+					<codi>1111</codi>
+				</tramit>
+				<capacitats>
+					<capacitat>
+						<codi>CONSULTA</codi>
+					</capacitat>
+				</capacitats>
+			</ambitRepresentacio>
+		</representacio>
+		<dataValidacio>2019-03-07T00:00:00</dataValidacio>
+		<solicitant>
+	        <persona>
+	         	<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+	         	<valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+	        </persona>
+	        <administracio>
+	         	<codi>12345</codi>
+	        </administracio>
+         </solicitant>
+</validarRepresentacio>
+```
+
+### Resposta (validació positiva)
+Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
+
+```xml
+<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
+ <resultat>
+	<resposta>
+	   <codi>0</codi>
+	   <descripcio>S'ha validat positivament el poder sol·licitat</descripcio>
+	   <tipusSolicitud>VALIDACIO</tipusSolicitud>
+	</resposta>
+	<representacio>
+	   <identificadorLegal>201900000131</identificadorLegal>
+	   <tipusRepresentacio>TIPUS_B</tipusRepresentacio>
+	   <estat>VALIDA</estat>
+	   <poderdant>
+		  ...
+	   </poderdant>
+	   <representant>
+		  ...
+	   </representant>
+	   <ambitRepresentacio>
+		  <administracio>
+			 <codi>800180001</codi>
+			 <nif>P-0800100-J</nif>
+			 <nom>Ajuntament d'Abrera</nom>
+			 <activa>true</activa>
+		  </administracio>
+	   </ambitRepresentacio>
+	   <dataCreacio>2019-03-08T00:00:00</dataCreacio>
+	   <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
+	   <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
+	   <validacions>2</validacions>
+	   <solicitant>
+		  ...
+	   </solicitant>
+	   <evidencies>
+		  <evidencia>
+			 <dataCreacio>2019-03-05T14:18:01</dataCreacio>
+			 <identificadorLegal>201900000131</identificadorLegal>
+			 <motiu>ALTA - Inscripció</motiu>
+			 <solicitant>
+				...
+			 </solicitant>
+			 <funcionariReceptor>
+				...
+			 </funcionariReceptor>
+			 <documentsEvidencia>
+				<documentEvidencia>
+				   ...
+				</documentEvidencia>
+			 </documentsEvidencia>
+		  </evidencia>
+	   </evidencies>
+	</representacio>
+ </resultat>
+</validarRepresentacioResponse>
+```
+
+** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
+
+### Resposta (validacio negativa)
+En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
+
+```xml
+<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
+	<resultat>
+        <resposta>
+            <codi>001</codi>
+            <descripcio>No hi ha cap apoderament inscrit amb aquesta informació</descripcio>
+        </resposta>
+    </resultat>
+</validarRepresentacioResponse>
+```
+
+## 4.4 Alta
+Exemple on es crea una representació.
+
+### Petició
+
+```xml
+<processarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
+	<dades>
+		<tokenValid>3Khny65kn....</tokenValid>				   
+		<representacio>    			
+			<tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+			<poderdant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>11223344B</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</poderdant> 
+			<representant>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<valorDocumentIdentificatiu>12121212Z</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+			</representant>        
+			<estat>VALIDA</estat>  
+			<dataIniciVigencia>2019-11-26T00:00:00</dataIniciVigencia>
+			<dataFiVigencia>2024-11-26T00:00:00</dataFiVigencia>	                                             
+		</representacio>
+		<motiu>Alta de representacio</motiu>
+		<tipusSolicitud>ALTA</tipusSolicitud>				
+		<solicitant>
+			<persona>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+				<valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>
+			</persona>
+			<administracio>
+				<codi>12345</codi>
+			</administracio>
+		</solicitant> 
+	</dades>
+</processarRepresentacio>
+```
+
+### Resposta
+
+```xml
+ <processarRepresentacioResponse xmlns:ns2="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>ALTA</tipusSolicitud>
+	   </resposta>
+	   <representacio>
+		  <identificadorLegal>201900000426</identificadorLegal>
+		  <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+		  <estat>VALIDA</estat>
+		  <poderdant>
+			 ...
+		  </poderdant>
+		  <representant>
+			 ...
+		  </representant>
+		  <ambitRepresentacio/>
+		  <dataCreacio>2019-10-11T14:42:51</dataCreacio>
+		  <dataIniciVigencia>2019-11-26T00:00:00</dataIniciVigencia>
+		  <dataFiVigencia>2019-11-27T00:00:00</dataFiVigencia>
+		  <validacions>0</validacions>
+		  <solicitant>
+			...
+		  </solicitant>
+		  <evidencies>
+			 <evidencia>
+				<dataCreacio>2019-10-11T14:42:51</dataCreacio>
+				<identificadorLegal>201900000426</identificadorLegal>
+				<estat>VALIDA</estat>
+				<motiu>Alta de representacio</motiu>                        
+				<solicitant>
+					...
+				</solicitant>
+			 </evidencia>
+		  </evidencies>
+	   </representacio>
+	</resultat>
+ </processarRepresentacioResponse>
+```
+
+## 4.5 Modificació
+L'unic atribut que es pot modificar d'una representació és el seu _estat_. Per a fer-ho cal indicar l'identificadorLegal per recuperar la representació i el nou estat que es desitja modificar.
+En aquest exemple es modifica l'estat de la representació creada al punt 4.7 passant de VALIDA a DENEGADA.
+
+### Petició
+
+```xml
+<processarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
+	<dades>
+		<tokenValid/>				   
+		<representacio>   
+			<identificadorLegal>201900000426</identificadorLegal>       
+			<estat>DENEGADA</estat>
+			<administracioReceptora>
+				<codi>1234</codi>
+			</administracioReceptora>                                       
+		</representacio>
+		<motiu>Denegació de la representació</motiu>
+		<tipusSolicitud>MODIFICACIO</tipusSolicitud>				
+		<solicitant>
+			<persona>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
+				<valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>         
+			</persona>
+			<administracio>
+				<codi>1234</codi>
+			</administracio>
+		</solicitant> 
+	</dades>
+</processarRepresentacio>
+```
+
+### Resposta
+
+```xml
+<processarRepresentacioResponse xmlns:ns2="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>MODIFICACIO</tipusSolicitud>
+	   </resposta>
+	   <representacio>
+		  <identificadorLegal>201900000426</identificadorLegal>
+		  <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+		  <estat>DENEGADA</estat>
+		  <poderdant>
+			 ...
+		  </poderdant>
+		  <representant>
+			 ...
+		  </representant>
+		  <ambitRepresentacio/>
+		  <dataCreacio>2019-10-11T14:42:51</dataCreacio>
+		  <dataIniciVigencia>2019-11-26T00:00:00</dataIniciVigencia>
+		  <dataFiVigencia>2019-11-27T00:00:00</dataFiVigencia>
+		  <validacions>0</validacions>
+		  <solicitant>
+			 ...
+		  </solicitant>
+		  <evidencies>
+			 <evidencia>
+				<dataCreacio>2019-10-11T14:42:51</dataCreacio>
+				<identificadorLegal>201900000426</identificadorLegal>
+				<estat>VALIDA</estat>
+				<motiu>ALTA - Alta a través de PCI3</motiu>
+				<solicitant>
+					 ...
+				</solicitant>				
+				<documentsEvidencia>
+				   <documentEvidencia>
+					  <uuid>117095</uuid>
+					  <nomDocument>SIGNATURA_EVIDENCIA_136091.xml</nomDocument>
+					  <descripcio>Signatura creada automaticament</descripcio>
+					  <dataCreacio>2019-10-11T14:45:21</dataCreacio>
+				   </documentEvidencia>
+				</documentsEvidencia>
+			 </evidencia>
+			 <evidencia>
+				<dataCreacio>2019-10-11T15:00:15</dataCreacio>
+				<identificadorLegal>201900000426</identificadorLegal>
+				<estat>DENEGADA</estat>
+				<motiu>MODIFICACIO - Denegació de la representació</motiu>
+				<solicitant>
+					 ...
+				</solicitant>
+			 </evidencia>
+		  </evidencies>
+	   </representacio>
+	</resultat>
+</processarRepresentacioResponse>
+```
 
 # 5. Codis de resposta
 _Pendent_

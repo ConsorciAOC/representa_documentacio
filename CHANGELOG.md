@@ -1,5 +1,10 @@
 # Change log
 
+## Octubre 2019
+- Afegida descripció i exemples d'operacions d'Alta i Modificació d'una representació.
+- Reestructuració operacions.
+- S'elimina l'element _administracioReceptora_ quedant cobert per l'element _solicitant_
+
 ## Juliol 2019
 - Corregit titol
 - Afegit descripció element _tramit_ i detall d'alguns camps de _documentEvidencia_
