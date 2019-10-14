@@ -89,8 +89,7 @@ Per cada acció realitzada sobre una representació es registra un element _evid
 	<xs:sequence>
 		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
 		<xs:element name="identificadorLegal" type="xs:string"/>
-		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>
-		<xs:element name="funcionariReceptor" type="persona"/>
+		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>		
 		<xs:element name="documentsEvidencia" minOccurs="0">
 			<xs:complexType>
 				<xs:sequence>
@@ -109,7 +108,6 @@ Per cada acció realitzada sobre una representació es registra un element _evid
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
-|funcionariReceptor | Persona funcionaria que ha executat el canvi|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 DocumentEvidencia
