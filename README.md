@@ -15,11 +15,13 @@ Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a serve
 
 Específicament per a fer ús del servei de Representa dins de la missatgeria de la PCI és necessari informar els següents elements del missatge XML:
 
-* //Peticion/Atributos/CodigoProducto >> REPRESENTA
-* //Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS / REPRESENTA_ALTA _segons l'ús**_
-* //Peticion/Atributos/DatosAutorizacion/Finalidad >> PROVES (preproducció) / REPRESENTA (producció)
-* //Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA_REPRESENTACIO / REPRESENTA_CONSULTA_REPRESENTACIONS / REPRESENTA_ALTA _segons l'ús**_
-* //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de *Representa*_
+```
+//Peticion/Atributos/CodigoProducto >> REPRESENTA
+//Peticion/Atributos/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA / REPRESENTA_MODIFICACIO / REPRESENTA_ALTA _segons l'ús**_
+//Peticion/Atributos/DatosAutorizacion/Finalidad >> PROVES (preproducció) / REPRESENTA (producció)
+//Peticion/Solicitudes/SolicitudTransmision/DatosGenericos/Transmision/CodigoCertificado >> REPRESENTA_VALIDACIO / REPRESENTA_CONSULTA / REPRESENTA_MODIFICACIO / REPRESENTA_ALTA _segons l'ús**_
+//Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de Representa del tipus consultarRepresentacions, consultarRepresentacio o validarRepresentacio_
+```
 
 Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisits definits al document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
 

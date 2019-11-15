@@ -1,5 +1,8 @@
 # Change log
 
+## Novembre 2019
+- Actualitzats codis de producte.
+
 ## Octubre 2019
 - Afegida descripció i exemples d'operacions d'Alta i Modificació d'una representació.
 - Reestructuració operacions.
