@@ -367,13 +367,14 @@ Exemple:
 
 ## 3.6 Estats
 Estats possibles d'una representació:
-* VALIDA >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
-* PENDENT_VALIDACIO >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* DENEGADA >> Un cop revisada la documentació adjunta a la inscripció.
-* EXPIRADA >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
-* RENUNCIADA >> El representant renuncia a la representació.
-* REVOCADA >> El poderdant revoca la representació.
-* ANULADA >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
+* `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
+* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada
+* `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
+* `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
+* `RENUNCIADA` >> El representant renuncia a la representació.
+* `REVOCADA` >> El poderdant revoca la representació.
+* `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
 ### 3.6.1 Diagrama de fluxe d'estats
 _Pendent_
@@ -650,35 +651,6 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
-
-
-
-
-
-#### 3.8.2 Solicitant
-Element obligatori on cal informar quina persona i des de quina administració es fa la petició. Adicionalment a les consultes, els elements _representacio_ conserven la informació del _solicitant_ que va sol·licitar-ne la creació.
-
-```xml
-<xs:complexType name="solicitant">
-	<xs:sequence>
-		<xs:element name="persona" type="persona" minOccurs="0" />
-		<xs:element name="administracio" type="administracio" minOccurs="0" />
-	</xs:sequence>
-</xs:complexType>
-```
-
-#### 3.8.3 Origen
-Camp on es desa la font des d'on es va crear una representació. Pot pendre els següents valors:
-
-```xml
-<xs:simpleType name="origen">
-	<xs:restriction base="xs:string">
-		<xs:enumeration value="PORTAL_EMPLEAT"/>
-		<xs:enumeration value="PORTAL_CIUTADA"/>
-		<xs:enumeration value="INTEGRACIO"/>
-	</xs:restriction>
-</xs:simpleType>
-```
 
 # 4. Exemples de peticions
 
@@ -1209,7 +1181,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwOTI0MTQ5NSwxNDY2MTk3NTczLC0xMj
+eyJoaXN0b3J5IjpbMTQ2MjAzNTExOCwxNDY2MTk3NTczLC0xMj
 E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
 MjUsLTE4NDk3NTIzNDFdfQ==
 -->
