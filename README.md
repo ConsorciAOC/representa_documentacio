@@ -31,6 +31,7 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 # 3. Missatgeria específica
 La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [dadesEspecifiques.xsd](dadesEspecifiques.xsd)
 
+A continuació es desciruen alguns elements complexos de la missatgeria de Representa.
 
 ## 3.1 Representacio
 
@@ -204,6 +205,17 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
+## 3.7  Estat
+
+Estats possibles d'una representació:
+* `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
+* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
+* `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
+* `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
+* `RENUNCIADA` >> El representant renuncia a la representació.
+* `REVOCADA` >> El poderdant revoca la representació.
+* `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
 
 # 4 Tipus de representacions					   
@@ -224,7 +236,7 @@ Existeixen 3 tipus de representacions:
 </xs:simpleType>
 ```
 
-### 3.5.1 General
+### 4.1 General
 Representació per a qualsevol tràmit, per a qualsevol administració.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_A**.
 
@@ -261,7 +273,7 @@ Exemple:
 </representacio>
 ```
 
-### 3.5.2 A organisme
+### 4.2 A organisme
 Representació per a realitzar qualsevol tràmit, per a una administració concreta.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_B**.
 
@@ -299,7 +311,7 @@ Exemple:
 </representacio>
 ```
 
-### 3.5.3 A tramit
+### 4.3 A tramit
 Representació per a una administració concreta i per a un tramit concret.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
@@ -342,17 +354,7 @@ Exemple:
 </representacio>
 ```
 
-## 3.6 Estats
 
-Estats possibles d'una representació:
-* `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
-* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
-* `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
-* `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
-* `RENUNCIADA` >> El representant renuncia a la representació.
-* `REVOCADA` >> El poderdant revoca la representació.
-* `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
 ### 3.6.1 Diagrama de fluxe d'estats
 _Pendent_
@@ -1159,7 +1161,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMj
-E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
-MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbMjAzMDc0NTIyOSwtNTgzMjM1MDg0LDE0Nj
+YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
+NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
