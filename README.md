@@ -260,37 +260,35 @@ L'element _ambitRepresentació_ té definit l'element _administracio_ i _capacit
 Exemple:
 ```xml
 <representacio>
-   <identificadorLegal>201900000097</identificadorLegal>
-   <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
-   <estat>VALIDA</estat>
-   <poderdant>
-      ...
-   </poderdant>
-   <representant>
-      ...
-   </representant>
-   <ambitRepresentacio>
-      <administracio>
-	        <codi>98754366</codi>
-      </administracio>
-      <capacitats>
-			<capacitat>
-				<codi>NOTIFICAR</codi>				
-			</capacitat>			
-		</capacitats>
-   </ambitRepresentacio>
-   <dataCreacio>2019-03-07T00:00:00</dataCreacio>
-   <dataIniciVigencia>2019-03-06T00:00:00</dataIniciVigencia>
-   <dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
-   <validacions>0</validacions>
-   <solicitant>
-      ...
-   </solicitant>
-   <evidencies>
-      <evidencia>
-          ...
-      </evidencia>
-   </evidencies>
+	<identificadorLegal>201900000097</identificadorLegal>
+	<tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+	<estat>VALIDA</estat>
+	<poderdant>
+		...
+	</poderdant>
+	<representant>
+		...
+	</representant>
+	<ambitRepresentacio>
+	<administracio>
+		<codi>98754366</codi>
+	</administracio>
+	<capacitats>
+		<capacitat>
+			<codi>NOTIFICAR</codi>				
+		</capacitat>			
+	</capacitats>
+	</ambitRepresentacio>
+<dataCreacio>2019-03-07T00:00:00</dataCreacio>
+<dataIniciVigencia>2019-03-06T00:00:00</dataIniciVigencia>
+<dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
+<validacions>0</validacions>
+	<solicitant>
+		...
+	</solicitant>
+	<evidencies>
+	   ...
+	</evidencies>
 </representacio>
 ```
 
@@ -1200,6 +1198,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MDEyMjExNiwyMTc0Mzc5NDQsLTExND
+eyJoaXN0b3J5IjpbLTE0NDcwNDM4MywyMTc0Mzc5NDQsLTExND
 Q3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
