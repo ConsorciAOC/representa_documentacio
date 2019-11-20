@@ -2,7 +2,6 @@
 <img align="center" src="img/logo.png" />
 </p>
 
-
 # Taula de continguts
 
 - [1. Introducció](#1-introducci-)
@@ -309,6 +308,7 @@ Estats possibles d'una representació:
 * `REVOCADA` >> El poderdant revoca la representació.
 * `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
+<p align="center"><img src='estats.svg'></p>
 
 # 4. Tipus de representacions					   
 
@@ -1273,10 +1273,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM2MDYwODc5NiwyMzkxMjAxNjYsLTEwOD
-Y0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMx
-MzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYxMzg4ODQwLC
-00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1NzMsLTEyMTk0
-NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNS
-wtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
+g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
+MTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MC
+wtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5
+NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3Mj
+UsLTE4NDk3NTIzNDFdfQ==
 -->
