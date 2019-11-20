@@ -587,6 +587,9 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 ## 5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
+
+#### Petició
 
 ```xml
 <xs:element name="consultarRepresentacionsPersona">  
@@ -612,6 +615,10 @@ Camp | Descripció
 |actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO`
 || `FALSE` > La resta d'estats
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició
+
+#### Resposta
+```xml
+```
 
 ## 5.4 Validació (_validarRepresentacio_)
 
@@ -1302,7 +1309,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTgwODA5MjksLTExMjQ4NDAwMjIsMj
+eyJoaXN0b3J5IjpbLTIwODgwMTM0ODIsLTExMjQ4NDAwMjIsMj
 M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
 MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
 gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
