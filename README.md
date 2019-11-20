@@ -383,14 +383,9 @@ Exemple:
 ```
 
 
+## 5 Operacions
 
-### 3.6.1 Diagrama de fluxe d'estats
-_Pendent_
-
-
-## 3.7 Operacions
-
-### 3.7.1 Consulta de representacions (_consultarRepresentacions_)
+### 5.1 Consulta de representacions (_consultarRepresentacions_)
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
@@ -1189,7 +1184,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTM2ODk5NjQzLC01ODMyMzUwODQsMTQ2Nj
+eyJoaXN0b3J5IjpbLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2Nj
 E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
 NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
