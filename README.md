@@ -234,6 +234,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 	</xs:sequence>  
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |persona| Element del tipus _persona_ que sol·licita la peticio|
@@ -255,6 +256,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 	</xs:sequence>  
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |tipusDocumentIdentificatiu| Pot pendre els valors de NIF o PASSAPORT|
@@ -1264,9 +1266,9 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMj
-A1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYxMzg4
-ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1NzMsLT
-EyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYw
-NDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTEwMTgwNjIxNDAsLTczODU1NzU2NCwxMz
+M2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3
+ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LD
+E0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0
+Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
