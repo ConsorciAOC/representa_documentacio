@@ -215,12 +215,12 @@ L'element _tramit_ té la següent estructura:
 Representació per a qualsevol tràmit, per a qualsevol administració.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_A**.
 
-L'element _ambitRepresentació_ està buit ja que no aplica.
+L'element _ambitRepresentació_ te informat l'element _capacitats_ amb 1 o N valors.
 
 Exemple:
 ```xml
 <representacio>
-   <identificadorLegal>201900000096</identificadorLegal>
+	<identificadorLegal>201900000096</identificadorLegal>
    <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
    <estat>VALIDA</estat>
    <poderdant>
@@ -1189,6 +1189,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MT
-YwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbMTA0NDAxNjU4MSwyMTc0Mzc5NDQsLTExND
+Q3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
