@@ -1,3 +1,4 @@
+
 # Taula de continguts
 
 - [1. Introducció](#1-introducci-)
@@ -1260,8 +1261,9 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsND
-cwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUw
-ODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLT
-ExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTE3ODIwNzA5OTYsLTEyMDU2MzEzNjIsLT
+E3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUw
+NjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMS
+wyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5
+NzUyMzQxXX0=
 -->
