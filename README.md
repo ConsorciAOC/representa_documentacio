@@ -251,8 +251,8 @@ Estats possibles d'una representació:
 Existeixen 3 tipus de representacions:
 
  - `TIPUS_A` > General
- - `TIPUS_B > A organisme
- - TIPUS_C > A tramit
+ - `TIPUS_B` > A organisme
+ - `TIPUS_C` > A tramit
 
 ```xml
 <xs:simpleType name="tipusRepresentacio">
@@ -268,7 +268,7 @@ Existeixen 3 tipus de representacions:
 Representació per a qualsevol tràmit, per a qualsevol administració.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_A**.
 
-L'element _ambitRepresentació_ te informat l'element _capacitats_ amb 1 o N valors.
+L'element _ambitRepresentació_ te informat l'element _capacitats_ amb 1 o varis valors.
 
 Exemple:
 ```xml
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2OTM0MDk1MywtNTgzMjM1MDg0LDE0Nj
+eyJoaXN0b3J5IjpbLTQ1MTE5NzA0MiwtNTgzMjM1MDg0LDE0Nj
 YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
 NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
