@@ -464,7 +464,7 @@ numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de con
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.7.2 Consulta de representació (_consultarRepresentacio_)
+### 5.2 Consulta de representació (_consultarRepresentacio_)
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
@@ -520,7 +520,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.7.3 Validació (_validarRepresentacio_)
+### 5.3 Validació (_validarRepresentacio_)
 La opertació de validació permet **preguntar** a Representa **si existeix** alguna representació en estat `VALIDA` **entre un poderdant i un representant, per una administració, un tràmit i una capacitat**.
 En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
@@ -587,7 +587,7 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
-### 3.7.4 Alta / Modificació (_processarRepresentacio_)
+### 5.4 Alta / Modificació (_processarRepresentacio_)
 Permet realitzar la inscripció o modificació** d'una representació.
 **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop creada una representació.**
 
@@ -655,9 +655,9 @@ resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
 
-# 4. Exemples de peticions
+# 6. Exemples de peticions
 
-## 4.1 Consulta
+## 6.1 Consulta
 
 ### Petició
 
@@ -748,7 +748,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 </consultarRepresentacioResponse>
 ```
 
-## 4.2 Consulta (múltiples representacions)
+## 6.2 Consulta (múltiples representacions)
 Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
 
 ### Petició
@@ -835,7 +835,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
-## 4.3 Validació
+## 6.3 Validació
 En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
 
 ### Peticio
@@ -956,7 +956,7 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 </validarRepresentacioResponse>
 ```
 
-## 4.4 Alta
+## 6.4 Alta
 Exemple on es crea una representació.
 
 ### Petició
@@ -1184,7 +1184,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2Nj
-E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
-NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbNzM0MDcwNDM5LC00MDU1MDY0MCwtNTgzMj
+M1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0
+LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
