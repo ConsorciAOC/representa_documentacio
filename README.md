@@ -525,9 +525,9 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.7.3 Validació ()
-La opertació de validació permet preguntar a Representa si existeix alguna representació en estat _VALIDA_ entre un poderdant i un representant per un tràmit i capacitat específic.
-En cas d'existir alguna representació existent i vàlida que ho permeti es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
+### 3.7.3 Validació (_validarRepresentacio_)
+La opertació de validació permet **preguntar** a Representa **si existeix** alguna representació en estat `VALIDA` **entre un poderdant i un representant, per una administració, un tràmit i una capacitat**.
+En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_VALIDACIO*.
 
 #### Petició
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUxMDAxODUzMywtNTgzMjM1MDg0LDE0Nj
-YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
-NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbNjU3NTUxNTg2LC01ODMyMzUwODQsMTQ2Nj
+E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
+NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
