@@ -132,7 +132,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
 
 ## 3.4 DocumentEvidencia
-Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
+Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
 ```xml
 <xs:complexType name="documentEvidencia">
         <xs:sequence>
@@ -174,7 +174,7 @@ El tipus de representació té afectació en l'ambit de la representació
         <xs:sequence>
             <xs:element name="administracio" type="administracio" minOccurs="0"/>
             <xs:element name="tramit" minOccurs="0"  type="tramit"/>
-            <xs:element name="capacitats" minOccurs="0" >
+            <xs:element name="capacitats">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
@@ -187,15 +187,16 @@ El tipus de representació té afectació en l'ambit de la representació
 
 L'element _tramit_ té la següent estructura:
 ```xml
-<xs:complexType name="tramit">
-    <xs:sequence>
-        <xs:element type="xs:string" name="uuid" minOccurs="0" />
-        <xs:element type="NonEmptyString" name="codi" minOccurs="0" />
-        <xs:element type="NonEmptyString" name="nom" minOccurs="0" />
-        <xs:element type="xs:string" name="uuidFamilia" minOccurs="0" />
-        <xs:element type="xs:string" name="descripcio" minOccurs="0" />
-        <xs:element type="xs:boolean" name="actiu" minOccurs="0" />
-    </xs:sequence>
+<xs:complexType name="tramit">  
+	 <xs:sequence>  
+		 <xs:element name="uuid" type="xs:string" minOccurs="0"/>  
+		 <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
+		 <xs:element name="codiFue" type="NonEmptyString" minOccurs="0"/>  
+		 <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
+		 <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>  
+		 <xs:element name="descripcio" type="xs:string" minOccurs="0"/>  
+		 <xs:element name="actiu" type="xs:boolean" minOccurs="0"/>  
+	 </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -1186,6 +1187,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xOD
-Q5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbMTE2OTEzNzk0OCwtMTE0NDc4ODU0Myw4Nj
+E2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
 -->
