@@ -1,5 +1,5 @@
 # Taula de continguts
-
+- [Taula de continguts](#taula-de-continguts)
 - [1. Introducció](#1-introducci-)
   * [1.1. Integració PCI](#11-integraci--pci)
 - [2. Missatgeria](#2-missatgeria)
@@ -16,17 +16,17 @@
     + [4.1 General](#41-general)
     + [4.2 A organisme](#42-a-organisme)
     + [4.3 A tramit](#43-a-tramit)
-  * [5 Operacions](#5-operacions)
-    + [5.1 Consulta de representacions (_consultarRepresentacions_)](#51-consulta-de-representacions---consultarrepresentacions--)
+- [5. Operacions](#5-operacions)
+  * [5.1 Consulta de representacions (_consultarRepresentacions_)](#51-consulta-de-representacions---consultarrepresentacions--)
       - [Peticio](#peticio)
       - [Resposta](#resposta)
-    + [5.2 Consulta de representació (_consultarRepresentacio_)](#52-consulta-de-representaci----consultarrepresentacio--)
+  * [5.2 Consulta de representació (_consultarRepresentacio_)](#52-consulta-de-representaci----consultarrepresentacio--)
     + [Petició](#petici-)
     + [Resposta](#resposta-1)
-    + [5.3 Validació (_validarRepresentacio_)](#53-validaci----validarrepresentacio--)
+  * [5.3 Validació (_validarRepresentacio_)](#53-validaci----validarrepresentacio--)
       - [Petició](#petici--1)
       - [Resposta](#resposta-2)
-    + [5.4 Alta / Modificació (_processarRepresentacio_)](#54-alta---modificaci----processarrepresentacio--)
+  * [5.4 Alta / Modificació (_processarRepresentacio_)](#54-alta---modificaci----processarrepresentacio--)
       - [Petició](#petici--2)
       - [Resposta](#resposta-3)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
@@ -52,6 +52,8 @@
   * [8.2 Importació mitjançant fitxer CSV](#82-importaci--mitjan-ant-fitxer-csv)
   * [8.3 Ús catàleg compartit per Consorci AOC](#83--s-cat-leg-compartit-per-consorci-aoc)
 - [9. Generació d'informes PDF](#9-generaci--d-informes-pdf)
+
+
 
 # 1. Introducció
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
@@ -1244,8 +1246,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjM3MjcyNzAsLTE3NjkwNjA0MzMsND
-cwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUw
-ODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLT
-ExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTE1NDg5NjA3MCwtMTc2OTA2MDQzMyw0Nz
+AzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4
+NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMT
+E0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
 -->
