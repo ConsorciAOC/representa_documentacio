@@ -35,32 +35,33 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 ## 3.1 Representacio
 
 ```xml
-<xs:complexType name="representacio">
-	<xs:sequence>
-		<xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>
-		<xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>
-		<xs:element name="estat" type="estat" minOccurs="0"/>
-		<xs:element name="poderdant" type="persona" minOccurs="1"/>
-		<xs:element name="representant" type="persona" minOccurs="1"/>
-		<xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
-		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
-		<xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>
-		<xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
-		<xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
-		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
-		<xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />
-		<xs:element name="refAlta" type="xs:string" minOccurs="0"/>
-		<xs:element name="solicitant" type="solicitant" minOccurs="0" />
-		<xs:element name="origen" type="origen" minOccurs="0" />
-		<xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />
-		<xs:element name="evidencies" minOccurs="0" >
-			<xs:complexType>
-				<xs:sequence>
-					<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:complexType>
-		</xs:element>
-	</xs:sequence>
+<xs:complexType name="representacio">  
+	<xs:sequence>  
+		<xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>  
+		<xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>  
+		<xs:element name="estat" type="estat" minOccurs="0"/>  
+		<xs:element name="poderdant" type="persona" minOccurs="0"/>  
+		<xs:element name="representant" type="persona" minOccurs="0" />  
+		<xs:element name="solicitant" type="solicitant" minOccurs="0" />  
+		<xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>  
+		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>  
+		<xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>  
+		<xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>  
+		<xs:element name="validacions" type="xs:int" minOccurs="0" 	nillable="true"/>  
+		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
+		<xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />  
+		<xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>  
+		<xs:element name="refAlta" type="xs:string" minOccurs="0"/>  
+		<xs:element name="origen" type="origen" minOccurs="0" />  
+		<xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />  
+		<xs:element name="evidencies" minOccurs="0" >  
+			<xs:complexType>  
+				<xs:sequence>  
+<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>  
+</xs:sequence>  
+</xs:complexType>  
+</xs:element>  
+</xs:sequence>  
 </xs:complexType>
 ```
 
@@ -1167,5 +1168,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTIwMDc2NjQyMjksLTE4NDk3NTIzNDFdfQ
+==
 -->
