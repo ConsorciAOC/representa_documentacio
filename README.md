@@ -180,6 +180,24 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
 
 ## 3.6 Persona
+```xml
+<xs:complexType name="persona">  
+	<xs:sequence>  
+		<xs:element name="tipusDocumentIdentificatiu" type="xs:string" />  
+		<xs:element name="valorDocumentIdentificatiu" type="NonEmptyString" />  
+		<xs:element name="tipusPersona" minOccurs="0" type="tipusPersona" />  
+		<xs:element name="nomRaoSocial" minOccurs="0" type="NonEmptyString" />  
+		<xs:element name="cognoms" minOccurs="0" type="xs:string" />  
+		<xs:element name="correuElectronic" minOccurs="0" type="NonEmptyString" />  
+		<xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean" />  
+		<xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:string" />  
+	</xs:sequence>  
+</xs:complexType>
+```
+|Camp | Descripció|
+|---- | ----------|
+|tipusDocumentIdentificatiu| Pot pendre els valors de NIF o PASSAPORT|
+|valorDocumentIdentificatiu| 
 
 
 ## 3.6 DocumentEvidencia
@@ -1165,7 +1183,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxNjEyNDgxNSwtNTgzMjM1MDg0LDE0Nj
-YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
-NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbODUxNTk3ODM0LC01ODMyMzUwODQsMTQ2Nj
+E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
+NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
