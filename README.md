@@ -72,14 +72,14 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 |estat | Llistat d'elements _estat_|
 |poderdant | Persona (física o jurídica) que atorga el poder de representació|
 |representant | Persona (física o jurídica) que rep el poder de representació|
-|ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_, _tramit_ i _capacitat_|
+|ambitRepresentacio | Element per definir l'ambit de la representació. En tots els casos inclou l'element _capacitat_ i segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_|
 |dataCreacio | Data de creació de la representació|
 |dataIniciVigencia | Data d'inici de vigència|
 |dataFiVigencia | Data de fi de la vigència|
 |validacions | Nombre de validacions realitzades sobre aquesta representació|
 |csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
 |dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial|
-|refAlta | Identificador per vincular les possibles N representacions a tramit creades en el mateix instant d'inscripció|
+|refAlta | Identificador per vincular les possibles N representacions a tramit. creades en el mateix instant d'inscripció. |
 |solicitant | Persona i administració que van sol·licitar la creació de la representació|
 |idRepresentacioA | Relacionat amb l'apartat _a través de_ ... |
 |evidencies | Llistat d'elements _evidencia_|
@@ -1168,5 +1168,5 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ5NTcxMzIzLC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbMzEwNDYyMDE3LC0xODQ5NzUyMzQxXX0=
 -->
