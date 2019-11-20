@@ -202,9 +202,11 @@ L'element _tramit_ té la següent estructura:
 
 |Camp | Descripció|
 |---- | ----------|
+|uuid| Identificador únic del tràmit|
 |codi | Codi del tramit |
+|codiFue| Codi FUE del tràmit|
 |nom | Nom del tramit |
-|uuidFamilia | Identificador únic intern de la familia a la que pertany |
+|uuidFamilia | Identificador únic de la familia a la que pertany |
 |descripcio | Descrpicó del tramit |
 |actiu | Indicador d'actiu o no actiu |
 
@@ -1187,6 +1189,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE2OTEzNzk0OCwtMTE0NDc4ODU0Myw4Nj
-E2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MT
+YwNDcyNSwtMTg0OTc1MjM0MV19
 -->
