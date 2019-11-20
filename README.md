@@ -1187,9 +1187,10 @@ El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) inte
 # 9. Generació d'informes PDF
 Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és possible demanar un informe en format PDF on es retornin les mateixes dades que s'han retornat a la consultar però en format orientat a la impressió.
 
-Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una 
+Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjg2OTA1MzkwLC00MDU1MDY0MCwtNTgzMj
-M1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0
-LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4Mz
+IzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0
+NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ
+==
 -->
