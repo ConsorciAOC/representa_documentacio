@@ -204,6 +204,21 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
+## 3.7 Estat
+```xml
+<xs:simpleType name="estat">  
+<xs:restriction base="xs:string">  
+<xs:enumeration value="PENDENT_VALIDACIO"/>  
+<xs:enumeration value="VALIDA"/>  
+<xs:enumeration value="ANULADA"/>  
+<xs:enumeration value="RENUNCIADA"/>  
+ <xs:enumeration value="REVOCADA"/>  
+ <xs:enumeration value="DENEGADA"/>  
+ <xs:enumeration value="EXPIRADA"/>  
+ <xs:enumeration value="PENDENT_SIGNATURA"/>  
+ </xs:restriction>  
+</xs:simpleType>
+```
 
 
 # 4 Tipus de representacions					   
@@ -1202,7 +1217,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNjczNjM5NCwxNDY2MTk3NTczLC0xMj
-E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
-MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbNDI0NzA1ODQwLDE0NjYxOTc1NzMsLTEyMT
+k0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcy
+NSwtMTg0OTc1MjM0MV19
 -->
