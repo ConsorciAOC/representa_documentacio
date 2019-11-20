@@ -390,7 +390,7 @@ _Pendent_
 
 ## 3.7 Operacions
 
-### 3.7.1 Consulta de representacions (_consultarRepresentacio_)
+### 3.7.1 Consulta de representacions (_consultarRepresentacions_)
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
@@ -469,9 +469,9 @@ numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de con
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.7.2 Consulta de representació
+### 3.7.2 Consulta de representació (_consultarRepresentacio_)
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
-Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_CONSULTA_REPRESENTACIO*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
 ### Petició
 
@@ -497,7 +497,7 @@ Camp | Descripció
 ---- | ----------
 identificadorLegal | Identificador únic de la representació
 generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
-solicitant | Persona i administració que sol·licita la petició
+solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
 
 ### Resposta
 
@@ -525,7 +525,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.7.3 Validació
+### 3.7.3 Validació ()
 La opertació de validació permet preguntar a Representa si existeix alguna representació en estat _VALIDA_ entre un poderdant i un representant per un tràmit i capacitat específic.
 En cas d'existir alguna representació existent i vàlida que ho permeti es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_VALIDACIO*.
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMzU3NjcwMSwtNTgzMjM1MDg0LDE0Nj
+eyJoaXN0b3J5IjpbLTUxMDAxODUzMywtNTgzMjM1MDg0LDE0Nj
 YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
 NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
