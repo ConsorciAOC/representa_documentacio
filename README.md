@@ -81,7 +81,7 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 |dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial|
 |refAlta | Identificador per vincular les possibles N representacions a tramit. creades en el mateix instant d'inscripció|
 |origen | Element que permet veure l'origen de creció de la representació (PORTAL_EMPLEAT, PORTAL_CIUTADA, INTEGRACIO) |
-|idRepresentacioA | Relacionat amb l'apartat _a través de_ ... |
+|idRepresentacioA | Relació entre representacions amb la finalitat d'actuar en nom d'una altra persona al portal del ciutadà |
 |evidencies | Llistat d'elements _evidencia_|
 
 ## 3.2 Evidencia
@@ -1168,6 +1168,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3ODA5NDY2OCw4NjE2MDQ3MjUsLTE4ND
+eyJoaXN0b3J5IjpbMTgzMDg5NjQ3MSw4NjE2MDQ3MjUsLTE4ND
 k3NTIzNDFdfQ==
 -->
