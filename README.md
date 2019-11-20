@@ -222,7 +222,12 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 
  - `VALIDA` > Representació vàlida
  - `PENDENT_VALIDACIO` > 
- - 
+ - `DENEGADA` >
+ - `EXPIRADA` >
+ - `RENUNCIADA` >
+ - `REVOCADA` >
+ - `ANULADA` >
+ - `PENDENT_SIGNATURA` >
 
 # 4 Tipus de representacions					   
 
@@ -646,25 +651,9 @@ resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
 
-## 3.8 Elements missatgeria
 
-### 3.8.1 Capacitat
-Indica quin tipus d'accions defineixen l'ambit d'una representació per a les representacions de tipus _a tramit_.
-Les representacions _a organisme_ o _generals_ no tenen la dimensió de capacitat.
 
-```
-<xs:complexType name="capacitat">
-	<xs:sequence>
-		<xs:element name="codi" type="xs:string"/>
-		<xs:element name="nom" type="xs:string" minOccurs="0"/>
-	</xs:sequence>
-</xs:complexType>
-```
 
-La capacitat pot tenir els següents _codi_:
-- CONSULTAR
-- TRAMITAR
-- NOTIFICAR
 
 #### 3.8.2 Solicitant
 Element obligatori on cal informar quina persona i des de quina administració es fa la petició. Adicionalment a les consultes, els elements _representacio_ conserven la informació del _solicitant_ que va sol·licitar-ne la creació.
@@ -1220,7 +1209,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcwMzk1MjEzLDE0NjYxOTc1NzMsLTEyMT
-k0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcy
-NSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbMTUwOTI0MTQ5NSwxNDY2MTk3NTczLC0xMj
+E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
+MjUsLTE4NDk3NTIzNDFdfQ==
 -->
