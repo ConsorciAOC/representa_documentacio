@@ -1193,7 +1193,20 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 ```
 
 # 7. Codis de resposta
-_Pendent_
+
+|codi.operacioCorrecta|0|
+codi.errorIntern = 500  
+codi.notFound = 001  
+codi.noIndicat = 002  
+codi.jaExistent = 003  
+codi.dadesIncorrectes = 004  
+codi.noExistent = 005  
+codi.noAdministracioPropietaria = 006  
+codi.noEliminable = 007  
+codi.noDisponible = 008  
+codi.signaturaNoValida = 009  
+codi.poderNoSubsistent = 100  
+codi.schemaError = 101
 
 # 8. Cataleg de tràmits
 Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en *families*. Alhora les families s'agrupen entorn a una entitat anomenada *cataleg*.
@@ -1246,7 +1259,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDg5NjA3MCwtMTc2OTA2MDQzMyw0Nz
+eyJoaXN0b3J5IjpbLTMyNDc2MTgwMCwtMTc2OTA2MDQzMyw0Nz
 AzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4
 NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMT
 E0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
