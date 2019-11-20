@@ -231,8 +231,10 @@ Exemple:
 	</representant>
 	<ambitRepresentacio>
 		<capacitats>
-			<capacitat />
-			
+			<capacitat>
+				<codi>NOTIFICAR</codi>
+				<codi>TRAMITAR</codi>
+			</capacitat>			
 		</capacitats>
 	</ambitRepresentacio>
 	<dataCreacio>2019-03-07T00:00:00</dataCreacio>
@@ -240,11 +242,10 @@ Exemple:
 	<dataFiVigencia>2019-03-07T00:00:00</dataFiVigencia>
 	<validacions>0</validacions>
 	<solicitant>
-	...
+		...
 	</solicitant>
 	<evidencies>
-	<evidencia>
-	...
+		...
 	</evidencia>
 	</evidencies>
 </representacio>
@@ -1194,6 +1195,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0NzM2OTA0LDIxNzQzNzk0NCwtMTE0ND
-c4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTUyNDEzODQ1MywyMTc0Mzc5NDQsLTExND
+Q3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
