@@ -159,8 +159,14 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |dataCreacio | Data de creació|
 
 ## 3.5 Tipus de representacions					   
+
+Existeixen 3 tipus de representacions:
+
+ - TIPUS_A > General
+ - TIPUS_B > A organisme
+ - TIPUS_C > A tramit
+
 ```xml
-Existeixen 3 tipus de representacions codificades se
 <xs:simpleType name="tipusRepresentacio">
         <xs:restriction base="xs:string">
             <xs:enumeration value="TIPUS_A"/>
@@ -170,7 +176,7 @@ Existeixen 3 tipus de representacions codificades se
 </xs:simpleType>
 ```
 ### 3.5.1 Ambit de representació
-Els elements de l'**ambit de la representació** varia segons el tipus de representació. A continuació es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
+Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. A continuació es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
 
 ```xml
 <xs:complexType name="ambitRepresentacio">
@@ -1193,7 +1199,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NzAzNzY0NTUsMTQ2NjE5NzU3MywtMT
+eyJoaXN0b3J5IjpbLTEwMjk5Nzg1NTAsMTQ2NjE5NzU3MywtMT
 IxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYxNjA0
 NzI1LC0xODQ5NzUyMzQxXX0=
 -->
