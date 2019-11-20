@@ -53,8 +53,6 @@
   * [8.3 Ús catàleg compartit per Consorci AOC](#83--s-cat-leg-compartit-per-consorci-aoc)
 - [9. Generació d'informes PDF](#9-generaci--d-informes-pdf)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
-
 # 1. Introducció
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
@@ -440,9 +438,9 @@ Exemple:
 ```
 
 
-## 5 Operacions
+# 5. Operacions
 
-### 5.1 Consulta de representacions (_consultarRepresentacions_)
+## 5.1 Consulta de representacions (_consultarRepresentacions_)
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
@@ -521,7 +519,7 @@ numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de con
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 5.2 Consulta de representació (_consultarRepresentacio_)
+## 5.2 Consulta de representació (_consultarRepresentacio_)
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
@@ -577,7 +575,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 5.3 Validació (_validarRepresentacio_)
+## 5.3 Validació (_validarRepresentacio_)
 La opertació de validació permet **preguntar** a Representa **si existeix** alguna representació en estat `VALIDA` **entre un poderdant i un representant, per una administració, un tràmit i una capacitat**.
 En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
@@ -644,7 +642,7 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
-### 5.4 Alta / Modificació (_processarRepresentacio_)
+## 5.4 Alta / Modificació (_processarRepresentacio_)
 Permet realitzar la inscripció o modificació** d'una representació.
 **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop creada una representació.**
 
@@ -1246,8 +1244,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNj
-EzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3
-MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsOD
-YxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTIxMjM3MjcyNzAsLTE3NjkwNjA0MzMsND
+cwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUw
+ODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLT
+ExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
