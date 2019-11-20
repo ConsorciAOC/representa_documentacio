@@ -528,7 +528,7 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 ### 3.7.3 Validació (_validarRepresentacio_)
 La opertació de validació permet **preguntar** a Representa **si existeix** alguna representació en estat `VALIDA` **entre un poderdant i un representant, per una administració, un tràmit i una capacitat**.
 En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
-Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_VALIDACIO*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
 
 #### Petició
 
@@ -546,9 +546,9 @@ Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA
 
 Camp | Descripció
 ---- | ----------
-representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, tramit, capacitat/s)
+representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, administracio, tramit, capacitat)
 dataValidacio | Data on es fa la consulta de validació. Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
-solicitant | Persona i administració que sol·licita la petició
+solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
 
 #### Resposta
 
@@ -590,7 +590,7 @@ Camp | Descripció
 ---- | ----------
 codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
-tipusSolicitud | Tipus de sol·licitud de la petició
+tipusSolicitud | Tipus de sol·licitud de la petició (ALTA, MODIFICACIO, CONSULTA,   )
 
 ### 3.7.4 Alta / Modificació
 Permet realitzar la inscripció o modificació** d'una representació.
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU3NTUxNTg2LC01ODMyMzUwODQsMTQ2Nj
+eyJoaXN0b3J5IjpbMTQyNjEzODg2LC01ODMyMzUwODQsMTQ2Nj
 E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
 NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
