@@ -529,7 +529,7 @@ representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-re
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ## 5.2 Consulta de representació (_consultarRepresentacio_)
-Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
+Permet recuperar **una** representació a partir del seu identificador únic (`identificadorLegal`).
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
 ### Petició
@@ -585,6 +585,8 @@ representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ## 5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)
+Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
+
 
 
 ## 5.4 Validació (_validarRepresentacio_)
@@ -1276,10 +1278,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0NDYzMzIzNCwtMTEyNDg0MDAyMiwyMz
-kxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2Nzkw
-OTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OC
-wxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYx
-OTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NT
-QzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTExNTM4NTQ2OTcsLTExMjQ4NDAwMjIsMj
+M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
+MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
+gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
+MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4OD
+U0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
 -->
