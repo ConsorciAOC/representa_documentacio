@@ -587,6 +587,28 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 ## 5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
 
+```xml
+<xs:element name="consultarRepresentacionsPersona">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="ConsultaRepresentacionsPersona">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="persona" type="persona"/>  
+						<xs:element name="actives" type="xs:boolean"/>  
+						<xs:element name="solicitant" type="solicitant"/>  
+					</xs:sequence>  
+			</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el valorDocumentIden
+representacio | Element del tipus [_representació_](#21-representacio)
 
 
 ## 5.4 Validació (_validarRepresentacio_)
@@ -1278,10 +1300,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTM4NTQ2OTcsLTExMjQ4NDAwMjIsMj
-M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
-MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
-gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
-MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4OD
-U0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTQ3MTU5ODIzNiwtMTEyNDg0MDAyMiwyMz
+kxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2Nzkw
+OTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OC
+wxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYx
+OTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NT
+QzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
