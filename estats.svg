@@ -1,0 +1,496 @@
+<svg id="mermaid-1574258276267" width="583.0703125" xmlns="http://www.w3.org/2000/svg" height="551.7453002929688" viewBox="0 0 583.0703125 551.7453002929688"><style>
+
+#mermaid-1574258276267 {
+   font-size: 80%;
+}
+
+#mermaid-1574258276267 .label {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  color: #333; }
+
+#mermaid-1574258276267 .label text {
+  fill: #333; }
+
+#mermaid-1574258276267 .node rect,
+#mermaid-1574258276267 .node circle,
+#mermaid-1574258276267 .node ellipse,
+#mermaid-1574258276267 .node polygon {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1px; }
+
+#mermaid-1574258276267 .node .label {
+  text-align: center; }
+
+#mermaid-1574258276267 .node.clickable {
+  cursor: pointer; }
+
+#mermaid-1574258276267 .arrowheadPath {
+  fill: #333333; }
+
+#mermaid-1574258276267 .edgePath .path {
+  stroke: #666;
+  stroke-width: 1.5px; }
+
+#mermaid-1574258276267 .edgeLabel {
+  background-color: white;
+  text-align: center; }
+
+#mermaid-1574258276267 .cluster rect {
+  fill: #eaf2fb;
+  stroke: #26a;
+  stroke-width: 1px; }
+
+#mermaid-1574258276267 .cluster text {
+  fill: #333; }
+
+#mermaid-1574258276267 div.mermaidTooltip {
+  position: absolute;
+  text-align: center;
+  max-width: 200px;
+  padding: 2px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 12px;
+  background: #eaf2fb;
+  border: 1px solid #26a;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 100; }
+
+#mermaid-1574258276267 .actor {
+  stroke: #999;
+  fill: #eee; }
+
+#mermaid-1574258276267 text.actor {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1574258276267 .actor-line {
+  stroke: #666; }
+
+#mermaid-1574258276267 .messageLine0 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1574258276267 .messageLine1 {
+  stroke-width: 1.5;
+  stroke-dasharray: '2 2';
+  stroke: #333; }
+
+#mermaid-1574258276267 #arrowhead {
+  fill: #333; }
+
+#mermaid-1574258276267 .sequenceNumber {
+  fill: white; }
+
+#mermaid-1574258276267 #sequencenumber {
+  fill: #333; }
+
+#mermaid-1574258276267 #crosshead path {
+  fill: #333 !important;
+  stroke: #333 !important; }
+
+#mermaid-1574258276267 .messageText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1574258276267 .labelBox {
+  stroke: #999;
+  fill: #eee; }
+
+#mermaid-1574258276267 .labelText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1574258276267 .loopText {
+  fill: #333;
+  stroke: none; }
+
+#mermaid-1574258276267 .loopLine {
+  stroke-width: 2;
+  stroke-dasharray: '2 2';
+  stroke: #999; }
+
+#mermaid-1574258276267 .note {
+  stroke: #777700;
+  fill: #ffa; }
+
+#mermaid-1574258276267 .noteText {
+  fill: black;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 14px; }
+
+#mermaid-1574258276267 .activation0 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1574258276267 .activation1 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+#mermaid-1574258276267 .activation2 {
+  fill: #f4f4f4;
+  stroke: #666; }
+
+
+#mermaid-1574258276267 .mermaid-main-font {
+  font-family: "trebuchet ms", verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .section {
+  stroke: none;
+  opacity: 0.2; }
+
+#mermaid-1574258276267 .section0 {
+  fill: #80b3e6; }
+
+#mermaid-1574258276267 .section2 {
+  fill: #80b3e6; }
+
+#mermaid-1574258276267 .section1,
+#mermaid-1574258276267 .section3 {
+  fill: white;
+  opacity: 0.2; }
+
+#mermaid-1574258276267 .sectionTitle0 {
+  fill: #333; }
+
+#mermaid-1574258276267 .sectionTitle1 {
+  fill: #333; }
+
+#mermaid-1574258276267 .sectionTitle2 {
+  fill: #333; }
+
+#mermaid-1574258276267 .sectionTitle3 {
+  fill: #333; }
+
+#mermaid-1574258276267 .sectionTitle {
+  text-anchor: start;
+  font-size: 11px;
+  text-height: 14px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+
+#mermaid-1574258276267 .grid .tick {
+  stroke: #e6e6e6;
+  opacity: 0.3;
+  shape-rendering: crispEdges; }
+#mermaid-1574258276267   .grid .tick text {
+    font-family: 'trebuchet ms', verdana, arial;
+    font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .grid path {
+  stroke-width: 0; }
+
+
+#mermaid-1574258276267 .today {
+  fill: none;
+  stroke: #d42;
+  stroke-width: 2px; }
+
+
+
+#mermaid-1574258276267 .task {
+  stroke-width: 2; }
+
+#mermaid-1574258276267 .taskText {
+  text-anchor: middle;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .taskText:not([font-size]) {
+  font-size: 11px; }
+
+#mermaid-1574258276267 .taskTextOutsideRight {
+  fill: #333;
+  text-anchor: start;
+  font-size: 11px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .taskTextOutsideLeft {
+  fill: #333;
+  text-anchor: end;
+  font-size: 11px; }
+
+
+#mermaid-1574258276267 .task.clickable {
+  cursor: pointer; }
+
+#mermaid-1574258276267 .taskText.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+#mermaid-1574258276267 .taskTextOutsideLeft.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+#mermaid-1574258276267 .taskTextOutsideRight.clickable {
+  cursor: pointer;
+  fill: #003163 !important;
+  font-weight: bold; }
+
+
+#mermaid-1574258276267 .taskText0,
+#mermaid-1574258276267 .taskText1,
+#mermaid-1574258276267 .taskText2,
+#mermaid-1574258276267 .taskText3 {
+  fill: white; }
+
+#mermaid-1574258276267 .task0,
+#mermaid-1574258276267 .task1,
+#mermaid-1574258276267 .task2,
+#mermaid-1574258276267 .task3 {
+  fill: #26a;
+  stroke: #1a4d80; }
+
+#mermaid-1574258276267 .taskTextOutside0,
+#mermaid-1574258276267 .taskTextOutside2 {
+  fill: #333; }
+
+#mermaid-1574258276267 .taskTextOutside1,
+#mermaid-1574258276267 .taskTextOutside3 {
+  fill: #333; }
+
+
+#mermaid-1574258276267 .active0,
+#mermaid-1574258276267 .active1,
+#mermaid-1574258276267 .active2,
+#mermaid-1574258276267 .active3 {
+  fill: #eee;
+  stroke: #1a4d80; }
+
+#mermaid-1574258276267 .activeText0,
+#mermaid-1574258276267 .activeText1,
+#mermaid-1574258276267 .activeText2,
+#mermaid-1574258276267 .activeText3 {
+  fill: #333 !important; }
+
+
+#mermaid-1574258276267 .done0,
+#mermaid-1574258276267 .done1,
+#mermaid-1574258276267 .done2,
+#mermaid-1574258276267 .done3 {
+  stroke: #666;
+  fill: #bbb;
+  stroke-width: 2; }
+
+#mermaid-1574258276267 .doneText0,
+#mermaid-1574258276267 .doneText1,
+#mermaid-1574258276267 .doneText2,
+#mermaid-1574258276267 .doneText3 {
+  fill: #333 !important; }
+
+
+#mermaid-1574258276267 .crit0,
+#mermaid-1574258276267 .crit1,
+#mermaid-1574258276267 .crit2,
+#mermaid-1574258276267 .crit3 {
+  stroke: #b1361b;
+  fill: #d42;
+  stroke-width: 2; }
+
+#mermaid-1574258276267 .activeCrit0,
+#mermaid-1574258276267 .activeCrit1,
+#mermaid-1574258276267 .activeCrit2,
+#mermaid-1574258276267 .activeCrit3 {
+  stroke: #b1361b;
+  fill: #eee;
+  stroke-width: 2; }
+
+#mermaid-1574258276267 .doneCrit0,
+#mermaid-1574258276267 .doneCrit1,
+#mermaid-1574258276267 .doneCrit2,
+#mermaid-1574258276267 .doneCrit3 {
+  stroke: #b1361b;
+  fill: #bbb;
+  stroke-width: 2;
+  cursor: pointer;
+  shape-rendering: crispEdges; }
+
+#mermaid-1574258276267 .milestone {
+  transform: rotate(45deg) scale(0.8, 0.8); }
+
+#mermaid-1574258276267 .milestoneText {
+  font-style: italic; }
+
+#mermaid-1574258276267 .doneCritText0,
+#mermaid-1574258276267 .doneCritText1,
+#mermaid-1574258276267 .doneCritText2,
+#mermaid-1574258276267 .doneCritText3 {
+  fill: #333 !important; }
+
+#mermaid-1574258276267 .activeCritText0,
+#mermaid-1574258276267 .activeCritText1,
+#mermaid-1574258276267 .activeCritText2,
+#mermaid-1574258276267 .activeCritText3 {
+  fill: #333 !important; }
+
+#mermaid-1574258276267 .titleText {
+  text-anchor: middle;
+  font-size: 18px;
+  fill: #333;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 g.classGroup text {
+  fill: #999;
+  stroke: none;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family);
+  font-size: 10px; }
+#mermaid-1574258276267   g.classGroup text .title {
+    font-weight: bolder; }
+
+#mermaid-1574258276267 g.classGroup rect {
+  fill: #eee;
+  stroke: #999; }
+
+#mermaid-1574258276267 g.classGroup line {
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 .classLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #eee;
+  opacity: 0.5; }
+
+#mermaid-1574258276267 .classLabel .label {
+  fill: #999;
+  font-size: 10px; }
+
+#mermaid-1574258276267 .relation {
+  stroke: #999;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1574258276267 #compositionStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #compositionEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #aggregationStart {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #aggregationEnd {
+  fill: #eee;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #dependencyStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #dependencyEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #extensionStart {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 #extensionEnd {
+  fill: #999;
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 .commit-id,
+#mermaid-1574258276267 .commit-msg,
+#mermaid-1574258276267 .branch-label {
+  fill: lightgrey;
+  color: lightgrey;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .pieTitleText {
+  text-anchor: middle;
+  font-size: 25px;
+  fill: #333;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 .slice {
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 g.stateGroup text {
+  fill: #999;
+  stroke: none;
+  font-size: 10px;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+#mermaid-1574258276267 g.stateGroup text {
+  fill: #999;
+  stroke: none;
+  font-size: 10px; }
+
+#mermaid-1574258276267 g.stateGroup .state-title {
+  font-weight: bolder;
+  fill: black; }
+
+#mermaid-1574258276267 g.stateGroup rect {
+  fill: #eee;
+  stroke: #999; }
+
+#mermaid-1574258276267 g.stateGroup line {
+  stroke: #999;
+  stroke-width: 1; }
+
+#mermaid-1574258276267 .transition {
+  stroke: #999;
+  stroke-width: 1;
+  fill: none; }
+
+#mermaid-1574258276267 .stateGroup .composit {
+  fill: white;
+  border-bottom: 1px; }
+
+#mermaid-1574258276267 .state-note {
+  stroke: #777700;
+  fill: #ffa; }
+#mermaid-1574258276267   .state-note text {
+    fill: black;
+    stroke: none;
+    font-size: 10px; }
+
+#mermaid-1574258276267 .stateLabel .box {
+  stroke: none;
+  stroke-width: 0;
+  fill: #eee;
+  opacity: 0.5; }
+
+#mermaid-1574258276267 .stateLabel text {
+  fill: black;
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'trebuchet ms', verdana, arial;
+  font-family: var(--mermaid-font-family); }
+
+:root {
+  --mermaid-font-family: '"trebuchet ms", verdana, arial';
+  --mermaid-font-family: "Comic Sans MS", "Comic Sans", cursive; }
+
+:root { --mermaid-font-family: "trebuchet ms", verdana, arial;}</style><style>#mermaid-1574258276267 {
+    color: rgba(0, 0, 0, 0.65);
+    font: ;
+  }</style><g transform="translate(0, 0)"><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M354.9375,117.24531097412108L354.4375,141.7453155517578L354.4375,166.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16557)" style="fill:none"></path><defs><marker id="arrowhead16557" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M395.87220982142856,207.7453155517578L467.625,243.2453155517578L467.625,278.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16558)" style="fill:none"></path><defs><marker id="arrowhead16558" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M310.18289620535717,207.7453155517578L233.546875,243.2453155517578L233.546875,299.2453155517578L233.546875,355.2453155517578L260.59036690848217,390.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16559)" style="fill:none"></path><defs><marker id="arrowhead16559" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M478.51705496651783,319.7453155517578L497.37890625,355.2453155517578L497.37890625,390.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16560)" style="fill:none"></path><defs><marker id="arrowhead16560" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M421.24117606026783,319.7453155517578L340.91796875,355.2453155517578L299.89585658482144,390.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16561)" style="fill:none"></path><defs><marker id="arrowhead16561" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M244.76171875,419.5661897234543L64.578125,467.2453155517578L64.578125,502.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16562)" style="fill:none"></path><defs><marker id="arrowhead16562" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M249.52528599330358,431.7453155517578L203.3203125,467.2453155517578L203.3203125,502.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16563)" style="fill:none"></path><defs><marker id="arrowhead16563" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M302.88877650669644,431.7453155517578L349.09375,467.2453155517578L349.09375,502.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16564)" style="fill:none"></path><defs><marker id="arrowhead16564" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M307.65234375,419.5127793770187L489.203125,467.2453155517578L489.203125,502.7453155517578" marker-end="url(https://mermaidjs.github.io/mermaid-live-editor/#arrowhead16565)" style="fill:none"></path><defs><marker id="arrowhead16565" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(467.625,243.2453155517578)" style="opacity: 1;"><g transform="translate(-107.4453125,-10.5)" class="label"><foreignObject width="214.890625" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Requereix validació documentació</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(233.546875,299.2453155517578)" style="opacity: 1;"><g transform="translate(-116.7109375,-10.5)" class="label"><foreignObject width="233.421875" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">No requereix validació documentació</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(497.37890625,355.2453155517578)" style="opacity: 1;"><g transform="translate(-71.140625,-10.5)" class="label"><foreignObject width="142.28125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Documentació invàlida</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(340.91796875,355.2453155517578)" style="opacity: 1;"><g transform="translate(-65.3203125,-10.5)" class="label"><foreignObject width="130.640625" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Documentació vàlida</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(64.578125,467.2453155517578)" style="opacity: 1;"><g transform="translate(-56.578125,-10.5)" class="label"><foreignObject width="113.15625" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Funcionari anul.la</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(203.3203125,467.2453155517578)" style="opacity: 1;"><g transform="translate(-54.9296875,-10.5)" class="label"><foreignObject width="109.859375" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Poderdant revoca</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(349.09375,467.2453155517578)" style="opacity: 1;"><g transform="translate(-70.84375,-10.5)" class="label"><foreignObject width="141.6875" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Representant renuncia</span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="A" transform="translate(354.4375,62.372657775878906)" style="opacity: 1;"><polygon points="54.37265625,0 108.7453125,-54.37265625 54.37265625,-108.7453125 0,-54.37265625" transform="translate(-54.37265625,54.37265625)" class="label-container"></polygon><g class="label" transform="translate(0,0)"><g transform="translate(-29.9140625,-10.5)"><foreignObject width="59.828125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Inscripció</div></foreignObject></g></g></g><g class="node" id="J" transform="translate(354.4375,187.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-77.140625" y="-20.5" width="154.28125" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-67.140625,-10.5)"><foreignObject width="134.28125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">PENDENT_SIGNATURA</div></foreignObject></g></g></g><g class="node" id="B" transform="translate(467.625,299.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-74.6640625" y="-20.5" width="149.328125" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-64.6640625,-10.5)"><foreignObject width="129.328125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">PENDENT_VALIDACIÓ</div></foreignObject></g></g></g><g class="node" id="C" transform="translate(276.20703125,411.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-31.4453125" y="-20.5" width="62.890625" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-21.4453125,-10.5)"><foreignObject width="42.890625" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">VALIDA</div></foreignObject></g></g></g><g class="node" id="E" transform="translate(497.37890625,411.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-43.546875" y="-20.5" width="87.09375" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-33.546875,-10.5)"><foreignObject width="67.09375" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">DENEGADA</div></foreignObject></g></g></g><g class="node" id="D" transform="translate(64.578125,523.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-45.3515625" y="-20.5" width="90.703125" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-35.3515625,-10.5)"><foreignObject width="70.703125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">ANUL.LADA</div></foreignObject></g></g></g><g class="node" id="F" transform="translate(203.3203125,523.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-43.390625" y="-20.5" width="86.78125" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-33.390625,-10.5)"><foreignObject width="66.78125" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">REVOCADA</div></foreignObject></g></g></g><g class="node" id="G" transform="translate(349.09375,523.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-49.984375" y="-20.5" width="99.96875" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-39.984375,-10.5)"><foreignObject width="79.96875" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">RENUNCIADA</div></foreignObject></g></g></g><g class="node" id="V" transform="translate(489.203125,523.2453155517578)" style="opacity: 1;"><rect rx="0" ry="0" x="-40.125" y="-20.5" width="80.25" height="41" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-30.125,-10.5)"><foreignObject width="60.25" height="21"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">EXPIRADA</div></foreignObject></g></g></g></g></g></g></svg>
