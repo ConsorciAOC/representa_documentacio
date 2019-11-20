@@ -1041,7 +1041,7 @@ Exemple on es crea una representació.
  </processarRepresentacioResponse>
 ```
 
-## 4.5 Modificació
+## 6.5 Modificació
 L'unic atribut que es pot modificar d'una representació és el seu _estat_. Per a fer-ho cal indicar l'identificadorLegal per recuperar la representació i el nou estat que es desitja modificar.
 En aquest exemple es modifica l'estat de la representació creada al punt 4.7 passant de VALIDA a DENEGADA.
 
@@ -1135,18 +1135,18 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 </processarRepresentacioResponse>
 ```
 
-# 5. Codis de resposta
+# 7. Codis de resposta
 _Pendent_
 
-# 6. Cataleg de tràmits
+# 8. Cataleg de tràmits
 Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en *families*. Alhora les families s'agrupen entorn a una entitat anomenada *cataleg*.
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per generar o fer ús del catàleg es contemplen 3 escenaris:
 
-## 6.1 Creació manual
+## 8.1 Creació manual
 Quan una administració inicia l'ús del servei de Representa disposarà d'un catàleg inicial buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
 
-## 6.2 Importació mitjançant fitxer CSV
+## 8.2 Importació mitjançant fitxer CSV
 Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Aquest procés requereix 2 fitxers:
 
 * CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi familia";"Nom familia"_
@@ -1180,11 +1180,13 @@ Restriccions / limitacions
 * Si s'indica un tràmit associat a una familia que ni existeix prèviament ni existeix al fitxer de families.csv es retornarà una excepció indicant-ne la causa i no es crearà cap tramit en la càrrega fins que es solucioni el conflicte. Caldrà corregir-ho i tornar a fer la càrrega.
 * Només es crearà les families que tinguin associat 1 o més tràmits en el moment de la càrrega.
 
-## 6.3 Ús catàleg compartit per Consorci AOC
+## 8.3 Ús catàleg compartit per Consorci AOC
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
+
+# 9 Generació 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzM0MDcwNDM5LC00MDU1MDY0MCwtNTgzMj
+eyJoaXN0b3J5IjpbNDI2Nzg1Mzg4LC00MDU1MDY0MCwtNTgzMj
 M1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0
 LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
