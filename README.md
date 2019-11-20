@@ -57,19 +57,19 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 		<xs:element name="evidencies" minOccurs="0" >  
 			<xs:complexType>  
 				<xs:sequence>  
-<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>  
-</xs:sequence>  
-</xs:complexType>  
-</xs:element>  
-</xs:sequence>  
+					<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>  
+				</xs:sequence>  
+			</xs:complexType>  
+		</xs:element>  
+	</xs:sequence>  
 </xs:complexType>
 ```
 
 |Camp | Descripció|
 |---- | ----------|
-|identificadorLegal | Identificador únic de la representació|
+|identificadorLegal | Identificador únic de la representació. Usat per recuperar representacions úniques a _consultaRepresentacio_|
 |tipusRepresentacio | Tipus de Representacio (TIPUS_A, TIPUS_B, TIPUS_C)|
-|estat | Llistat d'element _estat_|
+|estat | Llistat d'elements _estat_|
 |poderdant | Persona (física o jurídica) que atorga el poder de representació|
 |representant | Persona (física o jurídica) que rep el poder de representació|
 |ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_, _tramit_ i _capacitat_|
@@ -1168,6 +1168,5 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDc2NjQyMjksLTE4NDk3NTIzNDFdfQ
-==
+eyJoaXN0b3J5IjpbNDQ5NTcxMzIzLC0xODQ5NzUyMzQxXX0=
 -->
