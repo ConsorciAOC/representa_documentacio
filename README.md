@@ -1185,10 +1185,12 @@ Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i p
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 
 # 9. Generació d'informes PDF
-Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és possible demanar un informe en format PDF on es retornin les mateixes dades que s'han retornat a la consultar formatades i 
+Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és possible demanar un informe en format PDF on es retornin les mateixes dades que s'han retornat a la consultar però en format orientat a la impressió.
+
+Per fer-ho 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg2Mzc4MjQwNiwtNDA1NTA2NDAsLTU4Mz
-IzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0
-NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ
-==
+eyJoaXN0b3J5IjpbLTEyNDA3MzAwMDMsLTQwNTUwNjQwLC01OD
+MyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5
+NDQsLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX
+0=
 -->
