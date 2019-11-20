@@ -1,3 +1,4 @@
+
 # 1. Introducció
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
@@ -1189,8 +1190,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4Mz
-IzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0
-NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ
-==
+eyJoaXN0b3J5IjpbNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNT
+UwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAz
+MSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xOD
+Q5NzUyMzQxXX0=
 -->
