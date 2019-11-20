@@ -1,7 +1,11 @@
 # Change log
 
+
 ## Novembre 2019
 - Actualitzats codis de producte.
+- Afegit índex.
+- Corregida guia respecte els canvis de l'xsd.
+- Refactorització general de la guia.
 
 ## Octubre 2019
 - Afegida descripció i exemples d'operacions d'Alta i Modificació d'una representació.
