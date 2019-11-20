@@ -114,9 +114,21 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Solicitant
-Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa
+Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa.
 
-
+```xml
+<xs:complexType name="solicitant">  
+	<xs:sequence>  
+		<xs:element name="persona" type="persona" />  
+		<xs:element name="administracio" type="administracio" />  
+		<xs:element name="aplicacio" type="xs:string" minOccurs="0" />  
+	</xs:sequence>  
+</xs:complexType>
+```
+|Camp | Descripció|
+|---- | ----------|
+|persona| Persona que solicita la peticio|
+|administracio| 
 
 ## 3.4 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
@@ -1173,6 +1185,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTM4MDkzNSw4NjE2MDQ3MjUsLTE4ND
-k3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTE4MTA2MjQyNDQsODYxNjA0NzI1LC0xOD
+Q5NzUyMzQxXX0=
 -->
