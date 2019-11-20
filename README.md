@@ -204,30 +204,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
-## 3.7 Estat
-```xml
-<xs:simpleType name="estat">  
-	<xs:restriction base="xs:string">  
-		<xs:enumeration value="PENDENT_VALIDACIO"/>  
-		<xs:enumeration value="VALIDA"/>  
-		<xs:enumeration value="ANULADA"/>  
-		<xs:enumeration value="RENUNCIADA"/>  
-		<xs:enumeration value="REVOCADA"/>  
-		<xs:enumeration value="DENEGADA"/>  
-		<xs:enumeration value="EXPIRADA"/>  
-		<xs:enumeration value="PENDENT_SIGNATURA"/>  
-	</xs:restriction>  
-</xs:simpleType>
-```
 
- - `VALIDA` > Representació vàlida
- - `PENDENT_VALIDACIO` > 
- - `DENEGADA` >
- - `EXPIRADA` >
- - `RENUNCIADA` >
- - `REVOCADA` >
- - `ANULADA` >
- - `PENDENT_SIGNATURA` >
 
 # 4 Tipus de representacions					   
 
@@ -366,10 +343,11 @@ Exemple:
 ```
 
 ## 3.6 Estats
+
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada
+* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
 * `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
 * `RENUNCIADA` >> El representant renuncia a la representació.
@@ -1181,7 +1159,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MjAzNTExOCwxNDY2MTk3NTczLC0xMj
+eyJoaXN0b3J5IjpbLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMj
 E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
 MjUsLTE4NDk3NTIzNDFdfQ==
 -->
