@@ -584,7 +584,10 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-## 5.3 Validació (_validarRepresentacio_)
+## 5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)
+
+
+## 5.4 Validació (_validarRepresentacio_)
 
 > La opertació de validació permet **preguntar** a Representa **si
 > existeix** alguna representació en estat `VALIDA` **entre un poderdant
@@ -655,7 +658,7 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
-## 5.4 Alta / Modificació (_processarRepresentacio_)
+## 5.5 Alta / Modificació (_processarRepresentacio_)
 Permet realitzar la inscripció o modificació** d'una representació.
 
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
@@ -1273,10 +1276,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
-g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
-MTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MC
-wtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5
-NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3Mj
-UsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbMTM0NDYzMzIzNCwtMTEyNDg0MDAyMiwyMz
+kxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2Nzkw
+OTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OC
+wxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYx
+OTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NT
+QzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
