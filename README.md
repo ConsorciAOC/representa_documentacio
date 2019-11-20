@@ -290,7 +290,7 @@ Exemple:
 Representació per a una administració concreta i per a un tramit concret.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
-L'element _ambitRepresentació_ té definida la _administracio_, l'element _tramit_ i una llista d'elements _capacitat_.
+L'element _ambitRepresentació_ té definida la _administracio_, _tramit_ i _capacitats_.
 
 Exemple:
 ```xml
@@ -1192,6 +1192,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMT
-Q0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTIxMjkzNzc1MDAsLTEyMTk0NjAwMzEsMj
+E3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1
+MjM0MV19
 -->
