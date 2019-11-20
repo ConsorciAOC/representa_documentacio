@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="img/logo_REPRESENTA.png" />
+<img align="center" src="img/logo.png" />
 </p>
 
 # Taula de continguts
@@ -1264,9 +1264,9 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMT
-c2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2
-NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLD
-IxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3
-NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMj
+A1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYxMzg4
+ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1NzMsLT
+EyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYw
+NDcyNSwtMTg0OTc1MjM0MV19
 -->
