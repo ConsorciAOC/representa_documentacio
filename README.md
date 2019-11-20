@@ -101,7 +101,6 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 				</xs:sequence>
 			</xs:complexType>
 		</xs:element>
-		<xs:element name="solicitant" type="solicitant" minOccurs="0"/>
 	</xs:sequence>
 </xs:complexType>
 ```
@@ -111,11 +110,12 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |dataCreacio | Data de creació de l'evidencia|
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
-|solicitant | Element
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
-## 3.3 DocumentEvidencia
+## 3.3
+
+## 3.4 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
 ```xml
 <xs:complexType name="documentEvidencia">
@@ -142,7 +142,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
-## 3.4 Tipus de representacions					   
+## 3.5 Tipus de representacions					   
 ```xml
 <xs:simpleType name="tipusRepresentacio">
         <xs:restriction base="xs:string">
@@ -192,7 +192,7 @@ L'element _tramit_ té la següent estructura:
 |actiu | Indicador d'actiu o no actiu |
 
 
-### 3.4.1 General
+### 3.5.1 General
 Representació per a qualsevol tràmit, per a qualsevol administració.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_A**.
 
@@ -226,7 +226,7 @@ Exemple:
 </representacio>
 ```
 
-### 3.4.2 A organisme
+### 3.5.2 A organisme
 Representació per a qualsevol tràmit, per a una administració concreta.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_B**.
 
@@ -264,7 +264,7 @@ Exemple:
 </representacio>
 ```
 
-### 3.4.3 A tramit
+### 3.5.3 A tramit
 Representació per a una administració concreta i per a un tramit concret.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
@@ -310,7 +310,7 @@ Exemple:
 </representacio>
 ```
 
-## 3.5 Estats
+## 3.6 Estats
 Estats possibles d'una representació:
 * VALIDA >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * PENDENT_VALIDACIO >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
@@ -320,13 +320,13 @@ Estats possibles d'una representació:
 * REVOCADA >> El poderdant revoca la representació.
 * ANULADA >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
-### 3.5.1 Diagrama de fluxe d'estats
+### 3.6.1 Diagrama de fluxe d'estats
 _Pendent_
 
 
-## 3.6 Operacions
+## 3.7 Operacions
 
-### 3.6.1 Consulta de representacions
+### 3.7.1 Consulta de representacions
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
@@ -1170,6 +1170,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNTQ3NTM2MjcsODYxNjA0NzI1LC0xOD
+eyJoaXN0b3J5IjpbLTE1NDk3NDgyMTUsODYxNjA0NzI1LC0xOD
 Q5NzUyMzQxXX0=
 -->
