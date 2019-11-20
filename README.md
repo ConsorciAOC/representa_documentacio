@@ -30,7 +30,7 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 
 # 3. Missatgeria específica
 
-A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<datosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
+A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
 
 ## 3.1 Representacio
 
@@ -178,6 +178,9 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |persona| Element del tipus _persona_ que sol·licita la peticio|
 |administracio| Element del tipis _administració_ que sol·licita la petició|
 |aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
+
+## 3.6 Persona
+
 
 ## 3.6 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
@@ -1162,7 +1165,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDM0NjkxNDAsLTU4MzIzNTA4NCwxND
-Y2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4
-ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbMTUxNjEyNDgxNSwtNTgzMjM1MDg0LDE0Nj
+YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
+NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
