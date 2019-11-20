@@ -200,10 +200,13 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |valorDocumentIdentificatiu| Element usat per a la identificació o cerca de persones|
 |tipusPersona|Element del tipus _tipusPersona_ (FISICA o JURIDICA)|
 |nomRaoSocial|Nom o raó social de la persona|
-|cognoms
+|cognoms|Cognoms de la persona|
+|correuElectronic| Adreça de correu electrònic|
+|accceptaAvisos|Flag per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
+|dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_|
 
 
-## 3.6 DocumentEvidencia
+## 3.7 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
 ```xml
 <xs:complexType name="documentEvidencia">
@@ -230,7 +233,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
-## 3.7  Estat
+## 3.8  Estat
 
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
@@ -247,8 +250,8 @@ Estats possibles d'una representació:
 
 Existeixen 3 tipus de representacions:
 
- - TIPUS_A > General
- - TIPUS_B > A organisme
+ - `TIPUS_A` > General
+ - `TIPUS_B > A organisme
  - TIPUS_C > A tramit
 
 ```xml
@@ -1186,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzNzk5MjQ2OSwtNTgzMjM1MDg0LDE0Nj
+eyJoaXN0b3J5IjpbMTI2OTM0MDk1MywtNTgzMjM1MDg0LDE0Nj
 YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
 NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
