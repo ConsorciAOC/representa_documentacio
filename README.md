@@ -1194,6 +1194,9 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 
 # 7. Codis de resposta
 
+Tipus d'operació| Codi
+---- | ----------
+|Operació correcte| 0
 |codi.operacioCorrecta|0|
 codi.errorIntern = 500  
 codi.notFound = 001  
@@ -1259,8 +1262,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMyNDc2MTgwMCwtMTc2OTA2MDQzMyw0Nz
-AzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4
-NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMT
-E0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbOTk4MzcwNDQyLC0xNzY5MDYwNDMzLDQ3MD
+M3ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0
+LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMT
+Q0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
