@@ -113,7 +113,10 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
-## 3.3
+## 3.3 Solicitant
+Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa
+
+
 
 ## 3.4 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
@@ -405,7 +408,7 @@ numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de con
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.6.2 Consulta de representació
+### 3.7.2 Consulta de representació
 Permet recuperar *una* representació a partir del seu identificador únic (identificadorLegal).
 Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
@@ -461,7 +464,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-### 3.6.3 Validació
+### 3.7.3 Validació
 La opertació de validació permet preguntar a Representa si existeix alguna representació en estat _VALIDA_ entre un poderdant i un representant per un tràmit i capacitat específic.
 En cas d'existir alguna representació existent i vàlida que ho permeti es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut _CodigoCertificado_ de la petició de la PCI *REPRESENTA_VALIDACIO*.
@@ -528,7 +531,7 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició
 
-### 3.6.4 Alta / Modificació
+### 3.7.4 Alta / Modificació
 Permet realitzar la inscripció o modificació** d'una representació.
 La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop creada una representació.
 
@@ -596,9 +599,9 @@ resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
 
-## 3.7 Elements missatgeria
+## 3.8 Elements missatgeria
 
-### 3.7.1 Capacitat
+### 3.8.1 Capacitat
 Indica quin tipus d'accions defineixen l'ambit d'una representació per a les representacions de tipus _a tramit_.
 Les representacions _a organisme_ o _generals_ no tenen la dimensió de capacitat.
 
@@ -616,7 +619,7 @@ La capacitat pot tenir els següents _codi_:
 - TRAMITAR
 - NOTIFICAR
 
-#### 3.7.2 Solicitant
+#### 3.8.2 Solicitant
 Element obligatori on cal informar quina persona i des de quina administració es fa la petició. Adicionalment a les consultes, els elements _representacio_ conserven la informació del _solicitant_ que va sol·licitar-ne la creació.
 
 ```xml
@@ -628,7 +631,7 @@ Element obligatori on cal informar quina persona i des de quina administració e
 </xs:complexType>
 ```
 
-#### 3.7.3 Origen
+#### 3.8.3 Origen
 Camp on es desa la font des d'on es va crear una representació. Pot pendre els següents valors:
 
 ```xml
@@ -1170,6 +1173,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDk3NDgyMTUsODYxNjA0NzI1LC0xOD
-Q5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTEyNTM4MDkzNSw4NjE2MDQ3MjUsLTE4ND
+k3NTIzNDFdfQ==
 -->
