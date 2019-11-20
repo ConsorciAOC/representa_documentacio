@@ -608,9 +608,10 @@ Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen 
 
 Camp | Descripció
 ---- | ----------
-persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_
-actives| `TRUE` > representacions amb estat `VALIDA` o `PENDENT_VALIDACIO` actives| `FALSE` > La resta d'estats
-
+|persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_
+|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO`
+|| `FALSE` > La resta d'estats
+|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició
 
 ## 5.4 Validació (_validarRepresentacio_)
 
@@ -1301,7 +1302,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjA5MDc3ODEsLTExMjQ4NDAwMjIsMj
+eyJoaXN0b3J5IjpbLTEzNTgwODA5MjksLTExMjQ4NDAwMjIsMj
 M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
 MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
 gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
