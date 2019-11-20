@@ -658,11 +658,12 @@ Camp | Descripció
  </xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció
 ---- | ----------
 |resposta| Element del tipus _resposta_
-|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és la seva representant
-|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el seu poderdant
+|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant
+|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant
 
 
 ## 5.4 Validació (_validarRepresentacio_)
@@ -1354,10 +1355,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODQ0MDU0MCwtMTEyNDg0MDAyMiwyMz
-kxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2Nzkw
-OTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OC
-wxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYx
-OTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NT
-QzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOT
+EyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5
+NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LD
+EyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5
+NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1ND
+MsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
