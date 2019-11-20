@@ -168,7 +168,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
         </xs:restriction>
 </xs:simpleType>
 ```
-Els elements de l'**ambit de la representació** varia segons el tipus de representació. Als punts 3.51, 3.52 i 3.5.3 es descriuen els tipus de representació i 
+Els elements de l'**ambit de la representació** varia segons el tipus de representació. Als punts 3.51, 3.52 i 3.5.3 es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
 
 ```xml
 <xs:complexType name="ambitRepresentacio">
@@ -186,7 +186,7 @@ Els elements de l'**ambit de la representació** varia segons el tipus de repres
 </xs:complexType>
 ```
 
-L'element _tramit_ té la següent estructura:
+L'element **tramit** té la següent estructura:
 ```xml
 <xs:complexType name="tramit">  
 	 <xs:sequence>  
@@ -1190,7 +1190,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI5MjU0MDI5NCwxNDY2MTk3NTczLC0xMj
+eyJoaXN0b3J5IjpbMTA2MjUzNjAzMywxNDY2MTk3NTczLC0xMj
 E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
 MjUsLTE4NDk3NTIzNDFdfQ==
 -->
