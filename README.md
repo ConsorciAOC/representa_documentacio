@@ -30,9 +30,11 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 
 # 3. Missatgeria específica
 
-A continuació es desciruen alguns elements complexos de la missatgeria específica (`<datosEspecificos>`) existents  [dadesEspecifiques.xsd](dadesEspecifiques.xsd)  de la missatgeria de Representa.
+A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<datosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
 
 ## 3.1 Representacio
+
+Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
 
 ```xml
 <xs:complexType name="representacio">  
@@ -1160,7 +1162,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM3ODMzMTM0LC01ODMyMzUwODQsMTQ2Nj
-E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
-NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTIxNDM0NjkxNDAsLTU4MzIzNTA4NCwxND
+Y2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4
+ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
 -->
