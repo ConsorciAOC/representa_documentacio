@@ -85,14 +85,15 @@ La missatgeria específica de Representa exposada a la PCI s'engloba al fitxer [
 |evidencies | Llistat d'elements _evidencia_|
 
 ## 3.2 Evidencia
-Per cada acció realitzada sobre una representació es registra un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi en la representació.
+Per cada acció realitzada sobre una representació es crea i s'associa un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi sobre una representació.
 
 ```xml
 <xs:complexType name="evidencia">
 	<xs:sequence>
 		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
 		<xs:element name="identificadorLegal" type="xs:string"/>
-		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>		
+		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>	
+		<xs:element name="solicitant" type="solicitant"/>	
 		<xs:element name="documentsEvidencia" minOccurs="0">
 			<xs:complexType>
 				<xs:sequence>
@@ -110,6 +111,7 @@ Per cada acció realitzada sobre una representació es registra un element _evid
 |dataCreacio | Data de creació de l'evidencia|
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
+|solicitant | Element
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
@@ -1168,6 +1170,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMDg5NjQ3MSw4NjE2MDQ3MjUsLTE4ND
-k3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTEwNTQ3NTM2MjcsODYxNjA0NzI1LC0xOD
+Q5NzUyMzQxXX0=
 -->
