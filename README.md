@@ -590,7 +590,7 @@ Camp | Descripció
 ---- | ----------
 codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
-tipusSolicitud | Tipus de sol·licitud de la petició (ALTA, MODIFICACIO, CONSULTA, VALIDACIO)
+tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
 ### 3.7.4 Alta / Modificació (_processarRepresentacio_)
 Permet realitzar la inscripció o modificació** d'una representació.
@@ -632,8 +632,8 @@ tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder 
 representacio | Element del tipus _representacio_ 
 documentsRepresentacio | Elements del tipus _documentRepresentacio_
 motiu | Descripció del motiu de la inscripció
-tipusSolicitud | Tipus de sol·licitud de la petició (ALTA, MODIFICACIO)
-solicitant | Persona i administració que sol·licita la petició
+tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO)
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
 
 
 #### Resposta
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njg5MzI2OTMsLTU4MzIzNTA4NCwxND
-Y2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4
-ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbOTM2ODk5NjQzLC01ODMyMzUwODQsMTQ2Nj
+E5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1
+NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
