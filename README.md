@@ -1184,9 +1184,9 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 
-# 9 Generació 
+# 9. Generació d'informes PDF
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDI2Nzg1Mzg4LC00MDU1MDY0MCwtNTgzMj
+eyJoaXN0b3J5IjpbMTEwNTYxMjc2LC00MDU1MDY0MCwtNTgzMj
 M1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0
 LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
