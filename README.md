@@ -113,7 +113,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
-### 3.3 Tramit
+## 3.3 Tramit
 L'element **tramit** té la següent estructura:
 ```xml
 <xs:complexType name="tramit">  
@@ -128,6 +128,25 @@ L'element **tramit** té la següent estructura:
 	 </xs:sequence>  
 </xs:complexType>
 ```
+## 3.4 Ambit de representació
+Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
+
+```xml
+<xs:complexType name="ambitRepresentacio">
+        <xs:sequence>
+            <xs:element name="administracio" type="administracio" minOccurs="0"/>
+            <xs:element name="tramit" minOccurs="0"  type="tramit"/>
+            <xs:element name="capacitats">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+</xs:complexType>
+```
+Més endavant es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
 
 |Camp | Descripció|
 |---- | ----------|
@@ -139,7 +158,8 @@ L'element **tramit** té la següent estructura:
 |descripcio | Descrpicó del tramit |
 |actiu | Indicador d'actiu o no actiu |
 
-## 3.4 Solicitant
+
+## 3.5 Solicitant
 Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa.
 
 ```xml
@@ -157,7 +177,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |administracio| Element del tipis _administració_ que sol·licita la petició|
 |aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
 
-## 3.5 DocumentEvidencia
+## 3.6 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
 ```xml
 <xs:complexType name="documentEvidencia">
@@ -184,7 +204,9 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
-## 3.6 Tipus de representacions					   
+
+
+# 4 Tipus de representacions					   
 
 Existeixen 3 tipus de representacions:
 
@@ -201,25 +223,6 @@ Existeixen 3 tipus de representacions:
         </xs:restriction>
 </xs:simpleType>
 ```
-### 3.5.1 Ambit de representació
-Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
-
-```xml
-<xs:complexType name="ambitRepresentacio">
-        <xs:sequence>
-            <xs:element name="administracio" type="administracio" minOccurs="0"/>
-            <xs:element name="tramit" minOccurs="0"  type="tramit"/>
-            <xs:element name="capacitats">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
-</xs:complexType>
-```
-A continuació es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
 
 ### 3.5.1 General
 Representació per a qualsevol tràmit, per a qualsevol administració.
@@ -1199,7 +1202,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3NDgwMTEzNywxNDY2MTk3NTczLC0xMj
+eyJoaXN0b3J5IjpbLTIzNjczNjM5NCwxNDY2MTk3NTczLC0xMj
 E5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3
 MjUsLTE4NDk3NTIzNDFdfQ==
 -->
