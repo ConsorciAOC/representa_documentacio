@@ -1,3 +1,59 @@
+# Taula de continguts
+
+- [1. Introducció](#1-introducci-)
+  * [1.1. Integració PCI](#11-integraci--pci)
+- [2. Missatgeria](#2-missatgeria)
+- [3. Missatgeria específica](#3-missatgeria-espec-fica)
+  * [3.1 Representacio](#31-representacio)
+  * [3.2 Evidencia](#32-evidencia)
+  * [3.3 Tramit](#33-tramit)
+  * [3.4 Ambit de representació](#34-ambit-de-representaci-)
+  * [3.5 Solicitant](#35-solicitant)
+  * [3.6 Persona](#36-persona)
+  * [3.7 DocumentEvidencia](#37-documentevidencia)
+  * [3.8  Estat](#38--estat)
+- [4 Tipus de representacions](#4-tipus-de-representacions)
+    + [4.1 General](#41-general)
+    + [4.2 A organisme](#42-a-organisme)
+    + [4.3 A tramit](#43-a-tramit)
+  * [5 Operacions](#5-operacions)
+    + [5.1 Consulta de representacions (_consultarRepresentacions_)](#51-consulta-de-representacions---consultarrepresentacions--)
+      - [Peticio](#peticio)
+      - [Resposta](#resposta)
+    + [5.2 Consulta de representació (_consultarRepresentacio_)](#52-consulta-de-representaci----consultarrepresentacio--)
+    + [Petició](#petici-)
+    + [Resposta](#resposta-1)
+    + [5.3 Validació (_validarRepresentacio_)](#53-validaci----validarrepresentacio--)
+      - [Petició](#petici--1)
+      - [Resposta](#resposta-2)
+    + [5.4 Alta / Modificació (_processarRepresentacio_)](#54-alta---modificaci----processarrepresentacio--)
+      - [Petició](#petici--2)
+      - [Resposta](#resposta-3)
+- [6. Exemples de peticions](#6-exemples-de-peticions)
+  * [6.1 Consulta](#61-consulta)
+    + [Petició](#petici--3)
+    + [Resposta de consulta de representació](#resposta-de-consulta-de-representaci-)
+  * [6.2 Consulta (múltiples representacions)](#62-consulta--m-ltiples-representacions-)
+    + [Petició](#petici--4)
+    + [Resposta](#resposta-4)
+  * [6.3 Validació](#63-validaci-)
+    + [Peticio](#peticio-1)
+    + [Resposta (validació positiva)](#resposta--validaci--positiva-)
+    + [Resposta (validacio negativa)](#resposta--validacio-negativa-)
+  * [6.4 Alta](#64-alta)
+    + [Petició](#petici--5)
+    + [Resposta](#resposta-5)
+  * [6.5 Modificació](#65-modificaci-)
+    + [Petició](#petici--6)
+    + [Resposta](#resposta-6)
+- [7. Codis de resposta](#7-codis-de-resposta)
+- [8. Cataleg de tràmits](#8-cataleg-de-tr-mits)
+  * [8.1 Creació manual](#81-creaci--manual)
+  * [8.2 Importació mitjançant fitxer CSV](#82-importaci--mitjan-ant-fitxer-csv)
+  * [8.3 Ús catàleg compartit per Consorci AOC](#83--s-cat-leg-compartit-per-consorci-aoc)
+- [9. Generació d'informes PDF](#9-generaci--d-informes-pdf)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # 1. Introducció
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
@@ -1190,8 +1246,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNT
-UwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAz
-MSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xOD
-Q5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNj
+EzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3
+MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsOD
+YxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
