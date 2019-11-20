@@ -627,33 +627,33 @@ Camp | Descripció
 	 <xs:element name="resposta" type="resposta"/>  
 	 <xs:element name="poderdants">  
 		 <xs:complexType>  
-		 <xs:sequence>  
-		 <xs:element name="representacions" minOccurs="0">  
+			 <xs:sequence>  
+				 <xs:element name="representacions" minOccurs="0">  
+					 <xs:complexType>  
+						 <xs:sequence>  
+							 <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+						 </xs:sequence>  
+					 </xs:complexType>  
+				 </xs:element>  
+			 </xs:sequence>  
+		 </xs:complexType>  
+	 </xs:element>  
+	 <xs:element name="representants">  
 		 <xs:complexType>  
-		 <xs:sequence>  
-			 <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-		 </xs:sequence>  
+			 <xs:sequence>  
+				 <xs:element name="representacions" minOccurs="0">  
+					 <xs:complexType>  
+						 <xs:sequence>  
+							 <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+						 </xs:sequence>  
+					 </xs:complexType>  
+				 </xs:element>  
+			</xs:sequence>  
+		</xs:complexType>  
+				 </xs:element>  
+			 </xs:sequence>  
 		 </xs:complexType>  
-		 </xs:element>  
-		 </xs:sequence>  
-		 </xs:complexType>  
- </xs:element>  
- <xs:element name="representants">  
- <xs:complexType>  
- <xs:sequence>  
- <xs:element name="representacions" minOccurs="0">  
- <xs:complexType>  
- <xs:sequence>  
- <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
- </xs:sequence>  
- </xs:complexType>  
- </xs:element>  
- </xs:sequence>  
- </xs:complexType>  
- </xs:element>  
- </xs:sequence>  
- </xs:complexType>  
- </xs:element>  
+	 </xs:element>  
  </xs:sequence>  
  </xs:complexType>  
 </xs:element>
@@ -1348,10 +1348,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDE0NzE5NjIsLTExMjQ4NDAwMjIsMj
-M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
-MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
-gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
-MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4OD
-U0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbOTI4NjQxMzY4LC0xMTI0ODQwMDIyLDIzOT
+EyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5
+NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LD
+EyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5
+NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1ND
+MsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
 -->
