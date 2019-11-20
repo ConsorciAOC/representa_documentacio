@@ -1,5 +1,5 @@
 # Taula de continguts
-- [Taula de continguts](#taula-de-continguts)
+
 - [1. Introducció](#1-introducci-)
   * [1.1. Integració PCI](#11-integraci--pci)
 - [2. Missatgeria](#2-missatgeria)
@@ -7,12 +7,12 @@
   * [3.1 Representacio](#31-representacio)
   * [3.2 Evidencia](#32-evidencia)
   * [3.3 Tramit](#33-tramit)
-  * [3.4 Ambit de representació](#34-ambit-de-representaci-)
-  * [3.5 Solicitant](#35-solicitant)
+  * [3.4 Àmbit de representació](#34-ambit-de-representaci-)
+  * [3.5 Sol·licitant](#35-solicitant)
   * [3.6 Persona](#36-persona)
   * [3.7 DocumentEvidencia](#37-documentevidencia)
   * [3.8  Estat](#38--estat)
-- [4 Tipus de representacions](#4-tipus-de-representacions)
+- [4. Tipus de representacions](#4-tipus-de-representacions)
     + [4.1 General](#41-general)
     + [4.2 A organisme](#42-a-organisme)
     + [4.3 A tramit](#43-a-tramit)
@@ -187,7 +187,7 @@ L'element **tramit** té la següent estructura:
 	 </xs:sequence>  
 </xs:complexType>
 ```
-## 3.4 Ambit de representació
+## 3.4 Àmbit de representació
 Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
 
 ```xml
@@ -303,7 +303,7 @@ Estats possibles d'una representació:
 * `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
 
 
-# 4 Tipus de representacions					   
+# 4. Tipus de representacions					   
 
 Existeixen 3 tipus de representacions:
 
@@ -1260,8 +1260,8 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NzU4NTY3OTcsLTE3NjkwNjA0MzMsND
-cwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUw
-ODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLT
-ExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbMTc1MTIwMjczOSwtMTc2OTA2MDQzMyw0Nz
+AzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4
+NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMT
+E0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
 -->
