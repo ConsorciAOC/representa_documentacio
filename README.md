@@ -265,7 +265,7 @@ Existeixen 3 tipus de representacions:
 ```
 
 ### 4.1 General
-Representació per a qualsevol tràmit, per a qualsevol administració.
+Representació per a qualsevol tràmit, per a qualsevol administració per a una o més capacitats.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_A**.
 
 L'element _ambitRepresentació_ te informat l'element _capacitats_ amb 1 o varis valors.
@@ -302,7 +302,7 @@ Exemple:
 ```
 
 ### 4.2 A organisme
-Representació per a realitzar qualsevol tràmit, per a una administració concreta.
+Representació per a realitzar qualsevol tràmit, per a una administració concreta per a una o més capacitats.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_B**.
 
 L'element _ambitRepresentació_ té definit l'element _administracio_ i _capacitats_.
@@ -340,7 +340,7 @@ Exemple:
 ```
 
 ### 4.3 A tramit
-Representació per a una administració concreta i per a un tramit concret.
+Representació per a una administració concreta i per a un tramit concret per a una o més capacitats.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
 L'element _ambitRepresentació_ té definida la _administracio_, _tramit_ i _capacitats_.
@@ -1189,7 +1189,7 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1MTE5NzA0MiwtNTgzMjM1MDg0LDE0Nj
+eyJoaXN0b3J5IjpbMTM4Nzk2Nzc0OSwtNTgzMjM1MDg0LDE0Nj
 YxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4
 NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
