@@ -1,5 +1,5 @@
 <p align="center">
-<img align="center" src="img/logo_REPRESENTA.png" />
+<img align="center" src="img/logo.png" />
 </p>
 
 # Taula de continguts
@@ -234,6 +234,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 	</xs:sequence>  
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |persona| Element del tipus _persona_ que sol·licita la peticio|
@@ -255,6 +256,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 	</xs:sequence>  
 </xs:complexType>
 ```
+
 |Camp | Descripció|
 |---- | ----------|
 |tipusDocumentIdentificatiu| Pot pendre els valors de NIF o PASSAPORT|
@@ -582,7 +584,11 @@ representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ## 5.3 Validació (_validarRepresentacio_)
-La opertació de validació permet **preguntar** a Representa **si existeix** alguna representació en estat `VALIDA` **entre un poderdant i un representant, per una administració, un tràmit i una capacitat**.
+
+> La opertació de validació permet **preguntar** a Representa **si
+> existeix** alguna representació en estat `VALIDA` **entre un poderdant
+> i un representant, per una administració, un tràmit i una capacitat**.
+
 En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
 
@@ -650,7 +656,9 @@ tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
 ## 5.4 Alta / Modificació (_processarRepresentacio_)
 Permet realitzar la inscripció o modificació** d'una representació.
-**La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop creada una representació.**
+
+> **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
+> creada una representació.**
 
 #### Petició
 
@@ -1264,9 +1272,9 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMT
-c2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2
-NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLD
-IxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3
-NTIzNDFdfQ==
+eyJoaXN0b3J5IjpbLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMz
+M2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3
+ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LD
+E0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0
+Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
