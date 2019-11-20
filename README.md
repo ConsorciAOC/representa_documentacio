@@ -127,8 +127,9 @@ Element associat a cada evidencia on es recull informació relativa al context d
 ```
 |Camp | Descripció|
 |---- | ----------|
-|persona| Persona que solicita la peticio|
-|administracio| 
+|persona| Element del tipus _persona_ que sol·licita la peticio|
+|administracio| Element del tipis _administració_ que sol·licita la petició|
+|aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
 
 ## 3.4 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser sol·licituds (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), poders (poder notarial) o altres.
@@ -1185,6 +1186,6 @@ Restriccions / limitacions
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTA2MjQyNDQsODYxNjA0NzI1LC0xOD
+eyJoaXN0b3J5IjpbLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xOD
 Q5NzUyMzQxXX0=
 -->
