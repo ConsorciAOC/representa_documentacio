@@ -809,20 +809,21 @@ representacio | Element del tipus _representacio_ on es retorna el detall de la 
 ## 5.6 Consulta de catàleg
 Permet consultar el catàleg d'una administració.
 
-```
+```xml
 <xs:element name="consultarCataleg">  
-<xs:complexType>  
-<xs:sequence>  
-<xs:element name="codiAdministracio" type="xs:string" />  
-<xs:element name="solicitant" type="solicitant" />  
-</xs:sequence>  
-</xs:complexType>  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="codiAdministracio" type="xs:string" />  
+			<xs:element name="solicitant" type="solicitant" />  
+		</xs:sequence>  
+	</xs:complexType>  
 </xs:element>
 ```
 
 Camp | Descripció
 ---- | ----------
 codiAdministracio| Codi INE10 de l'administració
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
 
 # 6. Exemples de peticions
 
@@ -1372,10 +1373,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4OTk1MjIsLTM3Mzg2MDYyLC0xMTI0OD
-QwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0
-LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsND
-cwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUw
-ODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLT
-ExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMj
+Q4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1
+NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMy
+w0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIz
+NTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NC
+wtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
+
 -->
