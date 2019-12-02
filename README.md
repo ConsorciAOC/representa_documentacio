@@ -8,14 +8,16 @@
   * [1.1. Integració PCI](#11-integraci--pci)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria específica](#3-missatgeria-espec-fica)
-  * [3.1 Representacio](#31-representacio)
-  * [3.2 Evidencia](#32-evidencia)
-  * [3.3 Tramit](#33-tramit)
-  * [3.4 Àmbit de representació](#34-ambit-de-representaci-)
-  * [3.5 Sol·licitant](#35-solicitant)
-  * [3.6 Persona](#36-persona)
-  * [3.7 DocumentEvidencia](#37-documentevidencia)
-  * [3.8  Estat](#38--estat)
+  * [3.1 Representació](#31-representaci-)
+  * [3.2 Evidència](#32-evid-ncia)
+  * [3.3 Catàleg](#33-cat-leg)
+  * [3.4 Familia](#34-familia)
+  * [3.5 Tramit](#35-tramit)
+  * [3.6 Àmbit de representació](#36--mbit-de-representaci-)
+  * [3.7 Sol·licitant](#37-sol-licitant)
+  * [3.8 Persona](#38-persona)
+  * [3.9 DocumentEvidencia](#39-documentevidencia)
+  * [3.10  Estat](#310--estat)
 - [4. Tipus de representacions](#4-tipus-de-representacions)
     + [4.1 General](#41-general)
     + [4.2 A organisme](#42-a-organisme)
@@ -27,31 +29,50 @@
   * [5.2 Consulta de representació (_consultarRepresentacio_)](#52-consulta-de-representaci----consultarrepresentacio--)
     + [Petició](#petici-)
     + [Resposta](#resposta-1)
-  * [5.3 Validació (_validarRepresentacio_)](#53-validaci----validarrepresentacio--)
+  * [5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)](#53-consulta-de-representacions-per-persona---consultarrepresentaciopersona--)
       - [Petició](#petici--1)
       - [Resposta](#resposta-2)
-  * [5.4 Alta / Modificació (_processarRepresentacio_)](#54-alta---modificaci----processarrepresentacio--)
+  * [5.4 Validació (_validarRepresentacio_)](#54-validaci----validarrepresentacio--)
       - [Petició](#petici--2)
       - [Resposta](#resposta-3)
+  * [5.5 Alta / Modificació (_processarRepresentacio_)](#55-alta---modificaci----processarrepresentacio--)
+      - [Petició](#petici--3)
+      - [Resposta](#resposta-4)
+  * [5.6 Consulta de catàleg](#56-consulta-de-cat-leg)
+      - [Petició](#petici--4)
+      - [Resposta](#resposta-5)
+  * [5.7 Consulta de families](#57-consulta-de-families)
+      - [Petició](#petici--5)
+      - [Resposta](#resposta-6)
+  * [5.8 Consulta de familia](#58-consulta-de-familia)
+      - [Petició](#petici--6)
+      - [Resposta](#resposta-7)
+  * [5.9 Consulta de tràmits](#59-consulta-de-tr-mits)
+      - [Petició](#petici--7)
+      - [Resposta](#resposta-8)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
-  * [6.1 Consulta](#61-consulta)
-    + [Petició](#petici--3)
-    + [Resposta de consulta de representació](#resposta-de-consulta-de-representaci-)
-  * [6.2 Consulta (múltiples representacions)](#62-consulta--m-ltiples-representacions-)
-    + [Petició](#petici--4)
-    + [Resposta](#resposta-4)
+  * [6.1 Consulta de representació](#61-consulta-de-representaci-)
+    + [Petició](#petici--8)
+    + [Resposta](#resposta-9)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
+    + [Petició](#petici--9)
+    + [Resposta](#resposta-10)
   * [6.3 Validació](#63-validaci-)
     + [Peticio](#peticio-1)
     + [Resposta (validació positiva)](#resposta--validaci--positiva-)
     + [Resposta (validacio negativa)](#resposta--validacio-negativa-)
-  * [6.4 Alta](#64-alta)
-    + [Petició](#petici--5)
-    + [Resposta](#resposta-5)
-  * [6.5 Modificació](#65-modificaci-)
-    + [Petició](#petici--6)
-    + [Resposta](#resposta-6)
+  * [6.4 Alta representació](#64-alta-representaci-)
+    + [Petició](#petici--10)
+    + [Resposta](#resposta-11)
+  * [6.5 Modificació de representació](#65-modificaci--de-representaci-)
+    + [Petició](#petici--11)
+    + [Resposta](#resposta-12)
+  * [6.6 Consulta catàleg](#66-consulta-cat-leg)
+  * [6.7 Consulta families](#67-consulta-families)
+  * [6.8 Consulta familia](#68-consulta-familia)
+  * [6.9 Consulta tràmits](#69-consulta-tr-mits)
 - [7. Codis de resposta](#7-codis-de-resposta)
-- [8. Cataleg de tràmits](#8-cataleg-de-tr-mits)
+- [8. Creació/ús del catàleg de tràmits](#8-creaci---s-del-cat-leg-de-tr-mits)
   * [8.1 Creació manual](#81-creaci--manual)
   * [8.2 Importació mitjançant fitxer CSV](#82-importaci--mitjan-ant-fitxer-csv)
   * [8.3 Ús catàleg compartit per Consorci AOC](#83--s-cat-leg-compartit-per-consorci-aoc)
@@ -240,7 +261,7 @@ Element on s'agrupen els tramits.
 |tramits | Llista d'elements _tramit_|
 |catalegCodi | Codi del catàleg on pertany la familia|
 
-## 3.5 Tramit
+## 3.5 Tràmit
 L'element **tramit** permet definir representacions tipus C amb un àmbit específic d'actuació. Tot tràmit han d'estar vinculat a una única familia.
 
 ```xml
@@ -468,7 +489,7 @@ Exemple:
 </representacio>
 ```
 
-### 4.3 A tramit
+### 4.3 A tràmit
 Representació per a una administració concreta i per a un tramit concret per a una o més capacitats.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
@@ -1604,11 +1625,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMjQ1NTIwODEsLTE5MDE2Mjc2NSwxMj
-Y5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2
-OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMT
-EyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1
-NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwND
-MzLDQ3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgz
-MjM1MDg0XX0=
+eyJoaXN0b3J5IjpbODYxNTk3NjIzLC0xOTAxNjI3NjUsMTI2OT
+E1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2Njkz
+LDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMj
+Q4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1
+NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMy
+w0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIz
+NTA4NF19
 -->
