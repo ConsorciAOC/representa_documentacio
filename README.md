@@ -1002,6 +1002,9 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 
 ## 5.9 Consulta de tràmits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
+És a dir:
+- si es vol recuperar 1 tràmit concret cal informar el seu _uuid_
+- si es vol recuperar tots els tràmits 
 
 #### Petició
 ```xml
@@ -1565,11 +1568,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNj
-UyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5
-NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
-g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
-MTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MC
-wtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5
-NDYwMDMxXX0=
+eyJoaXN0b3J5IjpbLTE0OTU3NDA1MzIsMTI2OTE1OTE1OSw4ND
+QwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAx
+MTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMj
+M5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5
+MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOT
+gsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2
+MTk3NTczXX0=
 -->
