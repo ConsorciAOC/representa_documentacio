@@ -1527,7 +1527,16 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 	</resultat>
 </processarRepresentacioResponse>
 ```
-## 
+## 6.6 Consulta catàleg
+_Pendent_
+## 6.7 Consulta families
+_Pendent_
+## 6.8 Consulta familia
+_Pendent_
+## 6.9 Consulta tràmits
+_Pendent_
+
+
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -1595,7 +1604,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0ODA2NzU4NzksLTE5MDE2Mjc2NSwxMj
+eyJoaXN0b3J5IjpbLTEzMjQ1NTIwODEsLTE5MDE2Mjc2NSwxMj
 Y5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2
 OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMT
 EyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1
