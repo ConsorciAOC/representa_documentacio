@@ -292,6 +292,40 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="consultarTramits">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mida" type="mida"/>
+                <xs:element name="pagina" type="pagina"/>
+                <xs:element name="tramit" type="tramit"/>
+                <xs:element name="solicitant" type="solicitant" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarTramitsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal"/>
+                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="tramits">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="ErrorResponse">
         <xs:complexType>
             <xs:sequence>
