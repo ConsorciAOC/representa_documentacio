@@ -93,7 +93,7 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 
 A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
 
-## 3.1 Representacio
+## 3.1 Representació
 
 Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
 
@@ -147,7 +147,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 |idRepresentacioA | Relació entre representacions amb la finalitat d'actuar en nom d'una altra persona al portal del ciutadà |
 |evidencies | Llistat d'elements _evidencia_|
 
-## 3.2 Evidencia
+## 3.2 Evidència
 Per cada acció realitzada sobre una representació es crea i s'associa un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi sobre una representació.
 
 ```xml
@@ -1461,11 +1461,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDkwNTI0MTgsLTM5NjQ1NjY5MywxNj
-k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
-MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
-EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
-Mzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwOD
-QsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTEx
-NDQ3ODg1NDNdfQ==
+eyJoaXN0b3J5IjpbNjk5NjAwNTA5LC0zOTY0NTY2OTMsMTY5Nj
+czMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAy
+MiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMz
+M2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3
+ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LD
+E0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0
+Nzg4NTQzXX0=
 -->
