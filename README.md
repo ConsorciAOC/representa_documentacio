@@ -915,7 +915,24 @@ resposta | Element del tipus _resposta_
 cataleg | Element del tipus _cataleg_
 
 ## 5.7 Consulta de families
+
+```xml
+<xs:element name="consultarFamilies">  
+<xs:complexType>  
+<xs:sequence>  
+<xs:element name="mida" type="mida"/>  
+<xs:element name="pagina" type="pagina"/>  
+<xs:element name="catalegCodi" type="xs:string"/>  
+<xs:element name="solicitant" type="solicitant" />  
+</xs:sequence>  
+</xs:complexType>  
+</xs:element>
+```
+
 ## 5.8 Consulta de familia
+
+## 5.9 Consulta de tràmit
+
 
 # 6. Exemples de peticions
 
@@ -1464,11 +1481,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwNjQxMzYyMywtMzk2NDU2NjkzLDE2OT
-Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
-MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
-MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
-NzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NC
-wxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0
-NDc4ODU0M119
+eyJoaXN0b3J5IjpbLTE2NjU4ODYwNzYsLTM5NjQ1NjY5MywxNj
+k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
+MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
+EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
+Mzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwOD
+QsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTEx
+NDQ3ODg1NDNdfQ==
 -->
