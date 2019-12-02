@@ -1001,7 +1001,21 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 ```
 
 ## 5.9 Consulta de tràmits
-Permet recuperar 1 o 
+Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
+
+#### Petició
+```xml
+<xs:element name="consultarTramits">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="mida" type="mida"/>  
+			<xs:element name="pagina" type="pagina"/>  
+			<xs:element name="tramit" type="tramit"/>  
+			<xs:element name="solicitant" type="solicitant" />  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
 
 
 # 6. Exemples de peticions
@@ -1551,7 +1565,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQwMjIxNTIyOCw4NDQwMzUxODgsMTEyNj
+eyJoaXN0b3J5IjpbMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNj
 UyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5
 NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
 g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
