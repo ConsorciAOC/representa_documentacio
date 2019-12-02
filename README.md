@@ -206,6 +206,10 @@ Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una
 |---- | ----------|
 |codi | Codi del catàleg|
 |nom| Nom del catàleg|
+|dataCreacio | Data de creació del catàleg|
+|actiu | ```TRUE``` o ```FALSE``` per indicar si el catàleg està actiu o no|
+|codi | Codi del catàleg|
+|codi | Codi del catàleg|
 
 ## 3.4 Familia
 
@@ -1429,7 +1433,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjkzNjE3NjEsMTY5NjczMDExMiwtNz
+eyJoaXN0b3J5IjpbLTEwMzM5NjEyMDcsMTY5NjczMDExMiwtNz
 EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
 NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
 0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
