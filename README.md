@@ -943,28 +943,30 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 <xs:element name="consultarFamiliesResponse">  
 	<xs:complexType>  
 		<xs:sequence>  
-		<xs:element name="resultat" minOccurs="0">  
-		<xs:complexType>  
-		<xs:sequence>  
-		<xs:element name="resposta" type="resposta"/>  
-		<xs:element name="numTotal"/>  
-		<xs:element name="numPaginesTotal"/>  
-		<xs:element name="families" minOccurs="0" >  
-		<xs:complexType>  
-		<xs:sequence>  
-		<xs:element name="familia" type="familia" maxOccurs="unbounded" nillable="true"/>  
-		</xs:sequence>  
-		</xs:complexType>  
-		</xs:element>  
-		</xs:sequence>  
-		</xs:complexType>  
-		</xs:element>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta"/>  
+						<xs:element name="numTotal"/>  
+						<xs:element name="numPaginesTotal"/>  
+						<xs:element name="families" minOccurs="0" >  
+							<xs:complexType>  
+								<xs:sequence>  
+									<xs:element name="familia" type="familia" maxOccurs="unbounded" nillable="true"/>  
+								</xs:sequence>  
+							</xs:complexType>  
+						</xs:element>  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
 		</xs:sequence>  
 	</xs:complexType>  
 </xs:element>
 ```
 
+
 ## 5.8 Consulta de familia
+
 
 ## 5.9 Consulta de tràmit
 
@@ -1516,7 +1518,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMzkwMzA3MDcsLTM5NjQ1NjY5MywxNj
+eyJoaXN0b3J5IjpbLTE1NTQ3MTc0NzEsLTM5NjQ1NjY5MywxNj
 k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
 MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
 EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
