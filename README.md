@@ -1048,10 +1048,9 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 </xs:element>
 ```
 
-
 # 6. Exemples de peticions
 
-## 6.1 Consulta
+## 6.1 Consulta de representació
 
 ### Petició
 
@@ -1075,7 +1074,7 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 
 Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
 
-### Resposta de consulta de representació
+### Resposta
 
 ```xml
 <consultarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
@@ -1142,7 +1141,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 </consultarRepresentacioResponse>
 ```
 
-## 6.2 Consulta (múltiples representacions)
+## 6.2 Consulta representacions
 Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
 
 ### Petició
@@ -1350,7 +1349,7 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 </validarRepresentacioResponse>
 ```
 
-## 6.4 Alta
+## 6.4 Alta representació
 Exemple on es crea una representació.
 
 ### Petició
@@ -1435,7 +1434,7 @@ Exemple on es crea una representació.
  </processarRepresentacioResponse>
 ```
 
-## 6.5 Modificació
+## 6.5 Modificació de representació
 L'unic atribut que es pot modificar d'una representació és el seu _estat_. Per a fer-ho cal indicar l'identificadorLegal per recuperar la representació i el nou estat que es desitja modificar.
 En aquest exemple es modifica l'estat de la representació creada al punt 4.7 passant de VALIDA a DENEGADA.
 
@@ -1528,7 +1527,7 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 	</resultat>
 </processarRepresentacioResponse>
 ```
-
+## 
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -1596,11 +1595,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NzI0NjgyNywtMTkwMTYyNzY1LDEyNj
-kxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5
-MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMT
-I0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3
-NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0Mz
-MsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMy
-MzUwODRdfQ==
+eyJoaXN0b3J5IjpbLTE0ODA2NzU4NzksLTE5MDE2Mjc2NSwxMj
+Y5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2
+OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMT
+EyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1
+NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwND
+MzLDQ3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgz
+MjM1MDg0XX0=
 -->
