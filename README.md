@@ -916,15 +916,17 @@ cataleg | Element del tipus _cataleg_
 
 ## 5.7 Consulta de families
 
+A partir del codi del catàleg es poden obtenir les seves families. La consulta és paginada i cal inidcar el nº d'elements màxims a retornar i el nº de 
+
 ```xml
 <xs:element name="consultarFamilies">  
 	<xs:complexType>  
-	<xs:sequence>  
-	<xs:element name="mida" type="mida"/>  
-	<xs:element name="pagina" type="pagina"/>  
-	<xs:element name="catalegCodi" type="xs:string"/>  
-	<xs:element name="solicitant" type="solicitant" />  
-	</xs:sequence>  
+		<xs:sequence>  
+			<xs:element name="mida" type="mida"/>  
+			<xs:element name="pagina" type="pagina"/>  
+			<xs:element name="catalegCodi" type="xs:string"/>  
+			<xs:element name="solicitant" type="solicitant" />  
+		</xs:sequence>  
 	</xs:complexType>  
 </xs:element>
 ```
@@ -1481,7 +1483,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNDQ0MjU3NTYsLTM5NjQ1NjY5MywxNj
+eyJoaXN0b3J5IjpbLTIwMzI4Mzk2NTMsLTM5NjQ1NjY5MywxNj
 k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
 MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
 EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
