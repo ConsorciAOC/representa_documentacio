@@ -184,7 +184,29 @@ A partir del catàleg s'obtenen les families, i a partir d'aquestes es poden obt
 Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una manera més còmoda, però **no queden vinculades a les representacions**.
 
 ```xml
-
+<xs:complexType name="cataleg">  
+	<xs:sequence>  
+		<xs:element name="codi" type="NonEmptyString" />  
+		<xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
+		<xs:element name="dataCreacio" type="xs:string" minOccurs="0" />  
+		<xs:element name="actiu" type="xs:boolean" minOccurs="0" />  
+		<xs:element name="administracioPropietaria" type="administracio" />  
+		<xs:element name="administracions" minOccurs="0" >  
+		<xs:complexType>  
+			<xs:sequence>  
+			<xs:element name="administracio" type="administracio" maxOccurs="unbounded"/>  
+			</xs:sequence>  
+		</xs:complexType>  
+	</xs:element>  
+	<xs:element name="families" minOccurs="0" >  
+	<xs:complexType>  
+	<xs:sequence>  
+	<xs:element name="familia" type="familia" maxOccurs="unbounded"/>  
+	</xs:sequence>  
+	</xs:complexType>  
+	</xs:element>  
+	</xs:sequence>  
+</xs:complexType>
 ```
 
 ## 3.4 Familia
@@ -1409,11 +1431,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzQyNzkxNDgwLDE2OTY3MzAxMTIsLTcxMD
-k2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2
-LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMT
-IwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4
-ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC
-0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2
-MDQ3MjVdfQ==
+eyJoaXN0b3J5IjpbLTUxNjAwMDQxMCwxNjk2NzMwMTEyLC03MT
+A5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2
+NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLT
+EyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEz
+ODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3My
+wtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYx
+NjA0NzI1XX0=
 -->
