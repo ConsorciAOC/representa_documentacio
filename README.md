@@ -971,7 +971,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 <xs:element name="consultarFamilia">  
 	<xs:complexType>  
 		<xs:sequence>  
-			<xs:element type="familia" name="familia"/>  
+			<xs:element name="familia" type="familia" />  
 			<xs:element name="solicitant" type="solicitant" />  
 		</xs:sequence>  
 	</xs:complexType>  
@@ -980,11 +980,24 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 #### Resposta
 ```xml
-
+<xs:element name="consultarFamiliaResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta" />  
+						<xs:element name="familia" type="familia" minOccurs="0" />  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
 ```
 
-
 ## 5.9 Consulta de tràmit
+
 
 
 # 6. Exemples de peticions
@@ -1534,11 +1547,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMwNzg2NjAsLTM5NjQ1NjY5MywxNjk2Nz
-MwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIy
-LDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMz
-Y3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4
-MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMT
-Q2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3
-ODg1NDNdfQ==
+eyJoaXN0b3J5IjpbMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OT
+Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
+MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
+MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
+NzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NC
+wxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0
+NDc4ODU0M119
 -->
