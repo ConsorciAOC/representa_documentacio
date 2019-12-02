@@ -539,7 +539,7 @@ Exemple:
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
-#### Peticio
+#### Petició
 ```xml
 <xs:element name="consultarRepresentacions">
         <xs:complexType>
@@ -1252,7 +1252,7 @@ NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. 
 ## 6.3 Validació
 En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
 
-### Peticio
+### Petició
 
 ```xml
 <validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
@@ -1625,11 +1625,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODYxNTk3NjIzLC0xOTAxNjI3NjUsMTI2OT
-E1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2Njkz
-LDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMj
-Q4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1
-NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMy
-w0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIz
-NTA4NF19
+eyJoaXN0b3J5IjpbMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNj
+kxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5
+MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMT
+I0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3
+NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0Mz
+MsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMy
+MzUwODRdfQ==
 -->
