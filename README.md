@@ -1001,7 +1001,7 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 ```
 
 ## 5.9 Consulta de tràmits
-
+Permet recuperar 1 o 
 
 
 # 6. Exemples de peticions
@@ -1551,11 +1551,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDExODAzMTAsODQ0MDM1MTg4LDExMjY1Mj
-MyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQs
-LTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4Nj
-QxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEz
-NjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4NDAsLT
-QwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2
-MDAzMV19
+eyJoaXN0b3J5IjpbMTQwMjIxNTIyOCw4NDQwMzUxODgsMTEyNj
+UyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5
+NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
+g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
+MTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MC
+wtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5
+NDYwMDMxXX0=
 -->
