@@ -241,7 +241,7 @@ Element on s'agrupen els tramits.
 |catalegCodi | Codi del catàleg on pertany la familia|
 
 ## 3.5 Tramit
-L'element **tramit** té permet definir representacions amb un àmbit específic 
+L'element **tramit** permet definir representacions tipus C amb un àmbit específic d'actuació. Tot tràmit han d'estar vinculat a una única familia.
 
 ```xml
 <xs:complexType name="tramit">  
@@ -1461,11 +1461,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3OTYxMDU1MDUsMTY5NjczMDExMiwtNz
-EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
-NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
-0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
-Mzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1Nz
-MsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2
-MTYwNDcyNV19
+eyJoaXN0b3J5IjpbLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MT
+A5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2
+NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLT
+EyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEz
+ODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3My
+wtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYx
+NjA0NzI1XX0=
 -->
