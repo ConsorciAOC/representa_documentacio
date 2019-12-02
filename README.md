@@ -806,6 +806,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
+##5.6 Consulta de catàleg
 
 # 6. Exemples de peticions
 
@@ -1355,10 +1356,10 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOT
-EyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5
-NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LD
-EyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5
-NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1ND
-MsODYxNjA0NzI1LC0xODQ5NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbMjk1ODkwMjQ1LC0zNzM4NjA2MiwtMTEyND
+g0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2
+NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLD
+Q3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1
+MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC
+0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0OTc1MjM0MV19
 -->
