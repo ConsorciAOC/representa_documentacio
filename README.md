@@ -234,14 +234,15 @@ Element on s'agrupen els tramits.
 
 |Camp | Descripció|
 |---- | ----------|
-|codi | Codi del catàleg|
-|codi | Codi del catàleg|
-|codi | Codi del catàleg|
-|codi | Codi del catàleg|
-|codi | Codi del catàleg|
+|uuid | Identificador únic de la familia|
+|codi | Codi de la familia|
+|nom | Nom de la familia|
+|tramits | Llista d'elements _tramit_|
+|catalegCodi | Codi del catàleg on pertany la familia|
 
 ## 3.5 Tramit
-L'element **tramit** té la següent estructura:
+L'element **tramit** té permet definir representacions amb un àmbit específic 
+
 ```xml
 <xs:complexType name="tramit">  
 	 <xs:sequence>  
@@ -1460,7 +1461,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDM3NjE0MTksMTY5NjczMDExMiwtNz
+eyJoaXN0b3J5IjpbLTE3OTYxMDU1MDUsMTY5NjczMDExMiwtNz
 EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
 NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
 0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
