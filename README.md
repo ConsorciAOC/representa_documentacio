@@ -208,10 +208,13 @@ Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una
 |nom| Nom del catàleg|
 |dataCreacio | Data de creació del catàleg|
 |actiu | ```TRUE``` o ```FALSE``` per indicar si el catàleg està actiu o no|
-|codi | Codi del catàleg|
-|codi | Codi del catàleg|
+|administracioPropietaria | Element del tipus _administració_. Indica qui és el propietari del catàleg|
+|families | Llista d'elements _familia_|
 
 ## 3.4 Familia
+Element on s'agrupen els tramits.
+
+``
 
 ## 3.5 Tramit
 L'element **tramit** té la següent estructura:
@@ -1433,11 +1436,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMzM5NjEyMDcsMTY5NjczMDExMiwtNz
-EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
-NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
-0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
-Mzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1Nz
-MsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2
-MTYwNDcyNV19
+eyJoaXN0b3J5IjpbLTk4MTE0NDQzNiwxNjk2NzMwMTEyLC03MT
+A5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2
+NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLT
+EyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEz
+ODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3My
+wtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYx
+NjA0NzI1XX0=
 -->
