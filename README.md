@@ -833,16 +833,21 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 		<xs:sequence>  
 			<xs:element name="resultat" minOccurs="0">  
 				<xs:complexType>  
-				<xs:sequence>  
-					<xs:element name="resposta" type="resposta"/>  
-					<xs:element name="cataleg" type="cataleg"/>  
-				</xs:sequence>  
-			</xs:complexType>  
-	</xs:element>  
-	</xs:sequence>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta"/>  
+						<xs:element name="cataleg" type="cataleg"/>  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
 	</xs:complexType>  
 </xs:element>
 ```
+
+Camp | Descripció
+---- | ----------
+resposta | Element del tipus _resposta_
+cataleg | Element del tipus _cataleg_
 
 # 6. Exemples de peticions
 
@@ -1341,8 +1346,8 @@ Resultat| Codi
 |Poder no subsistent|100|
 |Error de schema|101|
 
-# 8. Cataleg de tràmits
-Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en *families*. Alhora les families s'agrupen entorn a una entitat anomenada *cataleg*.
+# 8. Catàleg de tràmits
+Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en **families**. Alhora les families s'agrupen entorn a una entitat anomenada **catàleg**.
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per generar o fer ús del catàleg es contemplen 3 escenaris:
 
@@ -1392,7 +1397,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDEyMzMxNzMsLTcxMDk2NTQ5NCwtMz
+eyJoaXN0b3J5IjpbLTEwNjM4OTQzNTUsLTcxMDk2NTQ5NCwtMz
 czODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4
 NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2Mi
 wtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1
