@@ -918,6 +918,7 @@ cataleg | Element del tipus _cataleg_
 
 A partir del codi del catàleg es poden obtenir les seves families. La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
+#### Petició
 ```xml
 <xs:element name="consultarFamilies">  
 	<xs:complexType>  
@@ -935,9 +936,33 @@ Camp | Descripció
 mida | Nombre màxim de resultats retornats per pàgina
 pagina | Pàgina de resultats sol·licitada (de 0 a N)
 catalegCodi | Codi del catàleg
-solicitant | 
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
 
-
+#### Resposta
+```xml
+<xs:element name="consultarFamiliesResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+		<xs:element name="resultat" minOccurs="0">  
+		<xs:complexType>  
+		<xs:sequence>  
+		<xs:element name="resposta" type="resposta"/>  
+		<xs:element name="numTotal"/>  
+		<xs:element name="numPaginesTotal"/>  
+		<xs:element name="families" minOccurs="0" >  
+		<xs:complexType>  
+		<xs:sequence>  
+		<xs:element name="familia" type="familia" maxOccurs="unbounded" nillable="true"/>  
+		</xs:sequence>  
+		</xs:complexType>  
+		</xs:element>  
+		</xs:sequence>  
+		</xs:complexType>  
+		</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
 
 ## 5.8 Consulta de familia
 
@@ -1491,11 +1516,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg4NTE1ODY4NywtMzk2NDU2NjkzLDE2OT
-Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
-MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
-MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
-NzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NC
-wxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0
-NDc4ODU0M119
+eyJoaXN0b3J5IjpbLTExMzkwMzA3MDcsLTM5NjQ1NjY5MywxNj
+k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
+MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
+EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
+Mzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwOD
+QsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTEx
+NDQ3ODg1NDNdfQ==
 -->
