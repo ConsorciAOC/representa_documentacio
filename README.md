@@ -176,7 +176,11 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
-## 3.3 Tramit
+## 3.3 Catàleg
+
+## 3.4 Familia
+
+## 3.5 Tramit
 L'element **tramit** té la següent estructura:
 ```xml
 <xs:complexType name="tramit">  
@@ -191,7 +195,7 @@ L'element **tramit** té la següent estructura:
 	 </xs:sequence>  
 </xs:complexType>
 ```
-## 3.4 Àmbit de representació
+## 3.6 Àmbit de representació
 Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
 
 ```xml
@@ -222,7 +226,7 @@ Més endavant es descriuen els tipus de representació i es detalla l'ambit de r
 |actiu | Indicador d'actiu o no actiu |
 
 
-## 3.5 Sol·licitant
+## 3.7 Sol·licitant
 Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa.
 
 ```xml
@@ -241,7 +245,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |administracio| Element del tipis _administració_ que sol·licita la petició|
 |aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
 
-## 3.6 Persona
+## 3.8 Persona
 ```xml
 <xs:complexType name="persona">  
 	<xs:sequence>  
@@ -269,7 +273,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_|
 
 
-## 3.7 DocumentEvidencia
+## 3.9 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
 ```xml
 <xs:complexType name="documentEvidencia">
@@ -296,7 +300,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació|
 
-## 3.8  Estat
+## 3.10  Estat
 
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
@@ -1397,11 +1401,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzgxMDI5NzI5LC03MTA5NjU0OTQsLTM3Mz
-g2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODcz
-NCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLT
-E3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUw
-NjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMS
-wyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYxNjA0NzI1LC0xODQ5
-NzUyMzQxXX0=
+eyJoaXN0b3J5IjpbMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNz
+M4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3
+MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC
+0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1
+MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMz
+EsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0
+OTc1MjM0MV19
 -->
