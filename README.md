@@ -177,7 +177,9 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Catàleg
+El catàleg de tramits està format per **families**, i aquestes alhora estan formades per **tràmits**.
 
+Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en **families**. Alhora les families s'agrupen entorn a una entitat anomenada **catàleg**.
 ## 3.4 Familia
 
 ## 3.5 Tramit
@@ -1350,8 +1352,7 @@ Resultat| Codi
 |Poder no subsistent|100|
 |Error de schema|101|
 
-# 8. CCatàleg de tràmits
-Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en **families**. Alhora les families s'agrupen entorn a una entitat anomenada **catàleg**.
+# 8. Creació/ús del catàleg de tràmits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 
@@ -1401,11 +1402,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYyNTM2OTgxMywxNjk2NzMwMTEyLC03MT
-A5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2
-NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLT
-EyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEz
-ODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3My
-wtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYx
-NjA0NzI1XX0=
+eyJoaXN0b3J5IjpbLTE5NDI1NDQ2MzYsMTY5NjczMDExMiwtNz
+EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
+NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
+0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
+Mzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1Nz
+MsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2
+MTYwNDcyNV19
 -->
