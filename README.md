@@ -968,6 +968,8 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 
 ## 5.8 Consulta de familia
+Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta es pot fer una consulta més específica.
+
 #### Petició
 ```xml
 <xs:element name="consultarFamilia">  
@@ -1549,7 +1551,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MzU3NDcwNDIsODQ0MDM1MTg4LDExMj
+eyJoaXN0b3J5IjpbLTE3NDYxMjMwOTgsODQ0MDM1MTg4LDExMj
 Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
 OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMT
 A4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2
