@@ -807,8 +807,9 @@ resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
 ## 5.6 Consulta de catàleg
-Permet consultar el catàleg d'una administració.
+Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 
+#### Petició
 ```xml
 <xs:element name="consultarCataleg">  
 	<xs:complexType>  
@@ -824,6 +825,24 @@ Camp | Descripció
 ---- | ----------
 codiAdministracio| Codi INE10 de l'administració
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+
+#### Resposta
+```xml
+<xs:element name="consultarCatalegResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+				<xs:sequence>  
+					<xs:element name="resposta" type="resposta"/>  
+					<xs:element name="cataleg" type="cataleg"/>  
+				</xs:sequence>  
+			</xs:complexType>  
+	</xs:element>  
+	</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
 
 # 6. Exemples de peticions
 
@@ -1373,11 +1392,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMj
-Q4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1
-NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMy
-w0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIz
-NTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NC
-wtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4NDk3NTIzNDFdfQ==
-
+eyJoaXN0b3J5IjpbLTE5NDEyMzMxNzMsLTcxMDk2NTQ5NCwtMz
+czODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4
+NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2Mi
+wtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1
+NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5NDYwMD
+MxLDIxNzQzNzk0NCwtMTE0NDc4ODU0Myw4NjE2MDQ3MjUsLTE4
+NDk3NTIzNDFdfQ==
 -->
