@@ -916,7 +916,7 @@ cataleg | Element del tipus _cataleg_
 
 ## 5.7 Consulta de families
 
-A partir del codi del catàleg es poden obtenir les seves families. La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
+A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
 #### Petició
 ```xml
@@ -1547,11 +1547,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5Nj
-Q1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYy
-LC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNz
-M4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3Njkw
-NjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC
-01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2MDAzMSwyMTc0
-Mzc5NDRdfQ==
+eyJoaXN0b3J5IjpbLTYxNzczMDY4Nyw4NDQwMzUxODgsMTEyNj
+UyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5
+NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
+g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
+MTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MC
+wtNDA1NTA2NDAsLTU4MzIzNTA4NCwxNDY2MTk3NTczLC0xMjE5
+NDYwMDMxXX0=
 -->
