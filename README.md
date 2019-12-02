@@ -968,7 +968,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 
 ## 5.8 Consulta de familia
-Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta es pot fer una consulta més específica.
+Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
 
 #### Petició
 ```xml
@@ -1000,7 +1000,7 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 </xs:element>
 ```
 
-## 5.9 Consulta de tràmit
+## 5.9 Consulta de tràmits
 
 
 
@@ -1551,11 +1551,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NDYxMjMwOTgsODQ0MDM1MTg4LDExMj
-Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
-OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMT
-A4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2
-MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4ND
-AsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIx
-OTQ2MDAzMV19
+eyJoaXN0b3J5IjpbNDExODAzMTAsODQ0MDM1MTg4LDExMjY1Mj
+MyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQs
+LTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4Nj
+QxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEz
+NjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEzODg4NDAsLT
+QwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3MywtMTIxOTQ2
+MDAzMV19
 -->
