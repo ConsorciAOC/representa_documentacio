@@ -1350,7 +1350,7 @@ Resultat| Codi
 |Poder no subsistent|100|
 |Error de schema|101|
 
-# 8. Catàleg de tràmits
+# 8. CCatàleg de tràmits
 Els tràmits als que es poden crear representacions o indicar a les consultes de validació s'agrupen en **families**. Alhora les families s'agrupen entorn a una entitat anomenada **catàleg**.
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
@@ -1401,11 +1401,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNz
-M4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3
-MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC
-0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1
-MDY0MCwtNTgzMjM1MDg0LDE0NjYxOTc1NzMsLTEyMTk0NjAwMz
-EsMjE3NDM3OTQ0LC0xMTQ0Nzg4NTQzLDg2MTYwNDcyNSwtMTg0
-OTc1MjM0MV19
+eyJoaXN0b3J5IjpbLTYyNTM2OTgxMywxNjk2NzMwMTEyLC03MT
+A5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2
+NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLT
+EyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcwMzc4MTk4LDEyNjEz
+ODg4NDAsLTQwNTUwNjQwLC01ODMyMzUwODQsMTQ2NjE5NzU3My
+wtMTIxOTQ2MDAzMSwyMTc0Mzc5NDQsLTExNDQ3ODg1NDMsODYx
+NjA0NzI1XX0=
 -->
