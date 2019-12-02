@@ -914,6 +914,9 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 cataleg | Element del tipus _cataleg_
 
+## 5.7 Consulta de families
+## 5.8 Consulta de familia
+
 # 6. Exemples de peticions
 
 ## 6.1 Consulta
@@ -1461,11 +1464,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjk5NjAwNTA5LC0zOTY0NTY2OTMsMTY5Nj
-czMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAy
-MiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMz
-M2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3
-ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1MDg0LD
-E0NjYxOTc1NzMsLTEyMTk0NjAwMzEsMjE3NDM3OTQ0LC0xMTQ0
-Nzg4NTQzXX0=
+eyJoaXN0b3J5IjpbMTcwNjQxMzYyMywtMzk2NDU2NjkzLDE2OT
+Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
+MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
+MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
+NzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIzNTA4NC
+wxNDY2MTk3NTczLC0xMjE5NDYwMDMxLDIxNzQzNzk0NCwtMTE0
+NDc4ODU0M119
 -->
