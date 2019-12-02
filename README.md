@@ -183,7 +183,7 @@ Per poder operar a _Representa_ tota administració necessita tenir associat un 
 A partir del catàleg s'obtenen les families, i a partir d'aquestes es poden obtenir els tramits (són aquests els que queden vinculats a les reprsentacions de tipus C, és a dir a representacions a tramit).
 Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una manera més còmoda, però **no queden vinculades a les representacions**.
 
-```
+```xml
 
 ```
 
@@ -1409,7 +1409,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQwMTc2NjYxLDE2OTY3MzAxMTIsLTcxMD
+eyJoaXN0b3J5IjpbMzQyNzkxNDgwLDE2OTY3MzAxMTIsLTcxMD
 k2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2
 LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMT
 IwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4
