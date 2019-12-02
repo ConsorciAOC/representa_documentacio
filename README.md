@@ -1006,6 +1006,7 @@ Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtr
 - si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
 - si es volen recuperar tots els tràmits d'una familia, cal informar a l'element _tramit_ l'element _uuidFamilia_.
 
+La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 #### Petició
 ```xml
 <xs:element name="consultarTramits">  
@@ -1016,6 +1017,32 @@ Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtr
 			<xs:element name="tramit" type="tramit"/>  
 			<xs:element name="solicitant" type="solicitant" />  
 		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
+
+#### Resposta
+```xml
+<xs:element name="consultarTramitsResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+				<xs:sequence>  
+				<xs:element name="resposta" type="resposta"/>  
+				<xs:element name="numTotal"/>  
+				<xs:element name="numPaginesTotal"/>  
+				<xs:element name="tramits">  
+				<xs:complexType>  
+				<xs:sequence>  
+				<xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>  
+				</xs:sequence>  
+				</xs:complexType>  
+				</xs:element>  
+				</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+			</xs:sequence>  
 	</xs:complexType>  
 </xs:element>
 ```
@@ -1568,11 +1595,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODAxODE5NTYsLTE5MDE2Mjc2NSwxMjY5MT
-U5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMs
-MTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyND
-g0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2
-NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLD
-Q3MDM3ODE5OCwxMjYxMzg4ODQwLC00MDU1MDY0MCwtNTgzMjM1
-MDg0XX0=
+eyJoaXN0b3J5IjpbNzM0MjQ5MTQ3LC0xOTAxNjI3NjUsMTI2OT
+E1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2Njkz
+LDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMj
+Q4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1
+NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMy
+w0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1NTA2NDAsLTU4MzIz
+NTA4NF19
 -->
