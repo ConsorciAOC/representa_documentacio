@@ -4,17 +4,17 @@
 
 # Taula de continguts
 
-- [1. Introducció](#1-introduccio)
-  * [1.1. Integració PCI](#11-integraci--pci)
+- [1. Introduccio](#1-introduccio)
+  * [1.1. Integracio PCI](#11-integracio-pci)
 - [2. Missatgeria](#2-missatgeria)
-- [3. Missatgeria específica](#3-missatgeria-espec-fica)
-  * [3.1 Representació](#31-representaci-)
-  * [3.2 Evidència](#32-evid-ncia)
-  * [3.3 Catàleg](#33-cat-leg)
+- [3. Missatgeria especifica](#3-missatgeria-especifica)
+  * [3.1 Representacio](#31-representacio)
+  * [3.2 Evidencia](#32-evidencia)
+  * [3.3 Cataleg](#33-cataleg)
   * [3.4 Familia](#34-familia)
   * [3.5 Tramit](#35-tramit)
-  * [3.6 Àmbit de representació](#36--mbit-de-representaci-)
-  * [3.7 Sol·licitant](#37-sol-licitant)
+  * [3.6 Ambit de representacio](#36-ambit-de-representacio)
+  * [3.7 Solicitant](#37-solicitant)
   * [3.8 Persona](#38-persona)
   * [3.9 DocumentEvidencia](#39-documentevidencia)
   * [3.10  Estat](#310--estat)
@@ -23,60 +23,61 @@
     + [4.2 A organisme](#42-a-organisme)
     + [4.3 A tramit](#43-a-tramit)
 - [5. Operacions](#5-operacions)
-  * [5.1 Consulta de representacions (_consultarRepresentacions_)](#51-consulta-de-representacions---consultarrepresentacions--)
-      - [Peticio](#peticio)
+  * [5.1 Consulta de representacions](#51-consulta-de-representacions)
+      - [Petició](#petici-)
       - [Resposta](#resposta)
-  * [5.2 Consulta de representació (_consultarRepresentacio_)](#52-consulta-de-representaci----consultarrepresentacio--)
-    + [Petició](#petici-)
+  * [5.2 Consulta de representacio](#52-consulta-de-representacio)
+    + [Petició](#petici--1)
     + [Resposta](#resposta-1)
-  * [5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)](#53-consulta-de-representacions-per-persona---consultarrepresentaciopersona--)
-      - [Petició](#petici--1)
-      - [Resposta](#resposta-2)
-  * [5.4 Validació (_validarRepresentacio_)](#54-validaci----validarrepresentacio--)
+  * [5.3 Consulta de representacions per persona](#53-consulta-de-representacions-per-persona)
       - [Petició](#petici--2)
-      - [Resposta](#resposta-3)
-  * [5.5 Alta / Modificació (_processarRepresentacio_)](#55-alta---modificaci----processarrepresentacio--)
+      - [Resposta](#resposta-2)
+  * [5.4 Validacio](#54-validacio)
       - [Petició](#petici--3)
-      - [Resposta](#resposta-4)
-  * [5.6 Consulta de catàleg (_consultarCataleg_)](#56-consulta-de-cat-leg)
+      - [Resposta](#resposta-3)
+  * [5.5 Alta / Modificacio](#55-alta---modificacio)
       - [Petició](#petici--4)
-      - [Resposta](#resposta-5)
-  * [5.7 Consulta de families (_consultarFamilies_)](#57-consulta-de-families)
+      - [Resposta](#resposta-4)
+  * [5.6 Consulta de cataleg](#56-consulta-de-cataleg)
       - [Petició](#petici--5)
-      - [Resposta](#resposta-6)
-  * [5.8 Consulta de familia (_consultarFamilia)](#58-consulta-de-familia)
+      - [Resposta](#resposta-5)
+  * [5.7 Consulta de families](#57-consulta-de-families)
       - [Petició](#petici--6)
-      - [Resposta](#resposta-7)
-  * [5.9 Consulta de tràmits (_consultarTramits_)](#59-consulta-de-tr-mits)
+      - [Resposta](#resposta-6)
+  * [5.8 Consulta de familia](#58-consulta-de-familia)
       - [Petició](#petici--7)
+      - [Resposta](#resposta-7)
+  * [5.9 Consulta de tramits](#59-consulta-de-tramits)
+      - [Petició](#petici--8)
       - [Resposta](#resposta-8)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
-  * [6.1 Consulta de representació](#61-consulta-de-representaci-)
-    + [Petició](#petici--8)
+  * [6.1 Consulta de representacio](#61-consulta-de-representacio)
+    + [Peticio](#peticio)
     + [Resposta](#resposta-9)
   * [6.2 Consulta representacions](#62-consulta-representacions)
-    + [Petició](#petici--9)
-    + [Resposta](#resposta-10)
-  * [6.3 Validació](#63-validaci-)
     + [Peticio](#peticio-1)
-    + [Resposta (validació positiva)](#resposta--validaci--positiva-)
+    + [Resposta](#resposta-10)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-2)
+    + [Resposta (validacio positiva)](#resposta--validacio-positiva-)
     + [Resposta (validacio negativa)](#resposta--validacio-negativa-)
-  * [6.4 Alta representació](#64-alta-representaci-)
-    + [Petició](#petici--10)
+  * [6.4 Alta representacio](#64-alta-representacio)
+    + [Peticio](#peticio-3)
     + [Resposta](#resposta-11)
-  * [6.5 Modificació de representació](#65-modificaci--de-representaci-)
-    + [Petició](#petici--11)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
+    + [Peticio](#peticio-4)
     + [Resposta](#resposta-12)
-  * [6.6 Consulta catàleg](#66-consulta-cat-leg)
+  * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
   * [6.8 Consulta familia](#68-consulta-familia)
-  * [6.9 Consulta tràmits](#69-consulta-tr-mits)
+  * [6.9 Consulta tramits](#69-consulta-tramits)
 - [7. Codis de resposta](#7-codis-de-resposta)
-- [8. Creació/ús del catàleg de tràmits](#8-creaci---s-del-cat-leg-de-tr-mits)
-  * [8.1 Creació manual](#81-creaci--manual)
-  * [8.2 Importació mitjançant fitxer CSV](#82-importaci--mitjan-ant-fitxer-csv)
-  * [8.3 Ús catàleg compartit per Consorci AOC](#83--s-cat-leg-compartit-per-consorci-aoc)
-- [9. Generació d'informes PDF](#9-generaci--d-informes-pdf)
+- [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
+  * [8.1 Creacio manual](#81-creacio-manual)
+  * [8.2 Importacio mitjançant fitxer CSV](#82-importacio-mitjan-ant-fitxer-csv)
+  * [8.3 Us cataleg compartit per Consorci AOC](#83-us-cataleg-compartit-per-consorci-aoc)
+- [9. Generacio d'informes PDF](#9-generacio-d-informes-pdf)
+
 
 
 
@@ -1576,14 +1577,14 @@ Resultat| Codi
 |Poder no subsistent|100|
 |Error de schema|101|
 
-# 8. Creacio/us del catàleg de tràmits
+# 8. Creacio/us del cataleg de tramits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 
-## 8.1 Creació manual
+## 8.1 Creacio manual
 Quan una administració inicia l'ús del servei de Representa disposarà d'un catàleg inicial buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
 
-## 8.2 Importació mitjançant fitxer CSV
+## 8.2 Importacio mitjançant fitxer CSV
 Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Aquest procés requereix 2 fitxers:
 
 * CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi familia";"Nom familia"_
@@ -1617,16 +1618,16 @@ Restriccions / limitacions
 * Si s'indica un tràmit associat a una familia que ni existeix prèviament ni existeix al fitxer de families.csv es retornarà una excepció indicant-ne la causa i no es crearà cap tramit en la càrrega fins que es solucioni el conflicte. Caldrà corregir-ho i tornar a fer la càrrega.
 * Només es crearà les families que tinguin associat 1 o més tràmits en el moment de la càrrega.
 
-## 8.3 Ús catàleg compartit per Consorci AOC
+## 8.3 Us cataleg compartit per Consorci AOC
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.
 El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) internament i s'ofereix perquè qualsevol administració en faci ús. Si trieu aquesta opció el tindreu disponible per inscriure apoderaments referenciant els tràmits definits i no haureu d'actualitzar-lo o mantenir-lo. Si voleu que el vostre ens el tingui disponible poseu-vos en contacte amb el CAU i [sol·liciteu-ho](https://www.aoc.cat/suport/)
 
-# 9. Generació d'informes PDF
+# 9. Generacio d'informes PDF
 Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és possible demanar un informe en format PDF on es retornin les mateixes dades que s'han retornat a la consultar però en format orientat a la impressió.
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM3MTgxNjk0NywxNTY0MjkyMjEzLC0zMT
+eyJoaXN0b3J5IjpbLTk4MTgyMzUzMywxNTY0MjkyMjEzLC0zMT
 I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
 NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
 k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
