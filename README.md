@@ -707,42 +707,42 @@ Camp | Descripció
 ```xml
 <xs:element name="consultarRepresentacionsPersonaResponse">  
 	<xs:complexType>  
-	 <xs:sequence>  
-	 <xs:element name="resultat">  
-		 <xs:complexType>  
-			 <xs:sequence>  
-				<xs:element name="resposta" type="resposta"/>  
-					 <xs:element name="poderdants">  
-						 <xs:complexType>  
-							 <xs:sequence>  
-								 <xs:element name="representacions" minOccurs="0">  
-									 <xs:complexType>  
-										 <xs:sequence>  
-											 <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-										 </xs:sequence>  
-									 </xs:complexType>  
-								 </xs:element>  
-							 </xs:sequence>  
-						 </xs:complexType>  
-					 </xs:element>  
-					 <xs:element name="representants">  
-						 <xs:complexType>  
-							 <xs:sequence>  
-								 <xs:element name="representacions" minOccurs="0">  
-									 <xs:complexType>  
-										 <xs:sequence>  
-											 <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-										 </xs:sequence>  
-									 </xs:complexType>  
-								 </xs:element>  
-							</xs:sequence>  
-						</xs:complexType>  
-					</xs:element>  
-				 </xs:sequence>  
-			 </xs:complexType>  
-		 </xs:element>  
-	 </xs:sequence>  
- </xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta"/>  
+						<xs:element name="poderdants">  
+							<xs:complexType>  
+								<xs:sequence>  
+									<xs:element name="representacions" minOccurs="0">  
+										<xs:complexType>  
+											<xs:sequence>  
+												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+											</xs:sequence>  
+										</xs:complexType>  
+									</xs:element>  
+								</xs:sequence>  
+							</xs:complexType>  
+						</xs:element>  
+						<xs:element name="representants">  
+							<xs:complexType>  
+								<xs:sequence>  
+									<xs:element name="representacions" minOccurs="0">  
+										<xs:complexType>  
+											<xs:sequence>  
+												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+											</xs:sequence>  
+										</xs:complexType>  
+									</xs:element>  
+								</xs:sequence>  
+							</xs:complexType>  
+						</xs:element>  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
 </xs:element>
 ```
 
@@ -1626,7 +1626,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4NzQxMDU1MCwxMzM4Mzg3MTM1LC0xOT
+eyJoaXN0b3J5IjpbLTMxMjQzNjQyNCwxMzM4Mzg3MTM1LC0xOT
 AxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0
 MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMz
 czODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4
