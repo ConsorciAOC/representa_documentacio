@@ -541,7 +541,7 @@ Exemple:
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
-#### Petició
+#### Peticio
 ```xml
 <xs:element name="consultarRepresentacions">
         <xs:complexType>
@@ -677,7 +677,7 @@ Permet consultar totes les representacions on intervé una determinada persona, 
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
-#### Petició
+#### Peticio
 
 ```xml
 <xs:element name="consultarRepresentacionsPersona">  
@@ -763,7 +763,7 @@ Camp | Descripció
 En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
 
-#### Petició
+#### Peticio
 
 ```xml
 <xs:element name="validarRepresentacio">
@@ -831,7 +831,7 @@ Permet realitzar la inscripció o modificació** d'una representació.
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
 > creada una representació.**
 
-#### Petició
+#### Peticio
 
 ```xml
 <xs:element name="processarRepresentacio">
@@ -897,7 +897,7 @@ representacio | Element del tipus _representacio_ on es retorna el detall de la 
 ## 5.6 Consulta de cataleg
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 
-#### Petició
+#### Peticio
 ```xml
 <xs:element name="consultarCataleg">  
 	<xs:complexType>  
@@ -943,7 +943,7 @@ A partir del codi del catàleg es poden obtenir les seves families. Per cada fam
 
 Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per això la consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
-#### Petició
+#### Peticio
 ```xml
 <xs:element name="consultarFamilies">  
 	<xs:complexType>  
@@ -993,7 +993,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 ## 5.8 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
 
-#### Petició
+#### Peticio
 ```xml
 <xs:element name="consultarFamilia">  
 	<xs:complexType>  
@@ -1031,7 +1031,7 @@ Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtr
 
 La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
-#### Petició
+#### Peticio
 ```xml
 <xs:element name="consultarTramits">  
 	<xs:complexType>  
@@ -1297,7 +1297,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 </validarRepresentacio>
 ```
 
-### Resposta (validacio positiva)
+### Resposta validacio positiva
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
@@ -1358,7 +1358,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
 
 ** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
 
-### Resposta (validacio negativa)
+### Resposta validacio negativa
 En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
 
 ```xml
@@ -1627,11 +1627,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk4MTgyMzUzMywxNTY0MjkyMjEzLC0zMT
-I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
-NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
-k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
-MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
-EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
-Mzc4MTk4XX0=
+eyJoaXN0b3J5IjpbLTIwNDg1MDUwMjksMTU2NDI5MjIxMywtMz
+EyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5
+MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMT
+Y5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0
+MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NC
+wxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3
+MDM3ODE5OF19
 -->
