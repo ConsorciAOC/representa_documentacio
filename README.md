@@ -156,6 +156,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 |estat | Llistat d'elements _estat_|
 |poderdant | Persona (física o jurídica) que atorga el poder de representació|
 |representant | Persona (física o jurídica) que rep el poder de representació|
+|solicitant | Element del tipus _solicitant_|
 |ambitRepresentacio | Element per definir l'ambit de la representació. En tots els casos inclou l'element _capacitat_ i segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_|
 |dataCreacio | Data de creació de la representació|
 |dataIniciVigencia | Data d'inici de vigència|
@@ -1625,11 +1626,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNj
-kxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5
-MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMT
-I0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3
-NTY0LDEzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0Mz
-MsNDcwMzc4MTk4LDEyNjEzODg4NDAsLTQwNTUwNjQwLC01ODMy
-MzUwODRdfQ==
+eyJoaXN0b3J5IjpbMTU4NzM3Mzc5NSwxMzM4Mzg3MTM1LC0xOT
+AxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0
+MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMz
+czODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4
+NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYzMTM2Mi
+wtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2MTM4ODg0MCwtNDA1
+NTA2NDBdfQ==
 -->
