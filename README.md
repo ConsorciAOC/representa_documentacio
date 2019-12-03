@@ -83,7 +83,7 @@
 # 1. Introduccio
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
-## 1.1. Integració PCI
+## 1.1. Integracio PCI
 Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integra dins de l'arquitectura de la Plataforma de Col·laboració Interadministrativa (en endavant PCI) a mode d'un nou servei accessible a través de la MTI.
 
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
@@ -110,11 +110,11 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 ** Modalitats de consum descrites a l'apartat [3.6]
 
 
-# 3. Missatgeria específica
+# 3. Missatgeria especifica
 
 A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
 
-## 3.1 Representació
+## 3.1 Representacio
 
 Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
 
@@ -169,7 +169,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 |idRepresentacioA | Relació entre representacions amb la finalitat d'actuar en nom d'una altra persona al portal del ciutadà |
 |evidencies | Llistat d'elements _evidencia_|
 
-## 3.2 Evidència
+## 3.2 Evidencia
 Per cada acció realitzada sobre una representació es crea i s'associa un element _evidencia_ on es recull informació relativa a qui, què i quan s'ha efectuat un canvi sobre una representació.
 
 ```xml
@@ -198,7 +198,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |solicitant | Element del tipus _solicitant_|
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
-## 3.3 Catàleg
+## 3.3 Cataleg
 
 El catàleg de tramits està format per **families**, i aquestes alhora estan formades per **tràmits**.
 Per poder operar a _Representa_ tota administració necessita tenir associat un catàleg, ja sigui propi o d'ús cedit.
@@ -262,7 +262,7 @@ Element on s'agrupen els tramits.
 |tramits | Llista d'elements _tramit_|
 |catalegCodi | Codi del catàleg on pertany la familia|
 
-## 3.5 Tràmit
+## 3.5 Tramit
 L'element **tramit** permet definir representacions tipus C amb un àmbit específic d'actuació. Tot tràmit han d'estar vinculat a una única familia.
 
 ```xml
@@ -278,7 +278,7 @@ L'element **tramit** permet definir representacions tipus C amb un àmbit espec�
 	 </xs:sequence>  
 </xs:complexType>
 ```
-## 3.6 Àmbit de representació
+## 3.6 Ambit de representacio
 Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
 
 ```xml
@@ -309,7 +309,7 @@ Més endavant es descriuen els tipus de representació i es detalla l'ambit de r
 |actiu | Indicador d'actiu o no actiu |
 
 
-## 3.7 Sol·licitant
+## 3.7 Solicitant
 Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa.
 
 ```xml
@@ -490,7 +490,7 @@ Exemple:
 </representacio>
 ```
 
-### 4.3 A tràmit
+### 4.3 A tramit
 Representació per a una administració concreta i per a un tramit concret per a una o més capacitats.
 Per aquest tipus de representació l'element _tipusRepresentacio_ té el valor **TIPUS_C**.
 
@@ -536,7 +536,7 @@ Exemple:
 
 # 5. Operacions
 
-## 5.1 Consulta de representacions (_consultarRepresentacions_)
+## 5.1 Consulta de representacions
 Permet consultar les representacions existents entre dues persones. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
 
@@ -1626,7 +1626,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4NzkxNjc0OSwxNTY0MjkyMjEzLC0zMT
+eyJoaXN0b3J5IjpbMTc5ODkyMzQ4MiwxNTY0MjkyMjEzLC0zMT
 I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
 NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
 k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
