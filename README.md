@@ -671,7 +671,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-## 5.3 Consulta de representacions per persona (_consultarRepresentacioPersona_)
+## 5.3 Consulta de representacions per persona (_consultarRepresentacionsPersona_)
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
@@ -706,12 +706,12 @@ Camp | Descripció
 #### Resposta
 ```xml
 <xs:element name="consultarRepresentacionsPersonaResponse">  
- <xs:complexType>  
+	<xs:complexType>  
 	 <xs:sequence>  
 	 <xs:element name="resultat">  
 		 <xs:complexType>  
 			 <xs:sequence>  
-					 <xs:element name="resposta" type="resposta"/>  
+				<xs:element name="resposta" type="resposta"/>  
 					 <xs:element name="poderdants">  
 						 <xs:complexType>  
 							 <xs:sequence>  
@@ -1626,7 +1626,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NzM3Mzc5NSwxMzM4Mzg3MTM1LC0xOT
+eyJoaXN0b3J5IjpbLTY4NzQxMDU1MCwxMzM4Mzg3MTM1LC0xOT
 AxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0
 MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMz
 czODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMDg2NDE4
