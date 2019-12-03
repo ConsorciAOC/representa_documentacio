@@ -4,7 +4,7 @@
 
 # Taula de continguts
 
-- [1. Introducció](#1-introducci-)
+- [1. Introducció](#1-introduccio)
   * [1.1. Integració PCI](#11-integraci--pci)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria específica](#3-missatgeria-espec-fica)
@@ -80,7 +80,7 @@
 
 
 
-# 1. Introducció
+# 1. Introduccio
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
 ## 1.1. Integració PCI
@@ -1626,11 +1626,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMz
-gzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4
-OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNz
-EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
-NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
-0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
-Mzg4ODQwXX0=
+eyJoaXN0b3J5IjpbLTc4NzkxNjc0OSwxNTY0MjkyMjEzLC0zMT
+I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
+NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
+k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
+MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
+EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
+Mzc4MTk4XX0=
 -->
