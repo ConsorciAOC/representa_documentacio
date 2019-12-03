@@ -24,48 +24,48 @@
     + [4.3 A tramit](#43-a-tramit)
 - [5. Operacions](#5-operacions)
   * [5.1 Consulta de representacions](#51-consulta-de-representacions)
-      - [Petició](#petici-)
+      - [Peticio](#peticio)
       - [Resposta](#resposta)
   * [5.2 Consulta de representacio](#52-consulta-de-representacio)
-    + [Petició](#petici--1)
+    + [Petició](#petici-)
     + [Resposta](#resposta-1)
   * [5.3 Consulta de representacions per persona](#53-consulta-de-representacions-per-persona)
-      - [Petició](#petici--2)
+      - [Peticio](#peticio-1)
       - [Resposta](#resposta-2)
   * [5.4 Validacio](#54-validacio)
-      - [Petició](#petici--3)
+      - [Peticio](#peticio-2)
       - [Resposta](#resposta-3)
   * [5.5 Alta / Modificacio](#55-alta---modificacio)
-      - [Petició](#petici--4)
+      - [Peticio](#peticio-3)
       - [Resposta](#resposta-4)
   * [5.6 Consulta de cataleg](#56-consulta-de-cataleg)
-      - [Petició](#petici--5)
+      - [Peticio](#peticio-4)
       - [Resposta](#resposta-5)
   * [5.7 Consulta de families](#57-consulta-de-families)
-      - [Petició](#petici--6)
+      - [Peticio](#peticio-5)
       - [Resposta](#resposta-6)
   * [5.8 Consulta de familia](#58-consulta-de-familia)
-      - [Petició](#petici--7)
+      - [Peticio](#peticio-6)
       - [Resposta](#resposta-7)
   * [5.9 Consulta de tramits](#59-consulta-de-tramits)
-      - [Petició](#petici--8)
+      - [Peticio](#peticio-7)
       - [Resposta](#resposta-8)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio)
+    + [Peticio](#peticio-8)
     + [Resposta](#resposta-9)
   * [6.2 Consulta representacions](#62-consulta-representacions)
-    + [Peticio](#peticio-1)
+    + [Peticio](#peticio-9)
     + [Resposta](#resposta-10)
   * [6.3 Validacio](#63-validacio)
-    + [Peticio](#peticio-2)
-    + [Resposta (validacio positiva)](#resposta--validacio-positiva-)
-    + [Resposta (validacio negativa)](#resposta--validacio-negativa-)
+    + [Peticio](#peticio-10)
+    + [Resposta validacio positiva](#resposta-validacio-positiva)
+    + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-3)
+    + [Peticio](#peticio-11)
     + [Resposta](#resposta-11)
   * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
-    + [Peticio](#peticio-4)
+    + [Peticio](#peticio-12)
     + [Resposta](#resposta-12)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
@@ -77,8 +77,6 @@
   * [8.2 Importacio mitjançant fitxer CSV](#82-importacio-mitjan-ant-fitxer-csv)
   * [8.3 Us cataleg compartit per Consorci AOC](#83-us-cataleg-compartit-per-consorci-aoc)
 - [9. Generacio d'informes PDF](#9-generacio-d-informes-pdf)
-
-
 
 
 # 1. Introduccio
@@ -1627,11 +1625,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwNDg1MDUwMjksMTU2NDI5MjIxMywtMz
-EyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5
-MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMT
-Y5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0
-MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NC
-wxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3
-MDM3ODE5OF19
+eyJoaXN0b3J5IjpbMjkyNjExNDcwLDE1NjQyOTIyMTMsLTMxMj
+QzNjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1
+OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OT
+Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
+MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
+MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
+NzgxOThdfQ==
 -->
