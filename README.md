@@ -38,16 +38,16 @@
   * [5.5 Alta / Modificació (_processarRepresentacio_)](#55-alta---modificaci----processarrepresentacio--)
       - [Petició](#petici--3)
       - [Resposta](#resposta-4)
-  * [5.6 Consulta de catàleg](#56-consulta-de-cat-leg)
+  * [5.6 Consulta de catàleg (_consultarCataleg_)](#56-consulta-de-cat-leg)
       - [Petició](#petici--4)
       - [Resposta](#resposta-5)
-  * [5.7 Consulta de families](#57-consulta-de-families)
+  * [5.7 Consulta de families (_consultarFamilies_)](#57-consulta-de-families)
       - [Petició](#petici--5)
       - [Resposta](#resposta-6)
-  * [5.8 Consulta de familia](#58-consulta-de-familia)
+  * [5.8 Consulta de familia (_consultarFamilia)](#58-consulta-de-familia)
       - [Petició](#petici--6)
       - [Resposta](#resposta-7)
-  * [5.9 Consulta de tràmits](#59-consulta-de-tr-mits)
+  * [5.9 Consulta de tràmits (_consultarTramits_)](#59-consulta-de-tr-mits)
       - [Petició](#petici--7)
       - [Resposta](#resposta-8)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
@@ -893,7 +893,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
-## 5.6 Consulta de catàleg
+## 5.6 Consulta de catàleg (_consultarCataleg_)
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 
 #### Petició
@@ -936,7 +936,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 cataleg | Element del tipus _cataleg_
 
-## 5.7 Consulta de families
+## 5.7 Consulta de families (_consultarFamilies_)
 
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
 
@@ -1626,11 +1626,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNTUxMDc3MjEsLTMxMjQzNjQyNCwxMz
-M4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUx
-ODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLT
-cxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIw
-MTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0Ni
-wtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAzNzgxOTgsMTI2
-MTM4ODg0MF19
+eyJoaXN0b3J5IjpbMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMz
+gzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4
+OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNz
+EwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAx
+NjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC
+0xMjA1NjMxMzYyLC0xNzY5MDYwNDMzLDQ3MDM3ODE5OCwxMjYx
+Mzg4ODQwXX0=
 -->
