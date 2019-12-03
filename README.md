@@ -615,7 +615,7 @@ numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de con
 representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-## 5.2 Consulta de representació (_consultarRepresentacio_)
+## 5.2 Consulta de representacio
 Permet recuperar **una** representació a partir del seu identificador únic (`identificadorLegal`).
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
 
@@ -671,7 +671,7 @@ resposta | Identificador únic de la representació
 representacio | Element del tipus [_representació_](#21-representacio)
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
-## 5.3 Consulta de representacions per persona (_consultarRepresentacionsPersona_)
+## 5.3 Consulta de representacions per persona
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
@@ -753,7 +753,7 @@ Camp | Descripció
 |representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant
 
 
-## 5.4 Validació (_validarRepresentacio_)
+## 5.4 Validacio
 
 > La opertació de validació permet **preguntar** a Representa **si
 > existeix** alguna representació en estat `VALIDA` **entre un poderdant
@@ -824,7 +824,7 @@ codi | Codi del resultat de la petició
 descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
-## 5.5 Alta / Modificació (_processarRepresentacio_)
+## 5.5 Alta / Modificacio
 Permet realitzar la inscripció o modificació** d'una representació.
 
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
@@ -893,7 +893,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
-## 5.6 Consulta de catàleg (_consultarCataleg_)
+## 5.6 Consulta de cataleg
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 
 #### Petició
@@ -936,7 +936,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 cataleg | Element del tipus _cataleg_
 
-## 5.7 Consulta de families (_consultarFamilies_)
+## 5.7 Consulta de families
 
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
 
@@ -989,7 +989,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 ```
 
 
-## 5.8 Consulta de familia (_consultarFamilia_)
+## 5.8 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
 
 #### Petició
@@ -1022,7 +1022,7 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 </xs:element>
 ```
 
-## 5.9 Consulta de tràmits
+## 5.9 Consulta de tramits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
 És a dir:
 - si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
@@ -1072,9 +1072,9 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 
 # 6. Exemples de peticions
 
-## 6.1 Consulta de representació
+## 6.1 Consulta de representacio
 
-### Petició
+### Peticio
 
 ```xml
 <consultarRepresentacio>
@@ -1166,7 +1166,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 ## 6.2 Consulta representacions
 Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
 
-### Petició
+### Peticio
 
 ```xml
 <consultarRepresentacions>
@@ -1250,10 +1250,10 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
-## 6.3 Validació
+## 6.3 Validacio
 En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
 
-### Petició
+### Peticio
 
 ```xml
 <validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
@@ -1296,7 +1296,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 </validarRepresentacio>
 ```
 
-### Resposta (validació positiva)
+### Resposta (validacio positiva)
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
@@ -1371,10 +1371,10 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
 </validarRepresentacioResponse>
 ```
 
-## 6.4 Alta representació
+## 6.4 Alta representacio
 Exemple on es crea una representació.
 
-### Petició
+### Peticio
 
 ```xml
 <processarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
@@ -1456,11 +1456,11 @@ Exemple on es crea una representació.
  </processarRepresentacioResponse>
 ```
 
-## 6.5 Modificació de representació
+## 6.5 Modificacio de representacio
 L'unic atribut que es pot modificar d'una representació és el seu _estat_. Per a fer-ho cal indicar l'identificadorLegal per recuperar la representació i el nou estat que es desitja modificar.
 En aquest exemple es modifica l'estat de la representació creada al punt 4.7 passant de VALIDA a DENEGADA.
 
-### Petició
+### Peticio
 
 ```xml
 <processarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
@@ -1549,13 +1549,13 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 	</resultat>
 </processarRepresentacioResponse>
 ```
-## 6.6 Consulta catàleg
+## 6.6 Consulta cataleg
 _Pendent_
 ## 6.7 Consulta families
 _Pendent_
 ## 6.8 Consulta familia
 _Pendent_
-## 6.9 Consulta tràmits
+## 6.9 Consulta tramits
 _Pendent_
 
 
@@ -1576,7 +1576,7 @@ Resultat| Codi
 |Poder no subsistent|100|
 |Error de schema|101|
 
-# 8. Creació/ús del catàleg de tràmits
+# 8. Creacio/us del catàleg de tràmits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 
@@ -1626,7 +1626,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc5ODkyMzQ4MiwxNTY0MjkyMjEzLC0zMT
+eyJoaXN0b3J5IjpbMTM3MTgxNjk0NywxNTY0MjkyMjEzLC0zMT
 I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
 NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
 k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
