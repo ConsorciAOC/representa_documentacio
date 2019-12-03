@@ -35,7 +35,7 @@
   * [5.4 Validacio](#54-validacio)
       - [Peticio](#peticio-2)
       - [Resposta](#resposta-3)
-  * [5.5 Alta / Modificacio](#55-alta---modificacio)
+  * [5.5 Alta o modificacio](#55-alta-o-modificacio)
       - [Peticio](#peticio-3)
       - [Resposta](#resposta-4)
   * [5.6 Consulta de cataleg](#56-consulta-de-cataleg)
@@ -1625,11 +1625,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1NjkwMjEyNiwxNTY0MjkyMjEzLC0zMT
-I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
-NTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNj
-k2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQw
-MDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LD
-EzMzY3OTA5NDYsLTEyMDU2MzEzNjIsLTE3NjkwNjA0MzMsNDcw
-Mzc4MTk4XX0=
+eyJoaXN0b3J5IjpbODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMj
+QzNjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1
+OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OT
+Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
+MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
+MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
+NzgxOThdfQ==
 -->
