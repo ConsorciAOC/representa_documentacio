@@ -592,7 +592,6 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
         </xs:complexType>
     </xs:element>
 ```
-Segons el tipus de representació que es desitgi consultar, per a l'element _representacio_ serà obligatori informat determinats camps. Alguns camp es controlen mitjançant validació contra l'esquema xsd i d'altres es comproven a nivell d'aplicació segons el cas d'ús.
 La consulta és paginada i cal indicar el nº d’elements màxims a retornar i el nº de la pàgina desitjada.
 
 Camp | Descripció
@@ -1650,7 +1649,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4ODcwNTg0MTYsMTExMTAwOTMxMSw4Mz
+eyJoaXN0b3J5IjpbLTIwODEzMDE2NjAsMTExMTAwOTMxMSw4Mz
 kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
 MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
 I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
