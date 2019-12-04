@@ -138,7 +138,7 @@ o bé del tipus:
 ```
 
 Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen informar uns camps obligatoris o no.
-
+Per exemple en l'alta d'una representació, per l'element `representacio` és obligatori informar com a mínim els camps: tipusRepresentacio, estat, poderdant, 
 ## 3.1 Representacio
 
 Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
@@ -1650,11 +1650,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMjgxMDQ4MSwxMTExMDA5MzExLDgzOT
-I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
-NSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMj
-Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
-OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMT
-A4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2
-MzEzNjJdfQ==
+eyJoaXN0b3J5IjpbLTEzNjc0NTQ2ODAsMTExMTAwOTMxMSw4Mz
+kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
+MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
+I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
+NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLT
+EwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1
+NjMxMzYyXX0=
 -->
