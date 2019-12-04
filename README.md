@@ -127,9 +127,9 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 		<xs:element name="representant" type="persona" minOccurs="0" />  
 		<xs:element name="solicitant" type="solicitant" minOccurs="0" />  
 		<xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>  
-		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>  
-		<xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>  
-		<xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>  
+		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>  
+		<xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>  
+		<xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>  
 		<xs:element name="validacions" type="xs:int" minOccurs="0" 	nillable="true"/>  
 		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
 		<xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />  
@@ -174,7 +174,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 ```xml
 <xs:complexType name="evidencia">
 	<xs:sequence>
-		<xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
 		<xs:element name="identificadorLegal" type="xs:string"/>
 		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>	
 		<xs:element name="solicitant" type="solicitant"/>	
@@ -209,7 +209,7 @@ Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una
 	<xs:sequence>  
 		<xs:element name="codi" type="NonEmptyString" />  
 		<xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
-		<xs:element name="dataCreacio" type="xs:string" minOccurs="0" />  
+		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0" />  
 		<xs:element name="actiu" type="xs:boolean" minOccurs="0" />  
 		<xs:element name="administracioPropietaria" type="administracio" />  
 		<xs:element name="families" minOccurs="0" >  
@@ -338,7 +338,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 		<xs:element name="cognoms" minOccurs="0" type="xs:string" />  
 		<xs:element name="correuElectronic" minOccurs="0" type="NonEmptyString" />  
 		<xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean" />  
-		<xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:string" />  
+		<xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:dateTime" />  
 	</xs:sequence>  
 </xs:complexType>
 ```
@@ -367,7 +367,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
             <xs:element name="tamany" type="xs:string" minOccurs="0"/>
             <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
             <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
         </xs:sequence>
 </xs:complexType>
 ```
@@ -768,7 +768,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="representacio" type="representacio" minOccurs="0"/>
-                <xs:element name="dataValidacio" type="xs:string"/>
+                <xs:element name="dataValidacio" type="xs:dateTime"/>
                 <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
         </xs:complexType>
@@ -1625,11 +1625,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMj
-QzNjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1
-OSw4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OT
-Y3MzAxMTIsLTcxMDk2NTQ5NCwtMzczODYwNjIsLTExMjQ4NDAw
-MjIsMjM5MTIwMTY2LC0xMDg2NDE4NzM0LC03Mzg1NTc1NjQsMT
-MzNjc5MDk0NiwtMTIwNTYzMTM2MiwtMTc2OTA2MDQzMyw0NzAz
-NzgxOThdfQ==
+eyJoaXN0b3J5IjpbMTE1MzEzNjU5Miw4MzkyNTI0OTYsMTU2ND
+I5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2
+NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOT
+Y0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2
+MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLT
+czODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5
+MDYwNDMzXX0=
 -->
