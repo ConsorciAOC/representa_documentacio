@@ -141,8 +141,8 @@ Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen
 
 Per exemple enla operació **processarRepresentacio** (alta), per l'element `representacio` és obligatori informar com a mínim els camps: _tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio_.
 
-En canvi, el mateix element `representacio` en la operació de **consultarRepresentacions** només és obligatori informar: poderdant i representant.
-La resta de camps actuen a mode filtre, és a dir, la cerca és tan restrictiva com camps s'informin. Si només s'informa poderdant i representant es retornaran totes les representacions que comp
+En canvi, el mateix element `representacio` en la operació de **consultarRepresentacions** només és obligatori informar: _poderdant i representant_.
+La resta de camps actuen a mode filtre, és a dir, la cerca és tan restrictiva com camps s'informin. Si només s'informa poderdant i representant es retornaran totes les representacions que continguin aquestes dades,  si s'informa l'estat es filtrarà per estat, etc...
 
 ## 3.1 Representacio
 
@@ -1655,7 +1655,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NDEwMzg2OCwtMTM2NzQ1NDY4MCwxMT
+eyJoaXN0b3J5IjpbMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMT
 ExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0
 MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksOD
 Q0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMw
