@@ -132,7 +132,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 		<xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>  
 		<xs:element name="validacions" type="xs:int" minOccurs="0" 	nillable="true"/>  
 		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
-		<xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />  
+		<xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />  
 		<xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>  
 		<xs:element name="refAlta" type="xs:string" minOccurs="0"/>  
 		<xs:element name="origen" type="origen" minOccurs="0" />  
@@ -157,12 +157,12 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 |representant | Persona (física o jurídica) que rep el poder de representació|
 |solicitant | Element del tipus _solicitant_|
 |ambitRepresentacio | Element per definir l'ambit de la representació. En tots els casos inclou l'element _capacitat_ i segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_|
-|dataCreacio | Data de creació de la representació|
-|dataIniciVigencia | Data d'inici de vigència|
-|dataFiVigencia | Data de fi de la vigència|
+|dataCreacio | Data de creació de la representació (yyyy-MM-dd'T'HH:mm:ss)|
+|dataIniciVigencia | Data d'inici de vigència (yyyy-MM-dd'T'HH:mm:ss)|
+|dataFiVigencia | Data de fi de la vigència (yyyy-MM-dd'T'HH:mm:ss)|
 |validacions | Nombre de validacions realitzades sobre aquesta representació|
 |csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
-|dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial|
+|dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial (yyyy-MM-dd'T'HH:mm:ss)|
 |refAlta | Identificador per vincular les possibles N representacions a tramit. creades en el mateix instant d'inscripció|
 |origen | Element que permet veure l'origen de creció de la representació (PORTAL_EMPLEAT, PORTAL_CIUTADA, INTEGRACIO) |
 |idRepresentacioA | Relació entre representacions amb la finalitat d'actuar en nom d'una altra persona al portal del ciutadà |
@@ -191,7 +191,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 
 |Camp | Descripció|
 |---- | ----------|
-|dataCreacio | Data de creació de l'evidencia|
+|dataCreacio | Data de creació de l'evidencia (yyyy-MM-dd'T'HH:mm:ss)|
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
@@ -227,7 +227,7 @@ Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una
 |---- | ----------|
 |codi | Codi del catàleg|
 |nom| Nom del catàleg|
-|dataCreacio | Data de creació del catàleg|
+|dataCreacio | Data de creació del catàleg (yyyy-MM-dd'T'HH:mm:ss)|
 |actiu | ```TRUE``` o ```FALSE``` per indicar si el catàleg està actiu o no|
 |administracioPropietaria | Element del tipus _administració_. Indica qui és el propietari del catàleg|
 |families | Llista d'elements _familia_|
@@ -352,7 +352,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |cognoms|Cognoms de la persona|
 |correuElectronic| Adreça de correu electrònic|
 |accceptaAvisos|Flag per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
-|dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_|
+|dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_ (yyyy-MM-dd'T'HH:mm:ss)|
 
 
 ## 3.9 DocumentEvidencia
@@ -380,7 +380,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |tamany | Tamany (bytes)|
 |tipusEncriptacio | Algoritme de resum criptogràfic|
 |resumCriptografic | Resum hash|
-|dataCreacio | Data de creació|
+|dataCreacio | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
 
 ## 3.10  Estat
 
@@ -778,7 +778,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció
 ---- | ----------
 representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, administracio, tramit, capacitat)
-dataValidacio | Data on es fa la consulta de validació. Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
+dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
 
 #### Resposta
@@ -1625,7 +1625,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE1MzEzNjU5Miw4MzkyNTI0OTYsMTU2ND
+eyJoaXN0b3J5IjpbMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2ND
 I5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2
 NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOT
 Y0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2
