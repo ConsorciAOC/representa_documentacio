@@ -139,8 +139,9 @@ o bé del tipus:
 
 Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen informar uns camps obligatoris o no.
 
-Per exemple enla operació **processarRepresentacio** (alta), per l'element `representacio` és obligatori informar com a mínim els camps: tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio.
-En canvi, el mateix element `representacio` en la operació de **validarRepresentacio** només és obligatori informar 
+Per exemple enla operació **processarRepresentacio** (alta), per l'element `representacio` és obligatori informar com a mínim els camps: _tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio_.
+
+En canvi, el mateix element `representacio` en la operació de **validarRepresentacio** només és obligatori informar: 
 ## 3.1 Representacio
 
 Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
@@ -1652,11 +1653,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYzNDA2MjMzMSwtMTM2NzQ1NDY4MCwxMT
-ExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0
-MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksOD
-Q0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMw
-MTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLD
-IzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3
-OTA5NDZdfQ==
+eyJoaXN0b3J5IjpbLTE3NDAyODgxODEsLTEzNjc0NTQ2ODAsMT
+ExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2
+NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LD
+g0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5Njcz
+MDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMi
+wyMzkxMjAxNjYsLTEwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2
+NzkwOTQ2XX0=
 -->
