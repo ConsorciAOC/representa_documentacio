@@ -124,6 +124,7 @@ Per tant, si falta informar algun camp es pot rebre un missatge del tipus:
     </resposta>
 </resultat>
 ```
+o bé del tipus:
 
 
 ## 3.1 Representacio
@@ -1638,7 +1639,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzcyNDAwODQsMTExMTAwOTMxMSw4Mz
+eyJoaXN0b3J5IjpbLTE0NjA2MzE3NDAsMTExMTAwOTMxMSw4Mz
 kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
 MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
 I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
