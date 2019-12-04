@@ -189,7 +189,7 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="representacio" type="representacio" minOccurs="0"/>
-                <xs:element name="dataValidacio" type="xs:string"/>
+                <xs:element name="dataValidacio" type="xs:dateTime"/>
                 <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
         </xs:complexType>
@@ -344,7 +344,7 @@
         <xs:sequence>
             <xs:element name="codi" type="NonEmptyString"  />
             <xs:element name="nom" type="NonEmptyString" minOccurs="0" />
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0" />
+            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0" />
             <xs:element name="actiu" type="xs:boolean" minOccurs="0" />
             <xs:element name="administracioPropietaria" type="administracio" />
             <xs:element name="administracions" minOccurs="0" >
@@ -427,12 +427,12 @@
             <xs:element name="representant" type="persona" minOccurs="0" />
             <xs:element name="solicitant" type="solicitant" minOccurs="0" />
             <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataIniciVigencia" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataFiVigencia" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
             <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
-            <xs:element name="dataValidacioPoderNotarial" type="xs:string" minOccurs="0" />
+            <xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />
             <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>
             <xs:element name="refAlta" type="xs:string" minOccurs="0"/>
             <xs:element name="origen" type="origen" minOccurs="0" />
@@ -461,7 +461,7 @@
 
     <xs:complexType name="evidencia">
         <xs:sequence>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="identificadorLegal" type="xs:string"/>
             <xs:element name="estat" type="estat"/>
             <xs:element name="motiu" type="xs:string" minOccurs="0"/>
@@ -485,7 +485,7 @@
             <xs:element name="tamany" type="xs:string" minOccurs="0"/>
             <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
             <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
-            <xs:element name="dataCreacio" type="xs:string" minOccurs="0"/>
+            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -536,14 +536,14 @@
 
     <xs:complexType name="persona">
         <xs:sequence>
-            <xs:element type="xs:string" name="tipusDocumentIdentificatiu"/>
-            <xs:element type="xs:string" name="valorDocumentIdentificatiu"/>
-            <xs:element type="tipusPersona" name="tipusPersona" minOccurs="0"/>
-            <xs:element type="xs:string" name="nomRaoSocial" minOccurs="0"/>
-            <xs:element type="xs:string" name="cognoms" minOccurs="0"/>
-            <xs:element type="xs:string" name="correuElectronic" minOccurs="0"/>
-            <xs:element type="xs:boolean" name="acceptaAvisos" minOccurs="0"/>
-            <xs:element type="xs:string" name="dataAcceptacioAvisos" minOccurs="0"/>
+            <xs:element name="tipusDocumentIdentificatiu" type="xs:string"/>
+            <xs:element name="valorDocumentIdentificatiu" type="xs:string"/>
+            <xs:element name="tipusPersona" minOccurs="0" type="tipusPersona"/>
+            <xs:element name="nomRaoSocial" minOccurs="0" type="xs:string"/>
+            <xs:element name="cognoms" minOccurs="0" type="xs:string"/>
+            <xs:element name="correuElectronic" minOccurs="0" type="xs:string"/>
+            <xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean"/>
+            <xs:element name="dataAcceptacioAvisos" type="xs:dateTime" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -566,9 +566,9 @@
 
     <xs:complexType name="resposta">
         <xs:sequence>
-            <xs:element type="xs:string" name="codi" minOccurs="0"/>
-            <xs:element type="xs:string" name="descripcio" minOccurs="0"/>
-            <xs:element type="xs:string" name="tipusSolicitud" minOccurs="0"/>
+            <xs:element name="codi" type="xs:string"  minOccurs="0"/>
+            <xs:element name="descripcio" type="xs:string"  minOccurs="0"/>
+            <xs:element name="tipusSolicitud" type="xs:string" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
 
