@@ -112,7 +112,20 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 # 3. Missatgeria especifica
 
 A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
-La validació dels camps es fa en alguns cassos a nivell de xsd i en d'altres (tot i aparèixer com a opcional `minOccurs=0` en la definició
+La validació dels camps (si són obligatoris, validacions sintàctiques, etc...) es fa en alguns cassos a nivell de xsd i en d'altres (tot i aparèixer com a opcional `minOccurs=0` en la definició) a nivell lògic.
+Per tant, si falta informar algun camp es pot rebre un missatge del tipus:
+
+```xml
+<resultat>
+            <resposta>
+               <codi>004</codi>
+               <descripcio>Cal informar els següents camps: origen</descripcio>
+               <tipusSolicitud>ALTA</tipusSolicitud>
+            </resposta>
+         </resultat>
+```
+
+
 ## 3.1 Representacio
 
 Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
@@ -1625,7 +1638,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxNjg4NzY0NiwxMTExMDA5MzExLDgzOT
+eyJoaXN0b3J5IjpbMjA2NTI3MzYzMiwxMTExMDA5MzExLDgzOT
 I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
 NSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMj
 Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
