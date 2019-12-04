@@ -113,7 +113,7 @@ Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisi
 
 A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
 
-La validació dels camps (si són obligatoris, validacions sintàctiques, etc...) es fa en alguns cassos a nivell de xsd i en d'altres a nivell lògic.
+La validació dels camps (obligatorietat, validacions sintàctiques, etc...) es fa en alguns casos a nivell d'schema xsd i en d'altres a nivell lògic.
 
 Per tant, si per exemple falta informar algun camp es pot rebre un missatge del tipus:
 
@@ -136,6 +136,9 @@ o bé del tipus:
    </resposta>
 </resultat>
 ```
+
+
+    A la descripció de cada operació s'indiquen els camps mínims obligatoris amb un símbol (*)
 
 ## 3.1 Representacio
 
@@ -1648,11 +1651,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMDYwMjg0NywxMTExMDA5MzExLDgzOT
-I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
-NSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMj
-Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
-OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMT
-A4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2
-MzEzNjJdfQ==
+eyJoaXN0b3J5IjpbLTEzOTE1MTM3NjIsMTExMTAwOTMxMSw4Mz
+kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
+MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
+I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
+NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLT
+EwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1
+NjMxMzYyXX0=
 -->
