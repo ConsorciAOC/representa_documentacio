@@ -137,7 +137,7 @@ o bé del tipus:
 </resultat>
 ```
 
-Segons el tipus operació alguns ele camps mínims obligatoris per cada element.
+Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen informar uns camps obligatoris o no.
 
 ## 3.1 Representacio
 
@@ -1650,7 +1650,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1OTY3NTY2OSwxMTExMDA5MzExLDgzOT
+eyJoaXN0b3J5IjpbLTIxMjgxMDQ4MSwxMTExMDA5MzExLDgzOT
 I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
 NSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMj
 Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
