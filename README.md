@@ -125,7 +125,15 @@ Per tant, si falta informar algun camp es pot rebre un missatge del tipus:
 </resultat>
 ```
 o bé del tipus:
-
+```xml
+<resultat>
+	<resposta>
+	<codi>101</codi>
+    <descripcio>cvc-complex-type.2.4.b: El contenido del elemento 'ns5:dades' no está completo. Se esperaba uno de '{"r:representa:V1.0":poderNotarial, "r:representa:V1.0":signatura, "r:representa:V1.0":solicitant}'.</descripcio>
+   <tipusSolicitud>ALTA</tipusSolicitud>
+   </resposta>
+</resultat>
+```
 
 ## 3.1 Representacio
 
@@ -1587,7 +1595,6 @@ Resultat| Codi
 |Element no disponible|008|
 |Signatura no vàlida|009|
 |Poder no subsistent|100|
-|Error de schema|101|
 
 # 8. Creacio/us del cataleg de tramits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
@@ -1639,11 +1646,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NjA2MzE3NDAsMTExMTAwOTMxMSw4Mz
-kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
-MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
-I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
-NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLT
-EwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1
-NjMxMzYyXX0=
+eyJoaXN0b3J5IjpbNzMxNTUxNTc4LDExMTEwMDkzMTEsODM5Mj
+UyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4Mzg3MTM1
+LC0xOTAxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNj
+UyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5
+NCwtMzczODYwNjIsLTExMjQ4NDAwMjIsMjM5MTIwMTY2LC0xMD
+g2NDE4NzM0LC03Mzg1NTc1NjQsMTMzNjc5MDk0NiwtMTIwNTYz
+MTM2Ml19
 -->
