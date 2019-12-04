@@ -137,8 +137,7 @@ o bé del tipus:
 </resultat>
 ```
 
-
-    A la descripció de cada operació s'indiquen els camps mínims obligatoris amb un símbol (*)
+**A la descripció de cada operació s'indiquen els camps mínims obligatoris amb un símbol  **
 
 ## 3.1 Representacio
 
@@ -1651,11 +1650,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTE1MTM3NjIsMTExMTAwOTMxMSw4Mz
-kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
-MzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMT
-I2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1
-NDk0LC0zNzM4NjA2MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLT
-EwODY0MTg3MzQsLTczODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1
-NjMxMzYyXX0=
+eyJoaXN0b3J5IjpbLTk1NzMzODgxMSwxMTExMDA5MzExLDgzOT
+I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
+NSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMj
+Y1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0
+OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMT
+A4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3OTA5NDYsLTEyMDU2
+MzEzNjJdfQ==
 -->
