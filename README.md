@@ -940,10 +940,10 @@ Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-codiAdministracio| Codi INE10 de l'administració
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | ---------
+codiAdministracio| Codi INE10 de l'administració | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1657,11 +1657,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTQ1MzIxNTAsLTQ5OTM1ODE2MiwtMT
-cwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5
-MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMT
-EsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4
-Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxOD
-gsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcx
-MDk2NTQ5NF19
+eyJoaXN0b3J5IjpbLTEyMDY5MzMyOSwtNDk5MzU4MTYyLC0xNz
+A5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkx
+MDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMxMS
+w4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgz
+ODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OC
+wxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEw
+OTY1NDk0XX0=
 -->
