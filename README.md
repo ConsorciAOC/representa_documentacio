@@ -604,7 +604,7 @@ Camp | Descripció
 ---- | ----------
 mida | Nombre màxim de resultats retornats per pàgina
 pagina | Pàgina de resultats sol·licitada (de 0 a N)
-representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar els 
+representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar els atributs: 
 estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
@@ -1655,7 +1655,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODMwMjY5NTcsMjIxOTEwMTUsMTc4MD
+eyJoaXN0b3J5IjpbLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MD
 czMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5
 NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMT
 kwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMy
