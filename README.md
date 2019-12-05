@@ -891,13 +891,13 @@ Permet realitzar la inscripció o modificació** d'una representació.
 ```
 
 Camp | Descripció | Oblogatori
----- | ----------
-tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació
-representacio | Element del tipus _representacio_ 
-documentsRepresentacio | Elements del tipus _documentRepresentacio_
-motiu | Descripció del motiu de la inscripció
-tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO)
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+---- | ---------- | ------
+tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació | No
+representacio | Element del tipus _representacio_. | Si
+documentsRepresentacio | Elements del tipus _documentRepresentacio_ | No
+motiu | Descripció del motiu de la inscripció | Si
+tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO) | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 
 #### Resposta
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwtMT
-YyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNzMz
-MjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2LD
-E1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4Mzg3MTM1LC0xOTAx
-NjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0My
-wtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMzcz
-ODYwNjJdfQ==
+eyJoaXN0b3J5IjpbMTQ4OTE5NjU0LC00OTkzNTgxNjIsLTE3MD
+k0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEw
+MTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLD
+gzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4
+NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LD
+ExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5
+NjU0OTRdfQ==
 -->
