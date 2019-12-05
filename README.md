@@ -789,7 +789,7 @@ Camp | Descripció
 > existeix** alguna representació en estat `VALIDA` **entre un poderdant
 > i un representant, per una administració, un tràmit i una capacitat**.
 
-En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
+En cas d'existir alguna representació existent en estat `VALIDA` que compleixi els criteris de la validació, es respon afirmativament i es retorna el detall de la representació recuperada per donar aquesta resposta. Només una única representació pot existir per 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
 
 #### Peticio
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMj
-IxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5
-MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMT
-MzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1
-MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC
-03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEy
-MDE2Nl19
+eyJoaXN0b3J5IjpbNDY5NzcxNjQ3LC0xNjI5MDI1MDAwLC0xOD
+I0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2
+ODAsMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMz
+EyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5
+MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMT
+Y5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2MiwtMTEyNDg0
+MDAyMl19
 -->
