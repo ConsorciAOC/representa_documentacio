@@ -139,7 +139,7 @@ o bé del tipus:
 
 Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen informar uns camps obligatoris o no.
 
-Per exemple enla operació **processarRepresentacio** (alta), per l'element `representacio` és obligatori informar com a mínim els camps: _tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio_.
+Per exemple en l'operació **processarRepresentacio** (alta), és obligatori informar a l'element `representacio` com a mínim els camps: _tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio_.
 
 En canvi, el mateix element `representacio` en la operació de **consultarRepresentacions** només és obligatori informar: _poderdant i representant_.
 La resta de camps actuen a mode filtre, és a dir, la cerca és tan restrictiva com camps s'informin. Si només s'informa poderdant i representant es retornaran totes les representacions que continguin aquestes dades,  si s'informa l'estat es filtrarà per estat, etc...
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMT
-ExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0
-MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksOD
-Q0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMw
-MTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLD
-IzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3NTY0LDEzMzY3
-OTA5NDZdfQ==
+eyJoaXN0b3J5IjpbMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2Nz
+Q1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEz
+LC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNj
+kxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5
+MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMT
+I0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3
+NTY0XX0=
 -->
