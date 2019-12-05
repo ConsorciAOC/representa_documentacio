@@ -892,7 +892,7 @@ Permet realitzar la inscripció o modificació** d'una representació.
 
 Camp | Descripció | Obligatori
 ---- | ---------- | ------
-tokenValid | Per les aplicacions integrades amb VALID, si es proporciona el tToken d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació | No
+tokenValid | Per les aplicacions integrades amb VALID, si es proporciona el token d'autenticació que retornai VALID s'adjuntarà a la representació les evidències del procés d'autenticació | No
 representacio | Element del tipus _representacio_. | Si
 | |ALTA > cal informar obligatòriament els atributs: _poderdant, representant, tipusRepresentacio, dataIniciVigencia, dataFiVigencia, origen, ambitRepresentacio_.
 || MODIFICACIO > cal informar obligatòriament els atributs: _identificadorLegal, estat, origen_  |
@@ -1657,7 +1657,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5Njc2MzI0NDMsLTQ5OTM1ODE2MiwtMT
+eyJoaXN0b3J5IjpbLTE4NTQ1MzIxNTAsLTQ5OTM1ODE2MiwtMT
 cwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5
 MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMT
 EsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4
