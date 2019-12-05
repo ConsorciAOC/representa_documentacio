@@ -1039,7 +1039,7 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 familia| Element del tipus _familia_. Cal informar obligatòriament els atributs: _uuid_ | Si
-
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1062,8 +1062,7 @@ familia| Element del tipus _familia_. Cal informar obligatòriament els atributs
 ## 5.9 Consulta de tramits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
 És a dir:
-- si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
-- si es volen recuperar tots els tràmits d'una familia, cal informar a l'element _tramit_ l'element _uuidFamilia_.
+
 
 La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
@@ -1080,6 +1079,13 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 	</xs:complexType>  
 </xs:element>
 ```
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+tramit| Element del tipus _tramit_. Si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
+- si es volen recuperar tots els tràmits d'una familia, cal informar a l'element _tramit_ l'element _uuidFamilia_.Cal informar obligatòriament els atributs: _uuid_ | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1662,7 +1668,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkwOTIxOTEyNiwtODY2MTI0NTIsLTQ5OT
+eyJoaXN0b3J5IjpbMTQ3ODYxNjg5MywtODY2MTI0NTIsLTQ5OT
 M1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3
 MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLD
 ExMTEwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQz
