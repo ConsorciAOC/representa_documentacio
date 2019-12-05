@@ -987,12 +987,12 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per aix
 	</xs:complexType>  
 </xs:element>
 ```
-Camp | Descripció
----- | ----------
-mida | Nombre màxim de resultats retornats per pàgina
-pagina | Pàgina de resultats sol·licitada (de 0 a N)
-catalegCodi | Codi del catàleg
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+catalegCodi | Codi del catàleg | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1035,6 +1035,10 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 	</xs:complexType>  
 </xs:element>
 ```
+
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+familia| Element del tipus _familia_.  | Si
 
 #### Resposta
 ```xml
@@ -1657,11 +1661,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMDY5MzMyOSwtNDk5MzU4MTYyLC0xNz
-A5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkx
-MDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMxMS
-w4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgz
-ODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OC
-wxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEw
-OTY1NDk0XX0=
+eyJoaXN0b3J5IjpbMTIzNTA3MDM1LC00OTkzNTgxNjIsLTE3MD
+k0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEw
+MTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLD
+gzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4
+NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LD
+ExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5
+NjU0OTRdfQ==
 -->
