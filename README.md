@@ -890,12 +890,12 @@ Permet realitzar la inscripció o modificació** d'una representació.
 </xs:element>
 ```
 
-Camp | Descripció | Oblogatori
+Camp | Descripció | Obligatori
 ---- | ---------- | ------
-tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació | No
+tokenValid | Per les aplicacions integrades amb VALID, si es proporciona el tToken d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació | No
 representacio | Element del tipus _representacio_. | Si
 | |ALTA > cal informar obligatòriament els atributs: _poderdant, representant, tipusRepresentacio, dataIniciVigencia, dataFiVigencia, origen, ambitRepresentacio_.
-|| MODIFICACIO > cal informar obligatòriament els atributs:  | Si
+|| MODIFICACIO > cal informar obligatòriament els atributs: _identificadorLegal, estat, origen_  |
 documentsRepresentacio | Elements del tipus _documentRepresentacio_ | No
 motiu | Descripció del motiu de la inscripció | Si
 tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO) | Si
@@ -1657,11 +1657,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ5NTU2NjM4MiwtNDk5MzU4MTYyLC0xNz
-A5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkx
-MDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMxMS
-w4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgz
-ODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4OC
-wxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5NjczMDExMiwtNzEw
-OTY1NDk0XX0=
+eyJoaXN0b3J5IjpbLTE5Njc2MzI0NDMsLTQ5OTM1ODE2MiwtMT
+cwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5
+MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMT
+EsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4
+Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxOD
+gsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcx
+MDk2NTQ5NF19
 -->
