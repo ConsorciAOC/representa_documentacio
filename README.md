@@ -798,7 +798,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 <xs:element name="validarRepresentacio">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="representacio" type="representacio" minOccurs="0"/>
+                <xs:element name="representacio" type="representacio" />
                 <xs:element name="dataValidacio" type="xs:dateTime"/>
                 <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
@@ -806,9 +806,9 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-representacio | Element del tipus _representacio_. Camps minims on incloure la informació relativa a la consulta de validació (poderdant, representant, administracio, tramit, capacitat)
+Camp | Descripció | Obligatori
+---- | ---------- | ----------
+representacio | Element del tipus _representacio_. Cal informar obligatòriament els atributs: _poderdant, representant, ambitRepresentacio (administracio, tramit, capacitat)_ | Si
 dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
 
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NzkxOTYxNTAsLTE3MDk0NjQ3NjEsLT
-E2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MDcz
-MzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5Ni
-wxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMTkw
-MTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyND
-MsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3
-Mzg2MDYyXX0=
+eyJoaXN0b3J5IjpbMjAzMjUxOTEzNiwtMTcwOTQ2NDc2MSwtMT
+YyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNzMz
+MjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2LD
+E1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4Mzg3MTM1LC0xOTAx
+NjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0My
+wtMzk2NDU2NjkzLDE2OTY3MzAxMTIsLTcxMDk2NTQ5NCwtMzcz
+ODYwNjJdfQ==
 -->
