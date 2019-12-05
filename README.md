@@ -1040,6 +1040,7 @@ Camp | Descripció | Obligatori
 ---- | ---------- | --------
 familia| Element del tipus _familia_. Cal informar obligatòriament els atributs: _uuid_ | Si
 
+
 #### Resposta
 ```xml
 <xs:element name="consultarFamiliaResponse">  
@@ -1661,11 +1662,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MD
-k0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEw
-MTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLD
-gzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4
-NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LD
-ExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5
-NjU0OTRdfQ==
+eyJoaXN0b3J5IjpbLTkwOTIxOTEyNiwtODY2MTI0NTIsLTQ5OT
+M1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3
+MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLD
+ExMTEwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQz
+NjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OS
+w4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3
+MzAxMTJdfQ==
 -->
