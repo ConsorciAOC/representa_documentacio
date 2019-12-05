@@ -669,10 +669,10 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-identificadorLegal | Identificador únic de la representació
-generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
+Camp | Descripció | Obligatori
+---- | ---------- | ----------
+identificadorLegal | Identificador únic de la representació | Si
+generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega. | 
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
 
 ### Resposta
@@ -1655,7 +1655,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDQ3MDc0MjIsLTE4MjQ1NzM5MzUsMj
+eyJoaXN0b3J5IjpbLTExNjIwMTY5NDIsLTE4MjQ1NzM5MzUsMj
 IxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5
 MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMT
 MzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1
