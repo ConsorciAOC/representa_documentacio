@@ -1083,8 +1083,7 @@ Camp | Descripció | Obligatori
 ---- | ---------- | --------
 mida | Nombre màxim de resultats retornats per pàgina | Si
 pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
-tramit| Element del tipus _tramit_. Si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
-- si es volen recuperar tots els tràmits d'una familia, cal informar a l'element _tramit_ l'element _uuidFamilia_.Cal informar obligatòriament els atributs: _uuid_ | Si
+tramit| Element del tipus _tramit_. Per recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`. Per recuperar tots els tràmits d'una familia, cal informar a l'atribut _uuidFamilia_. | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
@@ -1668,11 +1667,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ3ODYxNjg5MywtODY2MTI0NTIsLTQ5OT
-M1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3
-MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLD
-ExMTEwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQz
-NjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OS
-w4NDQwMzUxODgsMTEyNjUyMzI0MywtMzk2NDU2NjkzLDE2OTY3
-MzAxMTJdfQ==
+eyJoaXN0b3J5IjpbODgxMjExNzExLC04NjYxMjQ1MiwtNDk5Mz
+U4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTcz
+OTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMT
+ExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2
+NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LD
+g0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5Njcz
+MDExMl19
 -->
