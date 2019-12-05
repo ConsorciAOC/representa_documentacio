@@ -1038,7 +1038,7 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
-familia| Element del tipus _familia_.  | Si
+familia| Element del tipus _familia_. Cal informar obligatòriament els atributs: _uuid_ | Si
 
 #### Resposta
 ```xml
@@ -1661,7 +1661,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzNTA3MDM1LC00OTkzNTgxNjIsLTE3MD
+eyJoaXN0b3J5IjpbLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MD
 k0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEw
 MTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLD
 gzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4
