@@ -597,14 +597,14 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
         </xs:complexType>
     </xs:element>
 ```
-Segons el tipus de representació que es desitgi consultar, per a l'element _representacio_ serà obligatori informat determinats camps. Alguns camp es controlen mitjançant validació contra l'esquema xsd i d'altres es comproven a nivell d'aplicació segons el cas d'ús.
+
 La consulta és paginada i cal indicar el nº d’elements màxims a retornar i el nº de la pàgina desitjada.
 
 Camp | Descripció
 ---- | ----------
 mida | Nombre màxim de resultats retornats per pàgina
 pagina | Pàgina de resultats sol·licitada (de 0 a N)
-representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar els atributs: 
+representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar obligatoriament els atributs: _poderdant, representant_
 estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MD
-czMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5
-NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMT
-kwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMy
-NDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLT
-M3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQx
-ODczNF19
+eyJoaXN0b3J5IjpbLTE4ODU3ODcxODgsLTE4MjQ1NzM5MzUsMj
+IxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5
+MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMT
+MzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1
+MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC
+03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEy
+MDE2Nl19
 -->
