@@ -581,7 +581,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
                             <xs:element name="mida" type="mida"/>
                             <xs:element name="pagina" type="pagina"/>
                             <xs:element name="representacio" type="representacio"/>
-                            <xs:element name="estats" minOccurs="0">
+							<xs:element name="estats" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="estat"  type="estat" minOccurs="0" maxOccurs="unbounded"/>
@@ -1667,11 +1667,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgxMjExNzExLC04NjYxMjQ1MiwtNDk5Mz
-U4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTcz
-OTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMT
-ExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2
-NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LD
-g0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2OTMsMTY5Njcz
-MDExMl19
+eyJoaXN0b3J5IjpbMTA0MTgyMTUsODgxMjExNzExLC04NjYxMj
+Q1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAw
+LC0xODI0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNj
+c0NTQ2ODAsMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIx
+MywtMzEyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMj
+Y5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2
+OTNdfQ==
 -->
