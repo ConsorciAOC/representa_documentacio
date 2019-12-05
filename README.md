@@ -604,7 +604,7 @@ Camp | Descripció
 ---- | ----------
 mida | Nombre màxim de resultats retornats per pàgina
 pagina | Pàgina de resultats sol·licitada (de 0 a N)
-representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions
+representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar els 
 estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
 generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
@@ -1655,11 +1655,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2Nz
-Q1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEz
-LC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNj
-kxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMyNDMsLTM5NjQ1NjY5
-MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLTM3Mzg2MDYyLC0xMT
-I0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQxODczNCwtNzM4NTU3
-NTY0XX0=
+eyJoaXN0b3J5IjpbLTE3ODMwMjY5NTcsMjIxOTEwMTUsMTc4MD
+czMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5
+NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMT
+kwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMy
+NDMsLTM5NjQ1NjY5MywxNjk2NzMwMTEyLC03MTA5NjU0OTQsLT
+M3Mzg2MDYyLC0xMTI0ODQwMDIyLDIzOTEyMDE2NiwtMTA4NjQx
+ODczNF19
 -->
