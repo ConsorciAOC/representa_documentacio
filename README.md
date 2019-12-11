@@ -87,9 +87,10 @@ Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integr
 
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
 
-Les operacions exposades a continuació permeten ser usades en dues modalitats: 1 operaci petició síncrona o N peticions asíncrones.
+Les operacions exposades a continuació es poden usar en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions a una única petició (de manera asíncrona.)
 
-- 1 operació per petició (síncron): Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision` on a dins s'inclou la operació a realitzar a Representa (consulta, alta, validació, etc...). La resposta és síncrona.
+### 1.2 Operacions síncrones
+Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). La resposta és síncrona.
 - N operacions (del mateix tipus) per petició (asíncron): Al missatge xml que espera la PCI, s'informen N elements (màxim 500 elements) `SolicitudTransmision`
 
 
@@ -1675,7 +1676,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwNDA1NTUyNiwyNDM5NDI2MjMsMTA0MT
+eyJoaXN0b3J5IjpbLTU5Mjg5MzUwNywyNDM5NDI2MjMsMTA0MT
 gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
 NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
 kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
