@@ -85,26 +85,26 @@ A continuació es descriu el funcionament i les diferents modalitats de consum d
 ## 1.1. Integracio PCI
 Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integra dins de l'arquitectura de la Plataforma de Col·laboració Interadministrativa (en endavant PCI) a mode d'un nou servei accessible a través de la MTI.
 
+<p align="center">
+<img align="center" src="img/representa_arquitectura_pci.png" />
+</p>  
+
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
 
 Les operacions exposades a continuació poden ser consumides en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions per petició (de manera asíncrona.)
 
-### 1.2 Operacions unitaries (síncron)
+#### 1.1.2 Operacions unitaries (síncron)
 Al missatge xml que espera la PCI del tipus `Peticion`, s'informa 1 únic element del tipus `SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
 La resposta és síncrona i inclou el resultat de l'operació demanada.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
-### 1.3 Operacions mútiples (asíncron)
+### 1.1.3 Operacions mútiples (asíncron)
 Al missatge xml que espera la PCI del tipus `Peticion`, s'informen N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
 La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple respondrà amb un codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
 Es podrà anar consultant l'estat del processat (a través de `IdPeticion`) i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
-
-<p align="center">
-<img align="center" src="img/representa_arquitectura_pci.png" />
-</p>  
 
 # 2. Missatgeria
 Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a servei dins de la PCI, serà per tant necessari treballar amb la missatgeria de la PCI, encapsulant la missatgeria específica de Representa dins d'aquesta.
@@ -119,7 +119,6 @@ Específicament per a fer ús del servei de Representa dins de la missatgeria de
 //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de Representa del tipus consultarRepresentacions, consultarRepresentacio o validarRepresentacio_
 ```
 
-Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisits definits al document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
 
 ** Modalitats de consum descrites a l'apartat [3.6]
 
@@ -1682,7 +1681,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg3NTUyMzYwMSwyNDM5NDI2MjMsMTA0MT
+eyJoaXN0b3J5IjpbLTgzMDExMjc3NiwyNDM5NDI2MjMsMTA0MT
 gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
 NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
 kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
