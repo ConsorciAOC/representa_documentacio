@@ -103,7 +103,8 @@ Per a més informació consultar el [document d'integració de la PCI](https://w
 Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision`.
 
 La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclourà un codi confirmant que s'ha rebut correctament la petició i s'està processant.
-Es podrà anar consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
+Es podrà consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta`. 
+S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial i el resultat de cadascuna.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
@@ -1682,11 +1683,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyND
-M5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1Miwt
-NDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xOD
-I0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2
-ODAsMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMz
-EyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5
-MTU5XX0=
+eyJoaXN0b3J5IjpbMTU1NTE4MzExNywtMTA3Mjk1MTE0OSwtOT
+M1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEs
+LTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2Mj
+kwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3
+MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNT
+Y0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYy
+NzY1XX0=
 -->
