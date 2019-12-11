@@ -102,7 +102,7 @@ El processat és síncron i la resposta del tipus `Respuesta`  inclou el resulta
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
 #### 1.1.3 Operacions mutiples
-Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa, com en el cas simple/síncron.
+Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa, com en el cas simple/síncron. El processat és asíncron i caldrà consultar l'estat passats uns instants (s'informa un element del temps aproximat de processat)
 
 La resposta a aquesta petició múltiple en aquest cas serà del tipus `ConfirmacionPeticion`  i inclourà un codi confirmant que s'ha rebut i processant correctament la petició.
 Es podrà consultar l'estat del processat (a través de `IdPeticion`). Quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` amb tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial i el resultat de cadascuna.
@@ -1684,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNjM1MTM0NSw1MzkzODg2ODEsMTIyND
-g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
-LDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1OD
-E2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3Mzkz
-NSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMT
-EwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQy
-NF19
+eyJoaXN0b3J5IjpbMzg2OTkxNzMwLDUzOTM4ODY4MSwxMjI0OD
+gxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMs
+MTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MT
+YyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1
+LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMT
+AwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0
+XX0=
 -->
