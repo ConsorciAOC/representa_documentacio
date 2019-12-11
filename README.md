@@ -6,8 +6,8 @@
 
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
-      - [1.1.2 Operacions simples (processat sincron)](#112-operacions-simples--processat-sincron-)
-      - [1.1.3 Operacions mutiples (processat asincron)](#113-operacions-mutiples--processat-asincron-)
+      - [1.1.2 Operacions simples (processat sincron)](#112-operacions-simples)
+      - [1.1.3 Operacions mutiples (processat asincron)](#113-operacions-mutiples)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria especifica](#3-missatgeria-especifica)
   * [3.1 Representacio](#31-representacio)
@@ -95,13 +95,13 @@ Els integradors que vulguin accedir al Core de Representa ho hauran de fer a tra
 
 Les operacions exposades a continuació poden ser consumides en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions per petició (de manera asíncrona.)
 
-#### 1.1.2 Operacions simples (processat sincron)
+#### 1.1.2 Operacions simples
 Per realitzar una operació simple a Representa, a la petició de la PCI del tipus `Peticion`, cal informar 1 únic element del tipus `SolicitudTransmision` i al seu interior informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa.
 El processat és síncron i la resposta del tipus `Respuesta`  inclou el resultat de la operació sol·licitada.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
-#### 1.1.3 Operacions mutiples (processat asincron)
+#### 1.1.3 Operacions mutiples
 Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa, com en el cas simple/síncron.
 
 La resposta a aquesta petició múltiple en aquest cas serà del tipus `ConfirmacionPeticion`  i inclourà un codi confirmant que s'ha rebut i processant correctament la petició.
@@ -1684,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mj
-k1MTE0OSwtOTM1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4
-ODEyMTE3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0Nj
-Q3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUs
-MTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOT
-I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
-NV19
+eyJoaXN0b3J5IjpbLTYwNjM1MTM0NSw1MzkzODg2ODEsMTIyND
+g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
+LDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1OD
+E2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3Mzkz
+NSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMT
+EwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQy
+NF19
 -->
