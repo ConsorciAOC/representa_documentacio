@@ -97,8 +97,8 @@ Per a més informació consultar el [document d'integració de la PCI](https://w
 
 ### 1.3 Operacions mútiples (asíncron)
 Al missatge xml que espera la PCI del tipus `Peticion`, s'informen N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
-La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple respondrà amb un codi confirmant que s¡ha rebut correctament la petició múltiple i s'està processant.
-Es podrà anar consultant l'estat del processat i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzar incloent 
+La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple respondrà amb un codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
+Es podrà anar consultant l'estat del processat (a través de ) i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzar incloent N elements del tipus `TransmisionDatos` per cada operació sol·licitada.
 
 Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/)
 
@@ -1682,7 +1682,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5MDExNjk1MywyNDM5NDI2MjMsMTA0MT
+eyJoaXN0b3J5IjpbLTk0NzE0ODUxMiwyNDM5NDI2MjMsMTA0MT
 gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
 NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
 kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
