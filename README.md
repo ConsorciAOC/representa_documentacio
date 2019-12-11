@@ -87,16 +87,16 @@ Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integr
 
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
 
-Les operacions exposades a continuació es poden usar en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions a una única petició (de manera asíncrona.)
+Les operacions exposades a continuació poden ser consumides en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions per petició (de manera asíncrona.)
 
-### 1.2 Operacions síncrones
+### 1.2 Operacions unitaries
 Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
 La resposta és síncrona.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
-### 1.3 
-- N operacions (del mateix tipus) per petició (asíncron): Al missatge xml que espera la PCI, s'informen N elements (màxim 500 elements) `SolicitudTransmision`
+### 1.3 Operacions asíncrones (mútiples)
+Al missatge xml que espera la PCI, s'informen N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
 
 
 Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/)
@@ -1681,11 +1681,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1ODcwMzUyMywyNDM5NDI2MjMsMTA0MT
-gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
-NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
-kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
-MSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMz
-gzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4
-OF19
+eyJoaXN0b3J5IjpbLTEzMTU2ODk1OTMsMjQzOTQyNjIzLDEwND
+E4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2Miwt
+MTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMj
+E5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkz
+MTEsODM5MjUyNDk2LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMz
+M4Mzg3MTM1LC0xOTAxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUx
+ODhdfQ==
 -->
