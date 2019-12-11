@@ -87,10 +87,10 @@ Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integr
 
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
 
-Les operacions exposades a continuació permeten ser usades en dues modalitats:
+Les operacions exposades a continuació permeten ser usades en dues modalitats: 1 operaci petició síncrona o N peticions asíncrones.
 
-- 1 operació per petició (síncron): Dins del missatge que espera la PCI, s'informa 1 únic element `SolicitudTransmision` on a dins s'inclou la operació a realitzar a Representa (consulta, alta, validació, etc...)
-- Asíncronament amb N operacions (del mateix tipus) per petició:
+- 1 operació per petició (síncron): Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision` on a dins s'inclou la operació a realitzar a Representa (consulta, alta, validació, etc...). La resposta és síncrona.
+- N operacions (del mateix tipus) per petició (asíncron): Al missatge xml que espera la PCI, s'informen N elements (màxim 500 elements) `SolicitudTransmision`
 
 
 Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/)
@@ -1675,11 +1675,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1MDYxNTY1LDI0Mzk0MjYyMywxMDQxOD
-IxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3
-MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOT
-EwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzEx
-LDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzOD
-M4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4
-XX0=
+eyJoaXN0b3J5IjpbLTUwNDA1NTUyNiwyNDM5NDI2MjMsMTA0MT
+gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
+NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
+kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
+MSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMz
+gzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4
+OF19
 -->
