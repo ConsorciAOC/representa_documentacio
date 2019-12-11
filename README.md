@@ -102,8 +102,8 @@ Per a més informació consultar el [document d'integració de la PCI](https://w
 #### 1.1.3 Operacions mutiples (processat asincron)
 Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision`.
 
-La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclour codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
-Es podrà anar consultant l'estat del processat (a través de `IdPeticion`) i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
+La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclourà un codi confirmant que s'ha rebut correctament la petició i s'està processant.
+Es podrà anar consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
@@ -1682,11 +1682,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3OTY4MzgzMSwtOTM1NzgxNjI1LDI0Mz
-k0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00
-OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4Mj
-Q1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4
-MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMT
-I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
-NTldfQ==
+eyJoaXN0b3J5IjpbLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyND
+M5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1Miwt
+NDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xOD
+I0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2
+ODAsMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMz
+EyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5
+MTU5XX0=
 -->
