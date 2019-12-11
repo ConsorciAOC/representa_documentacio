@@ -95,7 +95,7 @@ Les operacions exposades a continuació poden ser consumides en dues modalitats:
 
 #### 1.1.2 Operacions simples (processat sincron)
 Al missatge xml que espera la PCI del tipus `Peticion`, s'informa 1 únic element del tipus `SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
-La resposta és síncrona i inclou el resultat de l'operació demanada.
+El processat és síncron i la resposta inclou el resultat de la operació sol·licitada
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
@@ -103,7 +103,7 @@ Per a més informació consultar el [document d'integració de la PCI](https://w
 Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision`.
 
 La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclourà un codi confirmant que s'ha rebut correctament la petició i s'està processant.
-Es podrà consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta`. 
+Es podrà consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat (es processarà cada operació de manera asíncrona) la consulta a `SolicitudRespuesta` retornarà una `Respuesta`. 
 S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial i el resultat de cadascuna.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
@@ -1683,11 +1683,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NTE4MzExNywtMTA3Mjk1MTE0OSwtOT
-M1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEs
-LTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2Mj
-kwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3
-MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNT
-Y0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYy
-NzY1XX0=
+eyJoaXN0b3J5IjpbMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05Mz
+U3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwt
+ODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOT
+AyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcx
+LC0xMzY3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2LDE1Nj
+QyOTIyMTMsLTMxMjQzNjQyNCwxMzM4Mzg3MTM1LC0xOTAxNjI3
+NjVdfQ==
 -->
