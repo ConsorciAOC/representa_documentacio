@@ -100,8 +100,9 @@ La resposta és síncrona i inclou el resultat de l'operació demanada.
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
 #### 1.1.3 Operacions mutiples (processat asincron)
-Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI (del tipus `Peticion`) es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
-La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple respondrà amb un codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
+Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision`.
+
+La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclour codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
 Es podrà anar consultant l'estat del processat (a través de `IdPeticion`) i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
@@ -1681,7 +1682,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNjU2Mjg2NCwtOTM1NzgxNjI1LDI0Mz
+eyJoaXN0b3J5IjpbMTY3OTY4MzgzMSwtOTM1NzgxNjI1LDI0Mz
 k0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00
 OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4Mj
 Q1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4
