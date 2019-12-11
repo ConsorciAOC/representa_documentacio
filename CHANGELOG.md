@@ -1,5 +1,9 @@
 # Change log
 
+## Desembre 2019
+- Afegida capacitat a representacions Tipus A i B.
+- Afegida informació referent a processat de múltiples peticions.
+- Afegida informació relativa als camps mínims a informar.
 
 ## Novembre 2019
 - Actualitzats codis de producte.
