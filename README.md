@@ -90,7 +90,12 @@ Els integradors que vulguin accedir al Core de Representa ho hauran de fer a tra
 Les operacions exposades a continuació es poden usar en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions a una única petició (de manera asíncrona.)
 
 ### 1.2 Operacions síncrones
-Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). La resposta és síncrona.
+Al missatge xml que espera la PCI, s'informa 1 únic element del tipus`SolicitudTransmision`, on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
+La resposta és síncrona.
+
+Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
+
+### 1.3 
 - N operacions (del mateix tipus) per petició (asíncron): Al missatge xml que espera la PCI, s'informen N elements (màxim 500 elements) `SolicitudTransmision`
 
 
@@ -1676,7 +1681,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU5Mjg5MzUwNywyNDM5NDI2MjMsMTA0MT
+eyJoaXN0b3J5IjpbLTg1ODcwMzUyMywyNDM5NDI2MjMsMTA0MT
 gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
 NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
 kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
