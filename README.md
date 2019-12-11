@@ -6,6 +6,8 @@
 
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
+      - [1.1.2 Operacions simples (processat sincron)](#112-operacions-simples--processat-sincron-)
+      - [1.1.3 Operacions mutiples (processat asincron)](#113-operacions-mutiples--processat-asincron-)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria especifica](#3-missatgeria-especifica)
   * [3.1 Representacio](#31-representacio)
@@ -1682,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNjM4MjM4NywxMjI0ODgxNzcsLTEwNz
-I5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUs
-ODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5ND
-Y0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1
-LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMxMSw4Mz
-kyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcx
-MzVdfQ==
+eyJoaXN0b3J5IjpbNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mj
+k1MTE0OSwtOTM1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4
+ODEyMTE3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0Nj
+Q3NjEsLTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUs
+MTc4MDczMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOT
+I1MjQ5NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEz
+NV19
 -->
