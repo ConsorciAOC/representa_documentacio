@@ -87,7 +87,7 @@ Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integr
 
 Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
 
-Les operacions exposades es consumiràn de manera síncrona enviant una petició amb 1 únic element `Solicitud
+Les operacions exposades es consumiràn de manera síncrona enviant una petició amb 1 únic element `SolicitudTransmision` 
 
 Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/)
 
@@ -1671,11 +1671,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU3NDM2NzQ5MCwxMDQxODIxNSw4ODEyMT
-E3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0NjQ3NjEs
-LTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MD
-czMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5
-NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMT
-kwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMy
-NDNdfQ==
+eyJoaXN0b3J5IjpbMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMT
+cxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwt
+MTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNz
+MzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2
+LDE1NjQyOTIyMTMsLTMxMjQzNjQyNCwxMzM4Mzg3MTM1LC0xOT
+AxNjI3NjUsMTI2OTE1OTE1OSw4NDQwMzUxODgsMTEyNjUyMzI0
+M119
 -->
