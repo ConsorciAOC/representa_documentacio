@@ -100,7 +100,7 @@ La resposta és síncrona i inclou el resultat de l'operació demanada.
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
 #### 1.1.3 Operacions mutiples (processat asincron)
-Al missatge xml que espera la PCI del tipus `Peticion`, s'informen N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
+Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI (del tipus `Peticion`) es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` on a dins s'inclou l'operació a realitzar a Representa (consulta, alta, validació, etc...). 
 La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple respondrà amb un codi confirmant que s'ha rebut correctament la petició múltiple i s'està processant.
 Es podrà anar consultant l'estat del processat (a través de `IdPeticion`) i quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` quan hagi finalitzat. S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial.
 
@@ -1681,11 +1681,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MT
-gyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0x
-NzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMT
-kxMDE1LDE3ODA3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMx
-MSw4MzkyNTI0OTYsMTU2NDI5MjIxMywtMzEyNDM2NDI0LDEzMz
-gzODcxMzUsLTE5MDE2Mjc2NSwxMjY5MTU5MTU5LDg0NDAzNTE4
-OF19
+eyJoaXN0b3J5IjpbLTQxNjU2Mjg2NCwtOTM1NzgxNjI1LDI0Mz
+k0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00
+OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4Mj
+Q1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4
+MCwxMTExMDA5MzExLDgzOTI1MjQ5NiwxNTY0MjkyMjEzLC0zMT
+I0MzY0MjQsMTMzODM4NzEzNSwtMTkwMTYyNzY1LDEyNjkxNTkx
+NTldfQ==
 -->
