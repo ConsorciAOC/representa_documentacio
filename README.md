@@ -85,7 +85,11 @@ A continuació es descriu el funcionament i les diferents modalitats de consum d
 ## 1.1. Integracio PCI
 Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integra dins de l'arquitectura de la Plataforma de Col·laboració Interadministrativa (en endavant PCI) a mode d'un nou servei accessible a través de la MTI.
 
-Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
+Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
+
+Les operacions exposades es consumiràn de manera síncrona enviant una petició amb 1 únic element `Solicitud
+
+Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/)
 
 <p align="center">
 <img align="center" src="img/representa_arquitectura_pci.png" />
@@ -1667,11 +1671,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA0MTgyMTUsODgxMjExNzExLC04NjYxMj
-Q1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAw
-LC0xODI0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzEsLTEzNj
-c0NTQ2ODAsMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2NDI5MjIx
-MywtMzEyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2NSwxMj
-Y5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOTY0NTY2
-OTNdfQ==
+eyJoaXN0b3J5IjpbMTU3NDM2NzQ5MCwxMDQxODIxNSw4ODEyMT
+E3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjIsLTE3MDk0NjQ3NjEs
+LTE2MjkwMjUwMDAsLTE4MjQ1NzM5MzUsMjIxOTEwMTUsMTc4MD
+czMzI3MSwtMTM2NzQ1NDY4MCwxMTExMDA5MzExLDgzOTI1MjQ5
+NiwxNTY0MjkyMjEzLC0zMTI0MzY0MjQsMTMzODM4NzEzNSwtMT
+kwMTYyNzY1LDEyNjkxNTkxNTksODQ0MDM1MTg4LDExMjY1MjMy
+NDNdfQ==
 -->
