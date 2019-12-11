@@ -94,15 +94,15 @@ Els integradors que vulguin accedir al Core de Representa ho hauran de fer a tra
 Les operacions exposades a continuació poden ser consumides en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions per petició (de manera asíncrona.)
 
 #### 1.1.2 Operacions simples (processat sincron)
-Per realitzar una operació simple a Representa, a la petició de la PCI del tipus `Peticion`, cal informar 1 únic element del tipus `SolicitudTransmision` i al seu interior informar 
-El processat és síncron i la resposta inclou el resultat de la operació sol·licitada
+Per realitzar una operació simple a Representa, a la petició de la PCI del tipus `Peticion`, cal informar 1 únic element del tipus `SolicitudTransmision` i al seu interior informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa.
+El processat és síncron i la resposta  inclou el resultat de la operació sol·licitada
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
 #### 1.1.3 Operacions mutiples (processat asincron)
-Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision`.
+Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa com en el cas simple/síncron.
 
-La resposta del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclourà un codi confirmant que s'ha rebut correctament la petició i s'està processant.
+La resposta en aquest cas serà del tipus `ConfirmacionPeticion` a aquesta petició múltiple inclourà un codi confirmant que s'ha rebut correctament la petició i s'està processant.
 Es podrà consultant l'estat del processat (a través de `IdPeticion`), i quan aquest hagi finalitzat (es processarà cada operació de manera asíncrona) la consulta a `SolicitudRespuesta` retornarà una `Respuesta`. 
 S'inclourà en aquesta respota tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial i el resultat de cadascuna.
 
@@ -1683,7 +1683,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5NzY5MDgyNywxMjI0ODgxNzcsLTEwNz
+eyJoaXN0b3J5IjpbMjA3NDE4NzMwNSwxMjI0ODgxNzcsLTEwNz
 I5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUs
 ODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5ND
 Y0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1
