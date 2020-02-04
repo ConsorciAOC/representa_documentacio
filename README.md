@@ -1537,7 +1537,7 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 		<solicitant>
 			<persona>
 				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-		        <valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>         
+				<valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>         
 		        <tipusPersona>FISICA</tipusPersona>
 			</persona>
 			<administracio>
@@ -1684,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1Mz
-kzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2
-MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MT
-I0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAw
-MCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcxLC0xMz
-Y3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2LDE1NjQyOTIy
-MTNdfQ==
+eyJoaXN0b3J5IjpbNjc1NzI5NjQsLTE1NDA2NTQ1NDAsLTkyNj
+I4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5
+LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMT
+cxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwt
+MTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNz
+MzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkzMTEsODM5MjUyNDk2
+XX0=
 -->
