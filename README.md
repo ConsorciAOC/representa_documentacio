@@ -585,7 +585,7 @@ Exemple:
 
 ## 5.1 Consulta de representacions
 Permet consultar les representacions existents entre dues persones. 
-Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
 ```xml
@@ -664,7 +664,7 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 
 ## 5.2 Consulta de representacio
 Permet recuperar **una** representació a partir del seu identificador únic (`identificadorLegal`).
-Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 ### Petició
 
@@ -1684,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOT
-I2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTEx
-NDksLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMj
-ExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYx
-LC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1LDE3OD
-A3MzMyNzEsLTEzNjc0NTQ2ODAsMTExMTAwOTMxMSw4MzkyNTI0
-OTZdfQ==
+eyJoaXN0b3J5IjpbLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1ND
+A2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3
+LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwND
+E4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2Miwt
+MTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMj
+E5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkz
+MTFdfQ==
 -->
