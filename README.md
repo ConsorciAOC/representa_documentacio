@@ -123,7 +123,7 @@ Específicament per a fer ús del servei de Representa dins de la missatgeria de
 ```
 
 
-** Modalitats de consum descrites a l'apartat [3.6]
+** Modalitats de consum descrites a l'apartat [5]
 
 
 # 3. Missatgeria especifica
@@ -1684,11 +1684,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1ND
-A2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3
-LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwND
-E4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2Miwt
-MTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMj
-E5MTAxNSwxNzgwNzMzMjcxLC0xMzY3NDU0NjgwLDExMTEwMDkz
-MTFdfQ==
+eyJoaXN0b3J5IjpbNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4Mz
+Y3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4Njgx
+LDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOTM1NzgxNjI1LDI0Mz
+k0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00
+OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4Mj
+Q1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4
+MF19
 -->
