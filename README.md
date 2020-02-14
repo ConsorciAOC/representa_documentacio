@@ -946,6 +946,7 @@ representacio | Element del tipus _representacio_ on es retorna el detall de la 
 
 ## 5.6 Consulta de cataleg
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 #### Peticio
 ```xml
@@ -990,6 +991,7 @@ cataleg | Element del tipus _cataleg_
 ## 5.7 Consulta de families
 
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per això la consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
@@ -1042,6 +1044,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 ## 5.8 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 #### Peticio
 ```xml
@@ -1080,7 +1083,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 ## 5.9 Consulta de tramits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
-És a dir:
+És a dir: 
 
 
 La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
@@ -1686,11 +1689,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA5MDYxOTg5LDY3MTg0OTQwMywtMzkzNT
-Y0MTUsMjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0
-LDUzOTM4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNT
-c4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04
-NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MD
-I1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzFd
-fQ==
+eyJoaXN0b3J5IjpbLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5Mz
+U2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0
+NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05Mz
+U3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwt
+ODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MSwtMTYyOT
+AyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNSwxNzgwNzMzMjcx
+XX0=
 -->
