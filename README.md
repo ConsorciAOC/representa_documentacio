@@ -872,7 +872,9 @@ descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
 ## 5.5 Alta o modificacio
-Permet realitzar la inscripció o modificació** d'una representació.
+Permet realitzar la inscripció o modificació** d'una representació. 
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_ALTA_ per crear representacions o _REPRESENTA_MODIFICACIO_ per modificar l'estat d'una representació.
+
 
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
 > creada una representació.**
@@ -1684,11 +1686,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4Mz
-Y3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4Njgx
-LDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOTM1NzgxNjI1LDI0Mz
-k0MjYyMywxMDQxODIxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00
-OTkzNTgxNjIsLTE3MDk0NjQ3NjEsLTE2MjkwMjUwMDAsLTE4Mj
-Q1NzM5MzUsMjIxOTEwMTUsMTc4MDczMzI3MSwtMTM2NzQ1NDY4
-MF19
+eyJoaXN0b3J5IjpbOTA5MDYxOTg5LDY3MTg0OTQwMywtMzkzNT
+Y0MTUsMjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0
+LDUzOTM4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNT
+c4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04
+NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MD
+I1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1LDE3ODA3MzMyNzFd
+fQ==
 -->
