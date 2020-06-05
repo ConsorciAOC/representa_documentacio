@@ -231,6 +231,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 		<xs:element name="identificadorLegal" type="xs:string"/>
 		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>	
 		<xs:element name="solicitant" type="solicitant"/>	
+		<xs:element name="origen" type="origen" minOccurs="0" />
 		<xs:element name="documentsEvidencia" minOccurs="0">
 			<xs:complexType>
 				<xs:sequence>
@@ -248,6 +249,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
+|origen | Element del tipus _origen_ on es desa l'origen que provocat laha creat aquesta evidencia
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Cataleg
@@ -1732,11 +1734,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MT
-gwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMs
-LTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNj
-I4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5
-LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMT
-cxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MV19
+eyJoaXN0b3J5IjpbOTA1NTUxNTE5LDkzMzQ1NTM0MSwtNTgwOD
+cwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzks
+NjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNj
+U0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3Nywt
+MTA3Mjk1MTE0OSwtOTM1NzgxNjI1LDI0Mzk0MjYyMywxMDQxOD
+IxNSw4ODEyMTE3MTEsLTg2NjEyNDUyLC00OTkzNTgxNjJdfQ==
 
 -->
