@@ -3,6 +3,7 @@
 ## Juny 2020
 - Afegida operacio consultaAdministracio,
 - Modificat element _representacio_ a les consultes de representacions i consulta representacions persona. Per alleugerir el volum de les respostes només s'inclou l'element _evidencies_ a la consultaRepresentacio (consulta d'una representació única).
+- Afegit element _origen_ a cada element _evidencia_. D'aquesta manera es pot determinar l'origen que ha provocat la creació d'aquesta evidència.
 
 ## Desembre 2019
 - Afegida capacitat a representacions Tipus A i B.
