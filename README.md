@@ -1134,6 +1134,24 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 ## 5.9 Consulta d'administracio
+Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
+#### Peticio
+```xml
+<xs:element name="consultarAdministracio">  
+  <xs:complexType>  
+    <xs:sequence>  
+      <xs:element type="administracio" name="administracio"/>  
+      <xs:element name="solicitant" type="solicitant" />  
+   </xs:sequence>  
+  </xs:complexType>  
+</xs:element>
+```
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+tramit| Element del tipus _tramit_. Per recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`. Per recuperar tots els tràmits d'una familia, cal informar a l'atribut _uuidFamilia_. | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 
 # 6. Exemples de peticions
@@ -1691,11 +1709,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMzNjY2MzQ1Nyw1NjI0NTk3MCwtNTgyMT
-Y4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUyOCwt
-MTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0OD
-gxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMs
-MTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MT
-YyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1
-XX0=
+eyJoaXN0b3J5IjpbLTE4Mjc5MTk0NjcsNTYyNDU5NzAsLTU4Mj
+E2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1Mjgs
+LTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyND
+g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
+LDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1OD
+E2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3Mzkz
+NV19
 -->
