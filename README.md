@@ -231,6 +231,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 		<xs:element name="identificadorLegal" type="xs:string"/>
 		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>	
 		<xs:element name="solicitant" type="solicitant"/>	
+		<xs:element name="origen" type="origen" minOccurs="0" />
 		<xs:element name="documentsEvidencia" minOccurs="0">
 			<xs:complexType>
 				<xs:sequence>
@@ -248,6 +249,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |identificadorLegal | Identificador únic de la representació|
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
+|origen | Element del tipus _origen_ on es desa l'origen que provocat la creació d'aquesta evidència
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Cataleg
@@ -967,7 +969,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _R
 
 Camp | Descripció | Obligatori
 ---- | ---------- | ---------
-codiAdministracio| Codi INE10 de l'administració | Si
+codiAdministracio | Codi INE10 de l'administració | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
@@ -1013,6 +1015,7 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per aix
 	</xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 mida | Nombre màxim de resultats retornats per pàgina | Si
@@ -1045,7 +1048,6 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
-
 
 ## 5.8 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
@@ -1106,6 +1108,7 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 	</xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 mida | Nombre màxim de resultats retornats per pàgina | Si
@@ -1138,6 +1141,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
+
 ## 5.10 Consulta administracio
 Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
 #### Peticio
@@ -1151,6 +1155,7 @@ Permet consultar les dades d'una administracio a partir del seu codi INE10 o el 
   </xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 administracio | Permet especificar el codi IN10 o el NIF per recuperar les dades d'una administracio | Si
@@ -1729,11 +1734,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1Nj
-I0NTk3MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUs
-MjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOT
-M4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYy
-NSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMj
-Q1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAw
-XX0=
+eyJoaXN0b3J5IjpbLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01OD
+A4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIz
+OSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1ND
+A2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3
+LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwND
+E4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2Ml19
+
 -->
