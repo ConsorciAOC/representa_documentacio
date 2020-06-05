@@ -1106,6 +1106,7 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 	</xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 mida | Nombre màxim de resultats retornats per pàgina | Si
@@ -1138,6 +1139,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
+
 ## 5.10 Consulta administracio
 Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
 #### Peticio
@@ -1151,6 +1153,7 @@ Permet consultar les dades d'una administracio a partir del seu codi INE10 o el 
   </xs:complexType>  
 </xs:element>
 ```
+
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
 administracio | Permet especificar el codi IN10 o el NIF per recuperar les dades d'una administracio | Si
@@ -1729,11 +1732,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTczODc5NDEsLTU4MDg3MDA4OSwtMT
-kxODAxNjEyOSw1NjI0NTk3MCwtNTgyMTY4MjM5LDY3MTg0OTQw
-MywtMzkzNTY0MTUsMjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOT
-I2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTEx
-NDksLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMj
-ExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYx
-XX0=
+eyJoaXN0b3J5IjpbOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MT
+gwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMs
+LTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNj
+I4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5
+LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMT
+cxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2NDc2MV19
+
 -->
