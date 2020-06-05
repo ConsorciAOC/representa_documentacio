@@ -1140,7 +1140,7 @@ Permet consultar les dades d'una administracio a partir del seu codi INE10 o el 
 <xs:element name="consultarAdministracio">  
   <xs:complexType>  
     <xs:sequence>  
-      <xs:element type="administracio" name="administracio"/>  
+      <xs:element name="administracio" type="administracio"/>  
       <xs:element name="solicitant" type="solicitant" />  
    </xs:sequence>  
   </xs:complexType>  
@@ -1153,14 +1153,14 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 #### Resposta
 ```xml
-<xs:element name="consultarAdminisResponse">  
+<xs:element name="consultarAdministracioResponse">  
 	<xs:complexType>  
 		<xs:sequence>  
 			<xs:element name="resultat" minOccurs="0">  
 				<xs:complexType>  
 					<xs:sequence>  
 						<xs:element name="resposta" type="resposta" />  
-						<xs:element name="familia" type="familia" minOccurs="0" />  
+						<xs:element name="administracio" type="administracio" minOccurs="0" />  
 					</xs:sequence>  
 				</xs:complexType>  
 			</xs:element>  
@@ -1656,7 +1656,8 @@ _Pendent_
 ## 6.9 Consulta tramits
 _Pendent_
 
-
+## 6.10 Consulta administracio
+_Pendent_
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -1723,7 +1724,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwODY0MzczMDYsNTYyNDU5NzAsLTU4Mj
+eyJoaXN0b3J5IjpbLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4Mj
 E2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1Mjgs
 LTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyND
 g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
