@@ -6,8 +6,8 @@
 
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
-      - [1.1.2 Operacions simples (processat sincron)](#112-operacions-simples)
-      - [1.1.3 Operacions mutiples (processat asincron)](#113-operacions-mutiples)
+      - [1.1.2 Operacions simples](#112-operacions-simples)
+      - [1.1.3 Operacions mutiples](#113-operacions-mutiples)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria especifica](#3-missatgeria-especifica)
   * [3.1 Representacio](#31-representacio)
@@ -52,33 +52,38 @@
   * [5.9 Consulta de tramits](#59-consulta-de-tramits)
       - [Peticio](#peticio-7)
       - [Resposta](#resposta-8)
+  * [5.10 Consulta administracio](#510-consulta-administracio)
+      - [Peticio](#peticio-8)
+      - [Resposta](#resposta-9)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio-8)
-    + [Resposta](#resposta-9)
-  * [6.2 Consulta representacions](#62-consulta-representacions)
     + [Peticio](#peticio-9)
     + [Resposta](#resposta-10)
-  * [6.3 Validacio](#63-validacio)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
     + [Peticio](#peticio-10)
+    + [Resposta](#resposta-11)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-11)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-11)
-    + [Resposta](#resposta-11)
-  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-12)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
+    + [Peticio](#peticio-13)
+    + [Resposta](#resposta-13)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
   * [6.8 Consulta familia](#68-consulta-familia)
   * [6.9 Consulta tramits](#69-consulta-tramits)
+  * [6.10 Consulta administracio](#610-consulta-administracio)
 - [7. Codis de resposta](#7-codis-de-resposta)
 - [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
   * [8.1 Creacio manual](#81-creacio-manual)
   * [8.2 Importacio mitjançant fitxer CSV](#82-importacio-mitjan-ant-fitxer-csv)
   * [8.3 Us cataleg compartit per Consorci AOC](#83-us-cataleg-compartit-per-consorci-aoc)
 - [9. Generacio d'informes PDF](#9-generacio-d-informes-pdf)
+
 
 
 # 1. Introduccio
@@ -1133,7 +1138,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
-## 5.10 Consulta d'administracio
+## 5.10 Consulta administracio
 Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
 #### Peticio
 ```xml
@@ -1724,11 +1729,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4Mj
-E2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1Mjgs
-LTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyND
-g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
-LDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1OD
-E2MiwtMTcwOTQ2NDc2MSwtMTYyOTAyNTAwMCwtMTgyNDU3Mzkz
-NV19
+eyJoaXN0b3J5IjpbLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1Nj
+I0NTk3MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUs
+MjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOT
+M4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYy
+NSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMj
+Q1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAw
+XX0=
 -->
