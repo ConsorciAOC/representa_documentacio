@@ -1133,6 +1133,8 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
+## 5.9 Consulta d'administracio
+
 
 # 6. Exemples de peticions
 
@@ -1689,11 +1691,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4ND
-k0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAs
-LTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOT
-UxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4
-MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2ND
-c2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNV19
-
+eyJoaXN0b3J5IjpbMTMzNjY2MzQ1Nyw1NjI0NTk3MCwtNTgyMT
+Y4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUyOCwt
+MTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0OD
+gxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMs
+MTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MT
+YyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1
+XX0=
 -->
