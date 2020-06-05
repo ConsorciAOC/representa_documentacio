@@ -6,6 +6,8 @@
 
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
+      - [1.1.2 Operacions simples](#112-operacions-simples)
+      - [1.1.3 Operacions mutiples](#113-operacions-mutiples)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria especifica](#3-missatgeria-especifica)
   * [3.1 Representacio](#31-representacio)
@@ -50,27 +52,31 @@
   * [5.9 Consulta de tramits](#59-consulta-de-tramits)
       - [Peticio](#peticio-7)
       - [Resposta](#resposta-8)
+  * [5.10 Consulta administracio](#510-consulta-administracio)
+      - [Peticio](#peticio-8)
+      - [Resposta](#resposta-9)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio-8)
-    + [Resposta](#resposta-9)
-  * [6.2 Consulta representacions](#62-consulta-representacions)
     + [Peticio](#peticio-9)
     + [Resposta](#resposta-10)
-  * [6.3 Validacio](#63-validacio)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
     + [Peticio](#peticio-10)
+    + [Resposta](#resposta-11)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-11)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-11)
-    + [Resposta](#resposta-11)
-  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-12)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
+    + [Peticio](#peticio-13)
+    + [Resposta](#resposta-13)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
   * [6.8 Consulta familia](#68-consulta-familia)
   * [6.9 Consulta tramits](#69-consulta-tramits)
+  * [6.10 Consulta administracio](#610-consulta-administracio)
 - [7. Codis de resposta](#7-codis-de-resposta)
 - [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
   * [8.1 Creacio manual](#81-creacio-manual)
@@ -79,17 +85,34 @@
 - [9. Generacio d'informes PDF](#9-generacio-d-informes-pdf)
 
 
+
 # 1. Introduccio
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
 ## 1.1. Integracio PCI
 Tal i com es mostra a la següent figura, el **Core** de **Representa** s'integra dins de l'arquitectura de la Plataforma de Col·laboració Interadministrativa (en endavant PCI) a mode d'un nou servei accessible a través de la MTI.
 
-Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. Per a més informació podeu consultar el document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
-
 <p align="center">
 <img align="center" src="img/representa_arquitectura_pci.png" />
 </p>  
+
+Els integradors que vulguin accedir al Core de Representa ho hauran de fer a través de la missatgeria de la PCI utilitzant l'element `<DatosEspecificos>` d'aquesta. 
+
+Les operacions exposades a continuació poden ser consumides en dues modalitats: 1 operació per petició (de manera síncrona) o N operacions per petició (de manera asíncrona.)
+
+#### 1.1.2 Operacions simples
+Per realitzar una operació simple a Representa, a la petició de la PCI del tipus `Peticion`, cal informar 1 únic element del tipus `SolicitudTransmision` i al seu interior informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa.
+El processat és **síncron** i la resposta del tipus `Respuesta`  inclou el resultat de la operació sol·licitada.
+
+Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
+
+#### 1.1.3 Operacions mutiples
+Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa, com en el cas simple/síncron. El processat és **asíncron** i caldrà consultar l'estat passats uns instants (la resposta inclou un element )
+
+La resposta a aquesta petició múltiple en aquest cas serà del tipus `ConfirmacionPeticion`  i inclourà un codi confirmant que s'ha rebut i processant correctament la petició.
+Es podrà consultar l'estat del processat (a través de `IdPeticion`). Quan aquest hagi finalitzat la consulta a `SolicitudRespuesta` retornarà una `Respuesta` amb tants elements del tipus `TransmisionDatos` com operacions s'hagin sol·icitat a la petició múltiple inicial i el resultat de cadascuna.
+
+Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
 # 2. Missatgeria
 Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a servei dins de la PCI, serà per tant necessari treballar amb la missatgeria de la PCI, encapsulant la missatgeria específica de Representa dins d'aquesta.
@@ -104,14 +127,44 @@ Específicament per a fer ús del servei de Representa dins de la missatgeria de
 //Peticion/Solicitudes/SolicitudTransmision/DatosEspecíficos >> _Petició XML específica de Representa del tipus consultarRepresentacions, consultarRepresentacio o validarRepresentacio_
 ```
 
-Pel que fa a la resta del missatge PCI, cal que aquest compleixi amb els requisits definits al document d'integració de la PCI [aqui](https://www.aoc.cat/knowledge-base/plataforma-de-col-laboracio-administrativa-2/idservei/enotum/)
 
-** Modalitats de consum descrites a l'apartat [3.6]
+** Modalitats de consum descrites a l'apartat [5]
 
 
 # 3. Missatgeria especifica
 
 A continuació es desciruen alguns elements complexos de la missatgeria específica ( la que s'ha d'incloure dins el tag `<DatosEspecificos>`) existents al document [dadesEspecifiques.xsd](dadesEspecifiques.xsd).
+
+La validació dels camps (obligatorietat, validacions sintàctiques, etc...) es fa en alguns casos a nivell d'schema xsd i en d'altres a nivell lògic.
+
+Per tant, si per exemple falta informar algun camp es pot rebre un missatge del tipus:
+
+```xml
+<resultat>
+	<resposta>
+	    <codi>004</codi>
+        <descripcio>Cal informar els següents camps: origen</descripcio>
+        <tipusSolicitud>ALTA</tipusSolicitud>
+    </resposta>
+</resultat>
+```
+o bé del tipus:
+```xml
+<resultat>
+	<resposta>
+		<codi>004</codi>
+	    <descripcio>cvc-complex-type.2.4.b: El contenido del elemento 'ns5:dades' no está completo. Se esperaba uno de '{"r:representa:V1.0":poderNotarial, "r:representa:V1.0":signatura, "r:representa:V1.0":solicitant}'.</descripcio>
+	   <tipusSolicitud>ALTA</tipusSolicitud>
+   </resposta>
+</resultat>
+```
+
+Segons el tipus d'operació (consulta, alta, etc...) alguns elements requereixen informar uns camps obligatoris o no.
+
+Per exemple en l'operació **processarRepresentacio** (alta), és obligatori informar a l'element `representacio` com a mínim els camps: _tipusRepresentacio, estat, poderdant, representant, dataIniciVigencia, dataFiVigencia, origen i ambitRepresentacio_.
+
+En canvi, el mateix element `representacio` en la operació de **consultarRepresentacions** només és obligatori informar: _poderdant i representant_.
+La resta de camps actuen a mode filtre, és a dir, la cerca és tan restrictiva com camps s'informin. Si només s'informa poderdant i representant es retornaran totes les representacions que continguin aquestes dades,  si s'informa l'estat es filtrarà per estat, etc...
 
 ## 3.1 Representacio
 
@@ -537,7 +590,7 @@ Exemple:
 
 ## 5.1 Consulta de representacions
 Permet consultar les representacions existents entre dues persones. 
-Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIONS*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
 ```xml
@@ -550,7 +603,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
                             <xs:element name="mida" type="mida"/>
                             <xs:element name="pagina" type="pagina"/>
                             <xs:element name="representacio" type="representacio"/>
-                            <xs:element name="estats" minOccurs="0">
+							<xs:element name="estats" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="estat"  type="estat" minOccurs="0" maxOccurs="unbounded"/>
@@ -566,17 +619,17 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
         </xs:complexType>
     </xs:element>
 ```
-Segons el tipus de representació que es desitgi consultar, per a l'element _representacio_ serà obligatori informat determinats camps. Alguns camp es controlen mitjançant validació contra l'esquema xsd i d'altres es comproven a nivell d'aplicació segons el cas d'ús.
+
 La consulta és paginada i cal indicar el nº d’elements màxims a retornar i el nº de la pàgina desitjada.
 
-Camp | Descripció
----- | ----------
-mida | Nombre màxim de resultats retornats per pàgina
-pagina | Pàgina de resultats sol·licitada (de 0 a N)
-representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions
-estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats
-generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
-solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | -----------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+representacio | Element _representacio_ on es poden definir alguns atributs per cercar i filtrar les representacions. Cal informar obligatòriament els atributs: _poderdant, representant_ | Si
+estats | Llistat d'1 o més elements _estat_ usats per filtrar els resultats | No
+generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega. | No
+solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 
@@ -611,12 +664,12 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 numRepresentacionsTotal | Nombre de representacions totals resultants de la petició de consulta
 numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de consulta
-representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio)
+representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio). En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ## 5.2 Consulta de representacio
 Permet recuperar **una** representació a partir del seu identificador únic (`identificadorLegal`).
-Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA_REPRESENTACIO*.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 ### Petició
 
@@ -638,11 +691,11 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-identificadorLegal | Identificador únic de la representació
-generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega.
-solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | ----------
+identificadorLegal | Identificador únic de la representació | Si
+generaInforme | Camp opcional boolea per indicar si es vol generar un informe PDF amb el resultat de la cerca. Es retorna una url de descàrrega. | No
+solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
 
 ### Resposta
 
@@ -695,12 +748,12 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-|persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_
-|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO`
-|| `FALSE` > La resta d'estats
-|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | -----------
+|persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
+|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
+|| `FALSE` > La resta d'estats 
+|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
 ```xml
@@ -748,8 +801,8 @@ Camp | Descripció
 Camp | Descripció
 ---- | ----------
 |resposta| Element del tipus _resposta_
-|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant
-|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant
+|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
+|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 
 
 ## 5.4 Validacio
@@ -758,7 +811,7 @@ Camp | Descripció
 > existeix** alguna representació en estat `VALIDA` **entre un poderdant
 > i un representant, per una administració, un tràmit i una capacitat**.
 
-En cas d'existir alguna representació existent i vàlida que ho permeti, es respon afirmativament i es retorna el detall de la representació emprada per donar aquesta resposta.
+En cas d'existir alguna representació existent en estat `VALIDA` que compleixi els criteris de la validació, es respon afirmativament i es retorna el detall de la representació recuperada per donar aquesta resposta. **Només pot existir una representació que permeti la validació.**
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_VALIDACIO*.
 
 #### Peticio
@@ -767,7 +820,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 <xs:element name="validarRepresentacio">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="representacio" type="representacio" minOccurs="0"/>
+                <xs:element name="representacio" type="representacio" />
                 <xs:element name="dataValidacio" type="xs:dateTime"/>
                 <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
@@ -775,11 +828,11 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-representacio | Element del tipus _representacio_ on incloure la informació relativa a la consulta de validació (poderdant, representant, administracio, tramit, capacitat)
-dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei
-solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | ----------
+representacio | Element del tipus _representacio_. Cal informar obligatòriament els atributs: _poderdant, representant, ambitRepresentacio (administracio, tramit, capacitat)_ | Si
+dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei | Si
+solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 
@@ -824,7 +877,9 @@ descripcio | Descripció del resultat de la petició
 tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
 ## 5.5 Alta o modificacio
-Permet realitzar la inscripció o modificació** d'una representació.
+Permet realitzar la inscripció o modificació** d'una representació. 
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_ALTA_ per crear representacions o _REPRESENTA_MODIFICACIO_ per modificar l'estat d'una representació.
+
 
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
 > creada una representació.**
@@ -859,14 +914,16 @@ Permet realitzar la inscripció o modificació** d'una representació.
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-tokenValid | Token d'autenticació proporcionat per el servei VALID per a poder recuperar les evidències i adjuntar-les a la representació
-representacio | Element del tipus _representacio_ 
-documentsRepresentacio | Elements del tipus _documentRepresentacio_
-motiu | Descripció del motiu de la inscripció
-tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO)
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | ------
+tokenValid | Per les aplicacions integrades amb VALID, si es proporciona el token d'autenticació que retornai VALID s'adjuntarà a la representació les evidències del procés d'autenticació | No
+representacio | Element del tipus _representacio_. | Si
+| |ALTA > cal informar obligatòriament els atributs: _poderdant, representant, tipusRepresentacio, dataIniciVigencia, dataFiVigencia, origen, ambitRepresentacio_.
+|| MODIFICACIO > cal informar obligatòriament els atributs: _identificadorLegal, estat, origen_  |
+documentsRepresentacio | Elements del tipus _documentRepresentacio_ | No
+motiu | Descripció del motiu de la inscripció | Si
+tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO) | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 
 #### Resposta
@@ -894,6 +951,7 @@ representacio | Element del tipus _representacio_ on es retorna el detall de la 
 
 ## 5.6 Consulta de cataleg
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 #### Peticio
 ```xml
@@ -907,10 +965,10 @@ Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 </xs:element>
 ```
 
-Camp | Descripció
----- | ----------
-codiAdministracio| Codi INE10 de l'administració
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | ---------
+codiAdministracio| Codi INE10 de l'administració | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -938,6 +996,7 @@ cataleg | Element del tipus _cataleg_
 ## 5.7 Consulta de families
 
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per això la consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
@@ -954,12 +1013,12 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per aix
 	</xs:complexType>  
 </xs:element>
 ```
-Camp | Descripció
----- | ----------
-mida | Nombre màxim de resultats retornats per pàgina
-pagina | Pàgina de resultats sol·licitada (de 0 a N)
-catalegCodi | Codi del catàleg
-solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+catalegCodi | Codi del catàleg | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -990,6 +1049,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 ## 5.8 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
 #### Peticio
 ```xml
@@ -1002,6 +1062,11 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 	</xs:complexType>  
 </xs:element>
 ```
+
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+familia| Element del tipus _familia_. Cal informar obligatòriament els atributs: _uuid_ | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1023,9 +1088,8 @@ Si no es volen recuperar totes les families i en canvi es volen recuperar només
 
 ## 5.9 Consulta de tramits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
-És a dir:
-- si es vol recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`.
-- si es volen recuperar tots els tràmits d'una familia, cal informar a l'element _tramit_ l'element _uuidFamilia_.
+És a dir: 
+
 
 La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
 
@@ -1042,6 +1106,12 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 	</xs:complexType>  
 </xs:element>
 ```
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+tramit| Element del tipus _tramit_. Per recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`. Per recuperar tots els tràmits d'una familia, cal informar a l'atribut _uuidFamilia_. | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 ```xml
@@ -1068,7 +1138,41 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 	</xs:complexType>  
 </xs:element>
 ```
+## 5.10 Consulta administracio
+Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
+#### Peticio
+```xml
+<xs:element name="consultarAdministracio">  
+  <xs:complexType>  
+    <xs:sequence>  
+      <xs:element name="administracio" type="administracio"/>  
+      <xs:element name="solicitant" type="solicitant" />  
+   </xs:sequence>  
+  </xs:complexType>  
+</xs:element>
+```
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+administracio | Permet especificar el codi IN10 o el NIF per recuperar les dades d'una administracio | Si
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
+#### Resposta
+```xml
+<xs:element name="consultarAdministracioResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta" />  
+						<xs:element name="administracio" type="administracio" minOccurs="0" />  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
 # 6. Exemples de peticions
 
 ## 6.1 Consulta de representacio
@@ -1399,9 +1503,9 @@ Exemple on es crea una representació.
 		<tipusSolicitud>ALTA</tipusSolicitud>				
 		<solicitant>
 			<persona>
-				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-				<tipusPersona>FISICA</tipusPersona>
+				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>				
 				<valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>
+				<tipusPersona>FISICA</tipusPersona>
 			</persona>
 			<administracio>
 				<codi>12345</codi>
@@ -1477,8 +1581,8 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 		<solicitant>
 			<persona>
 				<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-				<tipusPersona>FISICA</tipusPersona>
-				<valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>         
+			    <valorDocumentIdentificatiu>00000000A</valorDocumentIdentificatiu>
+			     <tipusPersona>FISICA</tipusPersona>
 			</persona>
 			<administracio>
 				<codi>1234</codi>
@@ -1557,7 +1661,8 @@ _Pendent_
 ## 6.9 Consulta tramits
 _Pendent_
 
-
+## 6.10 Consulta administracio
+_Pendent_
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -1573,7 +1678,6 @@ Resultat| Codi
 |Element no disponible|008|
 |Signatura no vàlida|009|
 |Poder no subsistent|100|
-|Error de schema|101|
 
 # 8. Creacio/us del cataleg de tramits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
@@ -1625,11 +1729,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMTAwOTMxMSw4MzkyNTI0OTYsMTU2ND
-I5MjIxMywtMzEyNDM2NDI0LDEzMzgzODcxMzUsLTE5MDE2Mjc2
-NSwxMjY5MTU5MTU5LDg0NDAzNTE4OCwxMTI2NTIzMjQzLC0zOT
-Y0NTY2OTMsMTY5NjczMDExMiwtNzEwOTY1NDk0LC0zNzM4NjA2
-MiwtMTEyNDg0MDAyMiwyMzkxMjAxNjYsLTEwODY0MTg3MzQsLT
-czODU1NzU2NCwxMzM2NzkwOTQ2LC0xMjA1NjMxMzYyLC0xNzY5
-MDYwNDMzXX0=
+eyJoaXN0b3J5IjpbLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1Nj
+I0NTk3MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUs
+MjA4ODM2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOT
+M4ODY4MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYy
+NSwyNDM5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMj
+Q1MiwtNDk5MzU4MTYyLC0xNzA5NDY0NzYxLC0xNjI5MDI1MDAw
+XX0=
 -->

@@ -4,6 +4,11 @@
 - Afegida operacio consultaAdministracio,
 - Modificat element _representacio_ a les consultes de representacions i consulta representacions persona. Per alleugerir el volum de les respostes només s'inclou l'element _evidencies_ a la consultaRepresentacio (consulta d'una representació única).
 
+## Desembre 2019
+- Afegida capacitat a representacions Tipus A i B.
+- Afegida informació referent a processat de múltiples peticions.
+- Afegida informació relativa als camps mínims a informar.
+
 ## Novembre 2019
 - Actualitzats codis de producte.
 - Afegit índex.
@@ -22,23 +27,23 @@
 ## Juny 2019
 - Afegida explicació dels elements _origen_, _solicitant_, _capacitat_
 
-#ConsultaRepresentacio i ConsultaRepresentacions
+### ConsultaRepresentacio i ConsultaRepresentacions
 - Afegit element _solicitant_
 - Afegit element _generaInforme_ i _urlDescarregaInforme_ en la resposta
 - Afegit exemple _consultaRepresentacions_ (consulta i  generació d'informe)
 - Afegit exemple _consultaRepresentacio_ generació d'informe
 - S'elimina el camp _codiAdministracioSolicitantInforme_ ja que queda cobert per l'element _solicitant_
 - Corregit exemple ConsultaRepresentacio, afegit _solicitant_
-#ValidarRepresentacio
+### ValidarRepresentacio
 - Es substitueixen els camps _funcionariSolicitant_ i _administracioSolicitant_ per l'element _solicitant_
 
-#Representacio
+### Representacio
 - Afegit el l'atribut _dataValidacioPoderNotarial_
 - Afegit element _solicitant_
 - Afeit element _origen_
 - Afegit element _idRepresentacioA_
 
-#ValidarRepresentacio
+### ValidarRepresentacio
 - Corregit exemple validar representació
 
 - Correccions format exemple xml
