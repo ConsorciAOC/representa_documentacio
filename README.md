@@ -659,8 +659,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 numRepresentacionsTotal | Nombre de representacions totals resultants de la petició de consulta
 numPaginesTotal | Nombre de pàgines totals dels resultats de la petició de consulta
-representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio). 
-IMPORTANT: En aquest cas l'element _representacio_ NO inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
+representacions | Llistat d'1 o més elements del tipus [_representacio_](#21-representacio). En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar l'informe sol·licitat a la petició
 
 ## 5.2 Consulta de representacio
@@ -797,8 +796,8 @@ Camp | Descripció | Obligatori
 Camp | Descripció
 ---- | ----------
 |resposta| Element del tipus _resposta_
-|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant
-|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant
+|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
+|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 
 
 ## 5.4 Validacio
@@ -1690,11 +1689,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjI1NDQ1NCwtNTgyMTY4MjM5LDY3MT
-g0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUyOCwtMTU0MDY1NDU0
-MCwtOTI2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0ODgxNzcsLTEwNz
-I5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2MjMsMTA0MTgyMTUs
-ODgxMjExNzExLC04NjYxMjQ1MiwtNDk5MzU4MTYyLC0xNzA5ND
-Y0NzYxLC0xNjI5MDI1MDAwLC0xODI0NTczOTM1LDIyMTkxMDE1
-XX0=
+eyJoaXN0b3J5IjpbNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4ND
+k0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAs
+LTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOT
+UxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1LDg4
+MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2MiwtMTcwOTQ2ND
+c2MSwtMTYyOTAyNTAwMCwtMTgyNDU3MzkzNSwyMjE5MTAxNV19
+
 -->
