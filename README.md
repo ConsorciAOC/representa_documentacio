@@ -1133,7 +1133,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 	</xs:complexType>  
 </xs:element>
 ```
-## 5.9 Consulta d'administracio
+## 5.10 Consulta d'administracio
 Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
 #### Peticio
 ```xml
@@ -1148,12 +1148,26 @@ Permet consultar les dades d'una administracio a partir del seu codi INE10 o el 
 ```
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
-mida | Nombre màxim de resultats retornats per pàgina | Si
-pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
-tramit| Element del tipus _tramit_. Per recuperar 1 tràmit concret cal informar el seu _uuid_ (obtingut prèviament amb la `consultaFamilia` o `consultaFamilies`. Per recuperar tots els tràmits d'una familia, cal informar a l'atribut _uuidFamilia_. | Si
+administracio | Permet especificar el codi IN10 o el NIF per recuperar les dades d'una administracio | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
-
+#### Resposta
+```xml
+<xs:element name="consultarAdminisResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat" minOccurs="0">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta" />  
+						<xs:element name="familia" type="familia" minOccurs="0" />  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
 # 6. Exemples de peticions
 
 ## 6.1 Consulta de representacio
@@ -1709,7 +1723,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4Mjc5MTk0NjcsNTYyNDU5NzAsLTU4Mj
+eyJoaXN0b3J5IjpbLTIwODY0MzczMDYsNTYyNDU5NzAsLTU4Mj
 E2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1Mjgs
 LTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyND
 g4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIz
