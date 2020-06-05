@@ -1,5 +1,8 @@
 # Change log
 
+## Juny 2020
+- Afegida operacio consultaAdministracio,
+- Modificat element _representacio_ a les consultes de representacions i consulta representacions persona. Per alleugerir el volum de les respostes només s'inclou l'element _evidencies_ a la consultaRepresentacio (consulta d'una representació única).
 
 ## Novembre 2019
 - Actualitzats codis de producte.

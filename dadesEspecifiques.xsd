@@ -135,6 +135,8 @@
                 <xs:element name="ConsultaRepresentacionsPersona">
                     <xs:complexType>
                         <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
                             <xs:element name="persona" type="persona"/>
                             <xs:element name="actives" type="xs:boolean"/>
                             <xs:element name="solicitant" type="solicitant"/>
@@ -152,6 +154,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
+                            <xs:element name="numTotal"/>
+                            <xs:element name="numPaginesTotal"/>
                             <xs:element name="poderdants">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -175,6 +179,88 @@
                                                 </xs:sequence>
                                             </xs:complexType>
                                         </xs:element>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarRepresentacionsPersonaPoderdant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaRepresentacionsPersonaPoderdant">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="persona" type="persona"/>
+                            <xs:element name="actives" type="xs:boolean"/>
+                            <xs:element name="solicitant" type="solicitant"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarRepresentacionsPersonaPoderdantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta"  type="resposta"/>
+                            <xs:element name="numRepresentacionsTotal"/>
+                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="representacions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarRepresentacionsPersonaRepresentant">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaRepresentacionsPersonaRepresentant">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="persona" type="persona"/>
+                            <xs:element name="actives" type="xs:boolean"/>
+                            <xs:element name="solicitant" type="solicitant"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarRepresentacionsPersonaRepresentantResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta"  type="resposta"/>
+                            <xs:element name="numRepresentacionsTotal"/>
+                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="representacions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -326,6 +412,31 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="consultarAdministracio">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element type="administracio" name="administracio"/>
+                <xs:element name="solicitant" type="solicitant" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Per defecte només es retornen les administracions actives si no s'indica el contrari -->
+    <xs:element name="consultarAdministracioResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="administracio" type="administracio" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="ErrorResponse">
         <xs:complexType>
             <xs:sequence>
@@ -466,6 +577,7 @@
             <xs:element name="estat" type="estat"/>
             <xs:element name="motiu" type="xs:string" minOccurs="0"/>
             <xs:element name="solicitant" type="solicitant"/>
+            <xs:element name="origen" type="origen" minOccurs="0" />
             <xs:element name="documentsEvidencia" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
