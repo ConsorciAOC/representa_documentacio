@@ -34,44 +34,50 @@
   * [5.3 Consulta de representacions per persona](#53-consulta-de-representacions-per-persona)
       - [Peticio](#peticio-1)
       - [Resposta](#resposta-2)
-  * [5.4 Validacio](#54-validacio)
+  * [5.4 Consulta de representacions per persona poderdant](#54-consulta-de-representacions-per-persona-poderdant)
       - [Peticio](#peticio-2)
       - [Resposta](#resposta-3)
-  * [5.5 Alta o modificacio](#55-alta-o-modificacio)
+  * [5.5 Consulta de representacions per persona representant](#55-consulta-de-representacions-per-persona-representant)
       - [Peticio](#peticio-3)
       - [Resposta](#resposta-4)
-  * [5.6 Consulta de cataleg](#56-consulta-de-cataleg)
+  * [5.6 Validacio](#56-validacio)
       - [Peticio](#peticio-4)
       - [Resposta](#resposta-5)
-  * [5.7 Consulta de families](#57-consulta-de-families)
+  * [5.7 Alta o modificacio](#57-alta-o-modificacio)
       - [Peticio](#peticio-5)
       - [Resposta](#resposta-6)
-  * [5.8 Consulta de familia](#58-consulta-de-familia)
+  * [5.8 Consulta de cataleg](#58-consulta-de-cataleg)
       - [Peticio](#peticio-6)
       - [Resposta](#resposta-7)
-  * [5.9 Consulta de tramits](#59-consulta-de-tramits)
+  * [5.9 Consulta de families](#59-consulta-de-families)
       - [Peticio](#peticio-7)
       - [Resposta](#resposta-8)
-  * [5.10 Consulta administracio](#510-consulta-administracio)
+  * [5.10 Consulta de familia](#510-consulta-de-familia)
       - [Peticio](#peticio-8)
       - [Resposta](#resposta-9)
+  * [5.11 Consulta de tramits](#511-consulta-de-tramits)
+      - [Peticio](#peticio-9)
+      - [Resposta](#resposta-10)
+  * [5.12 Consulta administracio](#512-consulta-administracio)
+      - [Peticio](#peticio-10)
+      - [Resposta](#resposta-11)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio-9)
-    + [Resposta](#resposta-10)
-  * [6.2 Consulta representacions](#62-consulta-representacions)
-    + [Peticio](#peticio-10)
-    + [Resposta](#resposta-11)
-  * [6.3 Validacio](#63-validacio)
     + [Peticio](#peticio-11)
+    + [Resposta](#resposta-12)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
+    + [Peticio](#peticio-12)
+    + [Resposta](#resposta-13)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-13)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-12)
-    + [Resposta](#resposta-12)
+    + [Peticio](#peticio-14)
+    + [Resposta](#resposta-14)
   * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
-    + [Peticio](#peticio-13)
-    + [Resposta](#resposta-13)
+    + [Peticio](#peticio-15)
+    + [Resposta](#resposta-15)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
   * [6.8 Consulta familia](#68-consulta-familia)
@@ -83,6 +89,9 @@
   * [8.2 Importacio mitjançant fitxer CSV](#82-importacio-mitjan-ant-fitxer-csv)
   * [8.3 Us cataleg compartit per Consorci AOC](#83-us-cataleg-compartit-per-consorci-aoc)
 - [9. Generacio d'informes PDF](#9-generacio-d-informes-pdf)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -1857,11 +1866,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzUyOTg0NTQsLTE5MjA0Nzg0MzMsOTMzND
-U1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAs
-LTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNj
-c1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEs
-MTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOT
-QyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTJdfQ==
-
+eyJoaXN0b3J5IjpbLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
+MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
+NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
+gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
+ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMj
+QzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTJd
+fQ==
 -->
