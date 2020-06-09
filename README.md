@@ -814,10 +814,10 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 #### Peticio
 
 ```xml
-<xs:element name="consultarRepresentacionsPersona">  
+<xs:element name="consultarRepresentacionsPersonaPoderdant">  
 	<xs:complexType>  
 		<xs:sequence>  
-			<xs:element name="ConsultaRepresentacionsPersona">  
+			<xs:element name="ConsultaRepresentacionsPersonaPoderdant">  
 				<xs:complexType>  
 					<xs:sequence>  
 						<xs:element name="persona" type="persona"/>  
@@ -840,36 +840,17 @@ Camp | Descripció | Obligatori
 
 #### Resposta
 ```xml
-<xs:element name="consultarRepresentacionsPersonaResponse">  
+<xs:element name="consultarRepresentacionsPersonaPoderdantResponse">  
 	<xs:complexType>  
 		<xs:sequence>  
 			<xs:element name="resultat">  
 				<xs:complexType>  
 					<xs:sequence>  
 						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="poderdants">  
+						<xs:element name="representacions" minOccurs="0">  
 							<xs:complexType>  
 								<xs:sequence>  
-									<xs:element name="representacions" minOccurs="0">  
-										<xs:complexType>  
-											<xs:sequence>  
-												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-											</xs:sequence>  
-										</xs:complexType>  
-									</xs:element>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-						<xs:element name="representants">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="representacions" minOccurs="0">  
-										<xs:complexType>  
-											<xs:sequence>  
-												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-											</xs:sequence>  
-										</xs:complexType>  
-									</xs:element>  
+									<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
 								</xs:sequence>  
 							</xs:complexType>  
 						</xs:element>  
@@ -878,7 +859,8 @@ Camp | Descripció | Obligatori
 			</xs:element>  
 		</xs:sequence>  
 	</xs:complexType>  
-</xs:element>
+</xs:element>  
+	
 ```
 
 Camp | Descripció
@@ -1816,11 +1798,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjY1NDgzMDcsLTE5MjA0Nzg0MzMsOT
-MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
-NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
-gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
-ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMj
-QzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTJd
-fQ==
+eyJoaXN0b3J5IjpbMTc0ODkzOTU0OSwtMTkyMDQ3ODQzMyw5Mz
+M0NTUzNDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3
+MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4OD
+M2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4
+MSwxMjI0ODgxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyND
+M5NDI2MjMsMTA0MTgyMTUsODgxMjExNzExLC04NjYxMjQ1Ml19
+
 -->
