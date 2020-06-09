@@ -806,6 +806,88 @@ Camp | Descripció
 |poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 |representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
 
+## 5.3 Consulta de representacions per persona poderdant
+Permet consultar totes les representacions on intervé una determinada persona com a poderdant.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
+
+#### Peticio
+
+```xml
+<xs:element name="consultarRepresentacionsPersona">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="ConsultaRepresentacionsPersona">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="persona" type="persona"/>  
+						<xs:element name="actives" type="xs:boolean"/>  
+						<xs:element name="solicitant" type="solicitant"/>  
+					</xs:sequence>  
+			</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
+
+Camp | Descripció | Obligatori
+---- | ---------- | -----------
+|persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
+|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
+|| `FALSE` > La resta d'estats 
+|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
+
+#### Resposta
+```xml
+<xs:element name="consultarRepresentacionsPersonaResponse">  
+	<xs:complexType>  
+		<xs:sequence>  
+			<xs:element name="resultat">  
+				<xs:complexType>  
+					<xs:sequence>  
+						<xs:element name="resposta" type="resposta"/>  
+						<xs:element name="poderdants">  
+							<xs:complexType>  
+								<xs:sequence>  
+									<xs:element name="representacions" minOccurs="0">  
+										<xs:complexType>  
+											<xs:sequence>  
+												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+											</xs:sequence>  
+										</xs:complexType>  
+									</xs:element>  
+								</xs:sequence>  
+							</xs:complexType>  
+						</xs:element>  
+						<xs:element name="representants">  
+							<xs:complexType>  
+								<xs:sequence>  
+									<xs:element name="representacions" minOccurs="0">  
+										<xs:complexType>  
+											<xs:sequence>  
+												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+											</xs:sequence>  
+										</xs:complexType>  
+									</xs:element>  
+								</xs:sequence>  
+							</xs:complexType>  
+						</xs:element>  
+					</xs:sequence>  
+				</xs:complexType>  
+			</xs:element>  
+		</xs:sequence>  
+	</xs:complexType>  
+</xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+|resposta| Element del tipus _resposta_
+|poderdants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el poderdant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
+|representants| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidencies d'una representacio cal fer servir l'operacio _consultaRepresentacio_
+
+
 
 ## 5.4 Validacio
 
@@ -1734,11 +1816,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01OD
-A4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIz
-OSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1ND
-A2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3
-LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwND
-E4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTIsLTQ5OTM1ODE2Ml19
-
+eyJoaXN0b3J5IjpbLTEzNjY1NDgzMDcsLTE5MjA0Nzg0MzMsOT
+MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
+NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
+gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
+ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMj
+QzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTJd
+fQ==
 -->
