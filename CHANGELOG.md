@@ -1,5 +1,10 @@
 # Change log
 
+## Juny 2020 (2)
+- Afegida operació de _consultaRepresentacionsPersonaPoderdant_.
+- Afegida operació de _consultaRepresentacionsPersonaRepresentant_.
+_Aquestes operacions retornen els mateixos resultats que _consultaRepresentacionsPersona_ però sense agrupar les representacions segons el rol de poderdant o representant._
+
 ## Juny 2020
 - Afegida operacio consultaAdministracio,
 - Modificat element _representacio_ a les consultes de representacions i consulta representacions persona. Per alleugerir el volum de les respostes només s'inclou l'element _evidencies_ a la consultaRepresentacio (consulta d'una representació única).
