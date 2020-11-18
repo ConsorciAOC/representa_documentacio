@@ -16,6 +16,7 @@
   * [3.4 Familia](#34-familia)
   * [3.5 Tramit](#35-tramit)
   * [3.6 Ambit de representacio](#36-ambit-de-representacio)
+      - [3.6.1 Capacitat](#361-capacitat) 
   * [3.7 Solicitant](#37-solicitant)
   * [3.8 Persona](#38-persona)
   * [3.9 DocumentEvidencia](#39-documentevidencia)
@@ -378,7 +379,7 @@ Els elements continguts a l'**ambit de la representació** varien segons el tipu
 |tramit| Element _tramit_ |
 |capacitats| Llista d'elements _capacitat_ |
 
-Més endavant (apartat 4.Tipus de representacions(#4-tipus-de-representacions)) es descriuen els tipus de representació i s'explica l'estructura de l'ambit de representació de cada cas.
+Més endavant (apartat [4.Tipus de representacions](#4-tipus-de-representacions)) es descriuen els tipus de representació i s'explica l'estructura de l'ambit de representació de cada cas.
 
 
 ### 3.6.1 Capacitat
