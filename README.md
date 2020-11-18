@@ -181,32 +181,32 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 
 ```xml
 <xs:complexType name="representacio">  
-	<xs:sequence>  
-		<xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>  
-		<xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>  
-		<xs:element name="estat" type="estat" minOccurs="0"/>  
-		<xs:element name="poderdant" type="persona" minOccurs="0"/>  
-		<xs:element name="representant" type="persona" minOccurs="0" />  
-		<xs:element name="solicitant" type="solicitant" minOccurs="0" />  
-		<xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>  
-		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>  
-		<xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>  
-		<xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>  
-		<xs:element name="validacions" type="xs:int" minOccurs="0" 	nillable="true"/>  
-		<xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
-		<xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />  
-		<xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>  
-		<xs:element name="refAlta" type="xs:string" minOccurs="0"/>  
-		<xs:element name="origen" type="origen" minOccurs="0" />  
-		<xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />  
-		<xs:element name="evidencies" minOccurs="0" >  
-			<xs:complexType>  
-				<xs:sequence>  
-					<xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>  
-				</xs:sequence>  
-			</xs:complexType>  
-		</xs:element>  
-	</xs:sequence>  
+ <xs:sequence>  
+  <xs:element name="identificadorLegal" type="xs:string" minOccurs="0"/>  
+  <xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0"/>  
+  <xs:element name="estat" type="estat" minOccurs="0"/>  
+  <xs:element name="poderdant" type="persona" minOccurs="0"/>  
+  <xs:element name="representant" type="persona" minOccurs="0" />  
+  <xs:element name="solicitant" type="solicitant" minOccurs="0" />  
+  <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>  
+  <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>  
+  <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>  
+  <xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>  
+  <xs:element name="validacions" type="xs:int" minOccurs="0"  nillable="true"/>  
+  <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
+  <xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />  
+  <xs:element name="administracioReceptora" type="administracio" minOccurs="0"/>  
+  <xs:element name="refAlta" type="xs:string" minOccurs="0"/>  
+  <xs:element name="origen" type="origen" minOccurs="0" />  
+  <xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />  
+  <xs:element name="evidencies" minOccurs="0" >  
+   <xs:complexType>  
+    <xs:sequence>  
+     <xs:element name="evidencia" type="evidencia" maxOccurs="unbounded"/>  
+    </xs:sequence>  
+   </xs:complexType>  
+  </xs:element>  
+ </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -235,20 +235,20 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 
 ```xml
 <xs:complexType name="evidencia">
-	<xs:sequence>
-		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
-		<xs:element name="identificadorLegal" type="xs:string"/>
-		<xs:element name="motiu" type="xs:string"  minOccurs="0"/>	
-		<xs:element name="solicitant" type="solicitant"/>	
-		<xs:element name="origen" type="origen" minOccurs="0" />
-		<xs:element name="documentsEvidencia" minOccurs="0">
-			<xs:complexType>
-				<xs:sequence>
-					<xs:element name="documentEvidencia" type="documentEvidencia" maxOccurs="unbounded"/>
-				</xs:sequence>
-			</xs:complexType>
-		</xs:element>
-	</xs:sequence>
+ <xs:sequence>
+  <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
+  <xs:element name="identificadorLegal" type="xs:string"/>
+  <xs:element name="motiu" type="xs:string"  minOccurs="0"/> 
+  <xs:element name="solicitant" type="solicitant"/> 
+  <xs:element name="origen" type="origen" minOccurs="0" />
+  <xs:element name="documentsEvidencia" minOccurs="0">
+   <xs:complexType>
+    <xs:sequence>
+     <xs:element name="documentEvidencia" type="documentEvidencia" maxOccurs="unbounded"/>
+    </xs:sequence>
+   </xs:complexType>
+  </xs:element>
+ </xs:sequence>
 </xs:complexType>
 ```
 
@@ -270,20 +270,20 @@ Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una
 
 ```xml
 <xs:complexType name="cataleg">  
-	<xs:sequence>  
-		<xs:element name="codi" type="NonEmptyString" />  
-		<xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
-		<xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0" />  
-		<xs:element name="actiu" type="xs:boolean" minOccurs="0" />  
-		<xs:element name="administracioPropietaria" type="administracio" />  
-		<xs:element name="families" minOccurs="0" >  
-			<xs:complexType>  
-				<xs:sequence>  
-					<xs:element name="familia" type="familia" maxOccurs="unbounded"/>  
-				</xs:sequence>  
-			</xs:complexType>  
-		</xs:element>  
-	</xs:sequence>  
+ <xs:sequence>  
+  <xs:element name="codi" type="NonEmptyString" />  
+  <xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
+  <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0" />  
+  <xs:element name="actiu" type="xs:boolean" minOccurs="0" />  
+  <xs:element name="administracioPropietaria" type="administracio" />  
+  <xs:element name="families" minOccurs="0" >  
+   <xs:complexType>  
+    <xs:sequence>  
+     <xs:element name="familia" type="familia" maxOccurs="unbounded"/>  
+    </xs:sequence>  
+   </xs:complexType>  
+  </xs:element>  
+ </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -301,19 +301,19 @@ Element on s'agrupen els tramits.
 
 ```xml
 <xs:complexType name="familia">  
-	<xs:sequence>  
-		<xs:element name="uuid" type="xs:string" minOccurs="0" />  
-		<xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
-		<xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
-		<xs:element name="tramits" minOccurs="0" >  
-			<xs:complexType>  
-				<xs:sequence>  
-					<xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>  
-				</xs:sequence>  
-			</xs:complexType>  
-		</xs:element>  
-		<xs:element name="catalegCodi" type="xs:string" minOccurs="0" />  
-	</xs:sequence>  
+ <xs:sequence>  
+  <xs:element name="uuid" type="xs:string" minOccurs="0" />  
+  <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="tramits" minOccurs="0" >  
+   <xs:complexType>  
+    <xs:sequence>  
+     <xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>  
+    </xs:sequence>  
+   </xs:complexType>  
+  </xs:element>  
+  <xs:element name="catalegCodi" type="xs:string" minOccurs="0" />  
+ </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -330,15 +330,15 @@ L'element **tramit** permet definir representacions tipus C amb un àmbit espec�
 
 ```xml
 <xs:complexType name="tramit">  
-	 <xs:sequence>  
-		 <xs:element name="uuid" type="xs:string" minOccurs="0"/>  
-		 <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
-		 <xs:element name="codiFue" type="NonEmptyString" minOccurs="0"/>  
-		 <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
-		 <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>  
-		 <xs:element name="descripcio" type="xs:string" minOccurs="0"/>  
-		 <xs:element name="actiu" type="xs:boolean" minOccurs="0"/>  
-	 </xs:sequence>  
+  <xs:sequence>  
+   <xs:element name="uuid" type="xs:string" minOccurs="0"/>  
+   <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
+   <xs:element name="codiFue" type="NonEmptyString" minOccurs="0"/>  
+   <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
+   <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>  
+   <xs:element name="descripcio" type="xs:string" minOccurs="0"/>  
+   <xs:element name="actiu" type="xs:boolean" minOccurs="0"/>  
+  </xs:sequence>  
 </xs:complexType>
 ```
 ## 3.6 Ambit de representacio
@@ -346,17 +346,17 @@ Els elements continguts a l'**ambit de la representació** varien segons el tipu
 
 ```xml
 <xs:complexType name="ambitRepresentacio">
-        <xs:sequence>
-            <xs:element name="administracio" type="administracio" minOccurs="0"/>
-            <xs:element name="tramit" minOccurs="0"  type="tramit"/>
-            <xs:element name="capacitats">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
+  <xs:sequence>
+   <xs:element name="administracio" type="administracio" minOccurs="0"/>
+   <xs:element name="tramit" minOccurs="0"  type="tramit"/>
+   <xs:element name="capacitats">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
 </xs:complexType>
 ```
 Més endavant es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
@@ -394,16 +394,16 @@ Element associat a cada evidencia on es recull informació relativa al context d
 ## 3.8 Persona
 ```xml
 <xs:complexType name="persona">  
-	<xs:sequence>  
-		<xs:element name="tipusDocumentIdentificatiu" type="xs:string" />  
-		<xs:element name="valorDocumentIdentificatiu" type="NonEmptyString" />  
-		<xs:element name="tipusPersona" minOccurs="0" type="tipusPersona" />  
-		<xs:element name="nomRaoSocial" minOccurs="0" type="NonEmptyString" />  
-		<xs:element name="cognoms" minOccurs="0" type="xs:string" />  
-		<xs:element name="correuElectronic" minOccurs="0" type="NonEmptyString" />  
-		<xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean" />  
-		<xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:dateTime" />  
-	</xs:sequence>  
+ <xs:sequence>  
+  <xs:element name="tipusDocumentIdentificatiu" type="xs:string" />  
+  <xs:element name="valorDocumentIdentificatiu" type="NonEmptyString" />  
+  <xs:element name="tipusPersona" minOccurs="0" type="tipusPersona" />  
+  <xs:element name="nomRaoSocial" minOccurs="0" type="NonEmptyString" />  
+  <xs:element name="cognoms" minOccurs="0" type="xs:string" />  
+  <xs:element name="correuElectronic" minOccurs="0" type="NonEmptyString" />  
+  <xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean" />  
+  <xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:dateTime" />  
+ </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -423,16 +423,16 @@ Element associat a cada evidencia on es recull informació relativa al context d
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
 ```xml
 <xs:complexType name="documentEvidencia">
-        <xs:sequence>
-            <xs:element name="uuid" type="xs:string" minOccurs="0"/>
-            <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
-            <xs:element name="nomDocument" type="xs:string" minOccurs="0"/>
-            <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
-            <xs:element name="tamany" type="xs:string" minOccurs="0"/>
-            <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
-            <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
-            <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
-        </xs:sequence>
+  <xs:sequence>
+   <xs:element name="uuid" type="xs:string" minOccurs="0"/>
+   <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+   <xs:element name="nomDocument" type="xs:string" minOccurs="0"/>
+   <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
+   <xs:element name="tamany" type="xs:string" minOccurs="0"/>
+   <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
+   <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
+   <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
+  </xs:sequence>
 </xs:complexType>
 ```
 
@@ -606,29 +606,29 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 #### Peticio
 ```xml
 <xs:element name="consultarRepresentacions">
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="ConsultaRepresentacions">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="mida" type="mida"/>
+       <xs:element name="pagina" type="pagina"/>
+       <xs:element name="representacio" type="representacio"/>
+       <xs:element name="estats" minOccurs="0">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element name="ConsultaRepresentacions">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="mida" type="mida"/>
-                            <xs:element name="pagina" type="pagina"/>
-                            <xs:element name="representacio" type="representacio"/>
-							<xs:element name="estats" minOccurs="0">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element name="estat"  type="estat" minOccurs="0" maxOccurs="unbounded"/>
-                                    </xs:sequence>
-                                </xs:complexType>
-                            </xs:element>
-							<xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
-							<xs:element name="solicitant" type="solicitant" />	
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
+         <xs:sequence>
+          <xs:element name="estat"  type="estat" minOccurs="0" maxOccurs="unbounded"/>
+         </xs:sequence>
         </xs:complexType>
+       </xs:element>
+       <xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
+       <xs:element name="solicitant" type="solicitant" /> 
+      </xs:sequence>
+     </xs:complexType>
     </xs:element>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
 ```
 
 La consulta és paginada i cal indicar el nº d’elements màxims a retornar i el nº de la pàgina desitjada.
@@ -646,27 +646,27 @@ solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petici
 
 ```xml
 <xs:element name="consultarRepresentacionsResponse">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="resultat">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="resposta"  type="resposta"/>
-						<xs:element name="numRepresentacionsTotal"/>
-						<xs:element name="numPaginesTotal"/>
-						<xs:element name="representacions" minOccurs="0">
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="representacio"  type="representacio" minOccurs="0" maxOccurs="unbounded"/>
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="urlDescarregaInforme"  minOccurs="0"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="resultat">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="resposta"  type="resposta"/>
+      <xs:element name="numRepresentacionsTotal"/>
+      <xs:element name="numPaginesTotal"/>
+      <xs:element name="representacions" minOccurs="0">
+       <xs:complexType>
+        <xs:sequence>
+         <xs:element name="representacio"  type="representacio" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+       </xs:complexType>
+      </xs:element>
+      <xs:element name="urlDescarregaInforme"  minOccurs="0"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:element>
 ```
 
@@ -686,19 +686,19 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 
 ```xml
 <xs:element name="consultarRepresentacio">
-	<xs:complexType>
-        <xs:sequence>
-            <xs:element name="ConsultaRepresentacio">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="identificadorLegal" type="xs:string" />
-						<xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
-                        <xs:element name="solicitant" type="solicitant" />
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-        </xs:sequence>
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="ConsultaRepresentacio">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="identificadorLegal" type="xs:string" />
+      <xs:element name="generaInforme" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="solicitant" type="solicitant" />
+     </xs:sequence>
     </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:element>
 ```
 
@@ -712,19 +712,19 @@ solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petici
 
 ```xml
 <xs:element name="consultarRepresentacioResponse">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="resultat">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="resposta" type="resposta" />
-						<xs:element name="representacio" type="representacio" minOccurs="0" />
-						<xs:element name="urlDescarregaInforme"  minOccurs="0"/>
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="resultat">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="resposta" type="resposta" />
+      <xs:element name="representacio" type="representacio" minOccurs="0" />
+      <xs:element name="urlDescarregaInforme"  minOccurs="0"/>
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:element>
 ```
 
@@ -743,19 +743,19 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 
 ```xml
 <xs:element name="consultarRepresentacionsPersona">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="ConsultaRepresentacionsPersona">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="persona" type="persona"/>  
-						<xs:element name="actives" type="xs:boolean"/>  
-						<xs:element name="solicitant" type="solicitant"/>  
-					</xs:sequence>  
-			</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="ConsultaRepresentacionsPersona">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="persona" type="persona"/>  
+      <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="solicitant" type="solicitant"/>  
+     </xs:sequence>  
+   </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -769,43 +769,43 @@ Camp | Descripció | Obligatori
 #### Resposta
 ```xml
 <xs:element name="consultarRepresentacionsPersonaResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="poderdants">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="representacions" minOccurs="0">  
-										<xs:complexType>  
-											<xs:sequence>  
-												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-											</xs:sequence>  
-										</xs:complexType>  
-									</xs:element>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-						<xs:element name="representants">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="representacions" minOccurs="0">  
-										<xs:complexType>  
-											<xs:sequence>  
-												<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-											</xs:sequence>  
-										</xs:complexType>  
-									</xs:element>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="poderdants">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="representacions" minOccurs="0">  
+          <xs:complexType>  
+           <xs:sequence>  
+            <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+           </xs:sequence>  
+          </xs:complexType>  
+         </xs:element>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+      <xs:element name="representants">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="representacions" minOccurs="0">  
+          <xs:complexType>  
+           <xs:sequence>  
+            <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+           </xs:sequence>  
+          </xs:complexType>  
+         </xs:element>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -824,19 +824,19 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 
 ```xml
 <xs:element name="consultarRepresentacionsPersonaPoderdant">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="ConsultaRepresentacionsPersonaPoderdant">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="persona" type="persona"/>  
-						<xs:element name="actives" type="xs:boolean"/>  
-						<xs:element name="solicitant" type="solicitant"/>  
-					</xs:sequence>  
-			</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="ConsultaRepresentacionsPersonaPoderdant">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="persona" type="persona"/>  
+      <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="solicitant" type="solicitant"/>  
+     </xs:sequence>  
+   </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -850,25 +850,25 @@ Camp | Descripció | Obligatori
 #### Resposta
 ```xml
 <xs:element name="consultarRepresentacionsPersonaPoderdantResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="representacions" minOccurs="0">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
-</xs:element>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="representacions" minOccurs="0">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
+</xs:element> 
 ```
 
 Camp | Descripció
@@ -885,19 +885,19 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 
 ```xml
 <xs:element name="consultarRepresentacionsPersonaRepresentant">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="ConsultaRepresentacionsPersonaRepresentant">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="persona" type="persona"/>  
-						<xs:element name="actives" type="xs:boolean"/>  
-						<xs:element name="solicitant" type="solicitant"/>  
-					</xs:sequence>  
-			</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="ConsultaRepresentacionsPersonaRepresentant">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="persona" type="persona"/>  
+      <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="solicitant" type="solicitant"/>  
+     </xs:sequence>  
+   </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -911,25 +911,25 @@ Camp | Descripció | Obligatori
 #### Resposta
 ```xml
 <xs:element name="consultarRepresentacionsPersonaRepresentantResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="representacions" minOccurs="0">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
-</xs:element>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="representacions" minOccurs="0">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
+</xs:element> 
 ```
 
 Camp | Descripció
@@ -952,13 +952,13 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 
 ```xml
 <xs:element name="validarRepresentacio">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="representacio" type="representacio" />
-                <xs:element name="dataValidacio" type="xs:dateTime"/>
-                <xs:element name="solicitant" type="solicitant" />
-            </xs:sequence>
-        </xs:complexType>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="representacio" type="representacio" />
+    <xs:element name="dataValidacio" type="xs:dateTime"/>
+    <xs:element name="solicitant" type="solicitant" />
+   </xs:sequence>
+  </xs:complexType>
 </xs:element>
 ```
 
@@ -972,18 +972,18 @@ solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petici
 
 ```xml
 <xs:element name="validarRepresentacioResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="resultat">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="representacio" type="representacio"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-            </xs:sequence>
-        </xs:complexType>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element name="resultat">
+     <xs:complexType>
+      <xs:sequence>
+       <xs:element name="resposta"  type="resposta"/>
+       <xs:element name="representacio" type="representacio"/>
+      </xs:sequence>
+     </xs:complexType>
+    </xs:element>
+   </xs:sequence>
+  </xs:complexType>
 </xs:element>
 ```
 
@@ -996,11 +996,11 @@ S'inclou l'element _resposta_
 
 ```xml
 <xs:complexType name="resposta">
-        <xs:sequence>
-            <xs:element type="xs:string" name="codi" minOccurs="0"/>
-            <xs:element type="xs:string" name="descripcio" minOccurs="0"/>
-            <xs:element type="xs:string" name="tipusSolicitud" minOccurs="0"/>
-        </xs:sequence>
+ <xs:sequence>
+  <xs:element type="xs:string" name="codi" minOccurs="0"/>
+  <xs:element type="xs:string" name="descripcio" minOccurs="0"/>
+  <xs:element type="xs:string" name="tipusSolicitud" minOccurs="0"/>
+ </xs:sequence>
 </xs:complexType>
 ```
 
@@ -1022,29 +1022,29 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _R
 
 ```xml
 <xs:element name="processarRepresentacio">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="dades">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="tokenValid" type="xs:string" minOccurs="0" />
-						<xs:element name="representacio" type="representacio">
-						</xs:element>
-						<xs:element name="documentsRepresentacio" minOccurs="0" >
-							<xs:complexType>
-								<xs:sequence>
-									<xs:element name="documentRepresentacio" minOccurs="0" maxOccurs="unbounded" type="documentRepresentacio" />
-								</xs:sequence>
-							</xs:complexType>
-						</xs:element>
-						<xs:element name="motiu" type="xs:string" />
-						<xs:element name="tipusSolicitud"  type="tipusSolicitud"/>				
-						<xs:element name="solicitant" type="solicitant" />
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="dades">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="tokenValid" type="xs:string" minOccurs="0" />
+      <xs:element name="representacio" type="representacio">
+      </xs:element>
+      <xs:element name="documentsRepresentacio" minOccurs="0" >
+       <xs:complexType>
+        <xs:sequence>
+         <xs:element name="documentRepresentacio" minOccurs="0" maxOccurs="unbounded" type="documentRepresentacio" />
+        </xs:sequence>
+       </xs:complexType>
+      </xs:element>
+      <xs:element name="motiu" type="xs:string" />
+      <xs:element name="tipusSolicitud"  type="tipusSolicitud"/>    
+      <xs:element name="solicitant" type="solicitant" />
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:element>
 ```
 
@@ -1063,18 +1063,18 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 #### Resposta
 ```xml
 <xs:element name="processarRepresentacioResponse">
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="resultat" minOccurs="0">
-				<xs:complexType>
-					<xs:sequence>
-						<xs:element name="resposta" type="resposta" />
-						<xs:element name="representacio" type="representacio" />
-					</xs:sequence>
-				</xs:complexType>
-			</xs:element>
-		</xs:sequence>
-	</xs:complexType>
+ <xs:complexType>
+  <xs:sequence>
+   <xs:element name="resultat" minOccurs="0">
+    <xs:complexType>
+     <xs:sequence>
+      <xs:element name="resposta" type="resposta" />
+      <xs:element name="representacio" type="representacio" />
+     </xs:sequence>
+    </xs:complexType>
+   </xs:element>
+  </xs:sequence>
+ </xs:complexType>
 </xs:element>
 ```
 
@@ -1090,12 +1090,12 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _R
 #### Peticio
 ```xml
 <xs:element name="consultarCataleg">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="codiAdministracio" type="xs:string" />  
-			<xs:element name="solicitant" type="solicitant" />  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="codiAdministracio" type="xs:string" />  
+   <xs:element name="solicitant" type="solicitant" />  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1107,18 +1107,18 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 #### Resposta
 ```xml
 <xs:element name="consultarCatalegResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat" minOccurs="0">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="cataleg" type="cataleg"/>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat" minOccurs="0">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="cataleg" type="cataleg"/>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1137,14 +1137,14 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per aix
 #### Peticio
 ```xml
 <xs:element name="consultarFamilies">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="mida" type="mida"/>  
-			<xs:element name="pagina" type="pagina"/>  
-			<xs:element name="catalegCodi" type="xs:string"/>  
-			<xs:element name="solicitant" type="solicitant" />  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="mida" type="mida"/>  
+   <xs:element name="pagina" type="pagina"/>  
+   <xs:element name="catalegCodi" type="xs:string"/>  
+   <xs:element name="solicitant" type="solicitant" />  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1158,26 +1158,26 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 #### Resposta
 ```xml
 <xs:element name="consultarFamiliesResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat" minOccurs="0">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="numTotal"/>  
-						<xs:element name="numPaginesTotal"/>  
-						<xs:element name="families" minOccurs="0" >  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="familia" type="familia" maxOccurs="unbounded" nillable="true"/>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat" minOccurs="0">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="numTotal"/>  
+      <xs:element name="numPaginesTotal"/>  
+      <xs:element name="families" minOccurs="0" >  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="familia" type="familia" maxOccurs="unbounded" nillable="true"/>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1188,12 +1188,12 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _R
 #### Peticio
 ```xml
 <xs:element name="consultarFamilia">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="familia" type="familia" />  
-			<xs:element name="solicitant" type="solicitant" />  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="familia" type="familia" />  
+   <xs:element name="solicitant" type="solicitant" />  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1205,18 +1205,18 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 #### Resposta
 ```xml
 <xs:element name="consultarFamiliaResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat" minOccurs="0">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta" />  
-						<xs:element name="familia" type="familia" minOccurs="0" />  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat" minOccurs="0">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta" />  
+      <xs:element name="familia" type="familia" minOccurs="0" />  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1230,14 +1230,14 @@ La consulta és paginada i cal indicar el nº d'elements màxims a retornar i el
 #### Peticio
 ```xml
 <xs:element name="consultarTramits">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="mida" type="mida"/>  
-			<xs:element name="pagina" type="pagina"/>  
-			<xs:element name="tramit" type="tramit"/>  
-			<xs:element name="solicitant" type="solicitant" />  
-		</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="mida" type="mida"/>  
+   <xs:element name="pagina" type="pagina"/>  
+   <xs:element name="tramit" type="tramit"/>  
+   <xs:element name="solicitant" type="solicitant" />  
+  </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -1251,26 +1251,26 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 #### Resposta
 ```xml
 <xs:element name="consultarTramitsResponse">  
-	<xs:complexType>  
-		<xs:sequence>  
-			<xs:element name="resultat" minOccurs="0">  
-				<xs:complexType>  
-					<xs:sequence>  
-						<xs:element name="resposta" type="resposta"/>  
-						<xs:element name="numTotal"/>  
-						<xs:element name="numPaginesTotal"/>  
-						<xs:element name="tramits">  
-							<xs:complexType>  
-								<xs:sequence>  
-									<xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>  
-								</xs:sequence>  
-							</xs:complexType>  
-						</xs:element>  
-					</xs:sequence>  
-				</xs:complexType>  
-			</xs:element>  
-			</xs:sequence>  
-	</xs:complexType>  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat" minOccurs="0">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="numTotal"/>  
+      <xs:element name="numPaginesTotal"/>  
+      <xs:element name="tramits">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="tramit" type="tramit" maxOccurs="unbounded"/>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+   </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
