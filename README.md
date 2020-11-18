@@ -150,21 +150,21 @@ Per tant, si per exemple falta informar algun camp es pot rebre un missatge del 
 
 ```xml
 <resultat>
-	<resposta>
-	    <codi>004</codi>
-        <descripcio>Cal informar els següents camps: origen</descripcio>
-        <tipusSolicitud>ALTA</tipusSolicitud>
-    </resposta>
+ <resposta>
+  <codi>004</codi>
+  <descripcio>Cal informar els següents camps: origen</descripcio>
+  <tipusSolicitud>ALTA</tipusSolicitud>
+ </resposta>
 </resultat>
 ```
 o bé del tipus:
 ```xml
 <resultat>
-	<resposta>
-		<codi>004</codi>
-	    <descripcio>cvc-complex-type.2.4.b: El contenido del elemento 'ns5:dades' no está completo. Se esperaba uno de '{"r:representa:V1.0":poderNotarial, "r:representa:V1.0":signatura, "r:representa:V1.0":solicitant}'.</descripcio>
-	   <tipusSolicitud>ALTA</tipusSolicitud>
-   </resposta>
+ <resposta>
+  <codi>004</codi>
+  <descripcio>cvc-complex-type.2.4.b: El contenido del elemento 'ns5:dades' no está completo. Se esperaba uno de '{"r:representa:V1.0":poderNotarial, "r:representa:V1.0":signatura, "r:representa:V1.0":solicitant}'.</descripcio>
+  <tipusSolicitud>ALTA</tipusSolicitud>
+ </resposta>
 </resultat>
 ```
 
@@ -341,6 +341,18 @@ L'element **tramit** permet definir representacions tipus C amb un àmbit espec�
   </xs:sequence>  
 </xs:complexType>
 ```
+
+|Camp | Descripció|
+|---- | ----------|
+|uuid| Identificador únic del tràmit|
+|codi | Codi del tramit |
+|codiFue| Codi FUE del tràmit|
+|nom | Nom del tramit |
+|uuidFamilia | Identificador únic de la familia a la que pertany |
+|descripcio | Descrpicó del tramit |
+|actiu | Indicador d'actiu o no actiu `TRUE` o `FALSE` |
+
+
 ## 3.6 Ambit de representacio
 Els elements continguts a l'**ambit de la representació** varien segons el tipus de representació. 
 
@@ -348,7 +360,7 @@ Els elements continguts a l'**ambit de la representació** varien segons el tipu
 <xs:complexType name="ambitRepresentacio">
   <xs:sequence>
    <xs:element name="administracio" type="administracio" minOccurs="0"/>
-   <xs:element name="tramit" minOccurs="0"  type="tramit"/>
+   <xs:element name="tramit" type="tramit" minOccurs="0"/>
    <xs:element name="capacitats">
     <xs:complexType>
      <xs:sequence>
@@ -359,17 +371,32 @@ Els elements continguts a l'**ambit de la representació** varien segons el tipu
   </xs:sequence>
 </xs:complexType>
 ```
-Més endavant es descriuen els tipus de representació i es detalla l'ambit de representació de cadascun.
 
 |Camp | Descripció|
 |---- | ----------|
-|uuid| Identificador únic del tràmit|
-|codi | Codi del tramit |
-|codiFue| Codi FUE del tràmit|
-|nom | Nom del tramit |
-|uuidFamilia | Identificador únic de la familia a la que pertany |
-|descripcio | Descrpicó del tramit |
-|actiu | Indicador d'actiu o no actiu |
+|administracio| Element _administracio_ |
+|tramit| Element _tramit_ |
+|capacitats| Llista d'elements _capacitat_ |
+
+Més endavant (apartat 4.Tipus de representacions(#4-tipus-de-representacions)) es descriuen els tipus de representació i s'explica l'estructura de l'ambit de representació de cada cas.
+
+
+### 3.6.1 Capacitat
+Element que determina la capacitat d'una representació.
+
+```xml
+<xs:complexType name="capacitat">
+ <xs:sequence>
+  <xs:element name="codi" type="xs:string" />
+  <xs:element name="nom" type="xs:string" minOccurs="0" />
+ </xs:sequence>
+</xs:complexType>
+```
+
+|Camp | Descripció|
+|---- | ----------|
+|codi| Codi de la capacitat (CONSULTAR, NOTIFICAR, TRAMITAR) |
+|nom| Nom de la capacitat |
 
 
 ## 3.7 Solicitant
