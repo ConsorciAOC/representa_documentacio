@@ -405,11 +405,11 @@ Element associat a cada evidencia on es recull informació relativa al context d
 
 ```xml
 <xs:complexType name="solicitant">  
-	<xs:sequence>  
-		<xs:element name="persona" type="persona" />  
-		<xs:element name="administracio" type="administracio" />  
-		<xs:element name="aplicacio" type="xs:string" minOccurs="0" />  
-	</xs:sequence>  
+ <xs:sequence>  
+  <xs:element name="persona" type="persona" />  
+  <xs:element name="administracio" type="administracio" />  
+  <xs:element name="aplicacio" type="xs:string" minOccurs="0" />  
+ </xs:sequence>  
 </xs:complexType>
 ```
 
