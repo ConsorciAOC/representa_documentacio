@@ -1576,42 +1576,42 @@ Si existeix una representació** que permet al representant actuar en nom del po
       <tipusSolicitud>VALIDACIO<tipusSolicitud>
     </resposta>
     <representacio>
-        <identificadorLegal>201900000131</identificadorLegal>
-        <tipusRepresentacio>TIPUS_B<tipusRepresentacio>
-        <estat>VALIDA</estat>
-        <poderdant>
-            ...
-        </poderdant>
-        <representant>
-            ...
-        </representant>
-        <ambitRepresentacio>
-            <administracio>
+      <identificadorLegal>201900000131</identificadorLegal>
+       <tipusRepresentacio>TIPUS_B<tipusRepresentacio>
+       <estat>VALIDA</estat>
+       <poderdant>
+         ...
+       </poderdant>
+       <representant>
+         ...
+       </representant>
+       <ambitRepresentacio>
+          <administracio>
             <codi>800180001</codi>
             <nif>P-0800100-J</nif>
             <nom>Ajuntament d'Abrera</nom>
             <activa>true</activa>
-            </administracio>
-            <capacitats>
-            <capacitat>
-                <codi>CONSULTAR</codi>
-                <nom>Consultar</codi>
-            </capacitat>
-            <capacitat>
-                <codi>TRAMITAR</codi>
-                <nom>Tramitar</codi>
-            </capacitat>
-            </capacitats>
-        </ambitRepresentacio>
-        <dataCreacio>2019-03-08T00:00:00</dataCreacio>
-        <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
-        <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
-        <validacions>2</validacions>
-        <solicitant>
-            ..
-        </solicitant>
-        <evidencies>
-            <evidencia>
+          </administracio>
+          <capacitats>
+          <capacitat>
+            <codi>CONSULTAR</codi>
+            <nom>Consultar</codi>
+          </capacitat>
+          <capacitat>
+            <codi>TRAMITAR</codi>
+            <nom>Tramitar</codi>
+          </capacitat>
+          </capacitats>
+      </ambitRepresentacio>
+      <dataCreacio>2019-03-08T00:00:00</dataCreacio>
+      <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
+      <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
+      <validacions>2</validacions>
+      <solicitant>
+          ..
+      </solicitant>
+      <evidencies>
+          <evidencia>
             <dataCreacio>2019-03-05T14:18:01</dataCreacio>
             <identificadorLegal>201900000131</identificadorLegal>
             <motiu>ALTA - Inscripció</motiu>
@@ -1633,7 +1633,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
 </validarRepresentacioResponse>
 ```
 
-Aquest exemple està retornant una representació de tipus B (a organisme) i té l'ambitRepresentació acord a aquest tipus de representació (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)), és a dir informant l'element administració. 
+Aquest exemple està retornant una representació de tipus B (a organisme) i té l'ambitRepresentació acord a aquest tipus de representació (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)), és a dir informant l'element administració i capacitats.
 
 ** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
 
