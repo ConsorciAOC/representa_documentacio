@@ -1525,6 +1525,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 
 ```xml
 <validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
+  <dades>
     <representacio>
       <poderdant>
         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
@@ -1561,6 +1562,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
         <codi>12345</codi>
       </administracio>
     </solicitant>
+  </dades>
 </validarRepresentacio>
 ```
 
@@ -1883,11 +1885,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
-MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
-NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
-gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
-ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2MjUsMj
-QzOTQyNjIzLDEwNDE4MjE1LDg4MTIxMTcxMSwtODY2MTI0NTJd
+eyJoaXN0b3J5IjpbMjc2NDc3MDEwLC0xOTk5MDUzMzA0LC0xOT
+IwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2
+MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOT
+M1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2
+NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOT
+M1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4ODEyMTE3MTFd
 fQ==
 -->
