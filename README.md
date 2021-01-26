@@ -985,6 +985,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
     <xs:element name="representacio" type="representacio" />
     <xs:element name="dataValidacio" type="xs:dateTime"/>
     <xs:element name="solicitant" type="solicitant" />
+    <xs:element name="generaEvidencia" type="xs:boolean" />
    </xs:sequence>
   </xs:complexType>
 </xs:element>
@@ -995,6 +996,7 @@ Camp | Descripció | Obligatori
 representacio | Element del tipus _representacio_. Cal informar obligatòriament els atributs: _poderdant, representant, ambitRepresentacio (administracio, tramit, capacitat)_ | Si
 dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei | Si
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
+generaEviden| _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
 
@@ -1887,11 +1889,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MDEzMDA3OSw5MTEyMjA2MDYsLTE5OT
-kwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01ODA4NzAw
-ODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2Nz
-E4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1
-NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMD
-cyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1
-XX0=
+eyJoaXN0b3J5IjpbLTEwODMwMTEwOTEsOTExMjIwNjA2LC0xOT
+k5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcw
+MDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNj
+cxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0
+NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMT
+A3Mjk1MTE0OSwtOTM1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIx
+NV19
 -->
