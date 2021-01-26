@@ -996,7 +996,7 @@ Camp | Descripció | Obligatori
 representacio | Element del tipus _representacio_. Cal informar obligatòriament els atributs: _poderdant, representant, ambitRepresentacio (administracio, tramit, capacitat)_ | Si
 dataValidacio | Data on es fa la consulta de validació (yyyy-MM-dd'T'HH:mm:ss). Aquesta data ha d'estar compresa entre la _dataIniciVigencia_ i la _dataFiVigencia_ de la representació recuperada pel servei | Si
 solicitant | _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
-generaEviden| _Persona_, _administració_ i _aplicacio_ que sol·licita la petició | Si
+generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en base64 incloent la consulta i resposta signada (XAdES-T ) com evidencia | No
 
 #### Resposta
 
@@ -1889,7 +1889,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwODMwMTEwOTEsOTExMjIwNjA2LC0xOT
+eyJoaXN0b3J5IjpbLTE5MjA3MjM2NTAsOTExMjIwNjA2LC0xOT
 k5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcw
 MDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNj
 cxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0
