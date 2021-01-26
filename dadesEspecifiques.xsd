@@ -274,9 +274,16 @@
     <xs:element name="validarRepresentacio">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="representacio" type="representacio" minOccurs="0"/>
-                <xs:element name="dataValidacio" type="xs:dateTime"/>
-                <xs:element name="solicitant" type="solicitant" />
+                <xs:element name="dades">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="representacio" type="representacio"/>
+                            <xs:element name="dataValidacio" type="xs:dateTime"/>
+                            <xs:element name="solicitant" type="solicitant" />
+                            <xs:element name="generaEvidencia" type="xs:boolean" minOccurs="0" default="false"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
@@ -284,17 +291,33 @@
     <xs:element name="validarRepresentacioResponse">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="resultat">
+                <xs:element name="response">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="representacio" type="representacio"/>
+                            <xs:element name="resultat">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="resposta" type="resposta"/>
+                                        <xs:element name="consulta" type="consultaValidacio"/>
+                                        <xs:element name="representacio" type="representacio"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Signatura en base64 i format XAdES-T_Enveloping que inclou el tag resultat signat -->
+                            <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
+
+    <xs:complexType name="consultaValidacio">
+        <xs:sequence>
+            <xs:element name="representacio" type="representacio" />
+            <xs:element name="dataValidacio" type="xs:dateTime"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:element name="consultarCataleg">
         <xs:complexType>
@@ -537,6 +560,7 @@
             <xs:element name="poderdant" type="persona" minOccurs="0"/>
             <xs:element name="representant" type="persona" minOccurs="0" />
             <xs:element name="solicitant" type="solicitant" minOccurs="0" />
+            <xs:element name="tipusPresentador" type="tipusPresentador" minOccurs="0" />
             <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
             <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>
@@ -636,6 +660,13 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="FISICA"/>
             <xs:enumeration value="JURIDICA"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="tipusPresentador">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="PODERDANT"/>
+            <xs:enumeration value="REPRESENTANT"/>
         </xs:restriction>
     </xs:simpleType>
 
