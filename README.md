@@ -1562,6 +1562,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
         <codi>12345</codi>
       </administracio>
     </solicitant>
+    <generaEvidencia>false</generaEvidencia>
   </dades>
 </validarRepresentacio>
 ```
@@ -1885,7 +1886,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjc2NDc3MDEwLC0xOTk5MDUzMzA0LC0xOT
+eyJoaXN0b3J5IjpbOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOT
 IwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2
 MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOT
 M1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2
