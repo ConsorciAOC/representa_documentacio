@@ -2,7 +2,7 @@
 
 ## Gener 2021
 - Modificat el tipus de dada _validarRepresentacio_ i _validarRepresentacioResponse_. S'ha afegit l'element _generaEvidencia_ a la petició . Si s'envia a true la resposta inclourrà un element _evidenciaSignada que conté una signatura en base64 i format XAdES-T_Enveloping que inclou el tag _resultat_ signat.
-- S'inclou en la resposta la propia consulta feta.
+- S'inclou en la resposta la propia consulta feta (_consultaValidacio_).
 - Afegit un nou atribut a l'element _representacio_ anomenat _tipusPresentador_ (opcional) per identificar qui és la persona que presenta la sol·licitud o canvi.
 
 
