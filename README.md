@@ -1562,7 +1562,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
         <codi>12345</codi>
       </administracio>
     </solicitant>
-    <generaEvidencia>false</generaEvidencia>
+    <generaEvidencia>true</generaEvidencia>
   </dades>
 </validarRepresentacio>
 ```
@@ -1633,6 +1633,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
         </evidencies>
     </representacio>
   </resultat>
+  <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
 </validarRepresentacioResponse>
 ```
 
@@ -1886,11 +1887,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOT
-IwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2
-MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOT
-M1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2
-NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOT
-M1NzgxNjI1LDI0Mzk0MjYyMywxMDQxODIxNSw4ODEyMTE3MTFd
-fQ==
+eyJoaXN0b3J5IjpbMTA3MDEzMDA3OSw5MTEyMjA2MDYsLTE5OT
+kwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01ODA4NzAw
+ODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2Nz
+E4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1
+NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMD
+cyOTUxMTQ5LC05MzU3ODE2MjUsMjQzOTQyNjIzLDEwNDE4MjE1
+XX0=
 -->
