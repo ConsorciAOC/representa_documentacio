@@ -1037,6 +1037,19 @@ S'inclou l'element _resposta_
 </xs:complexType>
 ```
 
+I l'element _consultaValidacio_ per poder guardar en un únic element la consulta i la resposta:
+
+```xml
+<xs:complexType name="consultaValidacio">  
+ <xs:sequence>  
+ <xs:element name="representacio" type="representacio" />  
+ <xs:element name="dataValidacio" type="xs:dateTime"/>  
+ </xs:sequence>  
+</xs:complexType>
+```
+
+
+
 Camp | Descripció
 ---- | ----------
 codi | Codi del resultat de la petició
@@ -1892,7 +1905,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDQ1OTAzNDIwLDE3NTQ4MzQxNTMsMTYyOD
+eyJoaXN0b3J5IjpbMTM4MDUzMDU5LDE3NTQ4MzQxNTMsMTYyOD
 Q3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0
 MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNT
 YyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1
