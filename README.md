@@ -1037,7 +1037,13 @@ S'inclou l'element _resposta_
 </xs:complexType>
 ```
 
-I l'element _consultaValidacio_ per poder guardar en un únic element la consulta i la resposta:
+Camp | Descripció
+---- | ----------
+codi | Codi del resultat de la petició
+descripcio | Descripció del resultat de la petició
+tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
+
+I l'element _consultaValidacio_ amb les dades consultades :
 
 ```xml
 <xs:complexType name="consultaValidacio">  
@@ -1048,13 +1054,6 @@ I l'element _consultaValidacio_ per poder guardar en un únic element la consult
 </xs:complexType>
 ```
 
-
-
-Camp | Descripció
----- | ----------
-codi | Codi del resultat de la petició
-descripcio | Descripció del resultat de la petició
-tipusSolicitud | Tipus de sol·licitud de la petició (CONSULTA)
 
 ## 5.7 Alta o modificacio
 Permet realitzar la inscripció o modificació** d'una representació. 
@@ -1905,11 +1904,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4MDUzMDU5LDE3NTQ4MzQxNTMsMTYyOD
-Q3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0
-MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNT
-YyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1
-LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1Mz
-kzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2
-MjVdfQ==
+eyJoaXN0b3J5IjpbMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mj
+g0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4
+NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LD
+U2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQx
+NSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNT
+M5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOTM1Nzgx
+NjI1XX0=
 -->
