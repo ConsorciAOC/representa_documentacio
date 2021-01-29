@@ -1024,7 +1024,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 consulta| Element del tipus _consultaValidacio_ per incloure la consulta feta a la petició (dades de la representació i data de validació).
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
-
+evidenciaSignada| Element en base64 i format de signatura XAdES-T Enveloping que inclou el tag resultat signat per el segell del Consorci AOC
 S'inclou l'element _resposta_
 
 ```xml
@@ -1892,11 +1892,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMT
-IyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUz
-NDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNT
-gyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUy
-OCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4MSwxMj
-I0ODgxNzcsLTEwNzI5NTExNDksLTkzNTc4MTYyNSwyNDM5NDI2
-MjNdfQ==
+eyJoaXN0b3J5IjpbNDQ1OTAzNDIwLDE3NTQ4MzQxNTMsMTYyOD
+Q3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0
+MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNT
+YyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1
+LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1Mz
+kzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUxMTQ5LC05MzU3ODE2
+MjVdfQ==
 -->
