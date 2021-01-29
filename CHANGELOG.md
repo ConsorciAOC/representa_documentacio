@@ -9,6 +9,7 @@
 ## Juny 2020 (2)
 - Afegida operació de _consultaRepresentacionsPersonaPoderdant_.
 - Afegida operació de _consultaRepresentacionsPersonaRepresentant_.
+
 _Aquestes operacions retornen els mateixos resultats que _consultaRepresentacionsPersona_ però sense agrupar les representacions segons el rol de poderdant o representant._
 
 ## Juny 2020
