@@ -1536,7 +1536,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
 ## 6.3 Validacio
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb uuid 1111 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens, recuperar l'uuid) a l'administració amb codi 800180001.
 
 ### Peticio
 
@@ -1904,11 +1904,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mj
-g0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4
-NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LD
-U2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQx
-NSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNT
-M5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOTM1Nzgx
-NjI1XX0=
+eyJoaXN0b3J5IjpbLTI4MzYwNjIyNCwxNTEzMzYzMjY5LDE3NT
+Q4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMz
+MDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLT
+E5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0
+MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLT
+kyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4MTc3LC0xMDcyOTUx
+MTQ5XX0=
 -->
