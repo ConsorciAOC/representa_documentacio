@@ -1631,48 +1631,22 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   <poderdant>
                      <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
                      <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
-                     <tipusPersona>FISICA</tipusPersona>
-                     <nomRaoSocial>Artur1</nomRaoSocial>
-                     <cognoms>Barbeta Gil</cognoms>
-                     <correuElectronic>abarbeta@aoc.cat</correuElectronic>
-                     <acceptaAvisos>true</acceptaAvisos>
-                     <dataAcceptacioAvisos>2020-10-07T16:19:11</dataAcceptacioAvisos>
+                     ...
                   </poderdant>
                   <representant>
                      <tipusDocumentIdentificatiu>PASSAPORT</tipusDocumentIdentificatiu>
                      <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
-                     <tipusPersona>FISICA</tipusPersona>
-                     <nomRaoSocial>test</nomRaoSocial>
-                     <cognoms>test</cognoms>
-                     <acceptaAvisos>false</acceptaAvisos>
-                     <dataAcceptacioAvisos>2021-02-02T09:59:50</dataAcceptacioAvisos>
+                     ...
                   </representant>
                   <solicitant>
                      <persona>
                         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
                         <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
-                        <tipusPersona>FISICA</tipusPersona>
-                        <nomRaoSocial>Artur1</nomRaoSocial>
-                        <cognoms>Barbeta Gil</cognoms>
-                        <correuElectronic>abarbeta@aoc.cat</correuElectronic>
-                        <acceptaAvisos>true</acceptaAvisos>
-                        <dataAcceptacioAvisos>2020-10-07T16:19:11</dataAcceptacioAvisos>
+                        ...
                      </persona>
                      <administracio>
                         <codi>9821920002</codi>
-                        <nif>Q12345678</nif>
-                        <nom>Consorci AOC</nom>
-                        <activa>true</activa>
-                        <url>http://www.aoc.cat/lopd</url>
-                        <adreca>Carrer Tanger 98 baixos</adreca>
-                        <telefon>934435458</telefon>
-                        <correu>norreu@aoc.cat</correu>
-                        <nomDPD>John Doe</nomDPD>
-                        <adrecaDPD>Carrer fals 123, AT 3º</adrecaDPD>
-                        <telefonDPD>678956785</telefonDPD>
-                        <correuDPD>nono@aoc.cat</correuDPD>
-                        <urlCataleg>http://www.aoc.cat</urlCataleg>
-                        <urlSuport>http://www.aoc.cat</urlSuport>
+                        ...
                      </administracio>
                   </solicitant>
                   <tipusPresentador>PODERDANT</tipusPresentador>
@@ -1693,8 +1667,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                      <evidencia>
                         <dataCreacio>2021-02-02T09:59:50</dataCreacio>
                         <identificadorLegal>202100010000</identificadorLegal>
-                        <estat>VALIDA</estat>
-                        <motiu>ALTA - null</motiu>
+                        <estat>VALIDA</estat>                        
                         <origen>PORTAL_EMPLEAT</origen>
                         <solicitant>
                            <persona>
@@ -2031,11 +2004,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NTI0MzA1MjAsLTE2Njg5ODQ1NDgsMT
-UxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIw
-NjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MS
-wtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIx
-NjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC
-0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4
-ODE3N119
+eyJoaXN0b3J5IjpbNDYwODU5NjgsLTE2Njg5ODQ1NDgsMTUxMz
+M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
+LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNT
+gwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgy
+MzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNT
+QwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3
+N119
 -->
