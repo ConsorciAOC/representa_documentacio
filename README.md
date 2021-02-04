@@ -1605,7 +1605,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   <representacio>
                      <poderdant>
                         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
                         <tipusPersona>FISICA</tipusPersona>
                      </poderdant>
                      <representant>
@@ -1622,7 +1622,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                         </tramit>
                         <capacitats>
                            <capacitat>
-                              <codi>CONSULTAR</codi>
+                              <codi>NOTIFICAR</codi>
                            </capacitat>
                         </capacitats>
                      </ambitRepresentacio>
@@ -1635,7 +1635,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   <estat>VALIDA</estat>
                   <poderdant>
                      <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                     <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
                      ...
                   </poderdant>
                   <representant>
@@ -1646,7 +1646,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   <solicitant>
                      <persona>
                         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
                         ...
                      </persona>
                      <administracio>
@@ -1658,8 +1658,8 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   <ambitRepresentacio>
                      <capacitats>
                         <capacitat>
-                           <codi>CONSULTAR</codi>
-                           <nom>CONSULTAR DADES</nom>
+                           <codi>NOTIFICAR</codi>
+                           <nom>NOTIFICAR DADES</nom>
                         </capacitat>
                      </capacitats>
                   </ambitRepresentacio>
@@ -1677,7 +1677,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                         <solicitant>
                            <persona>
                               <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                              <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                              <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
                               ...
                            </persona>
                            <administracio>
@@ -1728,6 +1728,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
 ```
 
 Aquest exemple està retornant una representació de tipus A (a organisme) amb capacitat CONSULTAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representació la resposta seria incorrecte.
+La capacitat GENERAL co
 
 ** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
 
@@ -2009,11 +2010,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ2NTI4MDAzNSw5MDYwMTg2NCwtMTY2OD
-k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
-MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
-MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
-NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
-gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
-ODFdfQ==
+eyJoaXN0b3J5IjpbLTIxMzI0Mjg5MTAsOTA2MDE4NjQsLTE2Nj
+g5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUz
+NjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLD
+kzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1
+OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMD
+g4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4
+NjgxXX0=
 -->
