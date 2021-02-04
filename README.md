@@ -1662,14 +1662,46 @@ Aquest exemple està retornant una representació de tipus B (a organisme) i té
 En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
-	<resultat>
-        <resposta>
-            <codi>001</codi>
-            <descripcio>No hi ha cap apoderament inscrit amb aquesta informació</descripcio>
-        </resposta>
-    </resultat>
-</validarRepresentacioResponse>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">
+         <response>
+            <resultat>
+               <resposta>
+                  <codi>001</codi>
+                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Artur1 Barbeta Gil (46773080G) i test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és incorrecte</descripcio>
+                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
+               </resposta>
+               <consulta>
+                  <representacio>
+                     <poderdant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </poderdant>
+                     <representant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </representant>
+                     <ambitRepresentacio>
+                        <administracio>
+                           <codi>9821920002</codi>
+                        </administracio>
+                        <tramit>
+                           <uuid>1</uuid>
+                        </tramit>
+                        <capacitats>
+                           <capacitat>
+                              <codi>TRAMITAR</codi>
+                           </capacitat>
+                        </capacitats>
+                     </ambitRepresentacio>
+                  </representacio>
+                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+               </consulta>
+            </resultat>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
+         </response>
+      </validarRepresentacioResponse>
 ```
 
 ## 6.4 Alta representacio
@@ -1904,11 +1936,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNz
-U0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUz
-MzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC
-0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5
-NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC
-05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1
-MTE0OV19
+eyJoaXN0b3J5IjpbLTcwNjA2NzMyOSwtMTY2ODk4NDU0OCwxNT
+EzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2
+MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC
+01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2
+ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLT
+E1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4
+MTc3XX0=
 -->
