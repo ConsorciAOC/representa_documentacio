@@ -1761,7 +1761,7 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
                            <codi>9821920002</codi>
                         </administracio>
                         <tramit>
-                           <uuid>1</uuid>
+                           <uuid>2</uuid>
                         </tramit>
                         <capacitats>
                            <capacitat>
@@ -1777,6 +1777,7 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
          </response>
       </validarRepresentacioResponse>
 ```
+Seguint l'exemple anterior, com que ara s'ha consultat la validació amb la capacitat TRAMITAR, no es troba cap representació que compelxi aquests paràmetres.
 
 ## 6.4 Alta representacio
 Exemple on es crea una representació.
@@ -2010,11 +2011,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NzgyMDg1OCw5MDYwMTg2NCwtMTY2OD
-k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
-MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
-MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
-NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
-gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
-ODFdfQ==
+eyJoaXN0b3J5IjpbLTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Nj
+g5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUz
+NjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLD
+kzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1
+OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMD
+g4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4
+NjgxXX0=
 -->
