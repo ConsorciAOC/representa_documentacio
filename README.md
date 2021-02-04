@@ -1536,7 +1536,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
 ## 6.3 Validacio
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 9999999Ppugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678A per al tramit amb uuid 1111 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulguis consultar) a l'administració amb codi 800180001.
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb document identificatiu 9999999P pugui actuar (en aquest cas amb la capacitat de NOTIFICAR) en nom del poderdant amb document identificatiu 12345678A per al tramit amb uuid 2 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulgui consultar) a l'administració amb codi 9821920002.
 
 ### Peticio
 
@@ -1575,7 +1575,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
             <r:solicitant>
 	         	<r:persona>
 	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-                  <r:valorDocumentIdentificatiu>46773080G</r:valorDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
                   <r:tipusPersona>FISICA</r:tipusPersona>
                </r:persona>
                 <r:administracio>
@@ -1598,7 +1598,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
             <resultat>
                <resposta>
                   <codi>0</codi>
-                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Artur1 Barbeta Gil (46773080G) i test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és correcte</descripcio>
+                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Pep Siurà (12345678A) i Test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és correcte</descripcio>
                   <tipusSolicitud>VALIDACIO</tipusSolicitud>
                </resposta>
                <consulta>
@@ -2009,11 +2009,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU5NDEzNjg1LDkwNjAxODY0LC0xNjY4OT
-g0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYw
-LDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5Mz
-M0NTUzNDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3
-MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4OD
-M2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4
-MV19
+eyJoaXN0b3J5IjpbLTQ2NTI4MDAzNSw5MDYwMTg2NCwtMTY2OD
+k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
+MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
+MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
+NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwOD
+gzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2
+ODFdfQ==
 -->
