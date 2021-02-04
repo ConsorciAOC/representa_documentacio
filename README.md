@@ -1536,52 +1536,57 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
 ## 6.3 Validacio
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb uuid 1111 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulguis consultar) a l'administració amb codi 800180001.
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 9999999Ppugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678A per al tramit amb uuid 1111 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulguis consultar) a l'administració amb codi 800180001.
 
 ### Peticio
 
 ```xml
-<validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
-  <dades>
-    <representacio>
-      <poderdant>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-      </poderdant>
-      <representant>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <valorDocumentIdentificatiu>99999999A</valorDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-      </representant>
-      <ambitRepresentacio>
-        <administracio>
-          <codi>800180001</codi>
-        </administracio>
-        <tramit>          
-          <uuid>1111</uuid>
-        </tramit>
-        <capacitats>
-          <capacitat>
-            <codi>CONSULTA</codi>
-          </capacitat>
-        </capacitats>
-      </ambitRepresentacio>
-    </representacio>
-    <dataValidacio>2019-03-07T00:00:00</dataValidacio>
-    <solicitant>
-      <persona>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-      </persona>
-      <administracio>
-        <codi>12345</codi>
-      </administracio>
-    </solicitant>
-    <generaEvidencia>true</generaEvidencia>
-  </dades>
-</validarRepresentacio>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:r="r:representa:V1.0">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <r:validarRepresentacio>
+         <r:dades>
+            <r:representacio>
+            	<r:poderdant>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:poderdant>
+               <r:representant>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>9999999P</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:representant>
+               <r:ambitRepresentacio>
+               	<r:administracio>
+               		<r:codi>9821920002</r:codi>
+               	</r:administracio>
+               	<r:tramit>
+               		<r:uuid>2</r:uuid>
+               	</r:tramit>
+               	<r:capacitats>
+               		<r:capacitat>
+               			<r:codi>NOTIFICAR</r:codi>
+               		</r:capacitat>
+               	</r:capacitats>
+               </r:ambitRepresentacio>
+            </r:representacio>
+            <r:dataValidacio>2021-02-02T00:00:00</r:dataValidacio>
+            <r:solicitant>
+	         	<r:persona>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>46773080G</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:persona>
+                <r:administracio>
+            	<r:codi>1</r:codi>
+            </r:administracio>
+            </r:solicitant> 
+            <r:generaEvidencia>true</r:generaEvidencia>        
+         </r:dades>
+      </r:validarRepresentacio>
+   </soapenv:Body>
+</soapenv:Envelope>
 ```
 
 ### Resposta validacio positiva
@@ -2004,11 +2009,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMz
-M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
-LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNT
-gwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgy
-MzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNT
-QwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3
-N119
+eyJoaXN0b3J5IjpbMTU5NDEzNjg1LDkwNjAxODY0LC0xNjY4OT
+g0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYw
+LDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5Mz
+M0NTUzNDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3
+MCwtNTgyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4OD
+M2NzUyOCwtMTU0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4
+MV19
 -->
