@@ -1588,70 +1588,165 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
-  <resultat>
-    <resposta>
-      <codi>0</codi>
-      <descripcio>S'ha validat positivament el poder sol·licitat</descripcio>
-      <tipusSolicitud>VALIDACIO<tipusSolicitud>
-    </resposta>
-    <representacio>
-      <identificadorLegal>201900000131</identificadorLegal>
-       <tipusRepresentacio>TIPUS_B<tipusRepresentacio>
-       <estat>VALIDA</estat>
-       <poderdant>
-         ...
-       </poderdant>
-       <representant>
-         ...
-       </representant>
-       <ambitRepresentacio>
-          <administracio>
-            <codi>800180001</codi>
-            <nif>P-0800100-J</nif>
-            <nom>Ajuntament d'Abrera</nom>
-            <activa>true</activa>
-          </administracio>
-          <capacitats>
-          <capacitat>
-            <codi>CONSULTAR</codi>
-            <nom>Consultar</codi>
-          </capacitat>
-          <capacitat>
-            <codi>TRAMITAR</codi>
-            <nom>Tramitar</codi>
-          </capacitat>
-          </capacitats>
-      </ambitRepresentacio>
-      <dataCreacio>2019-03-08T00:00:00</dataCreacio>
-      <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
-      <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
-      <validacions>2</validacions>
-      <solicitant>
-          ..
-      </solicitant>
-      <evidencies>
-          <evidencia>
-            <dataCreacio>2019-03-05T14:18:01</dataCreacio>
-            <identificadorLegal>201900000131</identificadorLegal>
-            <motiu>ALTA - Inscripció</motiu>
-            <solicitant>
-                ...
-            </solicitant>
-            <funcionariReceptor>
-                ...
-            </funcionariReceptor>
-            <documentsEvidencia>
-                <documentEvidencia>
-                ...
-                </documentEvidencia>
-            </documentsEvidencia>
-            </evidencia>
-        </evidencies>
-    </representacio>
-  </resultat>
-  <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
-</validarRepresentacioResponse>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">
+         <response>
+            <resultat>
+               <resposta>
+                  <codi>0</codi>
+                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Artur1 Barbeta Gil (46773080G) i test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és correcte</descripcio>
+                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
+               </resposta>
+               <consulta>
+                  <representacio>
+                     <poderdant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </poderdant>
+                     <representant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </representant>
+                     <ambitRepresentacio>
+                        <administracio>
+                           <codi>9821920002</codi>
+                        </administracio>
+                        <tramit>
+                           <uuid>1</uuid>
+                        </tramit>
+                        <capacitats>
+                           <capacitat>
+                              <codi>CONSULTAR</codi>
+                           </capacitat>
+                        </capacitats>
+                     </ambitRepresentacio>
+                  </representacio>
+                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+               </consulta>
+               <representacio>
+                  <identificadorLegal>202100010000</identificadorLegal>
+                  <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+                  <estat>VALIDA</estat>
+                  <poderdant>
+                     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                     <tipusPersona>FISICA</tipusPersona>
+                     <nomRaoSocial>Artur1</nomRaoSocial>
+                     <cognoms>Barbeta Gil</cognoms>
+                     <correuElectronic>abarbeta@aoc.cat</correuElectronic>
+                     <acceptaAvisos>true</acceptaAvisos>
+                     <dataAcceptacioAvisos>2020-10-07T16:19:11</dataAcceptacioAvisos>
+                  </poderdant>
+                  <representant>
+                     <tipusDocumentIdentificatiu>PASSAPORT</tipusDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                     <tipusPersona>FISICA</tipusPersona>
+                     <nomRaoSocial>test</nomRaoSocial>
+                     <cognoms>test</cognoms>
+                     <acceptaAvisos>false</acceptaAvisos>
+                     <dataAcceptacioAvisos>2021-02-02T09:59:50</dataAcceptacioAvisos>
+                  </representant>
+                  <solicitant>
+                     <persona>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                        <nomRaoSocial>Artur1</nomRaoSocial>
+                        <cognoms>Barbeta Gil</cognoms>
+                        <correuElectronic>abarbeta@aoc.cat</correuElectronic>
+                        <acceptaAvisos>true</acceptaAvisos>
+                        <dataAcceptacioAvisos>2020-10-07T16:19:11</dataAcceptacioAvisos>
+                     </persona>
+                     <administracio>
+                        <codi>9821920002</codi>
+                        <nif>Q12345678</nif>
+                        <nom>Consorci AOC</nom>
+                        <activa>true</activa>
+                        <url>http://www.aoc.cat/lopd</url>
+                        <adreca>Carrer Tanger 98 baixos</adreca>
+                        <telefon>934435458</telefon>
+                        <correu>norreu@aoc.cat</correu>
+                        <nomDPD>John Doe</nomDPD>
+                        <adrecaDPD>Carrer fals 123, AT 3º</adrecaDPD>
+                        <telefonDPD>678956785</telefonDPD>
+                        <correuDPD>nono@aoc.cat</correuDPD>
+                        <urlCataleg>http://www.aoc.cat</urlCataleg>
+                        <urlSuport>http://www.aoc.cat</urlSuport>
+                     </administracio>
+                  </solicitant>
+                  <tipusPresentador>PODERDANT</tipusPresentador>
+                  <ambitRepresentacio>
+                     <capacitats>
+                        <capacitat>
+                           <codi>CONSULTAR</codi>
+                           <nom>CONSULTAR DADES</nom>
+                        </capacitat>
+                     </capacitats>
+                  </ambitRepresentacio>
+                  <dataCreacio>2021-02-02T09:59:50</dataCreacio>
+                  <dataIniciVigencia>2021-02-02T00:00:00</dataIniciVigencia>
+                  <dataFiVigencia>2026-02-02T00:00:00</dataFiVigencia>
+                  <validacions>11</validacions>
+                  <origen>PORTAL_EMPLEAT</origen>
+                  <evidencies>
+                     <evidencia>
+                        <dataCreacio>2021-02-02T09:59:50</dataCreacio>
+                        <identificadorLegal>202100010000</identificadorLegal>
+                        <estat>VALIDA</estat>
+                        <motiu>ALTA - null</motiu>
+                        <origen>PORTAL_EMPLEAT</origen>
+                        <solicitant>
+                           <persona>
+                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                              <valorDocumentIdentificatiu>46773080G</valorDocumentIdentificatiu>
+                              ...
+                           </persona>
+                           <administracio>
+                              <codi>9821920002</codi>
+                              ...
+                           </administracio>
+                        </solicitant>
+                        <documentsEvidencia>
+                           <documentEvidencia>
+                              <uuid>201321</uuid>
+                              <tipusDocument>SOLICITUD</tipusDocument>
+                              <nomDocument>StudyGuide-MobileWebSpecialist.pdf</nomDocument>
+                              <descripcio>jj</descripcio>
+                              <tamany>183283</tamany>
+                              <resumCriptografic>e96336e59980c2d54cb795e8737ecb8c112cb488</resumCriptografic>
+                              <dataCreacio>2021-02-02T09:59:51</dataCreacio>
+                           </documentEvidencia>
+                        </documentsEvidencia>
+                     </evidencia>
+                     <evidencia>
+                        <dataCreacio>2021-02-02T10:00:01</dataCreacio>
+                        <identificadorLegal>202100010000</identificadorLegal>
+                        <estat>VALIDA</estat>
+                        <motiu>SIGNATURA - Signatura realitzada correctament</motiu>
+                        <origen>SERVEI_REPRESENTA</origen>
+                        <solicitant>
+                           <persona>
+                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                              <valorDocumentIdentificatiu>00000000</valorDocumentIdentificatiu>
+                              <tipusPersona>JURIDICA</tipusPersona>
+                              <nomRaoSocial>Servei</nomRaoSocial>
+                              <cognoms>Representa</cognoms>
+                              <correuElectronic>representa@aoc.cat</correuElectronic>
+                              <acceptaAvisos>false</acceptaAvisos>
+                           </persona>
+                           <administracio>
+                              <codi>9821920002</codi>
+                              ...
+                           </administracio>
+                        </solicitant>
+                     </evidencia>
+                  </evidencies>
+               </representacio>
+            </resultat>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
+         </response>
+      </validarRepresentacioResponse>
 ```
 
 Aquest exemple està retornant una representació de tipus B (a organisme) i té l'ambitRepresentació acord a aquest tipus de representació (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)), és a dir informant l'element administració i capacitats (però no s'informa cap tràmit perquè aquest tipus de representació no en té).
@@ -1936,11 +2031,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwNjA2NzMyOSwtMTY2ODk4NDU0OCwxNT
-EzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2
-MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC
-01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2
-ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1MjgsLT
-E1NDA2NTQ1NDAsLTkyNjI4MTY0NCw1MzkzODg2ODEsMTIyNDg4
-MTc3XX0=
+eyJoaXN0b3J5IjpbLTE4NTI0MzA1MjAsLTE2Njg5ODQ1NDgsMT
+UxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIw
+NjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MS
+wtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIx
+NjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC
+0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4
+ODE3N119
 -->
