@@ -1722,7 +1722,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
       </validarRepresentacioResponse>
 ```
 
-Aquest exemple està retornant una representació de tipus B (a organisme) i té l'ambitRepresentació acord a aquest tipus de representació (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)), és a dir informant l'element administració i capacitats (però no s'informa cap tràmit perquè aquest tipus de representació no en té).
+Aquest exemple està retornant una representació de tipus A (a organisme) amb capacitat CONSULTAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representa
 
 ** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
 
@@ -2004,11 +2004,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDYwODU5NjgsLTE2Njg5ODQ1NDgsMTUxMz
-M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
-LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNT
-gwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgy
-MzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNT
-QwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4NjgxLDEyMjQ4ODE3
-N119
+eyJoaXN0b3J5IjpbMTk2NDI4MDk3LC0xNjY4OTg0NTQ4LDE1MT
+MzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYw
+NiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUzNDEsLT
+U4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNTgyMTY4
+MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUyOCwtMT
+U0MDY1NDU0MCwtOTI2MjgxNjQ0LDUzOTM4ODY4MSwxMjI0ODgx
+NzddfQ==
 -->
