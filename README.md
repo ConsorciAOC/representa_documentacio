@@ -1028,6 +1028,7 @@ generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en ba
 
 Camp | Descripció
 ---- | ----------
+response | Element del tipus que inclou el _resultat_ i _evidenciaSignada_
 resposta | Element del tipus _resposta_
 consulta| Element del tipus _consultaValidacio_ per incloure la consulta feta a la petició (dades de la representació i data de validació).
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
@@ -2018,7 +2019,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTE5MTgwNTQ1MCwtMTMwNjc1ODUxNSw5MD
+eyJoaXN0b3J5IjpbLTgxOTUwNTgzMSwtMTMwNjc1ODUxNSw5MD
 YwMTg2NCwtMTY2ODk4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQx
 NTMsMTYyODQ3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLT
 E5MjA0Nzg0MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MTgw
