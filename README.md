@@ -1001,21 +1001,28 @@ generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en ba
 #### Resposta
 
 ```xml
-<xs:element name="validarRepresentacioResponse">
-  <xs:complexType>
-   <xs:sequence>
-    <xs:element name="resultat">
-     <xs:complexType>
-      <xs:sequence>
-       <xs:element name="resposta"  type="resposta"/>
-       <xs:element name="consulta" type="consultaValidacio"/>
-       <xs:element name="representacio" type="representacio"/>
-      </xs:sequence>
-     </xs:complexType>
-    </xs:element>
-    <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />
-   </xs:sequence>
-  </xs:complexType>
+<xs:element name="validarRepresentacioResponse">  
+  <xs:complexType>  
+    <xs:sequence>  
+      <xs:element name="response">  
+        <xs:complexType>  
+          <xs:sequence>  
+            <xs:element name="resultat">  
+              <xs:complexType>  
+                <xs:sequence>  
+                  <xs:element name="resposta" type="resposta"/>  
+                    <xs:element name="consulta" type="consultaValidacio"/>  
+ <xs:element name="representacio" type="representacio"/>  
+ </xs:sequence>  
+ </xs:complexType>  
+ </xs:element>  
+  <!-- Signatura en base64 i format XAdES-T_Enveloping que inclou el tag resultat signat -->  
+  <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />  
+ </xs:sequence>  
+ </xs:complexType>  
+ </xs:element>  
+ </xs:sequence>  
+ </xs:complexType>  
 </xs:element>
 ```
 
@@ -2011,11 +2018,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Nj
-g5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUz
-NjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLD
-kzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1
-OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMD
-g4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNTM5Mzg4
-NjgxXX0=
+eyJoaXN0b3J5IjpbLTIxMTkwMjkyMjQsLTEzMDY3NTg1MTUsOT
+A2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0
+MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC
+0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4
+MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC
+0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYy
+ODE2NDRdfQ==
 -->
