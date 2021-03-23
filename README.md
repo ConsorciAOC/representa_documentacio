@@ -1012,16 +1012,16 @@ generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en ba
                 <xs:sequence>  
                   <xs:element name="resposta" type="resposta"/>  
                     <xs:element name="consulta" type="consultaValidacio"/>  
- <xs:element name="representacio" type="representacio"/>  
- </xs:sequence>  
- </xs:complexType>  
- </xs:element>  
-  <!-- Signatura en base64 i format XAdES-T_Enveloping que inclou el tag resultat signat -->  
-  <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />  
- </xs:sequence>  
- </xs:complexType>  
- </xs:element>  
- </xs:sequence>  
+                    <xs:element name="representacio" type="representacio"/>  
+                  </xs:sequence>  
+              </xs:complexType>  
+            </xs:element>  
+            <!-- Signatura en base64 i format XAdES-T_Enveloping que inclou el tag resultat signat -->  
+            <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />  
+         </xs:sequence>  
+       </xs:complexType>  
+     </xs:element>  
+   </xs:sequence>  
  </xs:complexType>  
 </xs:element>
 ```
@@ -2018,11 +2018,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMTkwMjkyMjQsLTEzMDY3NTg1MTUsOT
-A2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0
-MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC
-0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4
-MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC
-0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYy
-ODE2NDRdfQ==
+eyJoaXN0b3J5IjpbMTE5MTgwNTQ1MCwtMTMwNjc1ODUxNSw5MD
+YwMTg2NCwtMTY2ODk4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQx
+NTMsMTYyODQ3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLT
+E5MjA0Nzg0MzMsOTMzNDU1MzQxLC01ODA4NzAwODksLTE5MTgw
+MTYxMjksNTYyNDU5NzAsLTU4MjE2ODIzOSw2NzE4NDk0MDMsLT
+M5MzU2NDE1LDIwODgzNjc1MjgsLTE1NDA2NTQ1NDAsLTkyNjI4
+MTY0NF19
 -->
