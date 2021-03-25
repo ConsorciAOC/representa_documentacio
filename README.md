@@ -1022,7 +1022,6 @@ generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en ba
 
 Camp | Descripció
 ---- | ----------
-response | Element del tipus que inclou el _resultat_ i _evidenciaSignada_
 resposta | Element del tipus _resposta_
 consulta| Element del tipus _consultaValidacio_ per incloure la consulta feta a la petició (dades de la representació i data de validació).
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
@@ -1050,10 +1049,10 @@ I l'element _consultaValidacio_ amb les dades consultades :
 
 ```xml
 <xs:complexType name="consultaValidacio">  
- <xs:sequence>  
- <xs:element name="representacio" type="representacio" />  
- <xs:element name="dataValidacio" type="xs:dateTime"/>  
- </xs:sequence>  
+  <xs:sequence>  
+    <xs:element name="representacio" type="representacio" />  
+    <xs:element name="dataValidacio" type="xs:dateTime"/>  
+  </xs:sequence>  
 </xs:complexType>
 ```
 
@@ -2014,7 +2013,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5NTYxODEzOSw3Njc1OTcwMzUsLTEzMD
+eyJoaXN0b3J5IjpbLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMD
 Y3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2
 OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOT
 k5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcw
