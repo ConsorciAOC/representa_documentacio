@@ -872,7 +872,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTAC | Si
+|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
 || `FALSE` > La resta d'estats 
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
@@ -933,7 +933,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
 || `FALSE` > La resta d'estats 
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
@@ -2010,11 +2010,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTQ2Njk3NDIsLTk1MjExODI5OCw3Nj
-c1OTcwMzUsLTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1
-NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOT
-ExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1
-NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC
-01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3
-NTI4XX0=
+eyJoaXN0b3J5IjpbLTQ1MTE1NjU4OSwtOTUyMTE4Mjk4LDc2Nz
+U5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0
+OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MT
+EyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1
+MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLT
+U4MjE2ODIzOSw2NzE4NDk0MDMsLTM5MzU2NDE1LDIwODgzNjc1
+MjhdfQ==
 -->
