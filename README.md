@@ -479,7 +479,8 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
+* `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una 
+* evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
 * `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
 * `RENUNCIADA` >> El representant renuncia a la representació.
@@ -1595,8 +1596,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">
-         <response>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">        
             <resultat>
                <resposta>
                   <codi>0</codi>
@@ -1724,8 +1724,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   </evidencies>
                </representacio>
             </resultat>
-            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
-         </response>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
       </validarRepresentacioResponse>
 ```
 
@@ -1738,8 +1737,7 @@ La capacitat GENERAL d'una representació permet que es consultin la resta de ca
 En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">
-         <response>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">         
             <resultat>
                <resposta>
                   <codi>001</codi>
@@ -1775,8 +1773,7 @@ En cas que no existeixi cap representació que permeti respondre positivament a 
                   <dataValidacio>2021-02-02T00:00:00</dataValidacio>
                </consulta>
             </resultat>
-            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
-         </response>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
       </validarRepresentacioResponse>
 ```
 Seguint l'exemple anterior, com que ara s'ha consultat la validació amb la capacitat TRAMITAR, no es troba cap representació que compelxi aquests paràmetres.
@@ -2013,11 +2010,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMD
-Y3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2
-OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOT
-k5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNTgwODcw
-MDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgyMzksNj
-cxODQ5NDAzLC0zOTM1NjQxNSwyMDg4MzY3NTI4LC0xNTQwNjU0
-NTQwXX0=
+eyJoaXN0b3J5IjpbNTE4NzgyNTA4LC05NTIxMTgyOTgsNzY3NT
+k3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4
+LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMT
+IyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUz
+NDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNT
+gyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUy
+OF19
 -->
