@@ -1,5 +1,9 @@
 # Change log
 
+## Març 2021
+- Afegit nou estat PENDENT_ACCEPTACIO.
+- Corregits exemples validarRepresentacio.
+
 ## Gener 2021
 - Modificat el tipus de dada _validarRepresentacio_ i _validarRepresentacioResponse_. S'ha afegit l'element _generaEvidencia_ a la petició . Si s'envia a true la resposta inclourà un element _evidenciaSignada_ que conté una signatura en base64 i format XAdES-T_Enveloping que inclou el tag _resultat_ signat.
 - S'inclou en la resposta la propia consulta feta (_consultaValidacio_).
