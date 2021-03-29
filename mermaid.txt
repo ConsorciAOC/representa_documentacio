@@ -1,11 +1,15 @@
 graph TD
-A{Inscripció} --> J[PENDENT_SIGNATURA]
-J --> |Requereix validació documentació| B[PENDENT_VALIDACIÓ]
-J--> |No requereix validació documentació|C[VALIDA]
+A{Inscripció} --> |Hi ha documentació|B[PENDENT_VALIDACIÓ]
+A{Inscripció} --> |No hi ha documentació|H[PENDENT_ACCEPTACIO]
+
 B --> |Documentació invàlida|E[DENEGADA]
 B --> |Documentació vàlida| C
 
+H --> |Representant accepta| C[VÀLIDA]
+H --> |Representant renuncia| G
+H --> |Poderdant revoca| F
+
 C -->|Funcionari anul.la| D[ANUL.LADA]
-C -->|Poderdant revoca| F[REVOCADA]
-C -->|Representant renuncia| G[RENUNCIADA]
 C -->V[EXPIRADA]
+C -->|Representant renuncia| G[RENUNCIADA]
+C -->|Poderdant revoca| F[REVOCADA]
