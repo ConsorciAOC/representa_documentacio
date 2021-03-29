@@ -480,6 +480,7 @@ Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
+* `PENDENT_ACCEPTACIO` >> El poderdant ha realitzat una representació sense documentació a validar i cal que el poderdant l’accepti explícitament per passar l'estat a VALIDA o RENUNCIADA. El representant també pot decidir donar-la de baixa i passar-la a REVOCADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
 * `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
 * `RENUNCIADA` >> El representant renuncia a la representació.
@@ -871,7 +872,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
 || `FALSE` > La resta d'estats 
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
@@ -932,7 +933,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
 || `FALSE` > La resta d'estats 
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
@@ -1001,21 +1002,22 @@ generaEvidencia| Permet indicar si es vol obtenir a la resposta un element en ba
 #### Resposta
 
 ```xml
-<xs:element name="validarRepresentacioResponse">
-  <xs:complexType>
-   <xs:sequence>
-    <xs:element name="resultat">
-     <xs:complexType>
-      <xs:sequence>
-       <xs:element name="resposta"  type="resposta"/>
-       <xs:element name="consulta" type="consultaValidacio"/>
-       <xs:element name="representacio" type="representacio"/>
-      </xs:sequence>
-     </xs:complexType>
-    </xs:element>
-    <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />
-   </xs:sequence>
-  </xs:complexType>
+<xs:element name="validarRepresentacioResponse">  
+  <xs:complexType>  
+    <xs:sequence>        
+      <xs:element name="resultat">  
+        <xs:complexType>  
+          <xs:sequence>  
+            <xs:element name="resposta" type="resposta"/>  
+            <xs:element name="consulta" type="consultaValidacio"/>  
+            <xs:element name="representacio" type="representacio"/>  
+          </xs:sequence>  
+        </xs:complexType>  
+      </xs:element>  
+      <!-- Signatura en base64 i format XAdES-T_Enveloping que inclou el tag resultat signat -->  
+      <xs:element name="evidenciaSignada" minOccurs="0" type="xs:string" />  
+   </xs:sequence>  
+ </xs:complexType>        
 </xs:element>
 ```
 
@@ -1025,6 +1027,7 @@ resposta | Element del tipus _resposta_
 consulta| Element del tipus _consultaValidacio_ per incloure la consulta feta a la petició (dades de la representació i data de validació).
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 evidenciaSignada| Element en base64 i format de signatura XAdES-T Enveloping que inclou el tag resultat signat per el segell del Consorci AOC
+
 S'inclou l'element _resposta_
 
 ```xml
@@ -1047,16 +1050,16 @@ I l'element _consultaValidacio_ amb les dades consultades :
 
 ```xml
 <xs:complexType name="consultaValidacio">  
- <xs:sequence>  
- <xs:element name="representacio" type="representacio" />  
- <xs:element name="dataValidacio" type="xs:dateTime"/>  
- </xs:sequence>  
+  <xs:sequence>  
+    <xs:element name="representacio" type="representacio" />  
+    <xs:element name="dataValidacio" type="xs:dateTime"/>  
+  </xs:sequence>  
 </xs:complexType>
 ```
 
 
 ## 5.7 Alta o modificacio
-Permet realitzar la inscripció o modificació** d'una representació. 
+Permet realitzar la inscripció o modificació** d'una representació. Quan s'inscriu una representació abans de tenir un estat `VALIDA` caldrà que passi per l'estat `PENDENT_ACCEPTACIO` (el representant haurà d'acceptar aquesta representació) o `PENDENT_VALIDACIO` (l'empleat públic amb rol VALIDADOR haurà de validar la documentació adjunta). 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_ALTA_ per crear representacions o _REPRESENTA_MODIFICACIO_ per modificar l'estat d'una representació.
 
 
@@ -1536,125 +1539,197 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
 ## 6.3 Validacio
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb NIF 99999999A pugui actuar (en aquest cas amb la capacitat de CONSULTA) en nom del poderdant amb NIF 12345678Z per al tramit amb codi 1111 a l'administració amb codi 800180001.
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb document identificatiu 9999999P pugui actuar (en aquest cas amb la capacitat de NOTIFICAR) en nom del poderdant amb document identificatiu 12345678A per al tramit amb uuid 2 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulgui consultar) a l'administració amb codi 9821920002.
 
 ### Peticio
 
 ```xml
-<validarRepresentacio xmlns="http://www.aoc.cat/representa/v2">
-  <dades>
-    <representacio>
-      <poderdant>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-      </poderdant>
-      <representant>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <valorDocumentIdentificatiu>99999999A</valorDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-      </representant>
-      <ambitRepresentacio>
-        <administracio>
-          <codi>800180001</codi>
-        </administracio>
-        <tramit>          
-          <codi>1111</codi>
-        </tramit>
-        <capacitats>
-          <capacitat>
-            <codi>CONSULTA</codi>
-          </capacitat>
-        </capacitats>
-      </ambitRepresentacio>
-    </representacio>
-    <dataValidacio>2019-03-07T00:00:00</dataValidacio>
-    <solicitant>
-      <persona>
-        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-      </persona>
-      <administracio>
-        <codi>12345</codi>
-      </administracio>
-    </solicitant>
-    <generaEvidencia>true</generaEvidencia>
-  </dades>
-</validarRepresentacio>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:r="r:representa:V1.0">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <r:validarRepresentacio>
+         <r:dades>
+            <r:representacio>
+            	<r:poderdant>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:poderdant>
+               <r:representant>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>9999999P</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:representant>
+               <r:ambitRepresentacio>
+               	<r:administracio>
+               		<r:codi>9821920002</r:codi>
+               	</r:administracio>
+               	<r:tramit>
+               		<r:uuid>2</r:uuid>
+               	</r:tramit>
+               	<r:capacitats>
+               		<r:capacitat>
+               			<r:codi>NOTIFICAR</r:codi>
+               		</r:capacitat>
+               	</r:capacitats>
+               </r:ambitRepresentacio>
+            </r:representacio>
+            <r:dataValidacio>2021-02-02T00:00:00</r:dataValidacio>
+            <r:solicitant>
+	         	<r:persona>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+                  <r:tipusPersona>FISICA</r:tipusPersona>
+               </r:persona>
+                <r:administracio>
+            	<r:codi>1</r:codi>
+            </r:administracio>
+            </r:solicitant> 
+            <r:generaEvidencia>true</r:generaEvidencia>        
+         </r:dades>
+      </r:validarRepresentacio>
+   </soapenv:Body>
+</soapenv:Envelope>
 ```
 
 ### Resposta validacio positiva
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
-  <resultat>
-    <resposta>
-      <codi>0</codi>
-      <descripcio>S'ha validat positivament el poder sol·licitat</descripcio>
-      <tipusSolicitud>VALIDACIO<tipusSolicitud>
-    </resposta>
-    <representacio>
-      <identificadorLegal>201900000131</identificadorLegal>
-       <tipusRepresentacio>TIPUS_B<tipusRepresentacio>
-       <estat>VALIDA</estat>
-       <poderdant>
-         ...
-       </poderdant>
-       <representant>
-         ...
-       </representant>
-       <ambitRepresentacio>
-          <administracio>
-            <codi>800180001</codi>
-            <nif>P-0800100-J</nif>
-            <nom>Ajuntament d'Abrera</nom>
-            <activa>true</activa>
-          </administracio>
-          <capacitats>
-          <capacitat>
-            <codi>CONSULTAR</codi>
-            <nom>Consultar</codi>
-          </capacitat>
-          <capacitat>
-            <codi>TRAMITAR</codi>
-            <nom>Tramitar</codi>
-          </capacitat>
-          </capacitats>
-      </ambitRepresentacio>
-      <dataCreacio>2019-03-08T00:00:00</dataCreacio>
-      <dataIniciVigencia>2019-03-05T00:00:00</dataIniciVigencia>
-      <dataFiVigencia>2019-03-08T00:00:00</dataFiVigencia>
-      <validacions>2</validacions>
-      <solicitant>
-          ..
-      </solicitant>
-      <evidencies>
-          <evidencia>
-            <dataCreacio>2019-03-05T14:18:01</dataCreacio>
-            <identificadorLegal>201900000131</identificadorLegal>
-            <motiu>ALTA - Inscripció</motiu>
-            <solicitant>
-                ...
-            </solicitant>
-            <funcionariReceptor>
-                ...
-            </funcionariReceptor>
-            <documentsEvidencia>
-                <documentEvidencia>
-                ...
-                </documentEvidencia>
-            </documentsEvidencia>
-            </evidencia>
-        </evidencies>
-    </representacio>
-  </resultat>
-  <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>
-</validarRepresentacioResponse>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">        
+            <resultat>
+               <resposta>
+                  <codi>0</codi>
+                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Pep Siurà (12345678A) i Test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és correcte</descripcio>
+                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
+               </resposta>
+               <consulta>
+                  <representacio>
+                     <poderdant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </poderdant>
+                     <representant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </representant>
+                     <ambitRepresentacio>
+                        <administracio>
+                           <codi>9821920002</codi>
+                        </administracio>
+                        <tramit>
+                           <uuid>2</uuid>
+                        </tramit>
+                        <capacitats>
+                           <capacitat>
+                              <codi>NOTIFICAR</codi>
+                           </capacitat>
+                        </capacitats>
+                     </ambitRepresentacio>
+                  </representacio>
+                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+               </consulta>
+               <representacio>
+                  <identificadorLegal>202100010000</identificadorLegal>
+                  <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+                  <estat>VALIDA</estat>
+                  <poderdant>
+                     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                     ...
+                  </poderdant>
+                  <representant>
+                     <tipusDocumentIdentificatiu>PASSAPORT</tipusDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                     ...
+                  </representant>
+                  <solicitant>
+                     <persona>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                        ...
+                     </persona>
+                     <administracio>
+                        <codi>9821920002</codi>
+                        ...
+                     </administracio>
+                  </solicitant>
+                  <tipusPresentador>PODERDANT</tipusPresentador>
+                  <ambitRepresentacio>
+                     <capacitats>
+                        <capacitat>
+                           <codi>NOTIFICAR</codi>
+                           <nom>NOTIFICAR DADES</nom>
+                        </capacitat>
+                     </capacitats>
+                  </ambitRepresentacio>
+                  <dataCreacio>2021-02-02T09:59:50</dataCreacio>
+                  <dataIniciVigencia>2021-02-02T00:00:00</dataIniciVigencia>
+                  <dataFiVigencia>2026-02-02T00:00:00</dataFiVigencia>
+                  <validacions>11</validacions>
+                  <origen>PORTAL_EMPLEAT</origen>
+                  <evidencies>
+                     <evidencia>
+                        <dataCreacio>2021-02-02T09:59:50</dataCreacio>
+                        <identificadorLegal>202100010000</identificadorLegal>
+                        <estat>VALIDA</estat>                        
+                        <origen>PORTAL_EMPLEAT</origen>
+                        <solicitant>
+                           <persona>
+                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                              <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                              ...
+                           </persona>
+                           <administracio>
+                              <codi>9821920002</codi>
+                              ...
+                           </administracio>
+                        </solicitant>
+                        <documentsEvidencia>
+                           <documentEvidencia>
+                              <uuid>201321</uuid>
+                              <tipusDocument>SOLICITUD</tipusDocument>
+                              <nomDocument>StudyGuide-MobileWebSpecialist.pdf</nomDocument>
+                              <descripcio>jj</descripcio>
+                              <tamany>183283</tamany>
+                              <resumCriptografic>e96336e59980c2d54cb795e8737ecb8c112cb488</resumCriptografic>
+                              <dataCreacio>2021-02-02T09:59:51</dataCreacio>
+                           </documentEvidencia>
+                        </documentsEvidencia>
+                     </evidencia>
+                     <evidencia>
+                        <dataCreacio>2021-02-02T10:00:01</dataCreacio>
+                        <identificadorLegal>202100010000</identificadorLegal>
+                        <estat>VALIDA</estat>
+                        <motiu>SIGNATURA - Signatura realitzada correctament</motiu>
+                        <origen>SERVEI_REPRESENTA</origen>
+                        <solicitant>
+                           <persona>
+                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                              <valorDocumentIdentificatiu>00000000</valorDocumentIdentificatiu>
+                              <tipusPersona>JURIDICA</tipusPersona>
+                              <nomRaoSocial>Servei</nomRaoSocial>
+                              <cognoms>Representa</cognoms>
+                              <correuElectronic>representa@aoc.cat</correuElectronic>
+                              <acceptaAvisos>false</acceptaAvisos>
+                           </persona>
+                           <administracio>
+                              <codi>9821920002</codi>
+                              ...
+                           </administracio>
+                        </solicitant>
+                     </evidencia>
+                  </evidencies>
+               </representacio>
+            </resultat>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
+      </validarRepresentacioResponse>
 ```
 
-Aquest exemple està retornant una representació de tipus B (a organisme) i té l'ambitRepresentació acord a aquest tipus de representació (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)), és a dir informant l'element administració i capacitats.
+Aquest exemple està retornant una representació de tipus A (a organisme) amb capacitat CONSULTAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representació la resposta seria incorrecte.
+La capacitat GENERAL d'una representació permet que es consultin la resta de capacitats positivament.
 
 ** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
 
@@ -1662,15 +1737,46 @@ Aquest exemple està retornant una representació de tipus B (a organisme) i té
 En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
-	<resultat>
-        <resposta>
-            <codi>001</codi>
-            <descripcio>No hi ha cap apoderament inscrit amb aquesta informació</descripcio>
-        </resposta>
-    </resultat>
-</validarRepresentacioResponse>
+<validarRepresentacioResponse xmlns="r:representa:V1.0">         
+            <resultat>
+               <resposta>
+                  <codi>001</codi>
+                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Pep Siurà (12345678A) i Test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és incorrecte</descripcio>
+                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
+               </resposta>
+               <consulta>
+                  <representacio>
+                     <poderdant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </poderdant>
+                     <representant>
+                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                        <tipusPersona>FISICA</tipusPersona>
+                     </representant>
+                     <ambitRepresentacio>
+                        <administracio>
+                           <codi>9821920002</codi>
+                        </administracio>
+                        <tramit>
+                           <uuid>2</uuid>
+                        </tramit>
+                        <capacitats>
+                           <capacitat>
+                              <codi>TRAMITAR</codi>
+                           </capacitat>
+                        </capacitats>
+                     </ambitRepresentacio>
+                  </representacio>
+                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+               </consulta>
+            </resultat>
+            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
+      </validarRepresentacioResponse>
 ```
+Seguint l'exemple anterior, com que ara s'ha consultat la validació amb la capacitat TRAMITAR, no es troba cap representació que compelxi aquests paràmetres.
 
 ## 6.4 Alta representacio
 Exemple on es crea una representació.
@@ -1904,11 +2010,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mj
-g0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4
-NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LD
-U2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQx
-NSwyMDg4MzY3NTI4LC0xNTQwNjU0NTQwLC05MjYyODE2NDQsNT
-M5Mzg4NjgxLDEyMjQ4ODE3NywtMTA3Mjk1MTE0OSwtOTM1Nzgx
-NjI1XX0=
+eyJoaXN0b3J5IjpbMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NT
+k3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4
+LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMT
+IyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUz
+NDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNT
+gyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUy
+OF19
 -->
