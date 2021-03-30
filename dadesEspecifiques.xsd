@@ -295,8 +295,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="consulta" type="consultaValidacio"/>
-                            <xs:element name="representacio" type="representacio"/>
+                            <xs:element name="consulta" type="consultaValidacio" minOccurs="0"/>
+                            <xs:element name="representacio" type="representacio" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
