@@ -1951,6 +1951,7 @@ Resultat| Codi
 |Operació correcte| 0
 |Error intern|500|
 |No trobat|001|
+|No indicat|002|
 |Element ja existent|003|
 |Dades incorrectes|004|
 |Element no existent|005|
@@ -2010,11 +2011,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NT
-k3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4
-LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMT
-IyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUz
-NDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNT
-gyMTY4MjM5LDY3MTg0OTQwMywtMzkzNTY0MTUsMjA4ODM2NzUy
-OF19
+eyJoaXN0b3J5IjpbMTM5Mjk0MzY3NSwxODA1MjQzOTQsLTk1Mj
+ExODI5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTUsOTA2MDE4NjQs
+LTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mj
+g0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4
+NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LD
+U2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQx
+NV19
 -->
