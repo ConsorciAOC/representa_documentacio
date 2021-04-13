@@ -1550,26 +1550,26 @@ Exemple per recuperar totes les representacions pendents de validar per part d'u
 
 ### Peticio
 ```xml
-<r:consultarRepresentacions>
-  <r:ConsultaRepresentacions>
-	<r:mida>25</r:mida>
-	<r:pagina>0</r:pagina>
-	<r:representacio/>
-	<r:estats>
-		<r:estat>PENDENT_VALIDACIO</r:estat>
-	</r:estats>
-	<r:solicitant>
-		<r:persona>
-			<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-			<r:valorDocumentIdentificatiu>12121212Z</r:valorDocumentIdentificatiu>
-			<r:tipusPersona>FISICA</r:tipusPersona>
-		</r:persona>
-		<r:administracio>
-			<r:codi>9821920002</r:codi>
-		</r:administracio>
-	</r:solicitant>
-</r:ConsultaRepresentacions>
-</r:consultarRepresentacions>
+<consultarRepresentacions>
+  <ConsultaRepresentacions>
+	<mida>25</mida>
+	<pagina>0</pagina>
+	<representacio/>
+	<estats>
+		<estat>PENDENT_VALIDACIO</estat>
+	</estats>
+	<solicitant>
+		<persona>
+			<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+			<valorDocumentIdentificatiu>12121212Z</valorDocumentIdentificatiu>
+			<tipusPersona>FISICA</tipusPersona>
+		</persona>
+		<administracio>
+			<codi>9821920002</codi>
+		</administracio>
+	</solicitant>
+</ConsultaRepresentacions>
+</consultarRepresentacions>
 ```
 ### Resposta
 
@@ -2072,7 +2072,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDg2MDMwNDc5LDEyOTMzMzA1NjUsNDU2ND
+eyJoaXN0b3J5IjpbMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2ND
 g1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwt
 OTUyMTE4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMT
 g2NCwtMTY2ODk4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMs
