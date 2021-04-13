@@ -4,6 +4,7 @@
 
 # Taula de continguts
 
+
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
       - [1.1.2 Operacions simples](#112-operacions-simples)
@@ -16,7 +17,7 @@
   * [3.4 Familia](#34-familia)
   * [3.5 Tramit](#35-tramit)
   * [3.6 Ambit de representacio](#36-ambit-de-representacio)
-      - [3.6.1 Capacitat](#361-capacitat) 
+    + [3.6.1 Capacitat](#361-capacitat)
   * [3.7 Solicitant](#37-solicitant)
   * [3.8 Persona](#38-persona)
   * [3.9 DocumentEvidencia](#39-documentevidencia)
@@ -67,18 +68,22 @@
     + [Peticio](#peticio-11)
     + [Resposta](#resposta-12)
   * [6.2 Consulta representacions](#62-consulta-representacions)
+    + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-13)
-  * [6.3 Validacio](#63-validacio)
+    + [6.2.2 Consulta representacions pendents validar d'una administració](#622-consulta-representacions-pendents-validar-d-una-administraci-)
     + [Peticio](#peticio-13)
+    + [Resposta](#resposta-14)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-14)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-14)
-    + [Resposta](#resposta-14)
-  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
     + [Peticio](#peticio-15)
     + [Resposta](#resposta-15)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
+    + [Peticio](#peticio-16)
+    + [Resposta](#resposta-16)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
   * [6.7 Consulta families](#67-consulta-families)
   * [6.8 Consulta familia](#68-consulta-familia)
@@ -1539,7 +1544,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
-### 6.2.1 Consulta representacions pendents validar d'una administració
+### 6.2.2 Consulta representacions pendents validar d'una administració
 
 Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar de l'organisme amb el codi INE 9821920002 (Consorci AOC).
 
@@ -2067,7 +2072,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDU0OTczMzgsNDU2NDg1MTk4LDc0MD
+eyJoaXN0b3J5IjpbLTEzMTcwMTMzNzMsNDU2NDg1MTk4LDc0MD
 I4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4
 LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2OD
 k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
