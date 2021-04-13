@@ -71,7 +71,7 @@
     + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-13)
-    + [6.2.2 Consulta representacions pendents validar d'una administració](#622-consulta-representacions-pendents-validar-d-una-administraci-)
+    + [6.2.2 Consulta representacions pendents validar d'una administració](#622-consulta-representacions-pendents-validar-d-una-administracio)
     + [Peticio](#peticio-13)
     + [Resposta](#resposta-14)
   * [6.3 Validacio](#63-validacio)
@@ -1544,7 +1544,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
-### 6.2.2 Consulta representacions pendents validar d'una administració
+### 6.2.2 Consulta representacions pendents validar d'una administracio
 
 Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar de l'organisme amb el codi INE 9821920002 (Consorci AOC).
 
@@ -2072,11 +2072,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMTcwMTMzNzMsNDU2NDg1MTk4LDc0MD
-I4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4
-LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2OD
-k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
-MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
-MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
-NzBdfQ==
+eyJoaXN0b3J5IjpbMTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMj
+gwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgs
+NzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OT
+g0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYw
+LDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5Mz
+M0NTUzNDEsLTU4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3
+MF19
 -->
