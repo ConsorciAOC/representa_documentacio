@@ -966,7 +966,66 @@ Camp | Descripció
 |resposta| Element del tipus _resposta_
 |representacions| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidències d'una representacio cal fer servir l'operació _consultaRepresentacio_
 
+## 5.6 Consulta de representacions pendents de validar d'una administració
+Permet consultar totes les representacions pendents de validar per part d'una administració. No cal in
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
+#### Peticio
+
+```xml
+<xs:element name="consultarRepresentacionsPersonaRepresentant">  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="ConsultaRepresentacionsPersonaRepresentant">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="persona" type="persona"/>  
+      <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="solicitant" type="solicitant"/>  
+     </xs:sequence>  
+   </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
+</xs:element>
+```
+
+Camp | Descripció | Obligatori
+---- | ---------- | -----------
+|persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
+|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
+|| `FALSE` > La resta d'estats 
+|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
+
+#### Resposta
+```xml
+<xs:element name="consultarRepresentacionsPersonaRepresentantResponse">  
+ <xs:complexType>  
+  <xs:sequence>  
+   <xs:element name="resultat">  
+    <xs:complexType>  
+     <xs:sequence>  
+      <xs:element name="resposta" type="resposta"/>  
+      <xs:element name="representacions" minOccurs="0">  
+       <xs:complexType>  
+        <xs:sequence>  
+         <xs:element name="representacio" type="representacio" maxOccurs="unbounded" minOccurs="0"/>  
+        </xs:sequence>  
+       </xs:complexType>  
+      </xs:element>  
+     </xs:sequence>  
+    </xs:complexType>  
+   </xs:element>  
+  </xs:sequence>  
+ </xs:complexType>  
+</xs:element> 
+```
+
+Camp | Descripció
+---- | ----------
+|resposta| Element del tipus _resposta_
+|representacions| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidències d'una representacio cal fer servir l'operació _consultaRepresentacio_
 
 ## 5.6 Validacio
 
@@ -2011,11 +2070,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM5Mjk0MzY3NSwxODA1MjQzOTQsLTk1Mj
-ExODI5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTUsOTA2MDE4NjQs
-LTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mj
-g0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4
-NDMzLDkzMzQ1NTM0MSwtNTgwODcwMDg5LC0xOTE4MDE2MTI5LD
-U2MjQ1OTcwLC01ODIxNjgyMzksNjcxODQ5NDAzLC0zOTM1NjQx
-NV19
+eyJoaXN0b3J5IjpbNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNT
+I0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1
+LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1ND
+gzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYwNiwtMTk5OTA1MzMw
+NCwtMTkyMDQ3ODQzMyw5MzM0NTUzNDEsLTU4MDg3MDA4OSwtMT
+kxODAxNjEyOSw1NjI0NTk3MCwtNTgyMTY4MjM5LDY3MTg0OTQw
+M119
 -->
