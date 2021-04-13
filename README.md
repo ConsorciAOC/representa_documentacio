@@ -1539,7 +1539,12 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
 
-Exemple per recuperar les representacions pendents de validar per part d'una administració:
+### 6.2.1 Consulta representacions pendents validar d'una administració
+
+Exemple per recuperar totes les representacions pendents de validar per part d'una administració.
+
+### Peticio
+
 
 
 
@@ -2016,11 +2021,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMzMzODMyMiw3NDAyODA0MzAsMTM5Mj
-k0MzY3NSwxODA1MjQzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUs
-LTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMz
-M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
-LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNT
-gwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgy
-MzldfQ==
+eyJoaXN0b3J5IjpbLTEwNDU2MDg0OTUsNzQwMjgwNDMwLDEzOT
+I5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1
+LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MT
+MzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYw
+NiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUzNDEsLT
+U4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNTgyMTY4
+MjM5XX0=
 -->
