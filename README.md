@@ -1548,7 +1548,7 @@ NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. 
 
 Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar de l'organisme amb el codi INE 9821920002 (Consorci AOC).
 
-NOTA: _Cal informar l'element representacio buit
+NOTA: _Cal informar l'element representacio però sense cap dada_
 
 ### Peticio
 ```xml
@@ -2074,7 +2074,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk1MjQ0MjYwNSwyNDg2NjIyNzksMTI5Mz
+eyJoaXN0b3J5IjpbLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
 MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUs
 MTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2Nz
 U4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjks
