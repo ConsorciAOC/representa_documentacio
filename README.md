@@ -1541,10 +1541,31 @@ NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. 
 
 ### 6.2.1 Consulta representacions pendents validar d'una administració
 
-Exemple per recuperar totes les representacions pendents de validar per part d'una administració.
+Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes les representacions pendents de validar de l'organisme amb el codi INE 
 
 ### Peticio
-
+```xml
+<r:consultarRepresentacions>
+  <r:ConsultaRepresentacions>
+	<r:mida>25</r:mida>
+	<r:pagina>0</r:pagina>
+	<r:representacio/>
+	<r:estats>
+		<r:estat>PENDENT_VALIDACIO</r:estat>
+	</r:estats>
+	<r:solicitant>
+		<r:persona>
+			<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+			<r:valorDocumentIdentificatiu>12121212Z</r:valorDocumentIdentificatiu>
+			<r:tipusPersona>FISICA</r:tipusPersona>
+		</r:persona>
+		<r:administracio>
+			<r:codi>9821920002</r:codi>
+		</r:administracio>
+	</r:solicitant>
+</r:ConsultaRepresentacions>
+</r:consultarRepresentacions>
+```
 
 
 
@@ -2021,11 +2042,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNDU2MDg0OTUsNzQwMjgwNDMwLDEzOT
-I5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1
-LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MT
-MzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYw
-NiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUzNDEsLT
-U4MDg3MDA4OSwtMTkxODAxNjEyOSw1NjI0NTk3MCwtNTgyMTY4
-MjM5XX0=
+eyJoaXN0b3J5IjpbMTIyNjAzNDA1OCw3NDAyODA0MzAsMTM5Mj
+k0MzY3NSwxODA1MjQzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUs
+LTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMz
+M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
+LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMzLDkzMzQ1NTM0MSwtNT
+gwODcwMDg5LC0xOTE4MDE2MTI5LDU2MjQ1OTcwLC01ODIxNjgy
+MzldfQ==
 -->
