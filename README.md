@@ -1569,7 +1569,28 @@ Exemple per recuperar totes les representacions pendents de validar per part d'u
 ### Resposta
 
 ```xml
-
+<consultarRepresentacionsResponse xmlns="r:representa:V1.0">
+	<resultat>
+		<resposta>
+			<codi>0</codi>
+			<descripcio>L'operació ha estat executada correctament</descripcio>
+			<tipusSolicitud>CONSULTA</tipusSolicitud>
+		</resposta>
+		<numRepresentacionsTotal xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">31</numRepresentacionsTotal>
+		<numPaginesTotal xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">2</numPaginesTotal>
+		<numRepresentacionsCerca xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">25</numRepresentacionsCerca>
+		<numPaginaCerca xsi:type="xsd:int" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">0</numPaginaCerca>
+		<representacions>
+			<representacio>
+				...
+			</representacio>
+			<representacio>
+				...
+			</representacio>
+			...
+		</representacions>
+	</resultat>
+</consultarRepresentacionsResponse>
 ```
 
 
@@ -2046,11 +2067,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOT
-QzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwt
-MTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OCwxNTEzMz
-YzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2MDYs
-LTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQxLC01OD
-A4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5NzAsLTU4MjE2ODIz
-OV19
+eyJoaXN0b3J5IjpbLTE2MDU0OTczMzgsNDU2NDg1MTk4LDc0MD
+I4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4
+LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2OD
+k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
+MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOT
+MzNDU1MzQxLC01ODA4NzAwODksLTE5MTgwMTYxMjksNTYyNDU5
+NzBdfQ==
 -->
