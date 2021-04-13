@@ -1450,6 +1450,9 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 ```
 
 ## 6.2 Consulta representacions
+
+### 6.2.1 Consulta representacions entre persones
+
 Exemple on es consulten les primeres 25 representacions en estat VALIDA o EXPIRADA existents entre el NIF 11223344B i el NIF 12345678Z
 
 ### Peticio
@@ -1535,6 +1538,10 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 ```
 
 NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. En cas de necessitar generar informes amb més de 25 elements per pàgina, poseu-vos en contacte amb el CAU de l'AOC i revisarem el cas._
+
+Exemple per recuperar les representacions pendents de validar per part d'una administració:
+
+
 
 ## 6.3 Validacio
 En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb document identificatiu 9999999P pugui actuar (en aquest cas amb la capacitat de NOTIFICAR) en nom del poderdant amb document identificatiu 12345678A per al tramit amb uuid 2 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulgui consultar) a l'administració amb codi 9821920002.
@@ -2009,7 +2016,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc1NjA0NTQxNyw3NDAyODA0MzAsMTM5Mj
+eyJoaXN0b3J5IjpbLTkxMzMzODMyMiw3NDAyODA0MzAsMTM5Mj
 k0MzY3NSwxODA1MjQzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUs
 LTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMz
 M2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2
