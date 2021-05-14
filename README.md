@@ -2056,6 +2056,7 @@ Exemple:
 El codi de cada tràmit ha de ser únic per cada familia. És recomenable que també sigui únic en tot el catàleg.
 
 Restriccions / limitacions
+* Per evitar problemes de caràcters o accents, és necessari que els fitxers .csv estiguin codificats en UTF-8.
 * El separador de columnes del fitxer csv ha de ser el caràcter ';'. Aquest caràcter no pot estar inclòs al nom de cap família o tràmit ja que s'interpreta com un separador de camps. Si algun nom l'inclou si us plau substituiu-lo per una coma o equivalent.
 * Un catàleg pot incloure N families.
 * Una familia pot incloure N tràmits.
