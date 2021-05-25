@@ -480,7 +480,8 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 |resumCriptografic | Resum hash|
 |dataCreacio | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
 
-Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides per descarregar els documents.
+
+Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides per descarregar documents.
 
 ## 3.10  Estat
 
@@ -2088,11 +2089,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1OD
-c4MDQ4NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1
-LDQ1NjQ4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1Mj
-QzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTUs
-OTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0OD
-M0MTUzLDE2Mjg0NzUzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0
-XX0=
+eyJoaXN0b3J5IjpbMjA2NTAwMzg3NSwtMTI3NTUxODY3LC01Nz
+YzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5
+LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOT
+QzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwt
+MTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OCwxNTEzMz
+YzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2MDZd
+fQ==
 -->
