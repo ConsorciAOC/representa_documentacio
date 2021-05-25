@@ -1361,6 +1361,12 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
   </xs:complexType>  
 </xs:element>
 ```
+
+## 5.13 Descarrega document evidencia
+Permet descarregar documents associats a representacions. A partir de l'
+#### Peticio
+
+
 # 6. Exemples de peticions
 
 ## 6.1 Consulta de representacio
@@ -2075,11 +2081,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
-MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUs
-MTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2Nz
-U4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjks
-MTc1NDgzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYwNiwtMTk5OT
-A1MzMwNCwtMTkyMDQ3ODQzMyw5MzM0NTUzNDEsLTU4MDg3MDA4
-OV19
+eyJoaXN0b3J5IjpbOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4Nj
+YyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwx
+MzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5Nz
+AzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OCwx
+NTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMj
+A2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0MzMsOTMzNDU1MzQx
+XX0=
 -->
