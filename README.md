@@ -1362,10 +1362,12 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.13 Descarrega document evidencia
+## 5.13 Descarrega de documents
 Permet descarregar documents associats a representacions. A partir de l'uuid del document és possible descarregar-lo fent una crida GET a la url corresponent.
-Preproducció > [https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=3467895](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=f88d7000-6e1f-4b5c-bd5a-9884fcbc92d5 "https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=f88d7000-6e1f-4b5c-bd5a-9884fcbc92d5")
-Producció > [https://serveis3.app.aoc.cat/representa-core/downloadDocument?uuid=f88d7000-6e1f-4b5c-bd5a-9884fcbc92d5](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=f88d7000-6e1f-4b5c-bd5a-9884fcbc92d5 "https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=f88d7000-6e1f-4b5c-bd5a-9884fcbc92d5")
+Preproducció > [https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx"https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
+Producció > [https://serveis3.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx "https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
+
+
 #### Peticio
 
 
@@ -2083,11 +2085,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODYwMTI2MjUsOTU4NzgwNDg2LC02Mz
-MzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4
-LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMT
-E4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwt
-MTY2ODk4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyOD
-Q3NTM2MCw5MTEyMjA2MDYsLTE5OTkwNTMzMDQsLTE5MjA0Nzg0
-MzNdfQ==
+eyJoaXN0b3J5IjpbMjEzNDQ4ODA0Nyw5NTg3ODA0ODYsLTYzMz
+M5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgs
+NzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMT
+gyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0x
+NjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4ND
+c1MzYwLDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQz
+M119
 -->
