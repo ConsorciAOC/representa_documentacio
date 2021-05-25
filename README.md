@@ -472,6 +472,7 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 
 |Camp | Descripció|
 |---- | ----------|
+|uuid| Identificador únic del document |
 |tipusDocument | Tipus del document (sol·licitud, poder notarial, altes) |
 |nomDocument | Nom del document|
 |descripcio | Descripció del document|
@@ -2089,7 +2090,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2NTAwMzg3NSwtMTI3NTUxODY3LC01Nz
+eyJoaXN0b3J5IjpbMTU1NDU1NjA2OSwtMTI3NTUxODY3LC01Nz
 YzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5
 LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOT
 QzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwt
