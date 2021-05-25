@@ -2017,12 +2017,6 @@ _Pendent_
 ## 6.10 Consulta administracio
 _Pendent_
 
-## 6.11 Descarrega de document
-### Peticio
-GET /representa-core/downloadDocument?uuid=xxxxxx
-### Resposta
-
-
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -2091,11 +2085,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzQ4MzE1Njc1LDk1ODc4MDQ4NiwtNjMzMz
-kyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1LDQ1NjQ4NTE5OCw3
-NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1MjQzOTQsLTk1MjExOD
-I5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTUsOTA2MDE4NjQsLTE2
-Njg5ODQ1NDgsMTUxMzM2MzI2OSwxNzU0ODM0MTUzLDE2Mjg0Nz
-UzNjAsOTExMjIwNjA2LC0xOTk5MDUzMzA0LC0xOTIwNDc4NDMz
-XX0=
+eyJoaXN0b3J5IjpbLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMz
+M5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgs
+NzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMT
+gyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0x
+NjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4ND
+c1MzYwLDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQz
+M119
 -->
