@@ -63,6 +63,7 @@
   * [5.12 Consulta administracio](#512-consulta-administracio)
       - [Peticio](#peticio-10)
       - [Resposta](#resposta-11)
+  * [5.13 Descarrega de documents](#513-descarrega-de-documents)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
     + [Peticio](#peticio-11)
@@ -71,7 +72,7 @@
     + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-13)
-    + [6.2.2 Consulta representacions pendents validar d'una administració](#622-consulta-representacions-pendents-validar-per-administracio)
+    + [6.2.2 Consulta representacions pendents validar per administracio](#622-consulta-representacions-pendents-validar-per-administracio)
     + [Peticio](#peticio-13)
     + [Resposta](#resposta-14)
   * [6.3 Validacio](#63-validacio)
@@ -2085,11 +2086,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMz
-M5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgs
-NzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMT
-gyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0x
-NjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4ND
-c1MzYwLDkxMTIyMDYwNiwtMTk5OTA1MzMwNCwtMTkyMDQ3ODQz
-M119
+eyJoaXN0b3J5IjpbLTIwMTMxNDQ3MzgsLTU3NjM1NDE0NSw5NT
+g3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2
+NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNT
+I0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1
+LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1ND
+gzNDE1MywxNjI4NDc1MzYwLDkxMTIyMDYwNiwtMTk5OTA1MzMw
+NF19
 -->
