@@ -490,8 +490,8 @@ Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides pe
 
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
-* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA  o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA, DENEGADA o altre cop a PENDENT_VALIDACIO. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
 * `PENDENT_ACCEPTACIO` >> El poderdant ha realitzat una representació sense documentació a validar i cal que el poderdant l’accepti explícitament per passar l'estat a VALIDA o RENUNCIADA. El representant també pot decidir donar-la de baixa i passar-la a REVOCADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
@@ -2091,7 +2091,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUyMDEzODM3NCwtMTI2MTEyNzU5NCwxNT
+eyJoaXN0b3J5IjpbLTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNT
 U0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0
 ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NT
 Y0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0
