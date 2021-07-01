@@ -491,6 +491,7 @@ Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides pe
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
 * `PENDENT_ACCEPTACIO` >> El poderdant ha realitzat una representació sense documentació a validar i cal que el poderdant l’accepti explícitament per passar l'estat a VALIDA o RENUNCIADA. El representant també pot decidir donar-la de baixa i passar-la a REVOCADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
@@ -2090,11 +2091,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjExMjc1OTQsMTU1NDU1NjA2OSwtMT
-I3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0
-NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MD
-I4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4
-LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2OD
-k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
-MF19
+eyJoaXN0b3J5IjpbMTUyMDEzODM3NCwtMTI2MTEyNzU5NCwxNT
+U0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0
+ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NT
+Y0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0
+LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNj
+AxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1
+M119
 -->
