@@ -248,6 +248,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
   <xs:element name="motiu" type="xs:string"  minOccurs="0"/> 
   <xs:element name="solicitant" type="solicitant"/> 
   <xs:element name="origen" type="origen" minOccurs="0" />
+  <xs:element name="tipusPresentador" type="tipusPresentador" minOccurs="0" />
   <xs:element name="documentsEvidencia" minOccurs="0">
    <xs:complexType>
     <xs:sequence>
@@ -266,6 +267,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
 |origen | Element del tipus _origen_ on es desa l'origen que provocat la creació d'aquesta evidència
+|tipusPresentador | Element del tipus _tipusPresentador_ on s'indica qui es la persona que va presentar la sol·licitu
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Cataleg
@@ -2090,11 +2092,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1NDU1NjA2OSwtMTI3NTUxODY3LC01Nz
-YzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5
-LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOT
-QzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwt
-MTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OCwxNTEzMz
-YzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2MCw5MTEyMjA2MDZd
-fQ==
+eyJoaXN0b3J5IjpbLTczNzkzMTM1NywxNTU0NTU2MDY5LC0xMj
+c1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2
+MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMj
+gwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgs
+NzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OT
+g0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYw
+XX0=
 -->
