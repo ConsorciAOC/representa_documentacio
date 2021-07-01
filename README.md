@@ -267,7 +267,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 |motiu | Motiu del canvi|
 |solicitant | Element del tipus _solicitant_|
 |origen | Element del tipus _origen_ on es desa l'origen que provocat la creació d'aquesta evidència
-|tipusPresentador | Element del tipus _tipusPresentador_ on s'indica qui es la persona que va presentar la sol·licitu
+|tipusPresentador | Element del tipus _tipusPresentador_ on s'indica qui es la persona que va presentar la sol·licitud (PODERDANT, REPRESENTANT, REPRESENTA, ADMINISTRACIO).
 |documentsEvidencia | Llistat d'elements _documentEvidencia_|
 
 ## 3.3 Cataleg
@@ -1735,7 +1735,6 @@ Si existeix una representació** que permet al representant actuar en nom del po
                         ...
                      </administracio>
                   </solicitant>
-                  <tipusPresentador>PODERDANT</tipusPresentador>
                   <ambitRepresentacio>
                      <capacitats>
                         <capacitat>
@@ -1772,8 +1771,7 @@ Si existeix una representació** que permet al representant actuar en nom del po
                               <tipusDocument>SOLICITUD</tipusDocument>
                               <nomDocument>StudyGuide-MobileWebSpecialist.pdf</nomDocument>
                               <descripcio>jj</descripcio>
-                              <tamany>183283</tamany>
-                              <resumCriptografic>e96336e59980c2d54cb795e8737ecb8c112cb488</resumCriptografic>
+                              <tamany>183283</tamany>                              <resumCriptografic>e96336e59980c2d54cb795e8737ecb8c112cb488</resumCriptografic>
                               <dataCreacio>2021-02-02T09:59:51</dataCreacio>
                            </documentEvidencia>
                         </documentsEvidencia>
@@ -2092,11 +2090,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNzkzMTM1NywxNTU0NTU2MDY5LC0xMj
-c1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2
-MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMj
-gwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgs
-NzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0LC0xNjY4OT
-g0NTQ4LDE1MTMzNjMyNjksMTc1NDgzNDE1MywxNjI4NDc1MzYw
-XX0=
+eyJoaXN0b3J5IjpbLTEyNjExMjc1OTQsMTU1NDU1NjA2OSwtMT
+I3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0
+NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MD
+I4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4
+LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2OD
+k4NDU0OCwxNTEzMzYzMjY5LDE3NTQ4MzQxNTMsMTYyODQ3NTM2
+MF19
 -->
