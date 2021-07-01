@@ -25,6 +25,7 @@
                             </xs:element>
                             <xs:element name="motiu" type="xs:string" />
                             <xs:element name="tipusSolicitud"  type="tipusSolicitud"/>
+                            <xs:element name="tipusPresentador"  type="tipusPresentador" minOccurs="0" />
                             <xs:element name="solicitant" type="solicitant" />
                         </xs:sequence>
                     </xs:complexType>
@@ -536,6 +537,7 @@
     <xs:simpleType name="estat">
         <xs:restriction base="xs:string">
             <xs:enumeration value="PENDENT_VALIDACIO"/>
+            <xs:enumeration value="EN_VALIDACIO"/>
             <xs:enumeration value="VALIDA"/>
             <xs:enumeration value="ANULADA"/>
             <xs:enumeration value="RENUNCIADA"/>
@@ -555,7 +557,6 @@
             <xs:element name="poderdant" type="persona" minOccurs="0"/>
             <xs:element name="representant" type="persona" minOccurs="0" />
             <xs:element name="solicitant" type="solicitant" minOccurs="0" />
-            <xs:element name="tipusPresentador" type="tipusPresentador" minOccurs="0" />
             <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0"/>
             <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>
@@ -597,6 +598,7 @@
             <xs:element name="motiu" type="xs:string" minOccurs="0"/>
             <xs:element name="solicitant" type="solicitant"/>
             <xs:element name="origen" type="origen" minOccurs="0" />
+            <xs:element name="tipusPresentador" type="tipusPresentador" minOccurs="0" />
             <xs:element name="documentsEvidencia" minOccurs="0">
                 <xs:complexType>
                     <xs:sequence>
@@ -662,6 +664,8 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="PODERDANT"/>
             <xs:enumeration value="REPRESENTANT"/>
+            <xs:enumeration value="REPRESENTA"/>
+            <xs:enumeration value="ADMINISTRACIO"/>
         </xs:restriction>
     </xs:simpleType>
 
