@@ -2062,7 +2062,7 @@ Exemple:
 
 El codi de cada familia ha de ser únic per cada catàleg.
 
-* CSV per tramits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia;"Codi tràmit";"Nom tramit"_
+* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia;"Codi tràmit";"Nom tramit"_
 
 Exemple:
 ```
@@ -2092,11 +2092,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MT
-EyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0
-NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
-MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUs
-MTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2Nz
-U4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjld
-fQ==
+eyJoaXN0b3J5IjpbNTMyMzc5NzcwLDM2ODQ0ODU5LC03NjU3Nj
+EwMjYsLTEyNjExMjc1OTQsMTU1NDU1NjA2OSwtMTI3NTUxODY3
+LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4Nj
+YyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwx
+MzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5Nz
+AzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OF19
+
 -->
