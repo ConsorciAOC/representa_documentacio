@@ -2042,11 +2042,11 @@ Resultat| Codi
 
 # 8. Creacio/us del cataleg de tramits
 Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ o _d'ús compartit_.
-Quan una administració inicia l'ús del servei de Representa, per defecte s'associarà automàticament al catàleg de tràmits compartit per l'AOC. Per desvincular-se (i poder crear-ne un propi) cal demanar-ho al CAU.
+Quan una administració inicia l'ús del servei de Representa, per defecte es vincularà automàticament al catàleg de tràmits compartit per l'AOC. Per desvincular-se (i poder crear-ne un propi) cal demanar-ho al CAU.
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 
 ## 8.1 Creacio manual
-Aquelles administracions que hagin demanat disposar d'un catàleg propi A partir d'aquí disposarà d'un catàleg buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
+Aquelles administracions que hagin demanat disposar d'un catàleg propi podran crear families i associar-hi tràmits d'una manera manual i individual segons necessiti a través de les pantalles de configuració de l'administració de Representa.
 
 ## 8.2 Importacio mitjançant fitxer CSV
 Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Per poder fer aquesta càrrega cal disposar d'un catàleg propi (no estar vinculat al catàleg compartit de l'AOC). Aquest procés requereix 2 fitxers:
@@ -2092,11 +2092,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY1MTc5MTY2MywtNzY1NzYxMDI2LC0xMj
-YxMTI3NTk0LDE1NTQ1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0
-MTQ1LDk1ODc4MDQ4NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMj
-kzMzMwNTY1LDQ1NjQ4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3
-NSwxODA1MjQzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMD
-Y3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2
-OV19
+eyJoaXN0b3J5IjpbMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MT
+EyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0
+NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
+MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUs
+MTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2Nz
+U4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMyNjld
+fQ==
 -->
