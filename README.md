@@ -2045,7 +2045,7 @@ Una administració només pot tenir associat 1 únic catàleg, ja sigui _propi_ 
 Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 
 ## 8.1 Creacio manual
-Quan una administració inicia l'ús del servei de Representa, per defecte s'associarà automàticament al catàleg de tràmits compartit per l'AOC. Per  disposarà d'un catàleg inicial buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
+Quan una administració inicia l'ús del servei de Representa, per defecte s'associarà automàticament al catàleg de tràmits compartit per l'AOC. Per desvincular-se (i poder crear-ne un propi) cal demanar-ho a disposarà d'un catàleg inicial buit, on podrà anar creant families i associar-hi tràmits d'una manera manual i individual segons necessiti.
 
 ## 8.2 Importacio mitjançant fitxer CSV
 Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Aquest procés requereix 2 fitxers:
@@ -2091,11 +2091,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNDQ3ODUzNSwtNzY1NzYxMDI2LC0xMj
-YxMTI3NTk0LDE1NTQ1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0
-MTQ1LDk1ODc4MDQ4NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMj
-kzMzMwNTY1LDQ1NjQ4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3
-NSwxODA1MjQzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMD
-Y3NTg1MTUsOTA2MDE4NjQsLTE2Njg5ODQ1NDgsMTUxMzM2MzI2
-OV19
+eyJoaXN0b3J5IjpbLTE5MDEwMTIzMDcsLTc2NTc2MTAyNiwtMT
+I2MTEyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1
+NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMT
+I5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2
+NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMz
+A2NzU4NTE1LDkwNjAxODY0LC0xNjY4OTg0NTQ4LDE1MTMzNjMy
+NjldfQ==
 -->
