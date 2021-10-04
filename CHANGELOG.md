@@ -1,18 +1,18 @@
 # Change log
 
 ## Octubre 2021
-- Afegit element _tipusPresentador_ a *processarRepresentacio.dades* i a *evidencia*.
+- Afegit element _tipusPresentador_ a *_processarRepresentacio.dades*_ i a *_evidencia*_.
 - Valors de l'element _tipusPresentador_: PODERDANT, REPRESENTANT, REPRESENTA, ADMINISTRACIO.
-- L'element *validarRepresentacioResponse.response.resultat* passa a ser *validarRepresentacioResponse.resultat* (per mantenir coherencia amb la resta de responses on no s'inclou el wrapper _response_).
+- L'element *_validarRepresentacioResponse.response.resultat*_ passa a ser *_validarRepresentacioResponse.resultat*_ (per mantenir coherencia amb la resta de responses on no s'inclou el wrapper _response_).
 - Nou estat EN_VALIDACIO.
 
 S'ha activat la validació d'esquema a les respostes (fins ara només es validaven les peticions). Al fer-ho s'ha hagut de modificar alguns atributs i respostes que no s'adecuaven al que l'esquema definia.
-- *consultarRepresentacionsResponse* > _numRepresentacionsTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
-- *consultarRepresentacionsPersonaResponse* > _numTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
-- *processarRepresentacioResponse* > s'afegeix l'atribut minOccurs=0 a l'element _representacio_, ja que quan es produeix algun error no es retorna cap representació.
-- *consultarRepresentacionsPersonaRepresentantResponse* i *consultarRepresentacionsPersonaPoderdantResponse* > _numPaginesTotal_ i _representacions_ minOccurs=0 ja que si hi ha algun errror no es retornen aquests valors.
-- *consultarCatalegResponse* > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
-- *consultarFamiliesResponse* > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
+- *_consultarRepresentacionsResponse*_ > _numRepresentacionsTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
+- *_consultarRepresentacionsPersonaResponse*_ > _numTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
+- *_processarRepresentacioResponse*_ > s'afegeix l'atribut minOccurs=0 a l'element _representacio_, ja que quan es produeix algun error no es retorna cap representació.
+- *_consultarRepresentacionsPersonaRepresentantResponse*_ i *_consultarRepresentacionsPersonaPoderdantResponse*_ > _numPaginesTotal_ i _representacions_ minOccurs=0 ja que si hi ha algun errror no es retornen aquests valors.
+- *_consultarCatalegResponse*_ > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
+- *_consultarFamiliesResponse*_ > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
 - Afegit minOccurs=0 a l'atribut _administracio_ de l'element _solicitant_.
 - Actualitzat el diagrama d'estats.
 - Abans hi havia casos en que es retornaven elements del tipus sequence encara que no tinguessin cap element (p. ex. un element familia, quan la seqüència _tramits_ no tenia cap _tramit_ es retornava <familia>...<tramits/></familia>. Ara si una familia no te cap tramit no s'inclou cap tag <tramits>.
@@ -87,3 +87,6 @@ _Aquestes operacions retornen els mateixos resultats que _consultaRepresentacion
 
 ## Gener 2019
 Càrrega inicial documentació i xsd de la integració al servei Representa a través de la PCI
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbNTI1NDE1MzU0XX0=
+-->
