@@ -14,6 +14,8 @@ S'ha activat la validació d'esquema a les respostes (fins ara només es validav
 - _consultarCatalegResponse_ > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
 - _consultarFamiliesResponse_ > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
 - Actualitzat el diagrama d'estats.
+- Abans hi havia casos en que es retornaven elements del tipus sequence encara que no tinguessin cap element (p. ex. un element familia, quan la seqüència _tramits_ no tenia cap _tramit_ es retornava <familia>...<tramits/></familia>. Ara si una familia no te cap tramit no s'inclou cap tag <tramits>.
+  
 ## Març 2021
 - Afegit nou estat PENDENT_ACCEPTACIO.
 - Corregits exemples validarRepresentacio.
