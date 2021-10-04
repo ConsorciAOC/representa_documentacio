@@ -274,7 +274,7 @@ Per cada acció realitzada sobre una representació es crea i s'associa un eleme
 
 El catàleg de tramits està format per **families**, i aquestes alhora estan formades per **tràmits**.
 Per poder operar a _Representa_ tota administració necessita tenir associat un catàleg, ja sigui propi o d'ús cedit.
-A partir del catàleg s'obtenen les families, i a partir d'aquestes es poden obtenir els tramits (són aquests els que queden vinculats a les representacions de tipus C, és a dir a representacions a tramit).
+A partir del catàleg s'obtenen les families, i a partir d'aquestes es poden obtenir els tramits (són aquests els que queden vinculats a les representacions de tipus C, és a dir a representacions a tràmit).
 Les **families** serveixen per agrupar els tràmits i poder mostrar/cercar d'una manera més còmoda, però **no queden vinculades a les representacions** ni es poden crear representacions amb àmbit de familia.
 
 ```xml
@@ -2089,11 +2089,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTMyMzc5NzcwLDM2ODQ0ODU5LC03NjU3Nj
-EwMjYsLTEyNjExMjc1OTQsMTU1NDU1NjA2OSwtMTI3NTUxODY3
-LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4Nj
-YyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwx
-MzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMTE4Mjk4LDc2NzU5Nz
-AzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NCwtMTY2ODk4NDU0OF19
+eyJoaXN0b3J5IjpbLTE4MDU0ODI2ODYsNTMyMzc5NzcwLDM2OD
+Q0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQsMTU1NDU1NjA2
+OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02Mz
+MzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4
+LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMT
+E4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NF19
 
 -->
