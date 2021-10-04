@@ -5,6 +5,8 @@
 - Valors de l'element _tipusPresentador_: PODERDANT, REPRESENTANT, REPRESENTA, ADMINISTRACIO.
 - L'element _validarRepresentacioResponse.response.resultat_ passa a ser _validarRepresentacioResponse.resultat_ (per mantenir coherencia amb la resta de responses on no s'inclou el wrapper _response_).
 - Nou estat EN_VALIDACIO.
+- Actualitzat el diagrama d'estats.
+- Abans hi havia casos en que es retornaven elements del tipus sequence encara que no tinguessin cap element (p. ex. un element familia, quan la seqüència _tramits_ no tenia cap _tramit_ es retornava &lt;familia&gt;...&lt;tramits/&gt;&lt;/familia&gt;. Ara si una familia no te cap tramit no s'inclou cap tag &lt;tramits&gt;.
 
 S'ha activat la validació d'esquema a les respostes (fins ara només es validaven les peticions). Al fer-ho s'ha hagut de modificar alguns atributs i respostes que no s'adecuaven al que l'esquema definia.
 - _consultarRepresentacionsResponse_ > _numRepresentacionsTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
@@ -14,8 +16,7 @@ S'ha activat la validació d'esquema a les respostes (fins ara només es validav
 - _consultarCatalegResponse_ > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
 - _consultarFamiliesResponse_ > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
 - Afegit minOccurs=0 a l'atribut _administracio_ de l'element _solicitant_.
-- Actualitzat el diagrama d'estats.
-- Abans hi havia casos en que es retornaven elements del tipus sequence encara que no tinguessin cap element (p. ex. un element familia, quan la seqüència _tramits_ no tenia cap _tramit_ es retornava &lt;familia&gt;...&lt;tramits/&gt;&lt;/familia&gt;. Ara si una familia no te cap tramit no s'inclou cap tag &lt;tramits&gt;.
+
   
 ## Març 2021
 - Afegit nou estat PENDENT_ACCEPTACIO.
