@@ -415,7 +415,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 <xs:complexType name="solicitant">  
  <xs:sequence>  
   <xs:element name="persona" type="persona" />  
-  <xs:element name="administracio" type="administracio" />  
+  <xs:element name="administracio" type="administracio" minOccurs="0" />  
   <xs:element name="aplicacio" type="xs:string" minOccurs="0" />  
  </xs:sequence>  
 </xs:complexType>
@@ -2089,11 +2089,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MDU0ODI2ODYsNTMyMzc5NzcwLDM2OD
-Q0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQsMTU1NDU1NjA2
-OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2LC02Mz
-MzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2NDg1MTk4
-LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NCwtOTUyMT
-E4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNSw5MDYwMTg2NF19
+eyJoaXN0b3J5IjpbLTI3MTMwMjA1OCw1MzIzNzk3NzAsMzY4ND
+Q4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNTU0NTU2MDY5
+LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMz
+M5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgs
+NzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMT
+gyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0XX0=
 
 -->
