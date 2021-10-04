@@ -1624,50 +1624,47 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 ### Peticio
 
 ```xml
-<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:r="r:representa:V1.0">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <r:validarRepresentacio>
-         <r:dades>
-            <r:representacio>
-            	<r:poderdant>
-	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
-                  <r:tipusPersona>FISICA</r:tipusPersona>
-               </r:poderdant>
-               <r:representant>
-	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-                  <r:valorDocumentIdentificatiu>9999999P</r:valorDocumentIdentificatiu>
-                  <r:tipusPersona>FISICA</r:tipusPersona>
-               </r:representant>
-               <r:ambitRepresentacio>
-               	<r:administracio>
-               		<r:codi>9821920002</r:codi>
-               	</r:administracio>
-               	<r:tramit>
-               		<r:uuid>2</r:uuid>
-               	</r:tramit>
-               	<r:capacitats>
-               		<r:capacitat>
-               			<r:codi>NOTIFICAR</r:codi>
-               		</r:capacitat>
-               	</r:capacitats>
-               </r:ambitRepresentacio>
-            </r:representacio>
-            <r:dataValidacio>2021-02-02T00:00:00</r:dataValidacio>
-            <r:solicitant>
-	         	<r:persona>
-	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-                  <r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
-                  <r:tipusPersona>FISICA</r:tipusPersona>
-               </r:persona>
-                <r:administracio>
-            	<r:codi>1</r:codi>
-            </r:administracio>
-            </r:solicitant> 
-            <r:generaEvidencia>true</r:generaEvidencia>        
-         </r:dades>
-      </r:validarRepresentacio>
+      <validarRepresentacio>
+         <dades>
+            <representacio>
+            	<poderdant>
+	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                  <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                  <tipusPersona>FISICA</tipusPersona>
+               </poderdant>
+               <representant>
+	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                  <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                  <tipusPersona>FISICA</tipusPersona>
+               </representant>
+               <ambitRepresentacio>
+               	<administracio>
+               		<codi>9821920002</codi>
+               	</administracio>
+               	<tramit>
+               		<uuid>2</uuid>
+               	<tramit>
+               	<capacitats>
+               		<capacitat>
+               			<codi>NOTIFICAR</codi>
+               		</capacitat>
+               	</capacitats>
+               </ambitRepresentacio>
+            </representacio>
+            <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+            <solicitant>
+	         	<persona>
+	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                  <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                  <tipusPersona>FISICA</tipusPersona>
+               </persona>
+                <administracio>
+            	<codi>1</codi>
+            </administracio>
+            </solicitant> 
+            <generaEvidencia>true</generaEvidencia>        
+         </dades>
+      </validarRepresentacio>
    </soapenv:Body>
 </soapenv:Envelope>
 ```
@@ -1676,7 +1673,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 Si existeix una representació** que permet al representant actuar en nom del poderdant per aquest tramit, administració i capacitat, es retorna una resposta tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">        
+<validarRepresentacioResponse>        
             <resultat>
                <resposta>
                   <codi>0</codi>
@@ -1815,7 +1812,7 @@ La capacitat GENERAL d'una representació permet que es consultin la resta de ca
 En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
 
 ```xml
-<validarRepresentacioResponse xmlns="r:representa:V1.0">         
+<validarRepresentacioResponse>         
             <resultat>
                <resposta>
                   <codi>001</codi>
