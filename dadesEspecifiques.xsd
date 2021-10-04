@@ -41,7 +41,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta" />
-                            <xs:element name="representacio" type="representacio" />
+                            <xs:element name="representacio" type="representacio" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -81,8 +81,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -155,8 +155,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="poderdants">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -215,8 +215,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -256,8 +256,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -330,7 +330,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="cataleg" type="cataleg"/>
+                            <xs:element name="cataleg" type="cataleg" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -380,8 +380,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="numTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="families"  minOccurs="0" >
                                 <xs:complexType>
                                     <xs:sequence>
@@ -414,8 +414,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="numTotal"/>
-                            <xs:element name="numPaginesTotal"/>
+                            <xs:element name="numTotal" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" minOccurs="0"/>
                             <xs:element name="tramits">
                                 <xs:complexType>
                                     <xs:sequence>
