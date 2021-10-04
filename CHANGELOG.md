@@ -13,7 +13,7 @@ S'ha activat la validació d'esquema a les respostes (fins ara només es validav
 - _consultarRepresentacionsPersonaRepresentantResponse_ i _consultarRepresentacionsPersonaPoderdantResponse_ > _numPaginesTotal_ i _representacions_ minOccurs=0 ja que si hi ha algun errror no es retornen aquests valors.
 - _consultarCatalegResponse_ > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
 - _consultarFamiliesResponse_ > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
-
+- Actualitzat el diagrama d'estats.
 ## Març 2021
 - Afegit nou estat PENDENT_ACCEPTACIO.
 - Corregits exemples validarRepresentacio.
