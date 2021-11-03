@@ -540,7 +540,7 @@ Estats possibles d'una representació:
 |telefonDPD|Telèfon de la persona delegada de protecció de dades|
 |correuDPD|Correu electrònic de la persona delegada de protecció de dades|
 |urlCataleg|Enllaç on cada administració disposi d'informació del seu catàleg de tràmits|
-|urlSuport|Enllaç per oferir ajuda als usuaris que facin servir el portal del ciutadà. Aquesta adreça es mostrarà al peu de pàgina de cada seu-e dels portals ciutadans de Representa per cada administració |
+|urlSuport|Enllaç per oferir ajuda als usuaris que facin servir el portal del ciutadà. Aquesta adreça es mostrarà al peu de pàgina de cada seu-e dels portals ciutadans de Representa, personalitzada per cada administració |
 
 
 # 4. Tipus de representacions					   
@@ -2130,7 +2130,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNTM0NzU0MzgsLTU0OTAxOTQxNCw1Mz
+eyJoaXN0b3J5IjpbLTE1OTcwMTUwMTksLTU0OTAxOTQxNCw1Mz
 Y3ODE3MDMsLTI3MTMwMjA1OCw1MzIzNzk3NzAsMzY4NDQ4NTks
 LTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNTU0NTU2MDY5LC0xMj
 c1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2
