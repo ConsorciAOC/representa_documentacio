@@ -502,6 +502,30 @@ Estats possibles d'una representació:
 
 <p align="center"><img src='estats.svg'></p>
 
+## 3.11  Administracio
+
+```xml
+<xs:complexType name="administracio">  
+  <xs:sequence>  
+  <xs:element name="codi" type="NonEmptyString"/>  
+  <xs:element name="nif" type="NonEmptyString" minOccurs="0" />  
+  <xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
+  <xs:element name="activa" type="xs:boolean" minOccurs="0" />  
+ <xs:element name="url" type="xs:string" minOccurs="0"/>  
+ <xs:element name="adreca" type="xs:string" minOccurs="0"/>  
+ <xs:element name="telefon" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="correu" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="nomDPD" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="adrecaDPD" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="telefonDPD" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="correuDPD" type="NonEmptyString" minOccurs="0"/>  
+ <xs:element name="urlCataleg" type="xs:string" minOccurs="0"/>  
+ <xs:element name="urlSuport" type="xs:string" minOccurs="0"/>  
+ </xs:sequence>  
+</xs:complexType>
+```
+
+
 # 4. Tipus de representacions					   
 
 Existeixen 3 tipus de representacions:
@@ -2089,11 +2113,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MTMwMjA1OCw1MzIzNzk3NzAsMzY4ND
-Q4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNTU0NTU2MDY5
-LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMz
-M5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgs
-NzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMT
-gyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1LDkwNjAxODY0XX0=
-
+eyJoaXN0b3J5IjpbLTEzOTk0MTYyMDEsLTI3MTMwMjA1OCw1Mz
+IzNzk3NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5
+NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NT
+g3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2
+NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNT
+I0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1
+XX0=
 -->
