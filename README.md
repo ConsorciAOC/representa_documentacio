@@ -503,7 +503,7 @@ Estats possibles d'una representació:
 <p align="center"><img src='estats.svg'></p>
 
 ## 3.11  Administracio
-Element per recuperar la informació de cada administració integrada al servei. Les administracions es creen automàticament en el moment d'integrar-se al servei i alguns camps es poden editar des del portal de l'empleat de Representa (sempre que l'usuari tingui el rol amb els permisos necessaris).
+Element per recuperar la informació de cada administració integrada al servei. Les administracions es creen automàticament en el moment d'integrar-se al servei i alguns camps es poden editar posteriorment des del portal de l'empleat de Representa (sempre que l'usuari tingui el rol amb els permisos necessaris).
 
 ```xml
 <xs:complexType name="administracio">  
@@ -2131,7 +2131,7 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDc0NjM5NzMsLTE1OTcwMTUwMTksLT
+eyJoaXN0b3J5IjpbLTExNjI3NTE2ODgsLTE1OTcwMTUwMTksLT
 U0OTAxOTQxNCw1MzY3ODE3MDMsLTI3MTMwMjA1OCw1MzIzNzk3
 NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNT
 U0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0
