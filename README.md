@@ -531,16 +531,16 @@ Estats possibles d'una representació:
 |nif|Valor del document identificatiu|
 |nom| Nom|
 |activa|Camp per controlar si l'administració és activa o inactiva|
-|url|Enllaç a la seu-e de l'ad|
-|adreca| Algoritme de resum criptogràfic|
-|telefon | Resum hash|
-|correu | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
+|url|Enllaç a la seu-e|
+|adreca|Adreça postal|
+|telefon |Telèfon|
+|correu |Correu electrònic|
 |nomDPD| Nom de la persona delegada de protecció de dades|
 |adrecaDPD| Adreça de la persona delegada de protecció de dades|
 |telefonDPD|Telèfon de la persona delegada de protecció de dades|
 |correuDPD|Correu electrònic de la persona delegada de protecció de dades|
-|urlCataleg|Enllaç on cada administració disposi d'informació del seu catàleg de tràmits|
-|urlSuport|Enllaç per oferir ajuda als usuaris que facin servir el portal del ciutadà. Aquesta adreça es mostrarà al peu de pàgina de cada seu-e dels portals ciutadans de Representa, personalitzada per cada administració |
+|urlCataleg|Enllaç amb informació refent al seu catàleg de tràmits|
+|urlSuport|Enllaç de suport per els usuaris que facin servir el portal del ciutadà. Aquesta adreça es mostrarà al peu de pàgina de cada seu-e dels portals ciutadans de Representa, personalitzada per cada administració |
 
 
 # 4. Tipus de representacions					   
@@ -2130,11 +2130,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzODA5NzA5ODksLTE1OTcwMTUwMTksLT
-U0OTAxOTQxNCw1MzY3ODE3MDMsLTI3MTMwMjA1OCw1MzIzNzk3
-NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNT
-U0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0
-ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NT
-Y0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0
-XX0=
+eyJoaXN0b3J5IjpbMTQyNDYzNDIwNiwtMTU5NzAxNTAxOSwtNT
+Q5MDE5NDE0LDUzNjc4MTcwMywtMjcxMzAyMDU4LDUzMjM3OTc3
+MCwzNjg0NDg1OSwtNzY1NzYxMDI2LC0xMjYxMTI3NTk0LDE1NT
+Q1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1ODc4MDQ4
+NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1LDQ1Nj
+Q4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1MjQzOTRd
+fQ==
 -->
