@@ -511,19 +511,30 @@ Estats possibles d'una representació:
   <xs:element name="nif" type="NonEmptyString" minOccurs="0" />  
   <xs:element name="nom" type="NonEmptyString" minOccurs="0" />  
   <xs:element name="activa" type="xs:boolean" minOccurs="0" />  
- <xs:element name="url" type="xs:string" minOccurs="0"/>  
- <xs:element name="adreca" type="xs:string" minOccurs="0"/>  
- <xs:element name="telefon" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="correu" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="nomDPD" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="adrecaDPD" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="telefonDPD" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="correuDPD" type="NonEmptyString" minOccurs="0"/>  
- <xs:element name="urlCataleg" type="xs:string" minOccurs="0"/>  
- <xs:element name="urlSuport" type="xs:string" minOccurs="0"/>  
- </xs:sequence>  
+  <xs:element name="url" type="xs:string" minOccurs="0"/>  
+  <xs:element name="adreca" type="xs:string" minOccurs="0"/>  
+  <xs:element name="telefon" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="correu" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="nomDPD" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="adrecaDPD" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="telefonDPD" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="correuDPD" type="NonEmptyString" minOccurs="0"/>  
+  <xs:element name="urlCataleg" type="xs:string" minOccurs="0"/>  
+  <xs:element name="urlSuport" type="xs:string" minOccurs="0"/>  
+  </xs:sequence>  
 </xs:complexType>
 ```
+
+|Camp | Descripció|
+|---- | ----------|
+|codi| Identificador únic del document |
+|nif| Tipus del document (sol·licitud, poder notarial, altes) |
+|nom| Nom del document|
+|activa| Descripció del document|
+|url| Tamany (bytes)|
+|adreca| Algoritme de resum criptogràfic|
+|resumCriptografic | Resum hash|
+|dataCreacio | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
 
 
 # 4. Tipus de representacions					   
@@ -2113,11 +2124,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTk0MTYyMDEsLTI3MTMwMjA1OCw1Mz
-IzNzk3NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MTEyNzU5
-NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0NSw5NT
-g3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5MzMzMDU2
-NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzUsMTgwNT
-I0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1LC0xMzA2NzU4NTE1
-XX0=
+eyJoaXN0b3J5IjpbLTQxMjIyNDU0NiwtMjcxMzAyMDU4LDUzMj
+M3OTc3MCwzNjg0NDg1OSwtNzY1NzYxMDI2LC0xMjYxMTI3NTk0
+LDE1NTQ1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1OD
+c4MDQ4NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1
+LDQ1NjQ4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1Mj
+QzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTVd
+fQ==
 -->
