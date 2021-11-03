@@ -1,7 +1,7 @@
 # Change log
 
 ## Octubre 2021
-- Afegit element _tipusPresentador_ a _processarRepresentacio.dades_ i a _evidencia_.
+- Afegit element _tipusPresentador_ a _processarRepresentacio.dades_ i a_evidencia_.
 - Valors de l'element _tipusPresentador_: PODERDANT, REPRESENTANT, REPRESENTA, ADMINISTRACIO.
 - L'element _validarRepresentacioResponse.response.resultat_ passa a ser _validarRepresentacioResponse.resultat_ (per mantenir coherencia amb la resta de responses on no s'inclou el wrapper _response_).
 - Nou estat EN_VALIDACIO.
@@ -12,7 +12,7 @@ S'ha activat la validació d'esquema a les respostes (fins ara només es validav
 - _consultarRepresentacionsResponse_ > _numRepresentacionsTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
 - _consultarRepresentacionsPersonaResponse_ > _numTotal_ i _numPaginesTotal_ amb minOccurs=0, ja que si hi ha algun errror no es retornen aquests valors.
 - _processarRepresentacioResponse_ > s'afegeix l'atribut minOccurs=0 a l'element _representacio_, ja que quan es produeix algun error no es retorna cap representació.
-- _consultarRepresentacionsPersonaRepresentantResponse_ i _consultarRepresentacionsPersonaPoderdantResponse_ > _numPaginesTotal_ i _representacions_ minOccurs=0 ja que si hi ha algun errror no es retornen aquests valors.
+- _consultarRepresentacionsPersonaRepresentantResponse_ i_consultarRepresentacionsPersonaPoderdantResponse_ > _numPaginesTotal_ i _representacions_ minOccurs=0 ja que si hi ha algun errror no es retornen aquests valors.
 - _consultarCatalegResponse_ > atribut minOccurs=0 a l'element _cataleg_, ja que quan es produeix algun error no es retorna cap cataleg.
 - _consultarFamiliesResponse_ > _numPaginesTotal_ i _numTotal_ s'afegeix l'atribut minOccurs=0 ja que quan es produeix algun error no es retorna cap familia.
 - Afegit minOccurs=0 a l'atribut _administracio_ de l'element _solicitant_.
@@ -89,5 +89,5 @@ _Aquestes operacions retornen els mateixos resultats que _consultaRepresentacion
 ## Gener 2019
 Càrrega inicial documentació i xsd de la integració al servei Representa a través de la PCI
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI1NDE1MzU0XX0=
+eyJoaXN0b3J5IjpbMTMyNjkxNTM5OCw1MjU0MTUzNTRdfQ==
 -->
