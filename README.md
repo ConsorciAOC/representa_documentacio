@@ -1391,7 +1391,7 @@ Permet consultar les dades d'una administracio a partir del seu codi INE10 o el 
 
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
-administracio | Permet especificar el codi IN10 o el NIF per recuperar les dades d'una administracio | Si
+administracio | Permet especificar el codi INE10 per recuperar les dades d'una administracio | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 #### Resposta
@@ -2159,11 +2159,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjIyODUwMzI2LC0xNTk3MDE1MDE5LC01ND
-kwMTk0MTQsNTM2NzgxNzAzLC0yNzEzMDIwNTgsNTMyMzc5Nzcw
-LDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQsMTU1ND
-U1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2
-LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2ND
-g1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NF19
-
+eyJoaXN0b3J5IjpbLTIwOTM5NDI4Miw2MjI4NTAzMjYsLTE1OT
+cwMTUwMTksLTU0OTAxOTQxNCw1MzY3ODE3MDMsLTI3MTMwMjA1
+OCw1MzIzNzk3NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MT
+EyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0
+NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
+MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzVd
+fQ==
 -->
