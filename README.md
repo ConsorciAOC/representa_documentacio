@@ -1414,7 +1414,9 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 
 ## 5.13 Descarrega de documents
 Permet descarregar documents associats a representacions. A partir de l'uuid del document és possible descarregar-lo fent una crida GET a la url corresponent.
+
 Preproducció > [https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx"https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
+
 Producció > [https://serveis3.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx "https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
 
 *Per tenir-hi permisos caldrà que la IP estigui autoritzada per poder accedir a aquest context. A l'entorn de preproducció no és necessari.*
@@ -2159,11 +2161,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTM5NDI4Miw2MjI4NTAzMjYsLTE1OT
-cwMTUwMTksLTU0OTAxOTQxNCw1MzY3ODE3MDMsLTI3MTMwMjA1
-OCw1MzIzNzk3NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwtMTI2MT
-EyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3NjM1NDE0
-NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzksMTI5Mz
-MzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5NDM2NzVd
-fQ==
+eyJoaXN0b3J5IjpbLTE5NTYzMzEzMzQsNjIyODUwMzI2LC0xNT
+k3MDE1MDE5LC01NDkwMTk0MTQsNTM2NzgxNzAzLC0yNzEzMDIw
+NTgsNTMyMzc5NzcwLDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNj
+ExMjc1OTQsMTU1NDU1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQx
+NDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOT
+MzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1
+XX0=
 -->
