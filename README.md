@@ -533,8 +533,14 @@ Estats possibles d'una representació:
 |activa| Descripció del document|
 |url| Tamany (bytes)|
 |adreca| Algoritme de resum criptogràfic|
-|resumCriptografic | Resum hash|
-|dataCreacio | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
+|telefon | Resum hash|
+|correu | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
+|nomDPD| |
+|adrecaDPD||
+|telefonDPD||
+|correuDPD||
+|urlCataleg||
+|urlSuport| |
 
 
 # 4. Tipus de representacions					   
@@ -2124,11 +2130,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxMjIyNDU0NiwtMjcxMzAyMDU4LDUzMj
-M3OTc3MCwzNjg0NDg1OSwtNzY1NzYxMDI2LC0xMjYxMTI3NTk0
-LDE1NTQ1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1OD
-c4MDQ4NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1
-LDQ1NjQ4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1Mj
-QzOTQsLTk1MjExODI5OCw3Njc1OTcwMzUsLTEzMDY3NTg1MTVd
-fQ==
+eyJoaXN0b3J5IjpbNTM2NzgxNzAzLC0yNzEzMDIwNTgsNTMyMz
+c5NzcwLDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQs
+MTU1NDU1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4Nz
+gwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUs
+NDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyND
+M5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNV19
+
 -->
