@@ -2060,6 +2060,7 @@ _Pendent_
 _Pendent_
 
 ## 6.10 Consulta administracio
+### Petició
 ```xml
 <consultarAdministracio xmlns="http://www.aoc.cat/representa/v2">
   <administracio>
@@ -2071,7 +2072,24 @@ _Pendent_
 </consultarAdministracio>
 ```
 
-
+### Resposta
+```xml
+<consultarAdministracioResponse xmlns="http://www.aoc.cat/representa/v2">
+  <resultat>
+    <resposta>
+      <codi>0</codi>
+      <descripcio>L'operació ha estat executada correctament</descripcio>
+      <tipusSolicitud>CONSULTA</tipusSolicitud>
+    </resposta>
+   <administracio>
+	  <codi>9821920002</codi>
+	  <nif>Q12345678</nif>
+	  <nom>Consorci AOC</nom>
+	  <activa>true</activa>
+   </administracio>
+  </resultat>
+</consultarAdministracioResponse>
+```
 # 7. Codis de resposta
 
 Resultat| Codi
@@ -2141,11 +2159,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQxMDY4MTU5MiwtMTU5NzAxNTAxOSwtNT
-Q5MDE5NDE0LDUzNjc4MTcwMywtMjcxMzAyMDU4LDUzMjM3OTc3
-MCwzNjg0NDg1OSwtNzY1NzYxMDI2LC0xMjYxMTI3NTk0LDE1NT
-Q1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1ODc4MDQ4
-NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1LDQ1Nj
-Q4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1MjQzOTRd
-fQ==
+eyJoaXN0b3J5IjpbNjIyODUwMzI2LC0xNTk3MDE1MDE5LC01ND
+kwMTk0MTQsNTM2NzgxNzAzLC0yNzEzMDIwNTgsNTMyMzc5Nzcw
+LDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQsMTU1ND
+U1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4NzgwNDg2
+LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUsNDU2ND
+g1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyNDM5NF19
+
 -->
