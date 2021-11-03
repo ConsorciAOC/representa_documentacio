@@ -535,8 +535,8 @@ Estats possibles d'una representació:
 |adreca| Algoritme de resum criptogràfic|
 |telefon | Resum hash|
 |correu | Data de creació (yyyy-MM-dd'T'HH:mm:ss)|
-|nomDPD| |
-|adrecaDPD||
+|nomDPD| Nom de la persona delegada de protecció de dades|
+|adrecaDPD| Adreça del responsable de la  |
 |telefonDPD||
 |correuDPD||
 |urlCataleg||
@@ -2130,11 +2130,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTM2NzgxNzAzLC0yNzEzMDIwNTgsNTMyMz
-c5NzcwLDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNjExMjc1OTQs
-MTU1NDU1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQxNDUsOTU4Nz
-gwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOTMzMzA1NjUs
-NDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1LDE4MDUyND
-M5NCwtOTUyMTE4Mjk4LDc2NzU5NzAzNSwtMTMwNjc1ODUxNV19
+eyJoaXN0b3J5IjpbLTU0OTAxOTQxNCw1MzY3ODE3MDMsLTI3MT
+MwMjA1OCw1MzIzNzk3NzAsMzY4NDQ4NTksLTc2NTc2MTAyNiwt
+MTI2MTEyNzU5NCwxNTU0NTU2MDY5LC0xMjc1NTE4NjcsLTU3Nj
+M1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2MywyNDg2NjIyNzks
+MTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMjgwNDMwLDEzOTI5ND
+M2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOTgsNzY3NTk3MDM1XX0=
 
 -->
