@@ -539,8 +539,8 @@ Estats possibles d'una representació:
 |adrecaDPD| Adreça de la persona delegada de protecció de dades|
 |telefonDPD|Telèfon de la persona delegada de protecció de dades|
 |correuDPD|Correu electrònic de la persona delegada de protecció de dades|
-|urlCataleg|Enllaç on cada administració dispo|
-|urlSuport| |
+|urlCataleg|Enllaç on cada administració disposi d'informació del seu catàleg de tràmits|
+|urlSuport|Enllaç per oferir ajuda als usuaris que facin servir el portal del ciutadà. Aquesta adreça es mostrarà al peu de pàgina de cada seu-e dels portals ciutadans de Representa per cada administració |
 
 
 # 4. Tipus de representacions					   
@@ -2130,11 +2130,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTEyOTgzMzQ1OSwtNTQ5MDE5NDE0LDUzNj
-c4MTcwMywtMjcxMzAyMDU4LDUzMjM3OTc3MCwzNjg0NDg1OSwt
-NzY1NzYxMDI2LC0xMjYxMTI3NTk0LDE1NTQ1NTYwNjksLTEyNz
-U1MTg2NywtNTc2MzU0MTQ1LDk1ODc4MDQ4NiwtNjMzMzkyNDYz
-LDI0ODY2MjI3OSwxMjkzMzMwNTY1LDQ1NjQ4NTE5OCw3NDAyOD
-A0MzAsMTM5Mjk0MzY3NSwxODA1MjQzOTQsLTk1MjExODI5OF19
-
+eyJoaXN0b3J5IjpbLTExNTM0NzU0MzgsLTU0OTAxOTQxNCw1Mz
+Y3ODE3MDMsLTI3MTMwMjA1OCw1MzIzNzk3NzAsMzY4NDQ4NTks
+LTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNTU0NTU2MDY5LC0xMj
+c1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2
+MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMj
+gwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOThd
+fQ==
 -->
