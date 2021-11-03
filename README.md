@@ -451,7 +451,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |nomRaoSocial|Nom o raó social de la persona|
 |cognoms|Cognoms de la persona|
 |correuElectronic| Adreça de correu electrònic|
-|accceptaAvisos|Flag per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
+|accceptaAvisos|Camp per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
 |dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_ (yyyy-MM-dd'T'HH:mm:ss)|
 
 
@@ -2130,11 +2130,11 @@ Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és poss
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTcwMTUwMTksLTU0OTAxOTQxNCw1Mz
-Y3ODE3MDMsLTI3MTMwMjA1OCw1MzIzNzk3NzAsMzY4NDQ4NTks
-LTc2NTc2MTAyNiwtMTI2MTEyNzU5NCwxNTU0NTU2MDY5LC0xMj
-c1NTE4NjcsLTU3NjM1NDE0NSw5NTg3ODA0ODYsLTYzMzM5MjQ2
-MywyNDg2NjIyNzksMTI5MzMzMDU2NSw0NTY0ODUxOTgsNzQwMj
-gwNDMwLDEzOTI5NDM2NzUsMTgwNTI0Mzk0LC05NTIxMTgyOThd
+eyJoaXN0b3J5IjpbLTY5NTI2NDQwNiwtMTU5NzAxNTAxOSwtNT
+Q5MDE5NDE0LDUzNjc4MTcwMywtMjcxMzAyMDU4LDUzMjM3OTc3
+MCwzNjg0NDg1OSwtNzY1NzYxMDI2LC0xMjYxMTI3NTk0LDE1NT
+Q1NTYwNjksLTEyNzU1MTg2NywtNTc2MzU0MTQ1LDk1ODc4MDQ4
+NiwtNjMzMzkyNDYzLDI0ODY2MjI3OSwxMjkzMzMwNTY1LDQ1Nj
+Q4NTE5OCw3NDAyODA0MzAsMTM5Mjk0MzY3NSwxODA1MjQzOTRd
 fQ==
 -->
