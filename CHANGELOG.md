@@ -1,5 +1,10 @@
 # Change log
 
+## Novembre 2021
+- Afegida explicació referent a la validació del _valorDocumentIdentificatiu_ de l'element _persona_.
+- Corregida la descrpció de l'estat _ANUL·LADA_ i _PENDENT_ACCEPTACIO_.
+- Afegida descripció, petició de consulta i resposta de l'element _administracio_.
+
 ## Octubre 2021
 - Afegit element _tipusPresentador_ a _processarRepresentacio.dades_ i a_evidencia_.
 - Valors de l'element _tipusPresentador_: PODERDANT, REPRESENTANT, REPRESENTA, ADMINISTRACIO.
