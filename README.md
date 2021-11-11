@@ -22,6 +22,7 @@
   * [3.8 Persona](#38-persona)
   * [3.9 DocumentEvidencia](#39-documentevidencia)
   * [3.10  Estat](#310--estat)
+  * [3.11  Administracio](#311--administracio)
 - [4. Tipus de representacions](#4-tipus-de-representacions)
     + [4.1 General](#41-general)
     + [4.2 A organisme](#42-a-organisme)
