@@ -498,7 +498,7 @@ Estats possibles d'una representació:
 * `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
 * `RENUNCIADA` >> El representant renuncia a la representació.
 * `REVOCADA` >> El poderdant revoca la representació.
-* `ANULADA` >> Estat excepcional en que per un motiu un funcionari habilitat invalida una representació.
+* `ANULADA` >> Estat excepcional en que per un motiu concret, un treballador públic invalida una representació. Una representació pot passar a aquest estat en qualsevol moment de la seva vida útil.
 
 <p align="center"><img src='estats.svg'></p>
 
