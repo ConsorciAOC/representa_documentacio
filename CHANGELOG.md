@@ -3,6 +3,7 @@
 ## Desembre 2021
 - Afegit l'element _origen_ dins l'element _solicitant_. 
 - Es limita el volum de dades retornades en les consultes de representacions. Fins ara en algunes consultes de representacions es retornava, dins dels elements representacio una llista d'elements evidencia. Per optimitzar les cerques i racionalitzar el pes de les respostes s'elimina aquest atribut (evidencies) d'aquest tipus de respostes. Si es vol recuperar les evidencies d'una representació cal fer-ho consultant una única representació (consultaRepresentacio).
+- Afegida descripció capacitat GENERAL.
 
 ## Novembre 2021
 - Afegida explicació referent a la validació del _valorDocumentIdentificatiu_ de l'element _persona_.
