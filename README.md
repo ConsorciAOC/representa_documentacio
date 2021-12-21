@@ -392,7 +392,7 @@ Més endavant (apartat [4.Tipus de representacions](#4-tipus-de-representacions)
 
 
 ### 3.6.1 Capacitat
-Element que determina la capacitat d'una representació.
+Element que determina la capacitat d'una representació. La capacitat _GENERAL_ inclou a la resta de capacitats, és a dir, una representació creada amb la capacitat GENERAL permetrà realitzar validacions que preguntin per la resta de capacitats.
 
 ```xml
 <xs:complexType name="capacitat">
@@ -405,8 +405,9 @@ Element que determina la capacitat d'una representació.
 
 |Camp | Descripció|
 |---- | ----------|
-|codi| Codi de la capacitat (CONSULTAR, NOTIFICAR, TRAMITAR) |
+|codi| Codi de la capacitat (CONSULTAR, NOTIFICAR, TRAMITAR, GENERAL) |
 |nom| Nom de la capacitat |
+
 
 
 ## 3.7 Solicitant
