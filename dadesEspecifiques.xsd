@@ -719,6 +719,7 @@
             <xs:element name="persona" type="persona" />
             <xs:element name="administracio" type="administracio" />
             <xs:element name="aplicacio" type="xs:string" minOccurs="0" />
+            <xs:element name="origen" type="origen" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
 
