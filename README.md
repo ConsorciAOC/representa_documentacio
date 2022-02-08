@@ -1609,7 +1609,7 @@ NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. 
 
 ### 6.2.2 Consulta representacions pendents validar per administracio
 
-Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar de l'organisme amb el codi INE 9821920002 (Consorci AOC).
+Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar i en validació de l'organisme amb el codi INE 9821920002 (Consorci AOC).
 
 NOTA: _Cal informar l'element representacio però sense cap dada_
 
@@ -1622,6 +1622,7 @@ NOTA: _Cal informar l'element representacio però sense cap dada_
 	<representacio/>
 	<estats>
 		<estat>PENDENT_VALIDACIO</estat>
+		<estat>EN_VALIDACIO</estat>
 	</estats>
 	<solicitant>
 		<persona>
