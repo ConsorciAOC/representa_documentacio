@@ -848,8 +848,8 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA` i `PENDENT_VALIDACIO` | Si
-|| `FALSE` > La resta d'estats 
+|actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` | Si
+|| `FALSE` > tots els estats
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
@@ -930,7 +930,7 @@ Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
 |actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
-|| `FALSE` > La resta d'estats 
+|| `FALSE` > tots els estats
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
@@ -991,7 +991,7 @@ Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
 |actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
-|| `FALSE` > La resta d'estats 
+|| `FALSE` > tots els estats
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
