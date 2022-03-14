@@ -2,8 +2,10 @@ graph TD
 A{Inscripció} --> |Hi ha documentació|B[PENDENT_VALIDACIÓ]
 A{Inscripció} --> |No hi ha documentació|H[PENDENT_ACCEPTACIO]
 
-B --> |Documentació invàlida|E[DENEGADA]
-B --> |Documentació vàlida| C
+B --> |Revisant documentació| I[EN_VALIDACIÓ]
+I[EN_VALIDACIÓ] --> B
+I[EN_VALIDACIÓ] --> |Documentació invàlida|E[DENEGADA]
+I[EN_VALIDACIÓ] --> |Documentació vàlida| C
 
 H --> |Representant accepta| C[VÀLIDA]
 H --> |Representant renuncia| G
@@ -11,5 +13,7 @@ H --> |Poderdant revoca| F
 
 C -->|Funcionari anul.la| D[ANUL.LADA]
 C -->V[EXPIRADA]
-C -->|Representant renuncia| G[RENUNCIADA]
+
 C -->|Poderdant revoca| F[REVOCADA]
+C -->|Representant renuncia| G[RENUNCIADA]
+H -->|Caducitat automàtica|D[ANUL.LADA]
