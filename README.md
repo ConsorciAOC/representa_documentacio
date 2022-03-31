@@ -343,7 +343,7 @@ L'element **tramit** permet definir representacions tipus C amb un Ã mbit especÃ
   <xs:sequence>  
    <xs:element name="uuid" type="xs:string" minOccurs="0"/>  
    <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>  
-   <xs:element name="codiFue" type="NonEmptyString" minOccurs="0"/>  
+   <xs:element name="codiFue" type="xs:string" minOccurs="0"/>  
    <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>  
    <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>  
    <xs:element name="descripcio" type="xs:string" minOccurs="0"/>  
