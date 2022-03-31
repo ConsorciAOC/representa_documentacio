@@ -3,6 +3,7 @@
 ## Març 2022
 - Correcció del type d'alguns elements on no estava definit (numRepresentacionsTotal, numPaginesTotal, urlDescarregaInforme).
 - Correcció del type de l'element _codiFue_ d'un _tramit_. Un cop informat no es permetia tornar a posar-ho sense cap valor.
+- Correcció de la operació _consultarFamilies_. Segons la documentació i la definició del fitxer dadesEspecifiques.xsd anterior, aquesta operació és paginada. Malgrat això, s'ha vist que sempre s'estaven retornant totes les families ja que la paginació en aquesta cerca no és òptima. D'aquesta manera s'eliminen els atributs de la petició _mida_ i _pagina_ i de la resposta els conseqüents _numTotal_ i _numPaginesTotal_.
 
 ## Desembre 2021
 - Afegit l'element _origen_ dins l'element _solicitant_. 
