@@ -1235,15 +1235,13 @@ cataleg | Element del tipus _cataleg_
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
-Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per això la consulta és paginada i cal indicar el nº d'elements màxims a retornar i el nº de la pàgina desitjada.
+Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** pel que es recomana minimitzar el nombre de crides al ser una operació costosa i amb un tamany de resposta potencialment alt.
 
 #### Peticio
 ```xml
 <xs:element name="consultarFamilies">  
  <xs:complexType>  
-  <xs:sequence>  
-   <xs:element name="mida" type="mida"/>  
-   <xs:element name="pagina" type="pagina"/>  
+  <xs:sequence>    
    <xs:element name="catalegCodi" type="xs:string"/>  
    <xs:element name="solicitant" type="solicitant" />  
   </xs:sequence>  
@@ -1253,8 +1251,7 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** per aix
 
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
-mida | Nombre màxim de resultats retornats per pàgina | Si
-pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+
 catalegCodi | Codi del catàleg | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
@@ -1266,9 +1263,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
    <xs:element name="resultat" minOccurs="0">  
     <xs:complexType>  
      <xs:sequence>  
-      <xs:element name="resposta" type="resposta"/>  
-      <xs:element name="numTotal"/>  
-      <xs:element name="numPaginesTotal"/>  
+      <xs:element name="resposta" type="resposta"/>
       <xs:element name="families" minOccurs="0" >  
        <xs:complexType>  
         <xs:sequence>  
