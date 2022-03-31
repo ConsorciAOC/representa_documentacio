@@ -81,8 +81,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
+                            <xs:element name="numRepresentacionsTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -90,7 +90,7 @@
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
-                            <xs:element name="urlDescarregaInforme"  minOccurs="0"/>
+                            <xs:element name="urlDescarregaInforme" type="xs:string" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
@@ -155,8 +155,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
+                            <xs:element name="numTotal" type="xs:integer" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:integer" minOccurs="0"/>
                             <xs:element name="poderdants">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -215,8 +215,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
+                            <xs:element name="numRepresentacionsTotal" type="xs:integer" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:integer" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -256,8 +256,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta"  type="resposta"/>
-                            <xs:element name="numRepresentacionsTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
+                            <xs:element name="numRepresentacionsTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
                             <xs:element name="representacions" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -365,8 +365,6 @@
     <xs:element name="consultarFamilies">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="mida" type="mida"/>
-                <xs:element name="pagina" type="pagina"/>
                 <xs:element name="catalegCodi" type="xs:string"/>
                 <xs:element name="solicitant" type="solicitant" />
             </xs:sequence>
@@ -380,9 +378,7 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="numTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
-                            <xs:element name="families"  minOccurs="0" >
+                            <xs:element name="families" minOccurs="0" >
                                 <xs:complexType>
                                     <xs:sequence>
                                         <xs:element name="familia" type="familia" maxOccurs="unbounded"  nillable="true"/>
@@ -414,8 +410,8 @@
                     <xs:complexType>
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta"/>
-                            <xs:element name="numTotal" minOccurs="0"/>
-                            <xs:element name="numPaginesTotal" minOccurs="0"/>
+                            <xs:element name="numTotal" type="xs:int"  minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
                             <xs:element name="tramits">
                                 <xs:complexType>
                                     <xs:sequence>
@@ -510,7 +506,7 @@
     </xs:complexType>
 
     <xs:simpleType name="pagina">
-        <xs:restriction base="xs:integer">
+        <xs:restriction base="xs:int">
             <xs:minInclusive value="0"/>
         </xs:restriction>
     </xs:simpleType>
@@ -582,7 +578,7 @@
         <xs:sequence>
             <xs:element name="uuid" type="xs:string" minOccurs="0"/>
             <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>
-            <xs:element name="codiFue" type="NonEmptyString" minOccurs="0"/>
+            <xs:element name="codiFue" type="xs:string" minOccurs="0"/>
             <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>
             <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>
             <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
