@@ -1,5 +1,9 @@
 # Change log
 
+## Març 2022
+- Correcció del type d'alguns elements on no estava definit (numRepresentacionsTotal, numPaginesTotal, urlDescarregaInforme).
+- Correcció del type de l'element _codiFue_ d'un _tramit_. Un cop informat no es permetia tornar a posar-ho sense cap valor.
+
 ## Desembre 2021
 - Afegit l'element _origen_ dins l'element _solicitant_. 
 - Es limita el volum de dades retornades en les consultes de representacions. Fins ara en algunes consultes de representacions es retornava, dins dels elements representacio una llista d'elements evidencia. Per optimitzar les cerques i racionalitzar el pes de les respostes s'elimina aquest atribut (evidencies) d'aquest tipus de respostes. Si es vol recuperar les evidencies d'una representació cal fer-ho consultant una única representació (consultaRepresentacio).
