@@ -1251,7 +1251,6 @@ Amb aquesta consulta es poden **obtenir tots els tramits d'un catàleg** pel que
 
 Camp | Descripció | Obligatori
 ---- | ---------- | --------
-
 catalegCodi | Codi del catàleg | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
