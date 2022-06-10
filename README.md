@@ -2050,13 +2050,249 @@ En aquest exemple es modifica l'estat de la representació creada al punt 4.7 pa
 </processarRepresentacioResponse>
 ```
 ## 6.6 Consulta cataleg
-_Pendent_
+En aquest exemple s'obté el catàleg de l'administració amb codi INE10 9821920002 (Consorci AOC).
+### Peticio
+```xml
+<consultarCataleg>     
+	<codiAdministracio>9821920002</codiAdministracio>
+    <solicitant>
+		<persona>
+			<tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+            <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+            <tipusPersona>FISICA</tipusPersona>
+        </persona>
+    </solicitant>
+</consultarCataleg>
+```
+### Resposta
+```xml
+<consultarCatalegResponse xmlns:ns9="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>CONSULTA</tipusSolicitud>
+	   </resposta>
+	   <cataleg>
+		  <codi>CATALEG_AOC</codi>
+		  <nom>Cataleg de tramits del Consorci AOC</nom>
+		  <dataCreacio>2018-10-24T11:52:14</dataCreacio>
+		  <actiu>true</actiu>
+		  <administracioPropietaria>
+			 <codi>9821920002</codi>
+			 <nif>Q0801175A</nif>
+			 <nom>Consorci Administració Oberta de Catalunya</nom>
+			 <activa>true</activa>
+		  </administracioPropietaria>
+	   </cataleg>
+	</resultat>
+</consultarCatalegResponse>
+```
+
 ## 6.7 Consulta families
-_Pendent_
+En aquest exemple, fent servir el codi de l'administració anterior, s'obtenen totes les families d'aquest catàleg i dels tramits associats a cada familia. 
+
+### Peticio
+```xml
+<consultarFamilies xmlns="http://www.aoc.cat/representa/v2">
+	<catalegCodi>CATALEG_AOC</catalegCodi>
+	<solicitant>
+		<persona>
+		   <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+		   <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+		   <tipusPersona>FISICA</tipusPersona>
+		</persona>
+	</solicitant>
+</consultarFamilies>
+```
+
+### Resposta
+```xml
+<consultarFamiliesResponse xmlns="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>CONSULTA</tipusSolicitud>
+	   </resposta>
+	   <families>
+		  <familia>
+			 <uuid>11002</uuid>
+			 <codi>0031</codi>
+			 <nom>Accés a la documentació i a la informació</nom>
+			 <tramits>
+				<tramit>
+				   <uuid>11016</uuid>
+				   <codi>1314</codi>
+				   <codiFue>8b4480882a1a497ea49a3d75f678323</codiFue>
+				   <nom>Sol·licituds d'accés a la documentació i/o la informació (consulta)</nom>
+				   <uuidFamilia>11002</uuidFamilia>
+				   <descripcio>Descripció...</descripcio>
+				   <actiu>true</actiu>
+				</tramit>
+				<tramit>
+					...
+				</tramit>	
+			 </tramits>					 
+			 <catalegCodi>CATALEG_AOC</catalegCodi>
+		  </familia>
+		  <familia>
+			...
+		  </familia>
+		 </families>
+	</resultat>
+</consultarFamiliesResponse>	
+```
+
 ## 6.8 Consulta familia
-_Pendent_
+Exemple per consultar una familia a partir del seu uuid
+### Peticio
+```xml
+<consultarFamilia xmlns="http://www.aoc.cat/representa/v2">
+	<familia>
+		<uuid>11002</uuid>
+	</familia>
+	 <solicitant>
+		<persona>
+		   <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+		   <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>      
+		</persona>
+	 </solicitant>
+</consultarFamilia>	
+```
+### Resposta
+```xml
+<consultarFamiliaResponse xmlns="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>CONSULTA</tipusSolicitud>
+	   </resposta>
+	   <familia>
+		  <uuid>13176</uuid>
+		  <codi>0243</codi>
+		  <nom>Actuacions dels cossos de seguretat i protecció ciutadana</nom>
+		  <tramits>
+			 <tramit>
+				<uuid>14547</uuid>
+				<codi>2941</codi>
+				<nom>Al·legacions a denúncies de trànsit</nom>
+				<uuidFamilia>13176</uuidFamilia>
+				<actiu>true</actiu>
+			 </tramit>
+			 <tramit>
+				...
+			 </tramit>
+			 <tramit>
+				...
+			 </tramit>
+			 <tramit>
+				...
+			 </tramit>
+			 <tramit>
+				...
+			 </tramit>
+		  </tramits>
+		  <catalegCodi>1707920002-6ce4b620-b12f-4f84-82b0-47721310c763</catalegCodi>
+	   </familia>
+	</resultat>
+</consultarFamiliaResponse>
+```
 ## 6.9 Consulta tramits
-_Pendent_
+Exemple per consultar els tramits d'una familia a partir del seu uuid.
+
+### Peticio
+```xml
+<consultarTramits xmlns="http://www.aoc.cat/representa/v2" xsi:schemaLocation="http://www.aoc.cat/representa/v2 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<mida>25</mida>
+	 <pagina>0</pagina>
+	 <tramit> 
+			<uuidFamilia>1</uuidFamilia>          		
+		</tramit>
+	 <solicitant>
+		<persona>
+		   <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+		   <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+		   <tipusPersona>FISICA</tipusPersona>
+		</persona>
+	 </solicitant>
+</consultarTramits>
+```
+### Resposta
+```xml
+<consultarTramitsResponse xmlns="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>CONSULTA</tipusSolicitud>
+	   </resposta>
+	   <numTotal>53</numTotal>
+	   <numPaginesTotal>3</numPaginesTotal>
+	   <tramits>
+		  <tramit>
+			 <uuid>11002</uuid>
+			 <codi>123</codi>
+			 <nom>123</nom>
+			 <uuidFamilia>1</uuidFamilia>
+			 <actiu>false</actiu>
+		  </tramit>
+		  <tramit>
+			 ...
+		  </tramit>
+		  <tramit>
+			 ...
+		  </tramit>
+		  <tramit>
+			 ...
+		  </tramit>
+	   </tramits>
+	</resultat>
+</consultarTramitsResponse>
+```
+Exemple per recuperar un tramit concret a partir del seu uuid
+
+### Peticio
+```xml
+<consultarTramits xmlns="http://www.aoc.cat/representa/v2" xsi:schemaLocation="http://www.aoc.cat/representa/v2 schema.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<mida>1</mida>
+	 <pagina>0</pagina>
+	 <tramit> 
+			<uuid>11002</uuid>          		
+		</tramit>
+	 <solicitant>
+		<persona>
+		   <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+		   <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+		   <tipusPersona>FISICA</tipusPersona>
+		</persona>
+	 </solicitant>
+</consultarTramits>
+```
+### Resposta
+```xml
+<consultarTramitsResponse xmlns="http://www.aoc.cat/representa/v2">
+	<resultat>
+	   <resposta>
+		  <codi>0</codi>
+		  <descripcio>L'operació ha estat executada correctament</descripcio>
+		  <tipusSolicitud>CONSULTA</tipusSolicitud>
+	   </resposta>
+	   <numTotal>1</numTotal>
+	   <numPaginesTotal>1</numPaginesTotal>
+	   <tramits>
+		  <tramit>
+			 <uuid>11002</uuid>
+			 <codi>123</codi>
+			 <nom>123</nom>
+			 <uuidFamilia>1</uuidFamilia>
+			 <actiu>false</actiu>
+		  </tramit>		 
+	   </tramits>
+	</resultat>
+</consultarTramitsResponse>
+```
 
 ## 6.10 Consulta administracio
 ### Petició
@@ -2157,12 +2393,3 @@ El catàleg de l'AOC és gestionat (altes i modificacions de nous tràmits) inte
 Per les operacions de `consultaRepresentacio` `consultaRepresentacions` és possible demanar un informe en format PDF on es retornin les mateixes dades que s'han retornat a la consultar però en format orientat a la impressió.
 
 Per fer-ho cal indicar el camp `generaInforme` amb valor `true`. La resposta de les consultes inclourà un element `urlDescarregaInforme ` on s'informa una url per a poder recuperar el document PDF a través d'una petició HTTP GET.
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NTYzMzEzMzQsNjIyODUwMzI2LC0xNT
-k3MDE1MDE5LC01NDkwMTk0MTQsNTM2NzgxNzAzLC0yNzEzMDIw
-NTgsNTMyMzc5NzcwLDM2ODQ0ODU5LC03NjU3NjEwMjYsLTEyNj
-ExMjc1OTQsMTU1NDU1NjA2OSwtMTI3NTUxODY3LC01NzYzNTQx
-NDUsOTU4NzgwNDg2LC02MzMzOTI0NjMsMjQ4NjYyMjc5LDEyOT
-MzMzA1NjUsNDU2NDg1MTk4LDc0MDI4MDQzMCwxMzkyOTQzNjc1
-XX0=
--->
