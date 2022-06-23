@@ -1114,8 +1114,15 @@ I l'element _consultaValidacio_ amb les dades consultades :
 
 
 ## 5.7 Alta o modificacio
-Permet realitzar la inscripció o modificació** d'una representació. Quan s'inscriu una representació abans de tenir un estat `VALIDA` caldrà que passi per l'estat `PENDENT_ACCEPTACIO` (el representant haurà d'acceptar aquesta representació) o `PENDENT_VALIDACIO` (l'empleat públic amb rol VALIDADOR haurà de validar la documentació adjunta). 
+Permet realitzar la inscripció o modificació** d'una representació. Quan s'inscriu una representació abans de tenir un estat `VALIDA` caldrà que passi per l'estat `PENDENT_ACCEPTACIO` (el representant haurà d'acceptar aquesta representació) o `PENDENT_VALIDACIO` (l'empleat públic amb rol _VALIDADOR_ de l'administració que correspongui segons l'ambit de la representació, haurà de validar la documentació adjunta). 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_ALTA_ per crear representacions o _REPRESENTA_MODIFICACIO_ per modificar l'estat d'una representació.
+
+Quan s'inscriu una representació cal adjuntar documentació que acrediti la representació sol·licitada. Aquest document haurà d'estar en format PDF i l'administració corresponent revisarà posteriorment la seva validesa. En aquest cas la representació inscrita tindrà un estat _PENDENT_VALIDACIO_ fins que una person autoritzada la validi o denegui.
+
+No caldrà adjuntar documentació en els següents casos:
+- s'actua en nom propi (el sol·licitant és qui dona els poders, és a dir l'element solicitant és igual al poderdant).
+- es té permís per actuar en nom d'un tercer (existeix una representació de tipus general en estat _VALIDA_ entre el sol·licitant i el poderdant).
+En aquest cas que no s'adjunta documentació, la representació un cop inscrita passarà a tenir estat _PENDENT_ACCEPTACIO_ perquè el representant (a través del portal del ciutadà) l'accepti.
 
 
 > **La modificació només permet modificar l'estat d'una representació. Cap dels atributs de la representació poden ser modificats un cop
