@@ -356,7 +356,7 @@ L'element **tramit** permet definir representacions tipus C amb un àmbit espec�
 |---- | ----------|
 |uuid| Identificador únic del tràmit|
 |codi | Codi del tramit |
-|codiFue| Codi FUE del tràmit|
+|codiFue| Codi FUE del tràmit. Té la finalitat de poder identificar i referenciar tràmits de diferents catàlegs que tinguin un codi diferent|
 |nom | Nom del tramit |
 |uuidFamilia | Identificador únic de la familia a la que pertany |
 |descripcio | Descrpicó del tramit |
