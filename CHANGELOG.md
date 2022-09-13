@@ -1,5 +1,12 @@
 # Change log
 
+## Setembre 2022
+- Es limita el camp "*TipoDocument*" (String) amb els següents ENUM
+- SOLICITUD
+- SOLICITUD_DELEGACIO_SIGNATURA
+- PODER_NOTARIAL
+- ALTRES
+
 ## Març 2022
 - Correcció del type d'alguns elements on no estava definit (numRepresentacionsTotal, numPaginesTotal, urlDescarregaInforme).
 - Correcció del type de l'element _codiFue_ d'un _tramit_. Un cop informat no es permetia tornar a posar-ho sense cap valor.

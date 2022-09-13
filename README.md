@@ -473,6 +473,12 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
   </xs:sequence>
 </xs:complexType>
 ```
+Restricció sobre els literals d'entrada per al camp "*TipusDocument*" (No nuls no diferents dels que ja existeixen).
+- SOLICITUD
+- SOLICITUD_DELEGACIO_SIGNATURA
+- PODER_NOTARIAL
+- ALTRES
+- XML
 
 |Camp | Descripció|
 |---- | ----------|
