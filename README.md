@@ -64,33 +64,48 @@
   * [5.12 Consulta administracio](#512-consulta-administracio)
       - [Peticio](#peticio-10)
       - [Resposta](#resposta-11)
-  * [5.13 Descarrega de documents](#513-descarrega-de-documents)
+  * [5.13 Consulta d'administracions](#513-consulta-d-administracions)
+      - [Peticio](#peticio-11)
+      - [Resposta](#resposta-12)
+  * [5.14 Descarrega de documents](#514-descarrega-de-documents)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio-11)
-    + [Resposta](#resposta-12)
-  * [6.2 Consulta representacions](#62-consulta-representacions)
-    + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-12)
     + [Resposta](#resposta-13)
-    + [6.2.2 Consulta representacions pendents validar per administracio](#622-consulta-representacions-pendents-validar-per-administracio)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
+    + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-13)
     + [Resposta](#resposta-14)
-  * [6.3 Validacio](#63-validacio)
+    + [6.2.2 Consulta representacions pendents validar per administracio](#622-consulta-representacions-pendents-validar-per-administracio)
     + [Peticio](#peticio-14)
+    + [Resposta](#resposta-15)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-15)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-15)
-    + [Resposta](#resposta-15)
-  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
     + [Peticio](#peticio-16)
     + [Resposta](#resposta-16)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
+    + [Peticio](#peticio-17)
+    + [Resposta](#resposta-17)
   * [6.6 Consulta cataleg](#66-consulta-cataleg)
+    + [Peticio](#peticio-18)
+    + [Resposta](#resposta-18)
   * [6.7 Consulta families](#67-consulta-families)
+    + [Peticio](#peticio-19)
+    + [Resposta](#resposta-19)
   * [6.8 Consulta familia](#68-consulta-familia)
+    + [Peticio](#peticio-20)
+    + [Resposta](#resposta-20)
   * [6.9 Consulta tramits](#69-consulta-tramits)
+    + [Peticio](#peticio-21)
+    + [Resposta](#resposta-21)
+    + [Peticio](#peticio-22)
+    + [Resposta](#resposta-22)
   * [6.10 Consulta administracio](#610-consulta-administracio)
+    + [Petició](#petici--1)
+    + [Resposta](#resposta-23)
 - [7. Codis de resposta](#7-codis-de-resposta)
 - [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
   * [8.1 Creacio manual](#81-creacio-manual)
@@ -1421,7 +1436,64 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.13 Descarrega de documents
+## 5.13 Consulta d'administracions
+Permet consultar totes les administracions disponibles al servei.
+
+#### Peticio
+```xml
+<xs:element name="consultarAdministracions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mida" type="mida"/>
+                <xs:element name="pagina" type="pagina"/>
+                <xs:element name="actives" type="xs:boolean" minOccurs="0"/>
+                <xs:element name="solicitant" type="solicitant" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+```
+
+Camp | Descripció | Obligatori
+---- | ---------- | --------
+mida | Nombre màxim de resultats retornats per pàgina | Si
+pagina | Pàgina de resultats sol·licitada (de 0 a N) | Si
+actives | Indica si es volen recuperar totes les representacions o filtrar les actives/inactives. Camp no informat o amb valor false > es recuperen totes. Si pren el valor true filtra només les representacions actives. | No
+solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
+
+#### Resposta
+```xml
+<xs:element name="consultarAdministracionsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="administracions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="administracio" type="administracio" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+resposta | Element del tipus _resposta_
+numTotal | Nombre d'administracions totals
+numPaginesTotal | Nombre de pàgines totals dels resultats de la petició
+administracions | Llistat d'elements del tipus _administracio_
+
+## 5.14 Descarrega de documents
 Permet descarregar documents associats a representacions. A partir de l'uuid del document és possible descarregar-lo fent una crida GET a la url corresponent.
 
 Preproducció > [https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx"https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
