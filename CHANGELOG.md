@@ -1,11 +1,12 @@
 # Change log
 
 ## Setembre 2022
-- Es limita el camp "*TipoDocument*" (String) amb els següents ENUM
-- SOLICITUD
-- SOLICITUD_DELEGACIO_SIGNATURA
-- PODER_NOTARIAL
-- ALTRES
+- Afegida nova operació de consulta per recuperar les administracions disponibles al servei (_consultaAdministracions_).
+- Afegit nou atribut _dataMaxVigencia_ a l'element _representacio_.
+- Afegit nou atribut _idRepresentacioProrroga_.
+- Modificat el type de l'element _uuid_ de _tramit_ de xs:string a NonEmptyString.
+- Modificat el type de l'element _codiFue_ de _tramit_ de NonEmptyString a xs:string.
+- Modificat el type de l'element _uuidFamilia_ de _tramit_ de xs:string a NonEmptyString.
 
 ## Març 2022
 - Correcció del type d'alguns elements on no estava definit (numRepresentacionsTotal, numPaginesTotal, urlDescarregaInforme).
