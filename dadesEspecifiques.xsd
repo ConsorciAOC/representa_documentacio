@@ -451,6 +451,40 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="consultarAdministracions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="mida" type="mida"/>
+                <xs:element name="pagina" type="pagina"/>
+                <xs:element name="actives" type="xs:boolean" minOccurs="0"/>
+                <xs:element name="solicitant" type="solicitant" />
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarAdministracionsResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="administracions" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="administracio" type="administracio" minOccurs="0" maxOccurs="unbounded"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="ErrorResponse">
         <xs:complexType>
             <xs:sequence>
@@ -557,6 +591,7 @@
             <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="dataMaxVigencia" type="xs:dateTime" minOccurs="0"/>
             <xs:element name="validacions" type="xs:int" minOccurs="0" nillable="true"/>
             <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>
             <xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />
@@ -564,6 +599,7 @@
             <xs:element name="refAlta" type="xs:string" minOccurs="0"/>
             <xs:element name="origen" type="origen" minOccurs="0" />
             <xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />
+            <xs:element name="idRepresentacioProrroga" type="xs:string" minOccurs="0" />
             <xs:element name="evidencies" minOccurs="0" >
                 <xs:complexType>
                     <xs:sequence>
@@ -576,11 +612,11 @@
 
     <xs:complexType name="tramit">
         <xs:sequence>
-            <xs:element name="uuid" type="xs:string" minOccurs="0"/>
+            <xs:element name="uuid" type="NonEmptyString" minOccurs="0"/>
             <xs:element name="codi" type="NonEmptyString" minOccurs="0"/>
             <xs:element name="codiFue" type="xs:string" minOccurs="0"/>
             <xs:element name="nom" type="NonEmptyString" minOccurs="0"/>
-            <xs:element name="uuidFamilia" type="xs:string" minOccurs="0"/>
+            <xs:element name="uuidFamilia" type="NonEmptyString" minOccurs="0"/>
             <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
             <xs:element name="actiu" type="xs:boolean" minOccurs="0"/>
         </xs:sequence>
