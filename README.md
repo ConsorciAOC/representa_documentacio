@@ -218,6 +218,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
   <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>  
   <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0"/>  
   <xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0"/>  
+  <xs:element name="dataMaxVigencia" type="xs:dateTime" minOccurs="0"/> 
   <xs:element name="validacions" type="xs:int" minOccurs="0"  nillable="true"/>  
   <xs:element name="csvPoderNotarial" type="xs:string" minOccurs="0"/>  
   <xs:element name="dataValidacioPoderNotarial" type="xs:dateTime" minOccurs="0" />  
@@ -225,6 +226,7 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
   <xs:element name="refAlta" type="xs:string" minOccurs="0"/>  
   <xs:element name="origen" type="origen" minOccurs="0" />  
   <xs:element name="idRepresentacioA" type="xs:string" minOccurs="0" />  
+  <xs:element name="idRepresentacioProrroga" type="xs:string" minOccurs="0" /> 
   <xs:element name="evidencies" minOccurs="0" >  
    <xs:complexType>  
     <xs:sequence>  
@@ -248,12 +250,14 @@ Element princial de Representa. Aquí es recull tota la informació relativa a l
 |dataCreacio | Data de creació de la representació (yyyy-MM-dd'T'HH:mm:ss)|
 |dataIniciVigencia | Data d'inici de vigència (yyyy-MM-dd'T'HH:mm:ss)|
 |dataFiVigencia | Data de fi de la vigència (yyyy-MM-dd'T'HH:mm:ss)|
+|dataMaxVigencia | Data màxima de fi de la vigència en cas de prórroga. Aquesta funcionalitat s'està acabant i permetrà prorrogar poders a través dels portals empleat i ciutadà (yyyy-MM-dd'T'HH:mm:ss)|
 |validacions | Nombre de validacions realitzades sobre aquesta representació|
 |csvPoderNotarial | CSV del poder notarial adjunt en la inscripció de la representació|
 |dataValidacioPoderNotarial | Data en que s'ha validat el poder notarial (yyyy-MM-dd'T'HH:mm:ss)|
 |refAlta | Identificador per vincular les possibles N representacions a tramit. creades en el mateix instant d'inscripció|
 |origen | Element que permet veure l'origen de creció de la representació (PORTAL_EMPLEAT, PORTAL_CIUTADA, INTEGRACIO) |
 |idRepresentacioA | Relació entre representacions amb la finalitat d'actuar en nom d'una altra persona al portal del ciutadà |
+|idRepresentacioProrroga | Identificador de la representació que prorroga |
 |evidencies | Llistat d'elements _evidencia_|
 
 ## 3.2 Evidencia
