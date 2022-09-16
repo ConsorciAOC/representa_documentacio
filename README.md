@@ -2410,6 +2410,43 @@ Exemple per recuperar un tramit concret a partir del seu uuid
   </resultat>
 </consultarAdministracioResponse>
 ```
+
+## 6.11 Consulta administracions
+### Petició
+```xml
+<consultarAdministracions xmlns="http://www.aoc.cat/representa/v2">
+  <mida>50</mida>
+  <pagina>0</pagina>  
+  <solicitant>
+	...
+  </solicitant>
+</consultarAdministracions>
+```
+
+### Resposta
+```xml
+<consultarAdministracionsResponse xmlns="http://www.aoc.cat/representa/v2">
+  <resultat>
+    <resposta>
+      <codi>0</codi>
+      <descripcio>L'operació ha estat executada correctament</descripcio>
+      <tipusSolicitud>CONSULTA</tipusSolicitud>
+    </resposta>
+    <numTotal>141</numTotal>
+    <numPaginesTotal>4</numPaginesTotal>
+    <administracions>  
+       <administracio>
+         <codi>9821920002</codi>
+         <nif>Q12345678</nif>
+         <nom>Consorci AOC</nom>
+         <activa>true</activa>
+       </administracio>
+	....
+     </administracions>
+  </resultat>
+</consultarAdministracioResponse>
+```
+
 # 7. Codis de resposta
 
 Resultat| Codi
