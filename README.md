@@ -497,7 +497,8 @@ Cada document adjunt a una representació es vincula a un element _evidencia_. E
 </xs:complexType>
 ```
 Restricció sobre els literals d'entrada per al camp "*TipusDocument*" : 
-La resposta si s'envia un valor no admès serà: El camp tipus de document es incorrecte
+La resposta si s'envia un valor no admès serà: 
+El camp tipus de document es incorrecte
 
 |Camp | Descripció|
 |---- | ----------|
