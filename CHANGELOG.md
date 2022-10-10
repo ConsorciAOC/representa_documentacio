@@ -1,5 +1,9 @@
 # Change log
 
+## Octubre 2022 (A PRE el 20 d'Octubre / A PRO el 26 d'Octubre)
+- El camp ja existent tipusDocument de documentEvidencia admetrà a les peticiones només un dels següents 4 valors possibles: SOLICITUD, SOLICITUD_DELEGACIO_SIGNATURA, PODER_NOTARIAL i ALTRES.
+  Qualsevol altre valor no serà vàlid i es retornarà el missatge: "El camp tipus de document es incorrecte".
+
 ## Setembre 2022
 - Afegida nova operació de consulta per recuperar les administracions disponibles al servei (_consultaAdministracions_).
 - Afegit nou atribut _dataMaxVigencia_ a l'element _representacio_.

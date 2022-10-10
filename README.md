@@ -481,31 +481,28 @@ Element associat a cada evidencia on es recull informació relativa al context d
 
 ## 3.9 DocumentEvidencia
 Cada document adjunt a una representació es vincula a un element _evidencia_. Els documents poden ser _sol·licituds_ (paper escanejat en còpia autèntica amb la sol·licitud de l'acció a realitzar sobre la representació), _poders_ (poder notarial) o _altres_.
+
 ```xml
-<xs:complexType name="documentEvidencia">
-  <xs:sequence>
-   <xs:element name="uuid" type="xs:string" minOccurs="0"/>
-   <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
+<xs:complexType name="documentEvidencia">  
+ <xs:sequence>  
+  <xs:element name="uuid" type="xs:string" minOccurs="0"/>
+  <xs:element name="tipusDocument" type="xs:string" minOccurs="0"/>
    <xs:element name="nomDocument" type="xs:string" minOccurs="0"/>
    <xs:element name="descripcio" type="xs:string" minOccurs="0"/>
    <xs:element name="tamany" type="xs:string" minOccurs="0"/>
    <xs:element name="tipusEncriptacio" type="tipusEncriptacio"  minOccurs="0"/>
    <xs:element name="resumCriptografic" type="xs:string"  minOccurs="0"/>
    <xs:element name="dataCreacio" type="xs:dateTime" minOccurs="0"/>
-  </xs:sequence>
+ </xs:sequence>  
 </xs:complexType>
 ```
-Restricció sobre els literals d'entrada per al camp "*TipusDocument*" (No nuls no diferents dels que ja existeixen).
-- SOLICITUD
-- SOLICITUD_DELEGACIO_SIGNATURA
-- PODER_NOTARIAL
-- ALTRES
-- XML
+Restricció sobre els literals d'entrada per al camp "*TipusDocument*" : 
+La resposta si s'envia un valor no admès serà: El camp tipus de document es incorrecte
 
 |Camp | Descripció|
 |---- | ----------|
 |uuid| Identificador únic del document |
-|tipusDocument | Tipus del document (sol·licitud, poder notarial, altes) |
+|tipusDocument | Tipus del document (SOLICITUD, SOLICITUD_DELEGACIO_SIGNATURA, PODER_NOTARIAL, ALTRES o XML) |
 |nomDocument | Nom del document|
 |descripcio | Descripció del document|
 |tamany | Tamany (bytes)|
