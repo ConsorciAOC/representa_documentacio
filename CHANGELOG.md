@@ -1,6 +1,6 @@
 # Change log
 
-## Octubre 2022 (A PRE el 20 d'Octubre / A PRO el 26 d'Octubre)
+## Octubre 2022 (A PRE el 3 de Novembre / A PRO el 9 de Novembre)
 - El camp ja existent tipusDocument de documentEvidencia admetrà a les peticiones només un dels següents 4 valors possibles: SOLICITUD, SOLICITUD_DELEGACIO_SIGNATURA, PODER_NOTARIAL i ALTRES.
   Qualsevol altre valor no serà vàlid i es retornarà el missatge: "El camp tipus de document es incorrecte".
 
