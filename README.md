@@ -469,7 +469,7 @@ Element associat a cada evidencia on es recull informació relativa al context d
 
 |Camp | Descripció|
 |---- | ----------|
-|tipusDocumentIdentificatiu| Pot pendre els valors de NIF o PASSAPORT. Si s'indica NIF, es valida que el valorDocumentIdentificatiu informat sigui un NIF o NIE vàlid. Si s'informa PASSAPORT, no es realitza cap validació.|
+|tipusDocumentIdentificatiu| Pot pendre els valors de NIF, NIE o PASSAPORT. Si s'indica NIF o NIE, es valida que el valorDocumentIdentificatiu informat sigui vàlid. Si s'informa PASSAPORT, no es realitza cap validació.|
 |valorDocumentIdentificatiu| Element usat per a la identificació o cerca de persones|
 |tipusPersona|Element del tipus _tipusPersona_ (FISICA o JURIDICA)|
 |nomRaoSocial|Nom o raó social de la persona|
