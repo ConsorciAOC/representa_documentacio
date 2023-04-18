@@ -1,5 +1,11 @@
 # Change log
 
+## Febrer 2023 (A PRE el 17 de Novembre / A PRO el 15 de Febrer)
+- El camp tipusPresentador passa a ser obligatori, admetent un dels següents valors possibles: PODERDANT, REPRESENTANT o ADMINISTRACIO.
+- El camp APLICACIO, encara que no serà obligatori a nivell de missatgeria, sí que validarem que estugui correctament informat. 
+- Recordar que els camps de SOLICITANT tenen que contenir a la persona que està fent la gestió. És a dir, la persona que entra a l'aplicatiu per efectuar la petició, ja sigui
+  el representant o poderdant, o una tercera persona. 
+
 ## Octubre 2022 (A PRE el 10 de Novembre / A PRO el 16 de Novembre)
 - El camp ja existent tipusDocument de documentEvidencia admetrà a les peticiones només un dels següents 4 valors possibles: SOLICITUD, SOLICITUD_DELEGACIO_SIGNATURA, PODER_NOTARIAL i ALTRES.
   Qualsevol altre valor no serà vàlid i es retornarà el missatge: "El camp tipus de document es incorrecte".
