@@ -448,8 +448,8 @@ Element associat a cada evidencia on es recull informació relativa al context d
 |Camp | Descripció|
 |---- | ----------|
 |persona| Element del tipus _persona_ que sol·licita la peticio|
-|administracio| Element del tipis _administració_ que sol·licita la petició|
-|aplicacio| Nom de l'aplicació que via integració sol·licita la petició|
+|administracio| Element del tipus _administració_ que sol·licita la petició|
+|aplicacio| Nom de l'aplicació (en majúscules) consensuat amb AOC, que via integració sol·licita la petició|
 
 ## 3.8 Persona
 ```xml
@@ -1175,6 +1175,7 @@ En aquest cas que no s'adjunta documentació, la representació un cop inscrita 
       </xs:element>
       <xs:element name="motiu" type="xs:string" />
       <xs:element name="tipusSolicitud"  type="tipusSolicitud"/>    
+      <xs:element name="tipusPresentador"  type="tipusPresentador" minOccurs="0" />
       <xs:element name="solicitant" type="solicitant" />
      </xs:sequence>
     </xs:complexType>
@@ -1193,6 +1194,7 @@ representacio | Element del tipus _representacio_. | Si
 documentsRepresentacio | Elements del tipus _documentRepresentacio_ | No
 motiu | Descripció del motiu de la inscripció | Si
 tipusSolicitud | Tipus de sol·licitud de la petició (ALTA,MODIFICACIO) | Si
+tipusPresentador | Qui presenta la sol·licitud (PODERDANT, REPRESENTANT, ADMINISTRACIO) | Si
 solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petició | Si
 
 
@@ -1750,7 +1752,7 @@ NOTA: _Cal informar l'element representacio però sense cap dada_
 
 
 ## 6.3 Validacio
-En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb document identificatiu 9999999P pugui actuar (en aquest cas amb la capacitat de NOTIFICAR) en nom del poderdant amb document identificatiu 12345678A per al tramit amb uuid 2 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulgui consultar) a l'administració amb codi 9821920002.
+En aquest exemple es pregunta si existeix alguna representació vàlida perquè el representant amb document identificatiu 43445911S pugui actuar (en aquest cas amb la capacitat de NOTIFICAR) en nom del poderdant amb document identificatiu 40259745Q per al tramit amb uuid 5003 (donat que el codi d'un tràmit no és únic dins d'un mateixa catàleg, i els codis de familia tampoc ho són entre diferents catàlegs cal consultar primer el catàleg de l'ens i recuperar l'uuid del tràmit pel que es vulgui consultar) a l'administració amb codi 9821920002.
 
 ### Peticio
 
@@ -1760,12 +1762,12 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
             <representacio>
             	<poderdant>
 	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                  <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
+                  <valorDocumentIdentificatiu>43445911S</valorDocumentIdentificatiu>
                   <tipusPersona>FISICA</tipusPersona>
                </poderdant>
                <representant>
 	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                  <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
+                  <valorDocumentIdentificatiu>40259745Q</valorDocumentIdentificatiu>
                   <tipusPersona>FISICA</tipusPersona>
                </representant>
                <ambitRepresentacio>
@@ -1773,7 +1775,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
                		<codi>9821920002</codi>
                	</administracio>
                	<tramit>
-               		<uuid>2</uuid>
+               		<uuid>5003</uuid>
                	<tramit>
                	<capacitats>
                		<capacitat>
@@ -1782,7 +1784,7 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
                	</capacitats>
                </ambitRepresentacio>
             </representacio>
-            <dataValidacio>2021-02-02T00:00:00</dataValidacio>
+            <dataValidacio>2023-10-26T00:00:00</dataValidacio>
             <solicitant>
 	         	<persona>
 	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
@@ -1805,133 +1807,44 @@ Si existeix una representació** que permet al representant actuar en nom del po
 
 ```xml
 <validarRepresentacioResponse>        
-            <resultat>
-               <resposta>
-                  <codi>0</codi>
-                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Pep Siurà (12345678A) i Test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és correcte</descripcio>
-                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
-               </resposta>
-               <consulta>
-                  <representacio>
-                     <poderdant>
-                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                        <tipusPersona>FISICA</tipusPersona>
-                     </poderdant>
-                     <representant>
-                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
-                        <tipusPersona>FISICA</tipusPersona>
-                     </representant>
-                     <ambitRepresentacio>
-                        <administracio>
-                           <codi>9821920002</codi>
-                        </administracio>
-                        <tramit>
-                           <uuid>2</uuid>
-                        </tramit>
-                        <capacitats>
-                           <capacitat>
-                              <codi>NOTIFICAR</codi>
-                           </capacitat>
-                        </capacitats>
-                     </ambitRepresentacio>
-                  </representacio>
-                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
-               </consulta>
+<resultat>
+            <resposta>
+               <codi>001</codi>
+               <descripcio>La validació de la consulta per el tràmit Plans parcials d'ordenació entre Jordi Florit (43445911S) i Maria Gonzalez (40259745Q) a l'ens Consorci Administració Oberta de Catalunya a data 26-10-2023 és incorrecta</descripcio>
+               <tipusSolicitud>VALIDACIO</tipusSolicitud>
+            </resposta>
+            <consulta>
                <representacio>
-                  <identificadorLegal>202100010000</identificadorLegal>
-                  <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
-                  <estat>VALIDA</estat>
                   <poderdant>
                      <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                     <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                     ...
+                     <valorDocumentIdentificatiu>43445911S</valorDocumentIdentificatiu>
+                     <tipusPersona>FISICA</tipusPersona>
                   </poderdant>
                   <representant>
-                     <tipusDocumentIdentificatiu>PASSAPORT</tipusDocumentIdentificatiu>
-                     <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
-                     ...
+                     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+                     <valorDocumentIdentificatiu>40259745Q</valorDocumentIdentificatiu>
+                     <tipusPersona>FISICA</tipusPersona>
                   </representant>
-                  <solicitant>
-                     <persona>
-                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                        ...
-                     </persona>
+                  <ambitRepresentacio>
                      <administracio>
                         <codi>9821920002</codi>
-                        ...
                      </administracio>
-                  </solicitant>
-                  <ambitRepresentacio>
+                     <tramit>
+                        <uuid>5003</uuid>
+                     </tramit>
                      <capacitats>
                         <capacitat>
                            <codi>NOTIFICAR</codi>
-                           <nom>NOTIFICAR DADES</nom>
                         </capacitat>
                      </capacitats>
                   </ambitRepresentacio>
-                  <dataCreacio>2021-02-02T09:59:50</dataCreacio>
-                  <dataIniciVigencia>2021-02-02T00:00:00</dataIniciVigencia>
-                  <dataFiVigencia>2026-02-02T00:00:00</dataFiVigencia>
-                  <validacions>11</validacions>
-                  <origen>PORTAL_EMPLEAT</origen>
-                  <evidencies>
-                     <evidencia>
-                        <dataCreacio>2021-02-02T09:59:50</dataCreacio>
-                        <identificadorLegal>202100010000</identificadorLegal>
-                        <estat>VALIDA</estat>                        
-                        <origen>PORTAL_EMPLEAT</origen>
-                        <solicitant>
-                           <persona>
-                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                              <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                              ...
-                           </persona>
-                           <administracio>
-                              <codi>9821920002</codi>
-                              ...
-                           </administracio>
-                        </solicitant>
-                        <documentsEvidencia>
-                           <documentEvidencia>
-                              <uuid>201321</uuid>
-                              <tipusDocument>SOLICITUD</tipusDocument>
-                              <nomDocument>StudyGuide-MobileWebSpecialist.pdf</nomDocument>
-                              <descripcio>jj</descripcio>
-                              <tamany>183283</tamany>                              <resumCriptografic>e96336e59980c2d54cb795e8737ecb8c112cb488</resumCriptografic>
-                              <dataCreacio>2021-02-02T09:59:51</dataCreacio>
-                           </documentEvidencia>
-                        </documentsEvidencia>
-                     </evidencia>
-                     <evidencia>
-                        <dataCreacio>2021-02-02T10:00:01</dataCreacio>
-                        <identificadorLegal>202100010000</identificadorLegal>
-                        <estat>VALIDA</estat>
-                        <motiu>SIGNATURA - Signatura realitzada correctament</motiu>
-                        <origen>SERVEI_REPRESENTA</origen>
-                        <solicitant>
-                           <persona>
-                              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                              <valorDocumentIdentificatiu>00000000</valorDocumentIdentificatiu>
-                              <tipusPersona>JURIDICA</tipusPersona>
-                              <nomRaoSocial>Servei</nomRaoSocial>
-                              <cognoms>Representa</cognoms>
-                              <correuElectronic>representa@aoc.cat</correuElectronic>
-                              <acceptaAvisos>false</acceptaAvisos>
-                           </persona>
-                           <administracio>
-                              <codi>9821920002</codi>
-                              ...
-                           </administracio>
-                        </solicitant>
-                     </evidencia>
-                  </evidencies>
                </representacio>
-            </resultat>
-            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
-      </validarRepresentacioResponse>
+               <dataValidacio>2023-10-26T00:00:00</dataValidacio>
+            </consulta>
+         </resultat>
+         <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5zOmRzaWc9Imh0...</evidenciaSignada>
+         <urlDescarregaInforme>http://xxxx.app.aoc.cat/representa-core/informe?uuid=cdde5296-75f6-4b9a-ac4c-1a8e686a3bad</urlDescarregaInforme>
+</validarRepresentacioResponse>
 ```
 
 Aquest exemple està retornant una representació de tipus A (a organisme) amb capacitat CONSULTAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representació la resposta seria incorrecte.
