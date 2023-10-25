@@ -1695,7 +1695,7 @@ NOTA: _L'informe retorna el nombre d'elements i pàgina indicats a la consulta. 
 
 ### 6.2.2 Consulta representacions pendents validar per administracio
 
-Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar i en validació de l'organisme amb el codi INE 9821920002 (Consorci AOC).
+Exemple per recuperar totes les representacions pendents de validar per part d'una administració. En aquest exemple es recuperen totes (consulta paginada, primer les 25 primeres) les representacions pendents de validar i en validació (sempre s'han de demanar junts aquests dos estats) de l'organisme amb el codi INE 9821920002 (Consorci AOC).
 
 NOTA: _Cal informar l'element representacio però sense cap dada_
 
@@ -1757,49 +1757,48 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
 ### Peticio
 
 ```xml
-      <validarRepresentacio>
-         <dades>
-            <representacio>
-            	<poderdant>
-	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                  <valorDocumentIdentificatiu>43445911S</valorDocumentIdentificatiu>
-                  <tipusPersona>FISICA</tipusPersona>
-               </poderdant>
-               <representant>
-	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                  <valorDocumentIdentificatiu>40259745Q</valorDocumentIdentificatiu>
-                  <tipusPersona>FISICA</tipusPersona>
-               </representant>
-               <ambitRepresentacio>
-               	<administracio>
-               		<codi>9821920002</codi>
-               	</administracio>
-               	<tramit>
-               		<uuid>5003</uuid>
-               	<tramit>
-               	<capacitats>
-               		<capacitat>
-               			<codi>NOTIFICAR</codi>
-               		</capacitat>
-               	</capacitats>
-               </ambitRepresentacio>
-            </representacio>
-            <dataValidacio>2023-10-26T00:00:00</dataValidacio>
-            <solicitant>
-	         	<persona>
-	         	     <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                  <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                  <tipusPersona>FISICA</tipusPersona>
-               </persona>
-                <administracio>
-            	<codi>1</codi>
-            </administracio>
-            </solicitant> 
-            <generaEvidencia>true</generaEvidencia>        
-         </dades>
-      </validarRepresentacio>
-   </soapenv:Body>
-</soapenv:Envelope>
+    <r:validarRepresentacio>
+        <r:dades>
+         <r:representacio>
+            <r:poderdant>
+               <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+               <r:valorDocumentIdentificatiu>43445911S</r:valorDocumentIdentificatiu>
+               <r:tipusPersona>FISICA</r:tipusPersona>
+            </r:poderdant>
+            <r:representant>
+               <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+               <r:valorDocumentIdentificatiu>40259745Q</r:valorDocumentIdentificatiu>
+               <r:tipusPersona>FISICA</r:tipusPersona>
+            </r:representant>
+            <r:ambitRepresentacio>
+               <r:administracio>
+                  <r:codi>801550006</r:codi>
+               </r:administracio>
+               <r:tramit>               	
+               	<r:uuid>5003</r:uuid>
+               </r:tramit>
+               <r:capacitats>
+               	<r:capacitat>
+               		<r:codi>NOTIFICAR</r:codi>
+               	</r:capacitat>
+               </r:capacitats>
+            </r:ambitRepresentacio>
+         </r:representacio>
+         <r:dataValidacio>2023-10-25T00:00:00</r:dataValidacio>
+         <r:solicitant>
+	         	<r:persona>
+	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+	         		<r:tipusPersona>FISICA</r:tipusPersona>
+	         		<r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+	         	</r:persona>
+	         	<r:administracio>
+	         		<r:codi>1</r:codi>
+	         	</r:administracio>
+         	</r:solicitant>
+         	<r:generaEvidencia>false</r:generaEvidencia>
+        </r:dades>
+      </r:validarRepresentacio>     
+
 ```
 
 ### Resposta validacio positiva
@@ -1809,8 +1808,38 @@ Si existeix una representació** que permet al representant actuar en nom del po
 <validarRepresentacioResponse>        
 <resultat>
             <resposta>
+               <codi>0</codi>
+               <descripcio>La validació de la consulta per el tràmit Plans parcials d'ordenació entre Jordi Florit (43445911S) i Maria Gonzalez (40259745Q) a l'ens Ajuntament de Badalona a data 25-10-2023 és correcta</descripcio>
+               <tipusSolicitud>VALIDACIO</tipusSolicitud>
+            </resposta>
+
+            <consulta>
+               ...
+            </consulta>
+            
+            <representacio>
+               ...
+            </representacio>
+
+         </resultat>
+
+</validarRepresentacioResponse>
+```
+
+Aquest exemple està retornant una representació de tipus C (a tràmit) amb capacitat NOTIFICAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representació la resposta seria incorrecte.
+La capacitat GENERAL d'una representació permet que es consultin la resta de capacitats positivament.
+
+** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
+
+### Resposta validacio negativa
+En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
+
+```xml
+<validarRepresentacioResponse>         
+            <resultat>
+            <resposta>
                <codi>001</codi>
-               <descripcio>La validació de la consulta per el tràmit Plans parcials d'ordenació entre Jordi Florit (43445911S) i Maria Gonzalez (40259745Q) a l'ens Consorci Administració Oberta de Catalunya a data 26-10-2023 és incorrecta</descripcio>
+               <descripcio>La validació de la consulta per el tràmit Plans parcials d'ordenació entre Jordi Florit (43445911S) i Maria Gonzalez (40259745Q) a l'ens Ajuntament de Badalona a data 25-10-2023 és incorrecta</descripcio>
                <tipusSolicitud>VALIDACIO</tipusSolicitud>
             </resposta>
             <consulta>
@@ -1827,75 +1856,24 @@ Si existeix una representació** que permet al representant actuar en nom del po
                   </representant>
                   <ambitRepresentacio>
                      <administracio>
-                        <codi>9821920002</codi>
+                        <codi>801550006</codi>
                      </administracio>
                      <tramit>
                         <uuid>5003</uuid>
                      </tramit>
                      <capacitats>
                         <capacitat>
-                           <codi>NOTIFICAR</codi>
+                           <codi>TRAMITAR</codi>
                         </capacitat>
                      </capacitats>
                   </ambitRepresentacio>
                </representacio>
-               <dataValidacio>2023-10-26T00:00:00</dataValidacio>
+               <dataValidacio>2023-10-25T00:00:00</dataValidacio>
             </consulta>
          </resultat>
-         <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5zOmRzaWc9Imh0...</evidenciaSignada>
-         <urlDescarregaInforme>http://xxxx.app.aoc.cat/representa-core/informe?uuid=cdde5296-75f6-4b9a-ac4c-1a8e686a3bad</urlDescarregaInforme>
-</validarRepresentacioResponse>
-```
-
-Aquest exemple està retornant una representació de tipus A (a organisme) amb capacitat CONSULTAR (veure apartat [4.Tipus de representacions](#4-tipus-de-representacions)). Si p. ex. s'hagués fet una validació amb la capacitat TRAMITAR o amb un rang de dates fora del termini de vigència de la representació la resposta seria incorrecte.
-La capacitat GENERAL d'una representació permet que es consultin la resta de capacitats positivament.
-
-** _Només pot existir una representació vàlida que doni resposta positiva a una consulta de validació._
-
-### Resposta validacio negativa
-En cas que no existeixi cap representació que permeti respondre positivament a la consulta de validació, es retorna una resposta del tipus:
-
-```xml
-<validarRepresentacioResponse>         
-            <resultat>
-               <resposta>
-                  <codi>001</codi>
-                  <descripcio>La validació de la consulta per el tràmit Tramit1 entre Pep Siurà (12345678A) i Test test (9999999P) a l'ens Consorci AOC a data 2/02/21 0:00 és incorrecte</descripcio>
-                  <tipusSolicitud>VALIDACIO</tipusSolicitud>
-               </resposta>
-               <consulta>
-                  <representacio>
-                     <poderdant>
-                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>12345678A</valorDocumentIdentificatiu>
-                        <tipusPersona>FISICA</tipusPersona>
-                     </poderdant>
-                     <representant>
-                        <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-                        <valorDocumentIdentificatiu>9999999P</valorDocumentIdentificatiu>
-                        <tipusPersona>FISICA</tipusPersona>
-                     </representant>
-                     <ambitRepresentacio>
-                        <administracio>
-                           <codi>9821920002</codi>
-                        </administracio>
-                        <tramit>
-                           <uuid>2</uuid>
-                        </tramit>
-                        <capacitats>
-                           <capacitat>
-                              <codi>TRAMITAR</codi>
-                           </capacitat>
-                        </capacitats>
-                     </ambitRepresentacio>
-                  </representacio>
-                  <dataValidacio>2021-02-02T00:00:00</dataValidacio>
-               </consulta>
-            </resultat>
-            <evidenciaSignada>PGRzaWc6U2lnbmF0dXJlIHhtbG5....</evidenciaSignada>         
       </validarRepresentacioResponse>
 ```
-Seguint l'exemple anterior, com que ara s'ha consultat la validació amb la capacitat TRAMITAR, no es troba cap representació que compelxi aquests paràmetres.
+Si s'ha consultat la validació amb un codi de tràmit inexistent entre aquestes dues persones, no es trobarà cap representació que compleixi aquests paràmetres i la resposta ho indicarà.
 
 ## 6.4 Alta representacio
 Exemple on es crea una representació.
