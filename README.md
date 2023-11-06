@@ -1786,16 +1786,16 @@ En aquest exemple es pregunta si existeix alguna representació vàlida perquè 
          </r:representacio>
          <r:dataValidacio>2023-10-25T00:00:00</r:dataValidacio>
          <r:solicitant>
-	         	<r:persona>
-	         	     <r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
-	         		<r:tipusPersona>FISICA</r:tipusPersona>
-	         		<r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
-	         	</r:persona>
-	         	<r:administracio>
-	         		<r:codi>1</r:codi>
-	         	</r:administracio>
-         	</r:solicitant>
-         	<r:generaEvidencia>false</r:generaEvidencia>
+			<r:persona>
+				<r:tipusDocumentIdentificatiu>NIF</r:tipusDocumentIdentificatiu>
+				<r:tipusPersona>FISICA</r:tipusPersona>
+				<r:valorDocumentIdentificatiu>12345678A</r:valorDocumentIdentificatiu>
+			</r:persona>
+			<r:administracio>
+				<r:codi>1</r:codi>
+			</r:administracio>
+		 </r:solicitant>
+		 <r:generaEvidencia>false</r:generaEvidencia>
         </r:dades>
       </r:validarRepresentacio>     
 
