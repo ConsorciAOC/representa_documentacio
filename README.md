@@ -122,6 +122,17 @@
 
 
 # 1. Introduccio
+
+El Representa és el servei de Registre Electrònic d’Apoderaments que el Consorci AOC posa a disposició de les Administracions Públiques catalanes. Podeu obtenir-me més informació a:
+
+Decàleg Representa (https://suport-representa.aoc.cat/hc/ca/articles/7918720402845-Dec%C3%A0leg-per-entendre-el-Representa-10-idees-per-con%C3%A8ixer-lo-a-fons)
+
+Què és i què fa el Representa (https://suport-representa.aoc.cat/hc/ca/articles/4417809777553-Qu%C3%A8-%C3%A9s-i-qu%C3%A8-fa-el-Representa-)
+
+<p align="center">
+<img align="center" src="img/repre_tw.png" />
+</p> 
+
 A continuació es descriu el funcionament i les diferents modalitats de consum del servei de Representa.
 
 ## 1.1. Integracio PCI
