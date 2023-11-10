@@ -531,17 +531,17 @@ Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides pe
 
 Estats possibles d'una representació:
 * `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
-* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA  o DENEGADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
-* `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA, DENEGADA o altre cop a PENDENT_VALIDACIO. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Temporalment, també es pot passar la representació a EN_VALIDACIÓ. Quan es faci una consulta de Validacio una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA, DENEGADA o altre cop a PENDENT_VALIDACIO. Quan es faci una consulta de _Validació_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
-* `PENDENT_ACCEPTACIO` >> El poderdant ha realitzat una representació sense documentació a validar i cal que el representant l’accepti explícitament per passar l'estat a VALIDA o RENUNCIADA. El poderdant també pot decidir donar-la de baixa i passar-la a REVOCADA. Quan es faci una consulta de _Validacio_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
+* `PENDENT_ACCEPTACIO` >> El poderdant o representant ha realitzat una representació sense documentació a validar i cal que l'altra part l’accepti explícitament per passar l'estat a VALIDA. Qualsevol de les dues parts, però pot decidir donar-la de baixa, tot passant a RENUNCIADA o REVOCADA (segons qui faci l'acció).  Quan es faci una consulta de Validacio una representació en aquest estat no podrà ser usada per respondre afirmativament. Passats 40 dies en aquest estat, si no ha estat acceptada o donada de baixa (revocació o renúncia), automàticament passa a anul·lada.
 * `DENEGADA` >> Un cop revisada la documentació adjunta a la inscripció.
-* `EXPIRADA` >> Una representació que abans ha estat VALIDA o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
+* `EXPIRADA` >> Una representació que abans ha estat VALIDA, PENDENT_ACCEPTACIO o PENDENT_VALIDACIO, però en la data actual està fora del seu periode de vigència.
 * `RENUNCIADA` >> El representant renuncia a la representació.
 * `REVOCADA` >> El poderdant revoca la representació.
-* `ANULADA` >> Estat excepcional en que per un motiu concret, un treballador públic invalida una representació. Una representació pot passar a aquest estat en qualsevol moment de la seva vida útil.
+* `ANULADA` >> Estat excepcional en que l'administració pública decideix donar de baixa una representació, ja sigui per què han passat 40 dies sense ser acceptada o bé, hi ha una errada en la mateixa (p.ex. NIF incorrecte, nom incorrecte, documentació adjunta no coincident, etc.) Una representació pot passar a aquest estat en qualsevol moment de la seva vida útil.
 
-<p align="center"><img src='estats.svg'></p>
+<p align="center"><img src='estats_new.svg'></p>
 
 ## 3.11  Administracio
 Element per recuperar la informació de cada administració integrada al servei. Les administracions es creen automàticament en el moment d'integrar-se al servei i alguns camps es poden editar posteriorment des del portal de l'empleat de Representa (sempre que l'usuari tingui el rol amb els permisos necessaris).

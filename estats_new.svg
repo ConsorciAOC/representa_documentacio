@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg id="mermaid-svg" width="100%" height="589.9000244140625" style="max-width: 908.5px;" viewBox="0 0.000003814697265625 908.5 589.9000244140625" xmlns="http://www.w3.org/2000/svg">
+  <style>#mermaid-svg {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#mermaid-svg .error-icon{fill:#552222;}#mermaid-svg .error-text{fill:#552222;stroke:#552222;}#mermaid-svg .edge-thickness-normal{stroke-width:2px;}#mermaid-svg .edge-thickness-thick{stroke-width:3.5px;}#mermaid-svg .edge-pattern-solid{stroke-dasharray:0;}#mermaid-svg .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-svg .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-svg .marker{fill:#333333;stroke:#333333;}#mermaid-svg .marker.cross{stroke:#333333;}#mermaid-svg svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-svg .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-svg .cluster-label text{fill:#333;}#mermaid-svg .cluster-label span{color:#333;}#mermaid-svg .label text,#mermaid-svg span{fill:#333;color:#333;}#mermaid-svg .node rect,#mermaid-svg .node circle,#mermaid-svg .node ellipse,#mermaid-svg .node polygon,#mermaid-svg .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-svg .node .label{text-align:center;}#mermaid-svg .node.clickable{cursor:pointer;}#mermaid-svg .arrowheadPath{fill:#333333;}#mermaid-svg .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-svg .flowchart-link{stroke:#333333;fill:none;}#mermaid-svg .edgeLabel{background-color:#e8e8e8;text-align:center;}#mermaid-svg .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#mermaid-svg .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-svg .cluster text{fill:#333;}#mermaid-svg .cluster span{color:#333;}#mermaid-svg div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-svg :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+  <g>
+    <g class="output">
+      <g class="clusters"/>
+      <g class="edgePaths">
+        <g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;">
+          <path class="path" d="M352.1514436543388,96.05144441727826L340.33453637861567,107.02620393537836C328.5176291028925,118.00096345347849,304.8838145514463,139.9504824896787,293.06690727572317,156.9252420077788C281.25,173.9000015258789,281.25,185.9000015258789,281.25,191.9000015258789L281.25,197.9000015258789" marker-end="url(#arrowhead53)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead53" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-A LE-H" id="L-A-H" style="opacity: 1;">
+          <path class="path" d="M418.92110983292616,89.97888940413448L438.3509248607718,101.96574142442522C457.78073988861746,113.95259344471594,496.6403699443087,137.92629748529743,516.0701849721544,159.41314950558817C535.5,180.9000015258789,535.5,199.9000015258789,535.5,218.9000015258789C535.5,237.9000015258789,535.5,256.9000015258789,535.5,272.4000015258789C535.5,287.9000015258789,535.5,299.9000015258789,535.5,305.9000015258789L535.5,311.9000015258789" marker-end="url(#arrowhead54)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead54" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-B LE-I" id="L-B-I" style="opacity: 1;">
+          <path class="path" d="M318.7368421052632,239.9000015258789L329.44736842105266,245.9000015258789C340.15789473684214,251.9000015258789,361.57894736842104,263.9000015258789,361.57894736842104,275.9000015258789C361.57894736842104,287.9000015258789,340.15789473684214,299.9000015258789,329.44736842105266,305.9000015258789L318.7368421052632,311.9000015258789" marker-end="url(#arrowhead55)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead55" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+          <path class="path" d="M 443.763 332.46 L 359.841 350.203 C 373.315 346.534 285.596 375.109 274.544 382.965 C 263.492 390.821 236.545 406.967 229.288 426.091 L 181.968 539.156" marker-end="url(#arrowhead55)" style="fill:none"/>
+        </g>
+        <g class="edgePath LS-I LE-B" id="L-I-B" style="opacity: 1;">
+          <path class="path" d="M262.1842105263158,311.9000015258789L256.7368421052632,305.9000015258789C251.28947368421052,299.9000015258789,240.3947368421053,287.9000015258789,240.3947368421053,275.9000015258789C240.3947368421053,263.9000015258789,251.28947368421052,251.9000015258789,256.7368421052632,245.9000015258789L262.1842105263158,239.9000015258789" marker-end="url(#arrowhead56)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead56" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-I LE-E" id="L-I-E" style="opacity: 1;">
+          <path class="path" d="M 221.75 350.68 L 199.875 357.217 C 178 363.753 134.25 376.827 112.375 389.363 C 90.5 401.9 87.737 409.065 87.737 415.065 L 88.428 423.828" marker-end="url(#arrowhead57)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead57" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+          <path class="path" d="M 221.059 239.469 L 208.854 259.131 C 198.9 277.072 185.57 303.154 180.76 320.289 C 175.95 337.424 149.214 442.221 149.214 448.221 L 134.018 538.492" marker-end="url(#arrowhead57)" style="fill:none"/>
+        </g>
+        <g class="edgePath LS-I LE-C" id="L-I-C" style="opacity: 1;">
+          <path class="path" d="M340.75,345.6740128253139L375.0833333333333,353.0450109420747C409.4166666666667,360.4160090588355,478.0833333333333,375.15800529235725,503.07456140350877,388.5290034091181C528.0657894736842,401.9000015258789,509.3815789473684,413.9000015258789,500.03947368421046,419.9000015258789L490.6973684210526,425.9000015258789" marker-end="url(#arrowhead58)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead58" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-H LE-C" id="L-H-C" style="opacity: 1;">
+          <path class="path" d="M475.7236842105263,353.9000015258789L458.64473684210526,359.9000015258789C441.56578947368416,365.9000015258789,407.4078947368421,377.9000015258789,399.25,389.9000015258789C391.0921052631579,401.9000015258789,408.93421052631584,413.9000015258789,417.8552631578948,419.9000015258789L426.7763157894737,425.9000015258789" marker-end="url(#arrowhead59)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead59" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-H LE-G" id="L-H-G" style="opacity: 1;">
+          <path class="path" d="M585.0526315789474,353.9000015258789L599.2105263157895,359.9000015258789C613.3684210526316,365.9000015258789,641.6842105263158,377.9000015258789,655.8421052631579,393.4000015258789C670,408.9000015258789,670,427.9000015258789,670,446.9000015258789C670,465.9000015258789,670,484.9000015258789,667.1052631578947,500.4000015258789C664.2105263157895,515.9000015258789,658.421052631579,527.9000015258789,655.5263157894736,533.9000015258789L652.6315789473684,539.9000015258789" marker-end="url(#arrowhead60)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead60" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-H LE-F" id="L-H-F" style="opacity: 1;">
+          <path class="path" d="M626.5,350.1039816253814L661.5833333333334,356.7366516087977C696.6666666666666,363.3693215922139,766.8333333333334,376.63466155904644,801.9166666666666,392.76733154246267C837,408.9000015258789,837,427.9000015258789,837,446.9000015258789C837,465.9000015258789,837,484.9000015258789,835.0526315789474,500.4000015258789C833.1052631578947,515.9000015258789,829.2105263157895,527.9000015258789,827.2631578947368,533.9000015258789L825.3157894736842,539.9000015258789" marker-end="url(#arrowhead61)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead61" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;">
+          <path class="path" d="M427.9736842105263,467.9000015258789L419.39473684210526,473.9000015258789C410.81578947368416,479.9000015258789,393.6578947368421,491.9000015258789,377.1578947368421,503.9000015258789C360.6578947368421,515.9000015258789,344.81578947368416,527.9000015258789,336.89473684210526,533.9000015258789L328.9736842105263,539.9000015258789" marker-end="url(#arrowhead62)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead62" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-C LE-V" id="L-C-V" style="opacity: 1;">
+          <path class="path" d="M423.5,453.44954357417197L379.2083333333333,461.85795323278984C334.9166666666667,470.2663628914076,246.33333333333334,487.0831822086432,202.04166666666666,501.4915918672611C157.75,515.9000015258789,157.75,527.9000015258789,157.75,533.9000015258789L157.75,539.9000015258789" marker-end="url(#arrowhead63)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead63" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-C LE-F" id="L-C-F" style="opacity: 1;">
+          <path class="path" d="M492.5,453.55482386090426L536,461.9456868050667C579.5,470.3365497492291,666.5,487.118275637554,716.8421052631579,501.5091385817165C767.1842105263158,515.9000015258789,780.8684210526317,527.9000015258789,787.7105263157895,533.9000015258789L794.5526315789474,539.9000015258789" marker-end="url(#arrowhead64)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead64" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-C LE-G" id="L-C-G" style="opacity: 1;">
+          <path class="path" d="M489.5921052631579,467.9000015258789L498.6184210526316,473.9000015258789C507.64473684210526,479.9000015258789,525.6973684210526,491.9000015258789,545.1184210526316,503.9000015258789C564.5394736842105,515.9000015258789,585.328947368421,527.9000015258789,595.7236842105264,533.9000015258789L606.1184210526316,539.9000015258789" marker-end="url(#arrowhead65)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead65" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+        <g class="edgePath LS-H LE-D" id="L-H-D" style="opacity: 1;">
+          <path class="path" d="M444.5,351.13198746612494L412.25,357.59332314275053C380,364.05465881937624,315.5,376.97733017262755,283.25,392.93866584925325C251,408.9000015258789,251,427.9000015258789,251,446.9000015258789C251,465.9000015258789,251,484.9000015258789,256.2894736842105,500.4000015258789C261.57894736842104,515.9000015258789,272.15789473684214,527.9000015258789,277.44736842105266,533.9000015258789L282.7368421052632,539.9000015258789" marker-end="url(#arrowhead66)" style="fill:none"/>
+          <defs>
+            <marker id="arrowhead66" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto">
+              <path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"/>
+            </marker>
+          </defs>
+        </g>
+      </g>
+      <g class="edgeLabels">
+        <g class="edgeLabel" transform="translate(281.25,161.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-72,-11)" class="label">
+            <rect rx="0" ry="0" width="144" height="22"/>
+            <foreignObject width="144" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-A' L-LE-B" id="L-L-A-B">Hi ha documentació</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(535.5,218.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-83.5,-11)" class="label">
+            <rect rx="0" ry="0" width="167" height="22"/>
+            <foreignObject width="167" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-A' L-LE-H" id="L-L-A-H">No hi ha documentació</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(383,275.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-83.5,-11)" class="label">
+            <rect rx="0" ry="0" width="167" height="22"/>
+            <foreignObject width="167" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-B' L-LE-I" id="L-L-B-I">Revisant documentació</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g transform="translate(0,0)" class="label">
+            <rect rx="0" ry="0" width="0" height="0"/>
+            <foreignObject width="0" height="0">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-I' L-LE-B" id="L-L-I-B"></span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(90.5,389.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-82.5,-11)" class="label">
+            <rect rx="0" ry="0" width="165" height="22"/>
+            <foreignObject width="165" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-I' L-LE-E" id="L-L-I-E">Documentació invàlida</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(546.75,389.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-75.5,-11)" class="label">
+            <rect rx="0" ry="0" width="151" height="22"/>
+            <foreignObject width="151" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-I' L-LE-C" id="L-L-I-C">Documentació vàlida</span>
+              </div>
+            </foreignObject>
+          </g>
+          <rect width="151" height="22" x="-75.5" y="-11"/>
+          <foreignObject width="151" height="22" transform="matrix(1, 0, 0, 1, -75.5, -11)">
+            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+              <span class="edgeLabel L-LS-I' L-LE-C" id="span-1">Documentació vàlida</span>
+            </div>
+          </foreignObject>
+          <foreignObject width="151" height="22" transform="matrix(1, 0, 0, 1, -224.0110188025484, -8.928250060909193)">
+            <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+              <span class="edgeLabel L-LS-I' L-LE-C" id="span-2">Acceptació</span>
+            </div>
+          </foreignObject>
+        </g>
+        <g class="edgeLabel" transform="translate(670,446.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-81.5,-11)" class="label">
+            <rect rx="0" ry="0" width="163" height="22"/>
+            <foreignObject width="163" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-H' L-LE-G" id="L-L-H-G">Representant renuncia</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(837,446.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-63.5,-11)" class="label">
+            <rect rx="0" ry="0" width="127" height="22"/>
+            <foreignObject width="127" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-H' L-LE-F" id="L-L-H-F">Poderdant revoca</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(376.5,503.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-65.5,-11)" class="label">
+            <rect rx="0" ry="0" width="131" height="22"/>
+            <foreignObject width="131" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-C' L-LE-D" id="L-L-C-D">Funcionari anul.la</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" style="opacity: 1;" transform="">
+          <g transform="translate(0,0)" class="label">
+            <rect rx="0" ry="0" width="0" height="0"/>
+            <foreignObject width="0" height="0">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-C' L-LE-V" id="L-L-C-V"></span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(753.5,503.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-63.5,-11)" class="label">
+            <rect rx="0" ry="0" width="127" height="22"/>
+            <foreignObject width="127" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-C' L-LE-F" id="L-L-C-F">Poderdant revoca</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(543.75,503.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-81.5,-11)" class="label">
+            <rect rx="0" ry="0" width="163" height="22"/>
+            <foreignObject width="163" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-C' L-LE-G" id="L-L-C-G">Representant renuncia</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+        <g class="edgeLabel" transform="translate(251,446.9000015258789)" style="opacity: 1;">
+          <g transform="translate(-77,-11)" class="label">
+            <rect rx="0" ry="0" width="154" height="22"/>
+            <foreignObject width="154" height="22">
+              <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">
+                <span class="edgeLabel L-LS-H' L-LE-D" id="L-L-H-D">Caducitat automàtica</span>
+              </div>
+            </foreignObject>
+          </g>
+        </g>
+      </g>
+      <g class="nodes">
+        <g class="node default" id="flowchart-A-28" transform="translate(382,66.95000076293945)" style="opacity: 1;">
+          <polygon points="58.95,0 117.9,-58.95 58.95,-117.9 0,-58.95" transform="translate(-58.95,58.95)" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-34.5,-11)">
+              <foreignObject width="69" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">Inscripció</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-B-29" transform="translate(281.25,218.9000015258789)" style="opacity: 1;">
+          <rect x="-86.448" y="-20.999" width="172.898" height="41.998" class="label-container" style="transform-box: fill-box; transform-origin: 50% 50%;" transform="matrix(0.999996, 0.002858, -0.011891, 0.99997, 3.445395, 0.009844)"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="matrix(1.028387, 0, 0, 1, -73, -11)" style=""/>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-H-31" transform="translate(535.5,332.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-91" y="-21" width="182" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-81,-11)">
+              <foreignObject width="162" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">PENDENT_ACCEPTACIO</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-I-33" transform="translate(281.25,332.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-59.5" y="-21" width="119" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-49.5,-11)">
+              <foreignObject width="99" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">EN_VALIDACIÓ</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-E-37" transform="translate(90.5,446.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-48.5" y="-21" width="97" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-38.5,-11)">
+              <foreignObject width="77" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">DENEGADA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-C-39" transform="translate(458,446.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-34.5" y="-21" width="69" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-24.5,-11)">
+              <foreignObject width="49" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">VÀLIDA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-G-43" transform="translate(642.5,560.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-55" y="-21" width="110" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-45,-11)">
+              <foreignObject width="90" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">RENUNCIADA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-F-45" transform="translate(818.5,560.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-48" y="-21" width="96" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-38,-11)">
+              <foreignObject width="76" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">REVOCADA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-D-47" transform="translate(301.25,560.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-49.5" y="-21" width="99" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-39.5,-11)">
+              <foreignObject width="79" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">ANUL.LADA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="flowchart-V-49" transform="translate(157.75,560.9000015258789)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-44" y="-21" width="88" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-34,-11)">
+              <foreignObject width="68" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">EXPIRADA</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+        <g class="node default" id="g-1" transform="matrix(1, 0, 0, 1, 535.5, 332.9)" style="opacity: 1;">
+          <rect rx="0" ry="0" x="-91" y="-21" width="182" height="42" class="label-container"/>
+          <g class="label" transform="translate(0,0)">
+            <g transform="translate(-81,-11)">
+              <foreignObject width="162" height="22">
+                <div style="display: inline-block; white-space: nowrap;" xmlns="http://www.w3.org/1999/xhtml">PENDENT_ACCEPTACIO</div>
+              </foreignObject>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+  <text style="font-family: Arial, sans-serif; font-size: 14.3px; white-space: pre;" x="208.606" y="223.957">PENDENT_VALIDACIÓ</text>
+</svg>
