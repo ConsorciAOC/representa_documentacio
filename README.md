@@ -530,7 +530,7 @@ Al punt [5.13](#513-descarrega-de-documents) s'indica on i com fer les crides pe
 ## 3.10  Estat
 
 Estats possibles d'una representació:
-* `VALIDA` >> Representació vàlida. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
+* `VALIDA` >> Representació validada pel representant o pel poderdant. L'únic estat d'una representació per a que en una consulta de validació sigui utilitzada.
 * `PENDENT_VALIDACIO` >> S'ha aportat documentació que cal revisar i validar per poder canviar l'estat a VALIDA o DENEGADA. Temporalment, també es pot passar la representació a EN_VALIDACIÓ. Quan es faci una consulta de Validacio una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `EN_VALIDACIO` >> S'està revisant la documentació adjunta. Un cop validada es passarà a VALIDA, DENEGADA o altre cop a PENDENT_VALIDACIO. Quan es faci una consulta de _Validació_ una representació en aquest estat no podrà ser usada per respondre afirmativament.
 * `PENDENT_SIGNATURA` >> Un cop el servei rep una petició d'inscripció o modificació d'una representació es genera una evidència signada. En cas que aquesta signatura falli es posa aquesta representació en estat pendent de signatura i es reintenta fins que es realitzi correctament la signatura.
