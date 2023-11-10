@@ -214,7 +214,9 @@ La resta de camps actuen a mode filtre, és a dir, la cerca és tan restrictiva 
 
 ## 3.1 Representacio
 
-Element princial de Representa. Aquí es recull tota la informació relativa a la representació entre dues persones.
+Element principal de Representa. Podeu obtenir més detalls sobre que és una representació a: https://suport-representa.aoc.cat/hc/ca/articles/4417801368593-Qu%C3%A8-%C3%A9s-una-representaci%C3%B3-
+
+Aquí es recull tota la informació relativa a la representació entre dues persones.
 
 ```xml
 <xs:complexType name="representacio">  
@@ -2358,14 +2360,14 @@ Exemple per recuperar un tramit concret a partir del seu uuid
 
 Resultat| Codi
 ---- | ----------
-|Operació correcte| 0
+|Operació correcta| 0
 |Error intern|500|
 |No trobat|001|
 |No indicat|002|
 |Element ja existent|003|
 |Dades incorrectes|004|
 |Element no existent|005|
-|No s'ha trobat l'administració propietaria|006|
+|No s'ha trobat l'administració propietària|006|
 |Element no eliminable|007|
 |Element no disponible|008|
 |Signatura no vàlida|009|
