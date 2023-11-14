@@ -446,7 +446,7 @@ Element que determina la capacitat d'una representació. La capacitat _GENERAL_ 
 
 
 ## 3.7 Solicitant
-Element associat a cada evidencia on es recull informació relativa al context de la petició que rep el servei Representa.
+Element associat a cada evidència on es recull informació relativa al context de la petició que rep el servei Representa.
 
 ```xml
 <xs:complexType name="solicitant">  
