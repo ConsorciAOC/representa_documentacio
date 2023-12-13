@@ -2395,13 +2395,13 @@ Exemple:
 
 El codi de cada familia ha de ser únic per cada catàleg.
 
-* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia;"Codi tràmit";"Nom tramit"_
+* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia";"Codi tràmit";"Nom tràmit";"Descripció";"Codi FUE"_
 
 Exemple:
 ```
-"0004";"1110";"Llicència d'obres"
-"0004";"1230";"Reclamacions i recursos a taxes i preus públics"
-"0006";"1456";"Plans parcials d'ordenació"
+"0004";"1110";"Llicència d'obres";"Tràmits destinats a les llicències d'obres públiques";"1115"
+"0004";"1230";"Reclamacions i recursos a taxes i preus públics";"";"1116"
+"0006";"1456";"Plans parcials d'ordenació";"Tràmits destinats als plans d'ordenació"
 ```
 El codi de cada tràmit ha de ser únic per cada familia. És recomenable que també sigui únic en tot el catàleg.
 
