@@ -1532,12 +1532,12 @@ Producció > [https://serveis3.app.aoc.cat/representa-core/downloadDocument?uuid
 ```xml
 <consultarRepresentacio>
   <ConsultaRepresentacio>            
-    <identificadorLegal>201900000063</identificadorLegal>
+    <identificadorLegal>202300098509</identificadorLegal>
     <solicitant>
       <persona>
          <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
-        <tipusPersona>FISICA</tipusPersona>
-        <valorDocumentIdentificatiu>12121212Z</valorDocumentIdentificatiu>
+         <valorDocumentIdentificatiu>11223344B</valorDocumentIdentificatiu>
+         <tipusPersona>FISICA</tipusPersona>
       </persona>
       <administracio>
         <codi>9821920002</codi>
@@ -1546,8 +1546,6 @@ Producció > [https://serveis3.app.aoc.cat/representa-core/downloadDocument?uuid
   </ConsultaRepresentacio>
 </consultarRepresentacio>
 ```
-
-Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_.
 
 ### Resposta
 
@@ -1560,15 +1558,18 @@ Si es vol retornar els resultats en format PDF generant un informe cal indicar l
        <tipusSolicitud>CONSULTA</tipusSolicitud>
     </resposta>
     <representacio>
-       <identificadorLegal>201900000063</identificadorLegal>
-       <tipusRepresentacio>TIPUS_C</tipusRepresentacio>
-       <estat>EXPIRADA</estat>
+       <identificadorLegal>202300098509</identificadorLegal>
+       <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+       <estat>ANULADA</estat>
        <poderdant>
         ...
        </poderdant>
        <representant>
         ...
        </representant>
+       <solicitant>
+        ...
+       </solicitant>
        <ambitRepresentacio>
         <administracio>
          ...
@@ -1580,14 +1581,12 @@ Si es vol retornar els resultats en format PDF generant un informe cal indicar l
          ...
         </capacitats>
        </ambitRepresentacio>
-       <dataCreacio>2019-02-24T00:00:00</dataCreacio>
-       <dataIniciVigencia>2019-02-23T00:00:00</dataIniciVigencia>
-       <dataFiVigencia>2019-02-24T00:00:00</dataFiVigencia>
+       <dataCreacio>2023-04-14T11:36:10</dataCreacio>
+       <dataIniciVigencia>2023-04-14T00:00:00</dataIniciVigencia>
+       <dataFiVigencia>2028-04-14T00:00:00</dataFiVigencia>
+       <dataMaxVigencia>2028-04-14T00:00:00</dataMaxVigencia>
        <validacions>0</validacions>
-       <solicitant>
-        ...
-       </solicitant>
-       <refAlta>a716be0b-4882-44a2-bd4a-7de30bbc8a8b-2512070005</refAlta>
+       <origen>PORTAL_EMPLEAT</origen>
        <evidencies>
         <evidencia>
          ...
@@ -1601,7 +1600,30 @@ Si es vol retornar els resultats en format PDF generant un informe cal indicar l
  </consultarRepresentacioResponse>
 ```
 
-Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
+Si es vol retornar els resultats en format PDF generant un informe cal indicar l'element _generaInforme_ a _true_. Per exemple:
+
+### Peticio
+
+```xml
+<consultarRepresentacio>
+  <ConsultaRepresentacio>            
+    <identificadorLegal>202300098509</identificadorLegal>
+    <solicitant>
+      <persona>
+         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+         <valorDocumentIdentificatiu>11223344B</valorDocumentIdentificatiu>
+         <tipusPersona>FISICA</tipusPersona>
+      </persona>
+      <administracio>
+        <codi>9821920002</codi>
+      </administracio>
+    </solicitant>
+    <generaInforme>true</generaInforme>
+  </ConsultaRepresentacio>
+</consultarRepresentacio>
+```
+
+Si la consulta anterior aquest element _generaInforme_ amb valor _true_ es retorna una resposta tipus:
 
 ```xml
 <consultarRepresentacioResponse xmlns="http://www.aoc.cat/representa/v2">
@@ -1611,7 +1633,7 @@ Si la consulta anterior inclou l'element _generaInforme_ amb valor _true_ es ret
 	   <descripcio>L'operació ha estat executada correctament</descripcio>
 	   <tipusSolicitud>CONSULTA</tipusSolicitud>
 	</resposta>
-	<urlDescarregaInforme xsi:type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">http://serveis3.app.aoc.cat/representa-core/informe?uuid=bea705e1-6669-4550-b59a-7da0bb99a16c</urlDescarregaInforme>
+	<urlDescarregaInforme>http://xxxxx/representa-core/informe?uuid=7be9be63-733b-4199-8190-993e259bed04</urlDescarregaInforme>
 	</resultat>
 </consultarRepresentacioResponse>
 ```
