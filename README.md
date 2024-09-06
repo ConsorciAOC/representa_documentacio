@@ -473,7 +473,11 @@ Element associat a cada evidència on es recull informació relativa al context 
   <xs:element name="tipusPersona" minOccurs="0" type="tipusPersona" />  
   <xs:element name="nomRaoSocial" minOccurs="0" type="NonEmptyString" />  
   <xs:element name="cognoms" minOccurs="0" type="xs:string" />  
+  <xs:element name="cognom1" minOccurs="0" type="xs:string" />  
+  <xs:element name="cognom2" minOccurs="0" type="xs:string" />  
   <xs:element name="correuElectronic" minOccurs="0" type="NonEmptyString" />  
+  <xs:element name="telefon" minOccurs="0" type="xs:string" />  
+  <xs:element name="prefix" minOccurs="0" type="xs:string" />  
   <xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean" />  
   <xs:element name="dataAcceptacioAvisos" minOccurs="0" type="xs:dateTime" />  
  </xs:sequence>  
@@ -486,9 +490,13 @@ Element associat a cada evidència on es recull informació relativa al context 
 |valorDocumentIdentificatiu| Element usat per a la identificació o cerca de persones|
 |tipusPersona|Element del tipus _tipusPersona_ (FISICA o JURIDICA)|
 |nomRaoSocial|Nom o raó social de la persona|
-|cognoms|Cognoms de la persona|
-|correuElectronic| Adreça de correu electrònic|
-|accceptaAvisos|Camp per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
+|cognoms|Cognoms de la persona (informar només en cas de no poder separar-los per cognom1 i cognom2|
+|cognom1|Primer cognom de la persona|
+|cognom2|Segon cognom de la persona|
+|correuElectronic| Adreça de correu electrònic per rebre els avisos|
+|telefon| Telèfon mòbil de la persona per rebre els avisos|
+|prefix| Digits del prefix del telèfon mòbil de la persona, en format numèric (per exemple: 0034)|
+|acceptaAvisos|Camp per controlar si desitja rebre avisos relatius als canvis d'estat de les representacions on sigui part implicada|
 |dataAcceptacioAvisos|Data de modificació de _dataAcceptacioAvisos_ (yyyy-MM-dd'T'HH:mm:ss)|
 
 
@@ -861,7 +869,7 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 
 ## 5.3 Consulta de representacions per persona
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -875,6 +883,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
      <xs:sequence>  
       <xs:element name="persona" type="persona"/>  
       <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="vigent" type="xs:boolean"/>  
       <xs:element name="solicitant" type="solicitant"/>  
      </xs:sequence>  
    </xs:complexType>  
@@ -887,8 +896,10 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
 || `FALSE` > tots els estats
+|vigent| `TRUE` > representacions amb data actual dins del periode de vigència de la representació | Si
+|| `FALSE` > vigents i no vigents
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
@@ -942,7 +953,7 @@ Camp | Descripció
 
 ## 5.4 Consulta de representacions per persona poderdant
 Permet consultar totes les representacions on intervé una determinada persona com a poderdant.
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -956,6 +967,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
      <xs:sequence>  
       <xs:element name="persona" type="persona"/>  
       <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="vigent" type="xs:boolean"/>  
       <xs:element name="solicitant" type="solicitant"/>  
      </xs:sequence>  
    </xs:complexType>  
@@ -968,8 +980,10 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
 || `FALSE` > tots els estats
+|vigent| `TRUE` > representacions amb data actual dins del periode de vigència de la representació | Si
+|| `FALSE` > vigents i no vigents
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
@@ -1003,7 +1017,7 @@ Camp | Descripció
 
 ## 5.5 Consulta de representacions per persona representant
 Permet consultar totes les representacions on intervé una determinada persona com a representant.
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -1017,6 +1031,7 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
      <xs:sequence>  
       <xs:element name="persona" type="persona"/>  
       <xs:element name="actives" type="xs:boolean"/>  
+      <xs:element name="vigent" type="xs:boolean"/>  
       <xs:element name="solicitant" type="solicitant"/>  
      </xs:sequence>  
    </xs:complexType>  
@@ -1029,8 +1044,10 @@ Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *R
 Camp | Descripció | Obligatori
 ---- | ---------- | -----------
 |persona| Persona sobre la que es volen recuperar les representacions. Només cal informar el _valorDocumentIdentificatiu_ | Si
-|actives| `TRUE` > representacions amb estat `VALIDA`, `PENDENT_VALIDACIO` i `PENDENT_ACCEPTACIO` | Si
+|actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
 || `FALSE` > tots els estats
+|vigent| `TRUE` > representacions amb data actual dins del periode de vigència de la representació | Si
+|| `FALSE` > vigents i no vigents
 |solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta

@@ -1,12 +1,18 @@
 # Change log
 
-## Febrer 2023 (A PRE el 17 de Novembre / A PRO el 15 de Febrer)
+## Octubre 2024 (A PRE el 3 d'octubre)
+
+- Incorporem a les dades personals el telèfon mòbil. A l'objecte _persona_, tindrem com a opcionals els camps _prefix_ i _telefon_. Aquests s'utilitzaràn per l'enviament de notificacions per SMS. 
+- Incorporem també a les dades personals els camps _cognom1_ i _cognom2_. Per la necessitat d'adaptarse amb Apodera (el Registre Electrònic d’Apoderaments de l’Administració General de l’Estat) necessitem separar els cognoms. Us demanem que si teniu la possibilitat de separar-los, els envieu separats en aquests dos camps. Si no, es mantindrà encara el camp _cognoms_. 
+- A la consulta de representacions per persona, afegim la opció de filtrar per les vigents. Amb el camp _vigent_ a _true_ retornarà les representacions que estàn vigents (és de dir, les que tenen la data actual dintre del periode de vigència). Si està a _false_ retornarà totes (vigents i no vigents).
+
+## Febrer 2023 (A PRE el 17 de novembre / A PRO el 15 de febrer)
 - El camp tipusPresentador passa a ser obligatori, admetent un dels següents valors possibles: PODERDANT, REPRESENTANT o ADMINISTRACIO.
 - El camp APLICACIO, encara que no serà obligatori a nivell de missatgeria, sí que validarem que estugui correctament informat. 
 - Recordar que els camps de SOLICITANT tenen que contenir a la persona que està fent la gestió. És a dir, la persona que entra a l'aplicatiu per efectuar la petició, ja sigui
   el representant o poderdant, o una tercera persona. 
 
-## Octubre 2022 (A PRE el 10 de Novembre / A PRO el 16 de Novembre)
+## Octubre 2022 (A PRE el 10 de novembre / A PRO el 16 de novembre)
 - El camp ja existent tipusDocument de documentEvidencia admetrà a les peticiones només un dels següents 4 valors possibles: SOLICITUD, SOLICITUD_DELEGACIO_SIGNATURA, PODER_NOTARIAL i ALTRES.
   Qualsevol altre valor no serà vàlid i es retornarà el missatge: "El camp tipus de document es incorrecte".
 
