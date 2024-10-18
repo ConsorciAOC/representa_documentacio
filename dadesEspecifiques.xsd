@@ -140,6 +140,7 @@
                             <xs:element name="pagina" type="pagina"/>
                             <xs:element name="persona" type="persona"/>
                             <xs:element name="actives" type="xs:boolean"/>
+                            <xs:element name="vigent" type="xs:boolean"/>
                             <xs:element name="solicitant" type="solicitant"/>
                         </xs:sequence>
                     </xs:complexType>
@@ -200,6 +201,7 @@
                             <xs:element name="pagina" type="pagina"/>
                             <xs:element name="persona" type="persona"/>
                             <xs:element name="actives" type="xs:boolean"/>
+                            <xs:element name="vigent"  type="xs:boolean"/>
                             <xs:element name="solicitant" type="solicitant"/>
                         </xs:sequence>
                     </xs:complexType>
@@ -241,6 +243,7 @@
                             <xs:element name="pagina" type="pagina"/>
                             <xs:element name="persona" type="persona"/>
                             <xs:element name="actives" type="xs:boolean"/>
+                            <xs:element name="vigent" type="xs:boolean"/>
                             <xs:element name="solicitant" type="solicitant"/>
                         </xs:sequence>
                     </xs:complexType>
@@ -715,7 +718,11 @@
             <xs:element name="tipusPersona" minOccurs="0" type="tipusPersona"/>
             <xs:element name="nomRaoSocial" minOccurs="0" type="xs:string"/>
             <xs:element name="cognoms" minOccurs="0" type="xs:string"/>
+            <xs:element name="cognom1" minOccurs="0" type="xs:string" />
+            <xs:element name="cognom2" minOccurs="0" type="xs:string" />
             <xs:element name="correuElectronic" minOccurs="0" type="xs:string"/>
+            <xs:element name="telefon" minOccurs="0" type="xs:string"/>
+            <xs:element name="prefix" minOccurs="0" type="xs:string"/>
             <xs:element name="acceptaAvisos" minOccurs="0" type="xs:boolean"/>
             <xs:element name="dataAcceptacioAvisos" type="xs:dateTime" minOccurs="0"/>
         </xs:sequence>
