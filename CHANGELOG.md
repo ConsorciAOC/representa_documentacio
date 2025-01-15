@@ -1,5 +1,9 @@
 # Change log
 
+## Novembre 2024 (A PRE el 27 de novembre)
+
+- Afegim camp URLDescargaInforme a la resposta de ValidacioRepresentacio
+
 ## Octubre 2024 (A PRE el 3 d'octubre)
 
 - Incorporem a les dades personals el telèfon mòbil. A l'objecte _persona_, tindrem com a opcionals els camps _prefix_ i _telefon_. Aquests s'utilitzaràn per l'enviament de notificacions per SMS. 
