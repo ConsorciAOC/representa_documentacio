@@ -122,7 +122,7 @@
                         <xs:sequence>
                             <xs:element name="resposta" type="resposta" />
                             <xs:element name="representacio" type="representacio" minOccurs="0" />
-                            <xs:element name="urlDescarregaInforme"  minOccurs="0"/>
+                            <xs:element name="urlDescarregaInforme" type="xs:string" minOccurs="0"/>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
