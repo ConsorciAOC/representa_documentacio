@@ -165,6 +165,8 @@ Per a més informació consultar el [document d'integració de la PCI](https://w
 |IMPORTANT |
 |---- | 
 |**Recordeu que els entorns de DEV i PRE estan destinats únicament per a l’ús de proves** i que, d’acord amb el Supervisor Europeu de Protecció de Dades (EDPS), **en cap cas podem fer servir dades personals reals**. Així doncs, als entorns de DEV i PRE hem de fer servir exclusivament dades fictícies o creades artificialment. |
+|---- | 
+|A l'hora de realitzar la vostra integració amb Representa, tingueu present les recomanacions sobre Protecció de Dades recollides al document https://www.apdcat.cat/content/dam/aem-apdcat/03-documentacio/documents/guiadesenvolupadors/GUIA-PDDD.pdf de l'APDCAT. |
 
 Com es comenta en el punt 1.1 d'aquest document, Representa funciona com a servei dins de la PCI, serà per tant necessari treballar amb la missatgeria de la PCI, encapsulant la missatgeria específica de Representa dins d'aquesta.
 
