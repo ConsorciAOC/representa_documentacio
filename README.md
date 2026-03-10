@@ -2429,9 +2429,13 @@ Aquelles administracions que hagin demanat disposar d'un catàleg propi podran c
 El portal de ciutadania ara es multiidioma. Això vol dir, que durant la creació manual, el nom de les famílies i els tràmits es pot informar en diversos idiomas. L'unic obligatori és el català. La resta és opcional informar-los, però s'ha de tenir present que si no tenen traducció a l'idioma escollit pel ciutadà al seu portal, li apareixeran en català.
 
 ## 8.2 Importacio mitjançant fitxer CSV
-Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Per poder fer aquesta càrrega cal disposar d'un catàleg propi (no estar vinculat al catàleg compartit de l'AOC). Aquest procés requereix 2 fitxers. Degut a que el Portal de Ciutadania admet diversos idiomes, a aquests fitxers tenim la possibilitat de indicar el nom de les families i dels tràmits en aquests idiomes. El català és obligatori, però la resta es poden deixar sense traducció simplement indicant "" al lloc corresponent del CSV. Els camps sense traducció apareixaran al portal en català. Per facilitar la tasca, hi han dues plantilles descarregables a la pantalla de gestió d'aquests elements, on s'indica clarament quin és el camp a informar.
+Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Per poder fer aquesta càrrega cal disposar d'un catàleg propi (no estar vinculat al catàleg compartit de l'AOC). 
 
-* CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi família";"Nom família en català";"Nom família en castellà";"Nom família en aranès";"Nom família en anglès"_
+Aquest procés requereix 2 fitxers. Degut a que el Portal de Ciutadania admet diversos idiomes, a aquests fitxers tenim la possibilitat d'indicar el nom de les famílies i dels tràmits en aquests idiomes. El català és obligatori, però la resta es poden deixar sense traducció simplement indicant "" al lloc corresponent del CSV. Els camps sense traducció apareixaran al portal en català. 
+
+Per facilitar la tasca, hi han dues plantilles descarregables a la pantalla de gestió d'aquests elements, on s'indica clarament quin és el camp a informar.
+
+* CSV per families: cal adjuntar un fitxer .csv amb les families amb el format _"Codi família";"Nom família en català";"Nom família en castellà";"Nom família en aranès";"Nom família en anglès"_
 
 Exemple (sense informar occità):
 ```
@@ -2441,7 +2445,7 @@ Exemple (sense informar occità):
 
 El codi de cada familia ha de ser únic per cada catàleg.
 
-* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia";"Codi tràmit";"Nom tràmit en català";"Nom tràmit en castellà";;"Nom tràmit en aranès";"Nom tràmit en anglès";"Descripció";"Codi FUE"_
+* CSV per tràmits: cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia";"Codi tràmit";"Nom tràmit en català";"Nom tràmit en castellà";"Nom tràmit en aranès";"Nom tràmit en anglès";"Descripció";"Codi FUE"_
 
 Exemple (sense informar occità):
 ```
@@ -2451,7 +2455,7 @@ Exemple (sense informar occità):
 ```
 El codi de cada tràmit ha de ser únic per cada familia. És recomenable que també sigui únic en tot el catàleg.
 
-Els camps "Descripció" i "Codi FUE", al igual que els idiomes diferents al català, també són opcionals. Recordeu que si no es vol informar la descripció però es vol informar el codi FUE, caldrà deixar el camp Descripió amb "" (veure exemple anterior).
+Els camps "Descripció" i "Codi FUE", igual que els idiomes diferents al català, també són opcionals. Recordeu que si no es vol informar la descripció però es vol informar el codi FUE, caldrà deixar el camp Descripió amb "" (veure exemple anterior).
 
 Restriccions / limitacions
 * MOLT IMPORTANT: Per evitar problemes de caràcters o accents, és necessari que els fitxers .csv estiguin codificats en UTF-8.
