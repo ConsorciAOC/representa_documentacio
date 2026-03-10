@@ -2426,34 +2426,35 @@ Per crear o fer ús d'un catàleg existent es contemplen 3 escenaris:
 ## 8.1 Creacio manual
 Aquelles administracions que hagin demanat disposar d'un catàleg propi podran crear families i associar-hi tràmits d'una manera manual i individual segons necessiti a través de les pantalles de configuració de l'administració de Representa.
 
+El portal de ciutadania ara es multiidioma. Això vol dir, que durant la creació manual, el nom de les famílies i els tràmits es pot informar en diversos idiomas. L'unic obligatori és el català. La resta és opcional informar-los, però s'ha de tenir present que si no tenen traducció a l'idioma escollit pel ciutadà al seu portal, li apareixeran en català.
+
 ## 8.2 Importacio mitjançant fitxer CSV
-Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Per poder fer aquesta càrrega cal disposar d'un catàleg propi (no estar vinculat al catàleg compartit de l'AOC). Aquest procés requereix 2 fitxers:
+Per aquelles administracions que disposin d'un catàleg propi s'ofereix la possibilitat de carregar-lo a través de fitxers en format CSV. Per poder fer aquesta càrrega cal disposar d'un catàleg propi (no estar vinculat al catàleg compartit de l'AOC). Aquest procés requereix 2 fitxers. Degut a que el Portal de Ciutadania admet diversos idiomes, a aquests fitxers tenim la possibilitat de indicar el nom de les families i dels tràmits en aquests idiomes. El català és obligatori, però la resta es poden deixar sense traducció simplement indicant "" al lloc corresponent del CSV. Els camps sense traducció apareixaran al portal en català. Per facilitar la tasca, hi han dues plantilles descarregables a la pantalla de gestió d'aquests elements, on s'indica clarament quin és el camp a informar.
 
-* CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi familia";"Nom familia"_
+* CSV per families > cal adjuntar un fitxer .csv amb les families amb el format _"Codi família";"Nom família en català";"Nom família en castellà";"Nom família en aranès";"Nom família en anglès"_
 
-Exemple:
+Exemple (sense informar occità):
 ```
-"0004";"Llicències"
-"0006";"Ajudes"
-"0007";"Sol·licituds"
+"0004";"Llicències";"Licencias";"";"Licenses"
+"0007";"Sol·licituds";"Solicitudes";"";"Applications"
 ```
 
 El codi de cada familia ha de ser únic per cada catàleg.
 
-* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia";"Codi tràmit";"Nom tràmit";"Descripció";"Codi FUE"_
+* CSV per tràmits > cal adjuntar un fitxer .csv amb els tràmits amb el format _"Codi familia";"Codi tràmit";"Nom tràmit en català";"Nom tràmit en castellà";;"Nom tràmit en aranès";"Nom tràmit en anglès";"Descripció";"Codi FUE"_
 
-Exemple:
+Exemple (sense informar occità):
 ```
-"0004";"1110";"Llicència d'obres";"Tràmits destinats a les llicències d'obres públiques";"1115"
-"0004";"1230";"Reclamacions i recursos a taxes i preus públics";"";"1116"
-"0006";"1456";"Plans parcials d'ordenació";"Tràmits destinats als plans d'ordenació"
+"0004";"1110";"Llicència d'obres";"Licencia de obras";"";"Building permit";"Tràmits destinats a les llicències d'obres públiques";"1115"
+"0004";"1230";"Reclamacions i recursos a taxes i preus públics";"Reclamaciones y recursos a tasas y precios públicos";"Claims and appeals regarding taxes and public fees";"";"Tràmits destinats a reclamacions de taxes i preus públics";"1116"
+"0007";"1456";"Plans parcials d'ordenació";"Planes parciales de ordenación";"";"Partial urban development plans";"";"1117"
 ```
 El codi de cada tràmit ha de ser únic per cada familia. És recomenable que també sigui únic en tot el catàleg.
 
-Els camps "Descripció" i "Codi FUE" són opcionals. Cal mantenir l'ordre. Si no es vol informar la descripció però es vol informar el codi FUE, caldrà deixar el camp Descripió amb "" (veure exemple anterior).
+Els camps "Descripció" i "Codi FUE", al igual que els idiomes diferents al català, també són opcionals. Recordeu que si no es vol informar la descripció però es vol informar el codi FUE, caldrà deixar el camp Descripió amb "" (veure exemple anterior).
 
 Restriccions / limitacions
-* Per evitar problemes de caràcters o accents, és necessari que els fitxers .csv estiguin codificats en UTF-8.
+* MOLT IMPORTANT: Per evitar problemes de caràcters o accents, és necessari que els fitxers .csv estiguin codificats en UTF-8.
 * El separador de columnes del fitxer csv ha de ser el caràcter ';'. Aquest caràcter no pot estar inclòs al nom de cap família o tràmit ja que s'interpreta com un separador de camps. Si algun nom l'inclou si us plau substituiu-lo per una coma o equivalent.
 * Un catàleg pot incloure N families.
 * Una familia pot incloure N tràmits.
@@ -2461,7 +2462,7 @@ Restriccions / limitacions
 * La càrrega mitjançant csv no actualitzarà cap familia ni cap tràmit existent. Un cop s'hagi creat una familia o tràmit amb un codi determinat, les posteriors càrregues indicant el mateix codi no actualitzaràn ni el tràmit ni la familia. Es podrà modificar manualment a través dels formularis web en els corresponents apartats d'edició.
 * Si s'afegeix una familia o tràmit nou (amb un codi que no existeixi prèviament al catàleg) es crearà i s'actualitzarà el llistat de families/tramits.
 * Si s'indica un tràmit associat a una familia que ni existeix prèviament ni existeix al fitxer de families.csv es retornarà una excepció indicant-ne la causa i no es crearà cap tramit en la càrrega fins que es solucioni el conflicte. Caldrà corregir-ho i tornar a fer la càrrega.
-* Només es crearà les families que tinguin associat 1 o més tràmits en el moment de la càrrega.
+* Només es crearà les families que tinguin associat un o més tràmits en el moment de la càrrega.
 
 ## 8.3 Us cataleg compartit per Consorci AOC
 Des del Consorci AOC s'ha elaborat un ampli catàleg estàndard, normalitzat i pensat per ser comú.

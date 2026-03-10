@@ -1,5 +1,9 @@
 # Change log
 
+## Març 2026 (A PRO el 11 de març)
+
+- El CSV de tràmits i famílies incorpora ara camps opcionals per informar els noms en diferents idiomes. La primera fila te els noms dels camps i no es pot modificar, per tant, ja no es mira la posició dels camps per assignar el valor sino que estiguin a la posició indicada per la capçalera.
+
 ## Novembre 2024 (A PRE el 27 de novembre)
 
 - Afegim camp URLDescargaInforme a la resposta de ValidacioRepresentacio
