@@ -265,7 +265,7 @@ Aquí es recull tota la informació relativa a la representació entre dues pers
 |poderdant | Persona (física o jurídica) que atorga el poder de representació|
 |representant | Persona (física o jurídica) que rep el poder de representació|
 |solicitant | Element del tipus _solicitant_|
-|ambitRepresentacio | Element per definir l'ambit de la representació. En tots els casos inclou l'element _capacitat_ i segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_|
+|ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_ i/o _capacitat_|
 |dataCreacio | Data de creació de la representació (yyyy-MM-dd'T'HH:mm:ss)|
 |dataIniciVigencia | Data d'inici de vigència (yyyy-MM-dd'T'HH:mm:ss)|
 |dataFiVigencia | Data de fi de la vigència (yyyy-MM-dd'T'HH:mm:ss)|
@@ -412,7 +412,7 @@ Els elements continguts a l'**ambit de la representació** varien segons el tipu
   <xs:sequence>
    <xs:element name="administracio" type="administracio" minOccurs="0"/>
    <xs:element name="tramit" type="tramit" minOccurs="0"/>
-   <xs:element name="capacitats">
+   <xs:element name="capacitats" minOccurs="0" >
     <xs:complexType>
      <xs:sequence>
       <xs:element name="capacitat" type="capacitat" maxOccurs="unbounded"/>
