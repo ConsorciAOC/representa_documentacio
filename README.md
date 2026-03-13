@@ -265,7 +265,7 @@ Aquí es recull tota la informació relativa a la representació entre dues pers
 |poderdant | Persona (física o jurídica) que atorga el poder de representació|
 |representant | Persona (física o jurídica) que rep el poder de representació|
 |solicitant | Element del tipus _solicitant_|
-|ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_ i/o _capacitat_|
+|ambitRepresentacio | Element per definir l'ambit de la representació. Segons el _tipusRepresentacio_ s'inclou l'element _administracio_ i/o _tramit_ i/o _capacitats_|
 |dataCreacio | Data de creació de la representació (yyyy-MM-dd'T'HH:mm:ss)|
 |dataIniciVigencia | Data d'inici de vigència (yyyy-MM-dd'T'HH:mm:ss)|
 |dataFiVigencia | Data de fi de la vigència (yyyy-MM-dd'T'HH:mm:ss)|
@@ -400,7 +400,7 @@ L'element **tramit** permet definir representacions tipus C amb un àmbit espec�
 |codiFue| Codi FUE del tràmit. Té la finalitat de poder identificar i referenciar tràmits de diferents catàlegs que tinguin un codi diferent|
 |nom | Nom del tramit |
 |uuidFamilia | Identificador únic de la familia a la que pertany |
-|descripcio | Descrpicó del tramit |
+|descripcio | Descripció del tramit |
 |actiu | Indicador d'actiu o no actiu `TRUE` o `FALSE` |
 
 
