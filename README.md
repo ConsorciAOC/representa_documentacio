@@ -1129,15 +1129,13 @@ Camp | Descripció | Obligatori
 |persona| Persona sobre la que es vol recuperar la informació. Només cal informar el _tipusDocumentIdentificatiu_ i el _valorDocumentIdentificatiu_ | Si
 |personaAgrupada| `TRUE` > retorna només les dades de la persona trobada agrupades en el camp _persona_ i, en cas que tingui més d'una representació amb la persona informada, indica al camp _numRepresentacions_ el número de representacions. Útil si només interesa esbrinar les persones coincidents o el número de representacions. | No
 || `FALSE` > retorna les dades de cada representació trobada. Per tant, no agrupa el resultat per persones, sino que retorna totes dades de cada persona localitzada, amb la informació també dels filtres aplicats. Útil si interesa conèixer totes les dades de cada resultat per separat, sense agrupar els coincidents. (Si no s'informa, per defecte, serà _FALSE_)
-|filtre / tipusRepresentacions | Tipus de Representacions que es vol cercar: `TIPUS_A` (General) `TIPUS_B` (d'organisme) i/o `TIPUS_C` (de tràmits) | No
-
-|filtre / tipusPersones | Tipus de persones que es vol cercar: `FISICA` i/o `JURIDICA` | No
-
-|filtre / vigents| `TRUE` > representacions vàlides amb data actual dins del periode de vigència de la representació | No
+|filtre/tipusRepresentacions | Tipus de Representacions que es volen cercar: `TIPUS_A` (General) `TIPUS_B` (d'organisme) i/o `TIPUS_C` (de tràmits) | No
+|filtre/tipusPersones | Tipus de persones que es vol cercar: `FISICA` i/o `JURIDICA` | No
+|filtre/vigents| `TRUE` > representacions vàlides amb data actual dins del periode de vigència de la representació | No
 || `FALSE` > vigents i no vigents
-|filtre / actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
+|filtre/actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
 || `FALSE` > tots els estats
-||solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
+|solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
 
 #### Resposta
 ```xml
