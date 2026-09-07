@@ -669,7 +669,7 @@
     <xs:complexType name="ambitRepresentacio">
         <xs:sequence>
             <xs:element name="administracio" type="administracio" minOccurs="0"/>
-            <xs:element name="tramit" minOccurs="0"  type="tramit"/>
+            <xs:element name="tramit" minOccurs="0" type="tramit"/>
             <xs:element name="capacitats" minOccurs="0" >
                 <xs:complexType>
                     <xs:sequence>
@@ -784,5 +784,140 @@
             <xs:pattern value=".*[^\s].*"/>
         </xs:restriction>
     </xs:simpleType>
+
+    <xs:element name="consultarRepresentantLite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaRepresentantLite">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="solicitant" type="solicitantObligatori" />
+                            <xs:element name="persona" type="persona"/>
+                            <xs:element name="personaAgrupada" type="xs:boolean" minOccurs="0" default="false" />
+                            <xs:element name="filtre" type="filtreRepresentacions" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarRepresentantLiteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="persones" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="persona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarPoderdantLite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaPoderdantLite">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="solicitant" type="solicitantObligatori" />
+                            <xs:element name="persona" type="persona"/>
+                            <xs:element name="personaAgrupada" type="xs:boolean" minOccurs="0" default="false" />
+                            <xs:element name="filtre" type="filtreRepresentacions" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="consultarPoderdantLiteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="persones" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="persona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="personaLiteResultat">
+        <xs:sequence>
+            <xs:element name="persona" type="persona" />
+            <xs:element name="numRepresentacions" type="xs:int" minOccurs="0" />
+            <xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0" />
+            <xs:element name="estat" type="estat" minOccurs="0" />
+            <xs:element name="tipusPersona" type="tipusPersona" minOccurs="0" />
+            <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0" />
+            <xs:element name="vigent" type="xs:boolean" minOccurs="0" />
+            <xs:element name="activa" type="xs:boolean" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="filtreRepresentacions">
+        <xs:sequence>
+            <xs:element name="tipusRepresentacions" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tipusRepresentacio" type="tipusRepresentacio" maxOccurs="3"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="estats" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="estat" type="estat" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="tipusPersones" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="tipusPersona" type="tipusPersona" maxOccurs="2"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0" />
+            <xs:element name="vigents" type="xs:boolean" minOccurs="0" />
+            <xs:element name="actives" type="xs:boolean" minOccurs="0" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="solicitantObligatori">
+        <xs:sequence>
+            <xs:element name="persona" type="persona" />
+            <xs:element name="administracio" type="administracio" />
+            <xs:element name="aplicacio" type="xs:string" />
+            <xs:element name="origen" type="origen" />
+        </xs:sequence>
+    </xs:complexType>
 
 </xs:schema>

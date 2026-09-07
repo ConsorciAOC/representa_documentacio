@@ -1,5 +1,9 @@
 # Change log
 
+## Setembre 2026 (A PRE i PRO)
+
+- Afegim dos nous endpoints de peticions per retornar representans i poderdants, amb possibilitat de filtrar per uns camps en concret (veure documentació), a partir del document identificatiu d'una persona.
+
 ## Març 2026 (A PRO el 11 de març)
 
 - El CSV de tràmits i famílies incorpora ara camps opcionals per informar els noms en diferents idiomes. La primera fila te els noms dels camps i no es pot modificar, per tant, ja no es mira la posició dels camps per assignar el valor sino que estiguin a la posició indicada per la capçalera.
