@@ -43,72 +43,78 @@
   * [5.5 Consulta de representacions per persona representant](#55-consulta-de-representacions-per-persona-representant)
       - [Peticio](#peticio-3)
       - [Resposta](#resposta-4)
-  * [5.6 Validacio](#56-validacio)
+  * [5.6 Consulta (amb filtres) de poderdants per representant](#56-consulta-(amb-filtres)-de-poderdants-per-representant)
       - [Peticio](#peticio-4)
-      - [Resposta](#resposta-5)
-  * [5.7 Alta o modificacio](#57-alta-o-modificacio)
+      - [Resposta](#resposta-5)    
+  * [5.7 Consulta (amb filtres) de representants per poderdant](#57-consulta-(amb-filtres)-de-representants-per-poderdant)
       - [Peticio](#peticio-5)
-      - [Resposta](#resposta-6)
-  * [5.8 Consulta de cataleg](#58-consulta-de-cataleg)
+      - [Resposta](#resposta-6)      
+  * [5.8 Validacio](#56-validacio)
       - [Peticio](#peticio-6)
       - [Resposta](#resposta-7)
-  * [5.9 Consulta de families](#59-consulta-de-families)
+  * [5.9 Alta o modificacio](#57-alta-o-modificacio)
       - [Peticio](#peticio-7)
       - [Resposta](#resposta-8)
-  * [5.10 Consulta de familia](#510-consulta-de-familia)
+  * [5.10 Consulta de cataleg](#58-consulta-de-cataleg)
       - [Peticio](#peticio-8)
       - [Resposta](#resposta-9)
-  * [5.11 Consulta de tramits](#511-consulta-de-tramits)
+  * [5.11 Consulta de families](#59-consulta-de-families)
       - [Peticio](#peticio-9)
       - [Resposta](#resposta-10)
-  * [5.12 Consulta administracio](#512-consulta-administracio)
+  * [5.12 Consulta de familia](#510-consulta-de-familia)
       - [Peticio](#peticio-10)
       - [Resposta](#resposta-11)
-  * [5.13 Consulta d'administracions](#513-consulta-d-administracions)
+  * [5.13 Consulta de tramits](#511-consulta-de-tramits)
       - [Peticio](#peticio-11)
       - [Resposta](#resposta-12)
-  * [5.14 Descarrega de documents](#514-descarrega-de-documents)
+  * [5.14 Consulta administracio](#512-consulta-administracio)
+      - [Peticio](#peticio-12)
+      - [Resposta](#resposta-13)
+  * [5.15 Consulta d'administracions](#513-consulta-d-administracions)
+      - [Peticio](#peticio-13)
+      - [Resposta](#resposta-14)
+  * [5.16 Descarrega de documents](#514-descarrega-de-documents)
 - [6. Exemples de peticions](#6-exemples-de-peticions)
   * [6.1 Consulta de representacio](#61-consulta-de-representacio)
-    + [Peticio](#peticio-12)
-    + [Resposta](#resposta-13)
-  * [6.2 Consulta representacions](#62-consulta-representacions)
-    + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
-    + [Peticio](#peticio-13)
-    + [Resposta](#resposta-14)
-    + [6.2.2 Consulta representacions pendents validar per administracio](#622-consulta-representacions-pendents-validar-per-administracio)
     + [Peticio](#peticio-14)
     + [Resposta](#resposta-15)
-  * [6.3 Validacio](#63-validacio)
+  * [6.2 Consulta representacions](#62-consulta-representacions)
+    + [6.2.1 Consulta representacions entre persones](#621-consulta-representacions-entre-persones)
     + [Peticio](#peticio-15)
+    + [Resposta](#resposta-16)
+    + [6.2.2 Consulta representacions pendents validar per administracio](#622-consulta-representacions-pendents-validar-per-administracio)
+    + [Peticio](#peticio-16)
+    + [Resposta](#resposta-17)
+  * [6.3 Validacio](#63-validacio)
+    + [Peticio](#peticio-17)
     + [Resposta validacio positiva](#resposta-validacio-positiva)
     + [Resposta validacio negativa](#resposta-validacio-negativa)
   * [6.4 Alta representacio](#64-alta-representacio)
-    + [Peticio](#peticio-16)
-    + [Resposta](#resposta-16)
-  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
-    + [Peticio](#peticio-17)
-    + [Resposta](#resposta-17)
-  * [6.6 Consulta cataleg](#66-consulta-cataleg)
     + [Peticio](#peticio-18)
     + [Resposta](#resposta-18)
-  * [6.7 Consulta families](#67-consulta-families)
+  * [6.5 Modificacio de representacio](#65-modificacio-de-representacio)
     + [Peticio](#peticio-19)
     + [Resposta](#resposta-19)
-  * [6.8 Consulta familia](#68-consulta-familia)
+  * [6.6 Consulta cataleg](#66-consulta-cataleg)
     + [Peticio](#peticio-20)
-    + [Resposta](#resposta-20)
-  * [6.9 Consulta tramits](#69-consulta-tramits)
+    + [Resposta](#resposta-18)
+  * [6.7 Consulta families](#67-consulta-families)
     + [Peticio](#peticio-21)
-    + [Resposta](#resposta-21)
+    + [Resposta](#resposta-20)
+  * [6.8 Consulta familia](#68-consulta-familia)
     + [Peticio](#peticio-22)
+    + [Resposta](#resposta-21)
+  * [6.9 Consulta tramits](#69-consulta-tramits)
+    + [Peticio](#peticio-23)
     + [Resposta](#resposta-22)
+    + [Peticio](#peticio-24)
+    + [Resposta](#resposta-23)
   * [6.10 Consulta administracio](#610-consulta-administracio)
     + [Petició](#petici--1)
-    + [Resposta](#resposta-23)
+    + [Resposta](#resposta-24)
   * [6.11 Consulta administracions](#611-consulta-administracions)
     + [Petició](#petici--2)
-    + [Resposta](#resposta-24)
+    + [Resposta](#resposta-25)
 - [7. Codis de resposta](#7-codis-de-resposta)
 - [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
   * [8.1 Creacio manual](#81-creacio-manual)
@@ -878,7 +884,7 @@ urlDescarregaInforme | Camp opcional on es retorna una url per poder descarregar
 
 ## 5.3 Consulta de representacions per persona
 Permet consultar totes les representacions on intervé una determinada persona, ja sigui com a poderdant o com a representant (a diferència de la _consultaRepresentacions_ on cal informar sempre tant el poderdant com el representant).
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -962,7 +968,7 @@ Camp | Descripció
 
 ## 5.4 Consulta de representacions per persona poderdant
 Permet consultar totes les representacions on intervé una determinada persona com a poderdant.
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -1026,7 +1032,7 @@ Camp | Descripció
 
 ## 5.5 Consulta de representacions per persona representant
 Permet consultar totes les representacions on intervé una determinada persona com a representant.
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les tenen la data actual dins del periode de vigència.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
 
 #### Peticio
@@ -1088,7 +1094,90 @@ Camp | Descripció
 |resposta| Element del tipus _resposta_
 |representacions| Inclou una llista de _representacio_ amb aquelles representacions on la persona consultada és el representant. En aquest cas l'element _representacio_ **NO** inclou l'element _evindencies_. Per recuperar les evidències d'una representacio cal fer servir l'operació _consultaRepresentacio_
 
-## 5.6 Validacio
+
+
+## 5.6 Consulta (amb filtres) de poderdants per representant
+Permet consultar tots els poderdants que té una determinada persona representant, utilitzant opcionalment diferents camps per filtrar la cerca.
+Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
+Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
+
+#### Peticio
+
+```xml
+<xs:element name="consultarRepresentantLite">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ConsultaRepresentantLite">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="mida" type="mida"/>
+                            <xs:element name="pagina" type="pagina"/>
+                            <xs:element name="solicitant" type="solicitantObligatori" />
+                            <xs:element name="persona" type="persona"/>
+                            <xs:element name="personaAgrupada" type="xs:boolean" minOccurs="0" default="false" />
+                            <xs:element name="filtre" type="filtreRepresentacions" minOccurs="0" />
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+```
+
+Camp | Descripció | Obligatori
+---- | ---------- | -----------
+|persona| Persona sobre la que es vol recuperar la informació. Només cal informar el _tipusDocumentIdentificatiu_ i el _valorDocumentIdentificatiu_ | Si
+|personaAgrupada| `TRUE` > retorna només les dades de la persona trobada agrupades en el camp _persona_ i, en cas que tingui més d'una representació amb la persona informada, indica al camp _numRepresentacions_ el número de representacions. Útil si només interesa esbrinar les persones coincidents o el número de representacions. | No
+|| `FALSE` > retorna les dades de cada representació trobada. Per tant, no agrupa el resultat per persones, sino que retorna totes dades de cada persona localitzada, amb la informació també dels filtres aplicats. Útil si interesa conèixer totes les dades de cada resultat per separat, sense agrupar els coincidents. (Si no s'informa, per defecte, serà _FALSE_)
+|filtre / tipusRepresentacions | Tipus de Representacions que es vol cercar: `TIPUS_A` (General) `TIPUS_B` (d'organisme) i/o `TIPUS_C` (de tràmits) | No
+
+|filtre / tipusPersones | Tipus de persones que es vol cercar: `FISICA` i/o `JURIDICA` | No
+
+|filtre / vigents| `TRUE` > representacions vàlides amb data actual dins del periode de vigència de la representació | No
+|| `FALSE` > vigents i no vigents
+|filtre / actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
+|| `FALSE` > tots els estats
+||solicitant| _Persona_, _administracio_ i _aplicacio_ que sol·licita la petició  | Si
+
+#### Resposta
+```xml
+<xs:element name="consultarRepresentantLiteResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="resultat" minOccurs="0">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="resposta" type="resposta"/>
+                            <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
+                            <xs:element name="persones" minOccurs="0">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="persona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+```
+
+Camp | Descripció
+---- | ----------
+|resposta| Element del tipus _resposta_
+|persona| En cas de demanar per _personaAgrupada=true_, tindrem camps _persona_ agrupats per NIF amb les seves dades personals i el número de representacions de cadascuna. En cas de demanar per _personaAgrupada=false_, tindrem persones sense agrupar, amb totes les dades personals i dels filtres que s'hagin trobat.
+
+
+
+## 5.7 Consulta (amb filtres) de representants per poderdant
+
+És exactament l'equivalent al punt 5.6, però amb la petició _consultarPoderdantLite_ i la resposta _consultarPoderdantLiteResponse_.
+
+
+## 5.8 Validacio
 
 > La opertació de validació permet **preguntar** a Representa **si
 > existeix** alguna representació en estat `VALIDA` **entre un poderdant
@@ -1178,7 +1267,7 @@ I l'element _consultaValidacio_ amb les dades consultades :
 ```
 
 
-## 5.7 Alta o modificacio
+## 5.9 Alta o modificacio
 Permet realitzar la inscripció o modificació** d'una representació. Quan s'inscriu una representació abans de tenir un estat `VALIDA` caldrà que passi per l'estat `PENDENT_ACCEPTACIO` (el representant haurà d'acceptar aquesta representació) o `PENDENT_VALIDACIO` (l'empleat públic amb rol _VALIDADOR_ de l'administració que correspongui segons l'ambit de la representació, haurà de validar la documentació adjunta). 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_ALTA_ per crear representacions o _REPRESENTA_MODIFICACIO_ per modificar l'estat d'una representació.
 
@@ -1260,7 +1349,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 representacio | Element del tipus _representacio_ on es retorna el detall de la representació vàlida que permet respondre afirmativament a la consulta de validació
 
-## 5.8 Consulta de cataleg
+## 5.10 Consulta de cataleg
 Permet consultar el catàleg d'una administració a partir del seu codi INE10.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
@@ -1304,7 +1393,7 @@ Camp | Descripció
 resposta | Element del tipus _resposta_
 cataleg | Element del tipus _cataleg_
 
-## 5.9 Consulta de families
+## 5.11 Consulta de families
 
 A partir del codi del catàleg es poden obtenir les seves families. Per cada familia retornada s'informa també els tramits de cada familia. 
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
@@ -1352,7 +1441,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.10 Consulta de familia
+## 5.12 Consulta de familia
 Si no es volen recuperar totes les families i en canvi es volen recuperar només els tramits d'una familia concreta (indicant el _uuid_) es pot fer una consulta més específica.
 Cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor _REPRESENTA_CONSULTA_
 
@@ -1391,7 +1480,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.11 Consulta de tramits
+## 5.13 Consulta de tramits
 Permet recuperar 1 o N tràmits, segons els camps que s'informin a mode de filtre a l'element _tramit_.
 És a dir: 
 
@@ -1445,7 +1534,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.12 Consulta administracio
+## 5.14 Consulta administracio
 Permet consultar les dades d'una administracio a partir del seu codi INE10 o el seu NIF.
 #### Peticio
 ```xml
@@ -1482,7 +1571,7 @@ solicitant | _Persona_,_administració_ i _aplicacio_ que sol·licita la petici�
 </xs:element>
 ```
 
-## 5.13 Consulta d'administracions
+## 5.15 Consulta d'administracions
 Permet consultar totes les administracions disponibles al servei.
 
 #### Peticio
@@ -1539,7 +1628,7 @@ numTotal | Nombre d'administracions totals
 numPaginesTotal | Nombre de pàgines totals dels resultats de la petició
 administracions | Llistat d'elements del tipus _administracio_
 
-## 5.14 Descarrega de documents
+## 5.16 Descarrega de documents
 Permet descarregar documents associats a representacions. A partir de l'uuid del document és possible descarregar-lo fent una crida GET a la url corresponent.
 
 Preproducció > [https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx](https://serveis3-pre.app.aoc.cat/representa-core/downloadDocument?uuid=xxxxxx"https://serveis3-pre.app.aoc.cat/representa-core/downloaddocument?uuid=xxxxxx")
