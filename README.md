@@ -43,10 +43,10 @@
   * [5.5 Consulta de representacions per persona representant](#55-consulta-de-representacions-per-persona-representant)
       - [Peticio](#peticio-3)
       - [Resposta](#resposta-4)
-  * [5.6 Consulta (amb filtres) de poderdants per representant](#56-consulta-(amb-filtres)-de-poderdants-per-representant)
+  * [5.6 Consulta amb filtres de poderdants per representant](#56-consulta-amb-filtres-de-poderdants-per-representant)
       - [Peticio](#peticio-4)
       - [Resposta](#resposta-5)    
-  * [5.7 Consulta (amb filtres) de representants per poderdant](#57-consulta-(amb-filtres)-de-representants-per-poderdant)
+  * [5.7 Consulta amb filtres de representants per poderdant](#57-consulta-amb-filtres-de-representants-per-poderdant)
       - [Peticio](#peticio-5)
       - [Resposta](#resposta-6)      
   * [5.8 Validacio](#56-validacio)
@@ -1096,7 +1096,7 @@ Camp | Descripció
 
 
 
-## 5.6 Consulta (amb filtres) de poderdants per representant
+## 5.6 Consulta amb filtres de poderdants per representant
 Permet consultar tots els poderdants que té una determinada persona representant, utilitzant opcionalment diferents camps per filtrar la cerca.
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
 Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
@@ -1170,7 +1170,7 @@ Camp | Descripció
 
 
 
-## 5.7 Consulta (amb filtres) de representants per poderdant
+## 5.7 Consulta amb filtres de representants per poderdant
 
 És exactament l'equivalent al punt 5.6, però amb la petició _consultarPoderdantLite_ i la resposta _consultarPoderdantLiteResponse_.
 
