@@ -2495,7 +2495,7 @@ Exemple per recuperar un tramit concret a partir del seu uuid
 
 ## 6.12 Consulta amb filtres de poderdants per representant
 
-En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídiques) del representant que s'indica al camp `persona`, que tinguin representacions amb capacitat CONSLUTAR, que estiguin actives i vigents, i siguin de tipus General (A) o d'Organisme (B). I que, en cas de les tipus B, l'organisme destí sigui 800180001 (codi INE10 d'un ens). El resultat es retornarà agrupat per poderdants.
+En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídiques) del representant que s'indica al camp `persona`, que tinguin representacions amb capacitat CONSULTAR, que estiguin actives i vigents, i siguin de tipus General (TIPUS_A) o d'Organisme (TIPUS_B). I que, en cas de les tipus B, l'organisme destí sigui 800180001 (codi INE10 d'un ens) indicat al camp `administracio`. El resultat es retornarà agrupat per poderdants.
 
 ### Petició
 ```xml
@@ -2506,7 +2506,7 @@ En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídi
   <filtre>
      <tipusRepresentacions>
         <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
-        <tipusRepresentacio>TIPUS_C</tipusRepresentacio>
+        <tipusRepresentacio>TIPUS_B</tipusRepresentacio>
      </tipusRepresentacions>
      <tipusPersones>
         <tipusPersona>JURIDICA</tipusPersona>
