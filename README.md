@@ -8,7 +8,7 @@
 - [1. Introduccio](#1-introduccio)
   * [1.1. Integracio PCI](#11-integracio-pci)
       - [1.1.2 Operacions simples](#112-operacions-simples)
-      - [1.1.3 Operacions mutiples](#113-operacions-mutiples)
+      - [1.1.3 Operacions múltiples](#113-operacions-multiples)
 - [2. Missatgeria](#2-missatgeria)
 - [3. Missatgeria especifica](#3-missatgeria-especifica)
   * [3.1 Representacio](#31-representacio)
@@ -161,7 +161,7 @@ El processat és **síncron** i la resposta del tipus `Respuesta`  inclou el res
 
 Per a més informació consultar el [document d'integració de la PCI](https://www.aoc.cat/wp-content/uploads/2015/02/PCI-Missatgeria.pdf)
 
-#### 1.1.3 Operacions mutiples
+#### 1.1.3 Operacions múltiples
 Per enviar en un únic missatge xml múltiples operacions (del mateix tipus) a Representa, a la petició de la PCI del tipus `Peticion`, es poden informar N elements (màxim 500 elements) del tipus `SolicitudTransmision` i a l'interior d'aquests informar el tipus d'operació concreta dins de l'element `DatosEspecificos` amb la missatgeria de Representa, com en el cas simple/síncron. El processat és **asíncron** i caldrà consultar l'estat passats uns instants (la resposta inclou un element )
 
 La resposta a aquesta petició múltiple en aquest cas serà del tipus `ConfirmacionPeticion`  i inclourà un codi confirmant que s'ha rebut i processant correctament la petició.
@@ -1101,8 +1101,11 @@ Camp | Descripció
 
 ## 5.6 Consulta amb filtres de poderdants per representant
 Permet consultar tots els poderdants que té una determinada persona representant, utilitzant opcionalment diferents camps per filtrar la cerca.
+
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
+
 Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*. I dins la petició específica, s'ha d'indicar al camp `origen` INTEGRACIO, i al camp `aplicacio` un valor únic que us identifiqui (i que consensuarem durant la integració).
+
 Al punt 6.12 d'aquest document teniu un exemple de filtre per entendre millor el funcionament d'aquest.
 
 #### Peticio
