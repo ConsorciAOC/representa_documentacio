@@ -110,11 +110,14 @@
     + [Peticio](#peticio-24)
     + [Resposta](#resposta-23)
   * [6.10 Consulta administracio](#610-consulta-administracio)
-    + [Petició](#petici--1)
+    + [Petició](#peticio-25)
     + [Resposta](#resposta-24)
   * [6.11 Consulta administracions](#611-consulta-administracions)
-    + [Petició](#petici--2)
+    + [Petició](#peticio-26)
     + [Resposta](#resposta-25)
+  * [6.12 Consulta amb filtres de poderdants per representant](#612-consulta-amb-filtres-de-poderdants-per-representant)
+    + [Petició](#peticio-27)
+    + [Resposta](#resposta-26)   
 - [7. Codis de resposta](#7-codis-de-resposta)
 - [8. Creacio/us del cataleg de tramits](#8-creacio-us-del-cataleg-de-tramits)
   * [8.1 Creacio manual](#81-creacio-manual)
@@ -1099,7 +1102,8 @@ Camp | Descripció
 ## 5.6 Consulta amb filtres de poderdants per representant
 Permet consultar tots els poderdants que té una determinada persona representant, utilitzant opcionalment diferents camps per filtrar la cerca.
 Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
-Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*.
+Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*. I dins la petició específica, s'ha d'indicar al camp `origen` INTEGRACIO, i al camp `aplicacio` un valor únic que us identifiqui (i que consensuarem durant la integració).
+Al punt 6.12 d'aquest document teniu un exemple de filtre per entendre millor el funcionament d'aquest.
 
 #### Peticio
 
@@ -1131,6 +1135,7 @@ Camp | Descripció | Obligatori
 || `FALSE` > retorna les dades de cada representació trobada. Per tant, no agrupa el resultat per persones, sino que retorna totes dades de cada persona localitzada, amb la informació també dels filtres aplicats. Útil si interesa conèixer totes les dades de cada resultat per separat, sense agrupar els coincidents. (Si no s'informa, per defecte, serà _FALSE_)
 |filtre/tipusRepresentacions | Tipus de Representacions que es volen cercar: `TIPUS_A` (General) `TIPUS_B` (d'organisme) i/o `TIPUS_C` (de tràmits) | No
 |filtre/tipusPersones | Tipus de persones que es vol cercar: `FISICA` i/o `JURIDICA` | No
+|filtre/ambitRepresentacio | Informant el codi INE10 al camp codi del camp administracio, retornarà només els resultats per aquest ens (que es correspon a l'organisme destí de les representacions de tipus B i C) | No
 |filtre/vigents| `TRUE` > representacions vàlides amb data actual dins del periode de vigència de la representació | No
 || `FALSE` > vigents i no vigents
 |filtre/actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
@@ -2484,6 +2489,92 @@ Exemple per recuperar un tramit concret a partir del seu uuid
   </resultat>
 </consultarAdministracioResponse>
 ```
+
+## 6.12 Consulta amb filtres de poderdants per representant
+
+En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídiques) del representant que s'indica al camp `persona`, que tinguin representacions amb capacitat CONSLUTAR, que estiguin actives i vigents, i siguin de tipus General (A) o d'Organisme (B). I que, en cas de les tipus B, l'organisme destí sigui 800180001 (codi INE10 d'un ens). El resultat es retornarà agrupat per poderdants.
+
+### Petició
+```xml
+<consultarRepresentantLite xmlns="http://www.aoc.cat/representa/v2">
+  <mida>50</mida>
+  <pagina>0</pagina>  
+  <personaAgrupada>true</ns2:personaAgrupada>
+  <filtre>
+     <tipusRepresentacions>
+        <tipusRepresentacio>TIPUS_A</tipusRepresentacio>
+        <tipusRepresentacio>TIPUS_C</tipusRepresentacio>
+     </tipusRepresentacions>
+     <tipusPersones>
+        <tipusPersona>JURIDICA</tipusPersona>
+        <tipusPersona>FISICA</tipusPersona>
+     </tipusPersones>
+     <vigents>true</vigents>
+     <actives>true</actives>
+     <ambitRepresentacio>
+        <administracio>
+           <codi>800180001</codi>
+        </administracio>
+        <capacitats>
+           <capacitat><codi>CONSULTAR</codi></capacitat>
+        </capacitats>
+     </ambitRepresentacio>
+   </filtre>
+   <persona>
+      <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+      <valorDocumentIdentificatiu>12345678Z</valorDocumentIdentificatiu>
+   </persona>
+   <solicitant>
+      <persona>
+         <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+         <valorDocumentIdentificatiu>00000000T</valorDocumentIdentificatiu>
+      </persona>
+      <aplicacio>EXEMPLE</aplicacio>
+      <origen>INTEGRACIO</origen>
+      <administracio>
+         <codi>00000000</codi>
+         <nif>41445611E</nif>
+         <nom>Ajuntament Exemple</nom>
+         <activa>true</activa>
+      </administracio>
+   </solicitant>
+</consultarRepresentantLite>
+```
+
+### Resposta
+```xml
+<consultarRepresentantLiteResponse xmlns="http://www.aoc.cat/representa/v2">
+  <resultat>
+    <resposta>
+      <codi>0</codi>
+      <descripcio>L'operació ha estat executada correctament</descripcio>
+      <tipusSolicitud>CONSULTA</tipusSolicitud>
+    </resposta>
+    <numTotal>1</numTotal>
+    <numPaginesTotal>1</numPaginesTotal>
+    <persones>
+       <persona>
+           <persona>
+              <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
+              <valorDocumentIdentificatiu>78674534H</valorDocumentIdentificatiu>
+              <tipusPersona>FISICA</tipusPersona>
+              <nomRaoSocial>Andrea</nomRaoSocial>
+              <cognoms>Gonzalez</cognoms>
+              <cognom1>Gonzalez</cognom1>
+              <correuElectronic>test@aoc.cat</correuElectronic>
+              <telefon>666000666</telefon>
+              <prefix>34</prefix>
+              <acceptaAvisos>true</acceptaAvisos>
+              <dataAcceptacioAvisos>2026-09-08T00:31:38</dataAcceptacioAvisos>
+           </persona>
+           <numRepresentacions>1</numRepresentacions>
+        </persona>
+    </persones>
+
+  </resultat>
+</consultarRepresentantLiteResponse>
+```
+
 
 # 7. Codis de resposta
 
