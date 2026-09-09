@@ -1138,7 +1138,7 @@ Camp | Descripció | Obligatori
 || `FALSE` > retorna les dades de cada representació trobada. Per tant, no agrupa el resultat per persones, sino que retorna totes dades de cada persona localitzada, amb la informació també dels filtres aplicats. Útil si interesa conèixer totes les dades de cada resultat per separat, sense agrupar els coincidents. (Si no s'informa, per defecte, serà _FALSE_)
 |filtre/tipusRepresentacions | Tipus de Representacions que es volen cercar: `TIPUS_A` (General) `TIPUS_B` (d'organisme) i/o `TIPUS_C` (de tràmits) | No
 |filtre/tipusPersones | Tipus de persones que es vol cercar: `FISICA` i/o `JURIDICA` | No
-|filtre/ambitRepresentacio | Informant el codi INE10 al camp codi del camp administracio, retornarà només els resultats per aquest ens (que es correspon a l'organisme destí de les representacions de tipus B i C) | No
+|filtre/ambitRepresentacio | Informant el codi INE10 al camp _codi_ del camp _administracio_, retornarà només els resultats per aquest ens concret (l'organisme destí de les representacions de tipus B i C) | No
 |filtre/vigents| `TRUE` > representacions vàlides amb data actual dins del periode de vigència de la representació | No
 || `FALSE` > vigents i no vigents
 |filtre/actives| `TRUE` > representacions amb estat `VALIDA` `PENDENT_VALIDACIO` `EN_VALIDACIO` `PENDENT_ACCEPTACIO` o 'PENDENT_SIGNATURA' | Si
