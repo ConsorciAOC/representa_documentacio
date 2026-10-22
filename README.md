@@ -1102,7 +1102,7 @@ Camp | Descripció
 ## 5.6 Consulta amb filtres de poderdants per representant
 Permet consultar tots els poderdants que té una determinada persona representant, utilitzant opcionalment diferents camps per filtrar la cerca.
 
-Amb l'atribut _actives_ es pot filtrar el tipus de representacions que es volen recuperar (les que tenen un estat actiu i no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les que tenen la data actual dins del periode de vigència.
+Amb l'atribut _actives_ es poden filtrar les representacions en estat actiu (és a dir, les que no estàn descartades). I amb l'atribut _vigent_ es pot filtrar per les VÀLIDES que tenen la data actual dins del periode de vigència. Cal tenir present que utilitzar a la vegada els dos filtres suma les posibilitats. És a dir, els dos a true filtraria per les actives (amb tots els seus estats, no nomès les vàlides) en periode vigent.
 
 Recordeu que cal indicar a l'atribut `CodigoCertificado` de la petició de la PCI el valor *REPRESENTA_CONSULTA*. I dins la petició específica, s'ha d'indicar al camp `origen` INTEGRACIO, i al camp `aplicacio` un valor únic que us identifiqui (i que consensuarem durant la integració).
 
