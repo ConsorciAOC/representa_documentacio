@@ -2555,8 +2555,8 @@ En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídi
     </resposta>
     <numTotal>1</numTotal>
     <numPaginesTotal>1</numPaginesTotal>
-    <persones>
-       <persona>
+    <resultatPersones>
+       <resultatPersona>
            <persona>
               <tipusDocumentIdentificatiu>NIF</tipusDocumentIdentificatiu>
               <valorDocumentIdentificatiu>78674534H</valorDocumentIdentificatiu>
@@ -2571,8 +2571,8 @@ En aquest exemple es cerquen poderdants (que siguin persones físiques o jurídi
               <dataAcceptacioAvisos>2026-09-08T00:31:38</dataAcceptacioAvisos>
            </persona>
            <numRepresentacions>1</numRepresentacions>
-        </persona>
-    </persones>
+        </resultatPersona>
+    </resultatPersones>
 
   </resultat>
 </consultarRepresentantLiteResponse>
