@@ -813,10 +813,10 @@
                             <xs:element name="resposta" type="resposta"/>
                             <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
                             <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
-                            <xs:element name="persones" minOccurs="0">
+                            <xs:element name="resultatPersones" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="persona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element name="resultatPersona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -855,10 +855,10 @@
                             <xs:element name="resposta" type="resposta"/>
                             <xs:element name="numTotal" type="xs:int" minOccurs="0"/>
                             <xs:element name="numPaginesTotal" type="xs:int" minOccurs="0"/>
-                            <xs:element name="persones" minOccurs="0">
+                            <xs:element name="resultatPersones" minOccurs="0">
                                 <xs:complexType>
                                     <xs:sequence>
-                                        <xs:element name="persona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
+                                        <xs:element name="resultatPersona" type="personaLiteResultat" maxOccurs="unbounded" minOccurs="0"/>
                                     </xs:sequence>
                                 </xs:complexType>
                             </xs:element>
@@ -875,10 +875,13 @@
             <xs:element name="numRepresentacions" type="xs:int" minOccurs="0" />
             <xs:element name="tipusRepresentacio" type="tipusRepresentacio" minOccurs="0" />
             <xs:element name="estat" type="estat" minOccurs="0" />
-            <xs:element name="tipusPersona" type="tipusPersona" minOccurs="0" />
             <xs:element name="ambitRepresentacio" type="ambitRepresentacio" minOccurs="0" />
             <xs:element name="vigent" type="xs:boolean" minOccurs="0" />
             <xs:element name="activa" type="xs:boolean" minOccurs="0" />
+            <xs:element name="identificadorLegal" type="xs:string" minOccurs="0" />
+            <xs:element name="dataIniciVigencia" type="xs:dateTime" minOccurs="0" />
+            <xs:element name="dataFiVigencia" type="xs:dateTime" minOccurs="0" />
+            <xs:element name="dataMaxVigencia" type="xs:dateTime" minOccurs="0" />
         </xs:sequence>
     </xs:complexType>
 
